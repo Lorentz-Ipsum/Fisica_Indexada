@@ -173,3 +173,6 @@ $$1.- \int ^\pi_{-\pi} d\xi e^{in\xi} e^{im\xi} =2\pi \delta_{m,n}$$
 $$2.- \sum_{n=1}^N e^{in\xi}e^{in\xi '}=\delta (\xi-\xi ')$$
 
 Las llamadas relaciones de ortonormalidad y compeltitud. Dada por tanto una función cualquiera $f(\xi)$ con $\xi \in [-\pi,\pi)$ se puede escribir $f(\xi)=\sum_{n=1}^N f_ne^{-in\xi}$ en base de ondas planas con coeficientes $f_n=\frac{1}{2\pi}\int^\pi_{-\pi}d\xi e^{in\xi}f(\xi)$.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyODU1NDU1NzBdfQ==
+-->
