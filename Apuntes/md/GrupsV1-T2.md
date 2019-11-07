@@ -679,3 +679,6 @@ $$
 
 
 Que se ve bien como se ha construido la tabla representándolo gráficamente.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzQyMTIzNzk0XX0=
+-->
