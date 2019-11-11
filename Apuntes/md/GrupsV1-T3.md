@@ -13,6 +13,11 @@ $$\begin{array}{c}
 \end{array}$$
 
 Se suele escribir como multiplicación por la izquierda en lugar de $f_g(X)$. Automáticamente vemos que se satisface que $(gh)x=g(hx)$ y $ex=x$.
+
+
+
+
+AJAJAJAJAJA
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk3MDY2MTc4XX0=
+eyJoaXN0b3J5IjpbLTE5MDc0NTg0MDgsOTk3MDY2MTc4XX0=
 -->
