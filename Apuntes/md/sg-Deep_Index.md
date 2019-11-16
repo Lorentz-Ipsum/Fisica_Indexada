@@ -64,15 +64,10 @@ Un índice bien en profundidad de la asignatura.
 
 ### Tema 5: Rotaciones en R^3: Los grupos SO(3) y SU(2)
 5.1. Descripción de SO(3)
-
 5.2. De SO(3) a SU(2)
-
 5.3. Generados infinitesimales y el álgebra de Lie
-
 5.4. Representaciones de SU(2)
-
 5.5. Producto directo de representaciones de SU(2)
-
 5.6. Medida invariante en SU(2)
 
 5.7. Ortogonalidad, completitud, caracteres
@@ -172,11 +167,12 @@ irreducibles del grupo de Lorentz, representaciones unitarias del grupo de Poinc
 
 
 ## Tema 4: Grupos y álgebras de Lie
-4.1 Elementos básicos sobre espacios topológicos
-4.2 Grupo de Lie: definición
-4.3 Grupos de Lie lineales
-4.4 Estudio local de un grupo de Lie: álgebras de Lie
-4.5 Representaciones adjuntas de álgebras y grupos de Lie: constantes de estructura
+### 4.1 Elementos básicos sobre espacios topológicos
+
+### 4.2 Grupo de Lie: definición
+### 4.3 Grupos de Lie lineales
+### 4.4 Estudio local de un grupo de Lie: álgebras de Lie
+### 4.5 Representaciones adjuntas de álgebras y grupos de Lie: constantes de estructura
 ### 4.6 Álgebras de Lie simples y semi-simples
 
 
@@ -225,5 +221,5 @@ irreducibles del grupo de Lorentz, representaciones unitarias del grupo de Poinc
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ5NTY5NzI4XX0=
+eyJoaXN0b3J5IjpbLTEzMTcxNjk0N119
 -->
