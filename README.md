@@ -16,10 +16,19 @@ Apuntes / md / [Notas para pasar de tex a md](Apuntes /md/Notas para pasar de te
 ---
 
 Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T1.md)
-Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T2.md)
-Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T3.md)
-Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T4.md)
-Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T5.md)
+
+Apuntes / md / [Tema 2](Apuntes /md/GrupsV1-T2.md)
+
+Apuntes / md / [Tema 3](Apuntes /md/GrupsV1-T3.md)
+
+Apuntes / md / [Tema 4](Apuntes /md/GrupsV1-T4.md)
+
+Apuntes / md / [Tema 5](Apuntes /md/GrupsV1-T5.md)
+
+---
+
+
+Problemas / [Tema 2](Problemas/ProblemasV1-T2.md)
 
 ---
 
@@ -134,5 +143,5 @@ University Press, 1997
 - [ ] Representar armonicos esfericos y radiales y mirar que clase de simetrias tienen
 - [ ]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NTM3MDgxNywtNzI1OTcyMDUyXX0=
+eyJoaXN0b3J5IjpbMTA2MDI4Mjg5OCwtNzI1OTcyMDUyXX0=
 -->
