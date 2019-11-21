@@ -11,20 +11,15 @@ Apuntes de Simetrías y Grupos en la UCM 2019.
 
 ## Treeview
 
-Apuntes / md / [Notas para pasar de tex a md](
-Apuntes /md/Notas para pasar de tex a md.md)
-
-Trabajo CFT / [Trabajo de CFT Bib](Trabajo_CFT/cft-bib.md)
+Apuntes / md / [Notas para pasar de tex a md](Apuntes /md/Notas para pasar de tex a md.md)
 
 ---
 
-Tema 2 /  [Index T2](Tema2/t2-indx.md)
-
-
-Tema 2 /  [Entrega T2](Tema2/t2-entrega.md)
-
-
-Tema 2 /  [Ecuaciones T2](Tema2/t2-equs.md)
+Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T1.md)
+Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T2.md)
+Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T3.md)
+Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T4.md)
+Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T5.md)
 
 ---
 
@@ -139,5 +134,5 @@ University Press, 1997
 - [ ] Representar armonicos esfericos y radiales y mirar que clase de simetrias tienen
 - [ ]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIwMTY1NjcwLC03MjU5NzIwNTJdfQ==
+eyJoaXN0b3J5IjpbMTI5NTM3MDgxNywtNzI1OTcyMDUyXX0=
 -->
