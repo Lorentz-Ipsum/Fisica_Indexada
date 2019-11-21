@@ -1,53 +1,3 @@
-
-
-\documentclass{article}
-\usepackage{yhmath}
-\usepackage[utf8]{inputenc}
-\usepackage{ upgreek }
-\usepackage{graphicx}
-\usepackage{appendix}
-\usepackage{ amssymb }
-\usepackage{ tipa }
-\usepackage{svg}
-\usepackage{amsmath}
-\setlength{\parindent}{0cm}
-\usepackage[spanish]{babel}
-\usepackage{vmargin}
-\usepackage{subfig}
-\usepackage{ dsfont }
-\newcommand{\rn}[1][n]{\mathds{R}^{#1}}
-\usepackage{pdfpages}
-\usepackage{braket}
-\usepackage{ gensymb }
-\usepackage{wrapfig}
-\usepackage{subcaption}
-\newcommand{\commentedbox}[2]{%
-  \mbox{
-    \begin{tabular}[t]{@{}c@{}}
-    $\boxed{\displaystyle#1}$\\
-    #2
-    \end{tabular}%
-  }%
-}
-\usepackage{scalerel,stackengine}
-\stackMath
-\newcommand\reallywidehat[1]{%
-\savestack{\tmpbox}{\stretchto{%
-  \scaleto{%
-    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
-    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
-  }{\textheight}% 
-}{0.5ex}}%
-\stackon[1pt]{#1}{\tmpbox}%
-}
-\title{Notas de simetrías y teoría de grupos}
-\author{Álvaro Santiago Serrano }
-\date{Septiembre de 2019}
-
-\begin{document}
-
-\maketitle
-
 # Representación de grupos
 ### Acciones de grupo
 Cuando un grupo actúa sobre un espacio vectorial, se obtiene una representación.
@@ -1121,6 +1071,6 @@ y^{(i)}
    Repitiendo este procedimiento podemos hallar la transformación para cada elemento de la base de V. Por tanto, es posible hallarnos $W(\tau _3)$ y con ella obtener $W(\tau _2)$, $W(\sigma _1)$ y $W(\sigma _2)$ mediante el producto adecuado de matrices.
    
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NTA0MDU4MCwtMTU2NTM1MjU0Niw5OT
-cwNjYxNzhdfQ==
+eyJoaXN0b3J5IjpbLTcxNzcyNjc5NCwtNjg1MDQwNTgwLC0xNT
+Y1MzUyNTQ2LDk5NzA2NjE3OF19
 -->
