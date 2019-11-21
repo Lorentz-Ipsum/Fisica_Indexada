@@ -1,6 +1,4 @@
 
-
-
 #  Grupos y álgebras de Lie
 
 Un grupo de Lie combina tres estructuras matemáticas diferentes. Verifica:
@@ -251,6 +249,6 @@ Esto provoca una restricción en las funciones peso que las hace únicas salvo c
     $$\int ^{2\pi}_0 d \theta \frac{1}{2\pi}$$
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzM1MTI0NTQsLTExNjc5NzI1MzJdfQ
-==
+eyJoaXN0b3J5IjpbMTU2Nzk5ODgwNiwtMjEzMzUxMjQ1NCwtMT
+E2Nzk3MjUzMl19
 -->
