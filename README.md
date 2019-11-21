@@ -11,19 +11,19 @@ Apuntes de Simetrías y Grupos en la UCM 2019.
 
 ## Treeview
 
-Apuntes / md / [Notas para pasar de tex a md](Apuntes /md/Notas para pasar de tex a md.md)
+Apuntes / md / [Notas para pasar de tex a md](Apuntes/md/Notas para pasar de tex a md.md)
 
 ---
 
-Apuntes / md / [Tema 1](Apuntes /md/GrupsV1-T1.md)
+Apuntes / md / [Tema 1](Apuntes/md/GrupsV1-T1.md)
 
-Apuntes / md / [Tema 2](Apuntes /md/GrupsV1-T2.md)
+Apuntes / md / [Tema 2](Apuntes/md/GrupsV1-T2.md)
 
-Apuntes / md / [Tema 3](Apuntes /md/GrupsV1-T3.md)
+Apuntes / md / [Tema 3](Apuntes/md/GrupsV1-T3.md)
 
-Apuntes / md / [Tema 4](Apuntes /md/GrupsV1-T4.md)
+Apuntes / md / [Tema 4](Apuntes/md/GrupsV1-T4.md)
 
-Apuntes / md / [Tema 5](Apuntes /md/GrupsV1-T5.md)
+Apuntes / md / [Tema 5](Apuntes/md/GrupsV1-T5.md)
 
 ---
 
@@ -143,5 +143,6 @@ University Press, 1997
 - [ ] Representar armonicos esfericos y radiales y mirar que clase de simetrias tienen
 - [ ]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MDI4Mjg5OCwtNzI1OTcyMDUyXX0=
+eyJoaXN0b3J5IjpbLTExOTQwOTEzMTIsMTA2MDI4Mjg5OCwtNz
+I1OTcyMDUyXX0=
 -->
