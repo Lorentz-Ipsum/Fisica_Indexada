@@ -3,19 +3,16 @@ Apuntes de Simetrías y Grupos en la UCM 2019.
 
 ## Links
 
-[Web donde se renderiza el repositorio](https://lorentz-ipsum.github.io/Mecanica_Teorica-019/)
+[Web donde se renderiza el repositorio](https://lorentz-ipsum.github.io/Simetrias_y_Grupos-019/)
 
-[GitHub del repositorio](https://github.com/Lorentz-Ipsum/Mecanica_Teorica-019)
+[GitHub del repositorio](https://github.com/Lorentz-Ipsum/Simetrias_y_Grupos-019)
 
 ---
 
 ## Treeview
 
-[Enlace a mt-cosas](./mt-cosas.md)
-
----
-
-Trabajo CFT / [Trabajo de CFT readme](Trabajo_CFT/cft-readme.md)
+Apuntes / md / [Notas para pasar de tex a md](
+Apuntes /md/Notas para pasar de tex a md.md)
 
 Trabajo CFT / [Trabajo de CFT Bib](Trabajo_CFT/cft-bib.md)
 
@@ -142,5 +139,5 @@ University Press, 1997
 - [ ] Representar armonicos esfericos y radiales y mirar que clase de simetrias tienen
 - [ ]
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMDQ3Mjc3MSwtNzI1OTcyMDUyXX0=
+eyJoaXN0b3J5IjpbMzIwMTY1NjcwLC03MjU5NzIwNTJdfQ==
 -->
