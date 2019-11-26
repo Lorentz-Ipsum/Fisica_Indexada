@@ -1,3 +1,5 @@
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+
 # Representación de grupos
 ### Acciones de grupo
 Cuando un grupo actúa sobre un espacio vectorial, se obtiene una representación.
@@ -1071,6 +1073,6 @@ y^{(i)}
    Repitiendo este procedimiento podemos hallar la transformación para cada elemento de la base de V. Por tanto, es posible hallarnos $W(\tau _3)$ y con ella obtener $W(\tau _2)$, $W(\sigma _1)$ y $W(\sigma _2)$ mediante el producto adecuado de matrices.
    
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNzcyNjc5NCwtNjg1MDQwNTgwLC0xNT
-Y1MzUyNTQ2LDk5NzA2NjE3OF19
+eyJoaXN0b3J5IjpbLTE5MTU3MjI3NTMsLTcxNzcyNjc5NCwtNj
+g1MDQwNTgwLC0xNTY1MzUyNTQ2LDk5NzA2NjE3OF19
 -->
