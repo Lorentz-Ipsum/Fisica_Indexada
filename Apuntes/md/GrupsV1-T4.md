@@ -1,3 +1,4 @@
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
 
 #  Grupos y álgebras de Lie
 
@@ -249,6 +250,6 @@ Esto provoca una restricción en las funciones peso que las hace únicas salvo c
     $$\int ^{2\pi}_0 d \theta \frac{1}{2\pi}$$
     
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2Nzk5ODgwNiwtMjEzMzUxMjQ1NCwtMT
-E2Nzk3MjUzMl19
+eyJoaXN0b3J5IjpbNTA0NTI1OTc5LDE1Njc5OTg4MDYsLTIxMz
+M1MTI0NTQsLTExNjc5NzI1MzJdfQ==
 -->
