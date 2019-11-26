@@ -1,3 +1,4 @@
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
 
 # Elementos generales de teoría de grupos
 ## Defininición y ejemplos
@@ -680,5 +681,5 @@ $$
 
 Que se ve bien como se ha construido la tabla representándolo gráficamente.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQyMTIzNzk0XX0=
+eyJoaXN0b3J5IjpbLTEzMzA1Mzc3NjksMzQyMTIzNzk0XX0=
 -->
