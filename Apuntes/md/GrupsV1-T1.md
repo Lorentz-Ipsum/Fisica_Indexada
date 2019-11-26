@@ -1,6 +1,4 @@
-\title{Notas de simetrías y teoría de grupos
-\author{Álvaro Santiago Serrano
-\date{Septiembre de 2019
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
 
 # Introducción a las simetrías en física
 ## La importancia de las simetrías en física
@@ -174,5 +172,5 @@ $$2.- \sum_{n=1}^N e^{in\xi}e^{in\xi '}=\delta (\xi-\xi ')$$
 
 Las llamadas relaciones de ortonormalidad y compeltitud. Dada por tanto una función cualquiera $f(\xi)$ con $\xi \in [-\pi,\pi)$ se puede escribir $f(\xi)=\sum_{n=1}^N f_ne^{-in\xi}$ en base de ondas planas con coeficientes $f_n=\frac{1}{2\pi}\int^\pi_{-\pi}d\xi e^{in\xi}f(\xi)$.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODU1NDU1NzBdfQ==
+eyJoaXN0b3J5IjpbLTYwMDEzMjA0OCwtMTI4NTU0NTU3MF19
 -->
