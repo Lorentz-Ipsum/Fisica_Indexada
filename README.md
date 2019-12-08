@@ -60,10 +60,6 @@ Peskin 5 primeros caps
 
 > Función de onda = Amplitud de probabilidad, comonentes del estado del sistema en una base bien definida.
 
-
-
-
-
 ### 1.2 Ecuación de Klein-Gordon
 $$\left( \dfrac {\partial ^{2}}{\partial t^{2}}-\nabla ^{2}+m^{2}\right) \Psi =0$$
 
@@ -77,3 +73,6 @@ $$\left( \dfrac {\partial ^{2}}{\partial t^{2}}-\nabla ^{2}+m^{2}\right) \Psi =0
 ## Tema 5: Cuantización canónica de campos fermiónicos.
 ## Tema 6: Electrodinámica cuántica.
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3MjE0MTI3ODNdfQ==
+-->
