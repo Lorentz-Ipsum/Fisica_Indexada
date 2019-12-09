@@ -152,6 +152,7 @@ Axioma de separabilidad
 Condiciones sobre elementos
 
 ### 4.3 Grupos de Lie lineales
+Condiciones sobre un grupo lineal
 
 ### 4.4 Estudio local de un grupo de Lie: álgebras de Lie
 ### 4.5 Representaciones adjuntas de álgebras y grupos de Lie: constantes de estructura
@@ -203,6 +204,6 @@ Condiciones sobre elementos
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwOTIzNzc0NCwyMTMzNDM4NTI5LC02OD
+eyJoaXN0b3J5IjpbLTkyMjI4NjkwNiwyMTMzNDM4NTI5LC02OD
 A0MTY3OTYsODUyOTg2NjA1XX0=
 -->
