@@ -142,14 +142,17 @@ Simplemente conexo
 n-veces conexo
 > Ejemplos: $\mathcal{R}^n$ y $\mathcal{R}^2$ 
 #### 4.1.3 Mapa homeomórfico
-Contínuo
+Continuo
 #### 4.1.4 Espacio Hausdorff
 Axioma de separabilidad
 #### 4.1.5 Carta
 #### 4.1.6 Variedad analítica de dimensión n
 
 ### 4.2 Grupo de Lie: definición
+Condiciones sobre elementos
+
 ### 4.3 Grupos de Lie lineales
+
 ### 4.4 Estudio local de un grupo de Lie: álgebras de Lie
 ### 4.5 Representaciones adjuntas de álgebras y grupos de Lie: constantes de estructura
 ### 4.6 Álgebras de Lie simples y semi-simples
@@ -200,6 +203,6 @@ Axioma de separabilidad
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NDI5NTQzMywyMTMzNDM4NTI5LC02OD
+eyJoaXN0b3J5IjpbLTkwOTIzNzc0NCwyMTMzNDM4NTI5LC02OD
 A0MTY3OTYsODUyOTg2NjA1XX0=
 -->
