@@ -141,8 +141,11 @@ Arco-conexo
 Simplemente conexo
 n-veces conexo
 #### 4.1.3 Mapa homeomórfico
+Contínuo
 #### 4.1.4 Espacio Hausdorff
+Axioma de separabilidad
 #### 4.1.5 Carta
+
 #### 4.1.6 Variedad analítica de dimensión n
 
 ### 4.2 Grupo de Lie: definición
@@ -197,6 +200,6 @@ n-veces conexo
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMzQzODUyOSwtNjgwNDE2Nzk2LDg1Mj
-k4NjYwNV19
+eyJoaXN0b3J5IjpbLTgzODI4NDYzOSwyMTMzNDM4NTI5LC02OD
+A0MTY3OTYsODUyOTg2NjA1XX0=
 -->
