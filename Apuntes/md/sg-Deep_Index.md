@@ -154,7 +154,8 @@ Condiciones sobre elementos
 ### 4.3 Grupos de Lie lineales
 Condiciones sobre un grupo lineal
 #### 4.3.1 Recubridor universal
-
+#### 4.3.2 Representaaciones unitarias del grupo de Lie
+#### 4.3.3 Ejemp
 
 ### 4.4 Estudio local de un grupo de Lie: álgebras de Lie
 ### 4.5 Representaciones adjuntas de álgebras y grupos de Lie: constantes de estructura
@@ -206,6 +207,6 @@ Condiciones sobre un grupo lineal
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTE0ODQ3NTYsLTkyMjI4NjkwNiwyMT
-MzNDM4NTI5LC02ODA0MTY3OTYsODUyOTg2NjA1XX0=
+eyJoaXN0b3J5IjpbMTc1NTYzODE3NCwtOTIyMjg2OTA2LDIxMz
+M0Mzg1MjksLTY4MDQxNjc5Niw4NTI5ODY2MDVdfQ==
 -->
