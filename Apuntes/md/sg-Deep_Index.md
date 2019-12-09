@@ -134,7 +134,11 @@ irreducibles del grupo de Lorentz, representaciones unitarias del grupo de Poinc
 
 ## Tema 4: Grupos y álgebras de Lie
 ### 4.1 Elementos básicos sobre espacios topológicos
-
+#### Compacidad
+#### Conexión
+Camino en S
+Arco-conexo
+Simplemente 
 ### 4.2 Grupo de Lie: definición
 ### 4.3 Grupos de Lie lineales
 ### 4.4 Estudio local de un grupo de Lie: álgebras de Lie
@@ -187,5 +191,5 @@ irreducibles del grupo de Lorentz, representaciones unitarias del grupo de Poinc
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUyOTg2NjA1XX0=
+eyJoaXN0b3J5IjpbLTU1MTcyNjE1MSw4NTI5ODY2MDVdfQ==
 -->
