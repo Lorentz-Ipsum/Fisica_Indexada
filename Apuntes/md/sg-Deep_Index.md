@@ -156,19 +156,15 @@ Condiciones sobre un grupo lineal
 #### 4.3.1 Recubridor universal
 #### 4.3.2 Representaciones unitarias del grupo de Lie
 #### 4.3.3 Ejemplos
-    $GL(n,\mathds{C})$: grupo general lineal de matrices complejas M con det M$\neq$ 0 de dimensión 2$n^2$.
-
- $SL(n, \mathcal{C})$: grupo especial lineal, subgrupo del general con detM=1 de dimensión 2$n^2$ -2 (pues el determinante da dos restricciones; Re(detM)=1 y Im(detM)=0).
-
+$GL(n,\mathcal{C})$: grupo general lineal de matrices complejas, de dimensión 2$n^2$.
+ $SL(n, \mathcal{C})$: grupo especial lineal
  GL($n,\mathcal{R}$): de dimensión $n^2$.
-
- $SL(n,\mathcal{R})$: de dimensión $n^2-1$.
-
- El grupo $U(n)$: grupo unitario de matrices complejas U tal que $U^+U=UU^+=\mathcal{1}^n$ de dimensión $n^2$ (en principio es subgrupo de GL pero la condición de conmutación nos quita la mitad).
+$SL(n,\mathcal{R})$: de dimensión $n^2-1$.
+$U(n)$: grupo unitario de matrices complejas U tal que $U^+U=UU^+=\mathcal{1}^n$ de dimensión $n^2$ (en principio es subgrupo de GL pero la condición de conmutación nos quita la mitad).
 
  SU(n): grupo especial unitario, subgrupo de U(n) que agrupa las matrices con detU=1, de dimensión $n^2-1$ (como el det U es un complejo de fase libre y norma 1 solo pone 1 condición sobre el detU).
 
- O(n): grupo ortogonal de matrices reales que cumplen $OO^+=O^+O=\mathds{1}_n$ de dimensión $\frac{n(n-1)}{2}$.
+ O(n): grupo ortogonal de matrices reales que cumplen $OO^+=O^+O=\mathcal{1}_n$ de dimensión $\frac{n(n-1)}{2}$.
 
  SO(n): grupo ortogonal especia, subgrupo de O(n) con detO=1, de la misma dimensión que O(n).
 
@@ -232,7 +228,7 @@ Condiciones sobre un grupo lineal
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTM4OTYzNzksMTM3OTkzNzMwNSwtOT
-IyMjg2OTA2LDIxMzM0Mzg1MjksLTY4MDQxNjc5Niw4NTI5ODY2
-MDVdfQ==
+eyJoaXN0b3J5IjpbMTE4NTg0NTEwOSwxMzc5OTM3MzA1LC05Mj
+IyODY5MDYsMjEzMzQzODUyOSwtNjgwNDE2Nzk2LDg1Mjk4NjYw
+NV19
 -->
