@@ -134,15 +134,15 @@ irreducibles del grupo de Lorentz, representaciones unitarias del grupo de Poinc
 
 ## Tema 4: Grupos y álgebras de Lie
 ### 4.1 Elementos básicos sobre espacios topológicos
-#### Compacidad
-#### Conexión
+#### 4.1.1 Compacidad
+#### 4.1.2 Conexión
 Camino en S
 Arco-conexo
 Simplemente conexo
 n-veces conexo
-#### Mapa homeomórfico
-####  Espacio Hausdorff
-#### Carta
+#### 4.1.3 Mapa homeomórfico
+#### 4.1.4 Espacio Hausdorff
+#### 4.1.5 Carta
 #### 4.1.6 Variedad analítica de dimensión n
 
 ### 4.2 Grupo de Lie: definición
@@ -197,6 +197,6 @@ n-veces conexo
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMjk5NTI1MywtNjgwNDE2Nzk2LDg1Mj
+eyJoaXN0b3J5IjpbMjEzMzQzODUyOSwtNjgwNDE2Nzk2LDg1Mj
 k4NjYwNV19
 -->
