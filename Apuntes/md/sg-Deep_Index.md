@@ -140,6 +140,10 @@ Camino en S
 Arco-conexo
 Simplemente conexo
 n-veces conexo
+#### Mapa homeomórfico
+####  Espacio Hausdorff
+#### Carta
+#### 4.1.6 Variedad analítica de dimensión n
 
 ### 4.2 Grupo de Lie: definición
 ### 4.3 Grupos de Lie lineales
@@ -193,5 +197,6 @@ n-veces conexo
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MDQxNjc5Niw4NTI5ODY2MDVdfQ==
+eyJoaXN0b3J5IjpbMTMwMjk5NTI1MywtNjgwNDE2Nzk2LDg1Mj
+k4NjYwNV19
 -->
