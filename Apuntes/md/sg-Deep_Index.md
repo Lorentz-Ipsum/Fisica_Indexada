@@ -138,7 +138,9 @@ irreducibles del grupo de Lorentz, representaciones unitarias del grupo de Poinc
 #### Conexión
 Camino en S
 Arco-conexo
-Simplemente 
+Simplemente conexo
+n-veces conexo
+
 ### 4.2 Grupo de Lie: definición
 ### 4.3 Grupos de Lie lineales
 ### 4.4 Estudio local de un grupo de Lie: álgebras de Lie
@@ -191,5 +193,5 @@ Simplemente
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MTcyNjE1MSw4NTI5ODY2MDVdfQ==
+eyJoaXN0b3J5IjpbLTY4MDQxNjc5Niw4NTI5ODY2MDVdfQ==
 -->
