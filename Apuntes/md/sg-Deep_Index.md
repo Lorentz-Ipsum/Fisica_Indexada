@@ -140,7 +140,7 @@ Camino en S
 Arco-conexo
 Simplemente conexo
 n-veces conexo
-> Ejemplos
+> Ejemplos: $\mathcal{R}^n$ y $\mathcal{R}^2$ 
 #### 4.1.3 Mapa homeomórfico
 Contínuo
 #### 4.1.4 Espacio Hausdorff
@@ -200,6 +200,6 @@ Axioma de separabilidad
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjQ2NDExMDAsMjEzMzQzODUyOSwtNj
-gwNDE2Nzk2LDg1Mjk4NjYwNV19
+eyJoaXN0b3J5IjpbLTU2NDI5NTQzMywyMTMzNDM4NTI5LC02OD
+A0MTY3OTYsODUyOTg2NjA1XX0=
 -->
