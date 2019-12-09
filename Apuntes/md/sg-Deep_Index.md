@@ -156,6 +156,30 @@ Condiciones sobre un grupo lineal
 #### 4.3.1 Recubridor universal
 #### 4.3.2 Representaciones unitarias del grupo de Lie
 #### 4.3.3 Ejemplos
+    $GL(n,\mathds{C})$: grupo general lineal de matrices complejas M con det M$\neq$ 0 de dimensión 2$n^2$.
+
+ $SL(n, \mathcal{C})$: grupo especial lineal, subgrupo del general con detM=1 de dimensión 2$n^2$ -2 (pues el determinante da dos restricciones; Re(detM)=1 y Im(detM)=0).
+
+ GL($n,\mathcal{R}$): de dimensión $n^2$.
+
+ $SL(n,\mathcal{R})$: de dimensión $n^2-1$.
+
+ El grupo $U(n)$: grupo unitario de matrices complejas U tal que $U^+U=UU^+=\mathcal{1}^n$ de dimensión $n^2$ (en principio es subgrupo de GL pero la condición de conmutación nos quita la mitad).
+
+ SU(n): grupo especial unitario, subgrupo de U(n) que agrupa las matrices con detU=1, de dimensión $n^2-1$ (como el det U es un complejo de fase libre y norma 1 solo pone 1 condición sobre el detU).
+
+ O(n): grupo ortogonal de matrices reales que cumplen $OO^+=O^+O=\mathds{1}_n$ de dimensión $\frac{n(n-1)}{2}$.
+
+ SO(n): grupo ortogonal especia, subgrupo de O(n) con detO=1, de la misma dimensión que O(n).
+
+ Sp(n): grupo simpléptico, grupo de matrices unitarias (n $\times$ n) con n par. Satisfacen $U^T J U=J$. La matriz J$=\left (\begin{array}{cc}
+    0 & \mathds{1}_{n/2} \\
+    -\mathds{1}_{n/2} & 0
+\end{array} \right )$ de dimensión $\frac{n(n+1)}{2}$.
+
+ U(l,n-l): grupo pseudo-unitario de matrices complejas U que satisfacen $UgU^+=g$ siendo g una matriz diagonal de unos y menos unos de forma que $g_{kk}=1$ para $1 \leq k \leq l$ y $g_{kk}=-1$ para $ l+1 \leq k \leq n$. LA dimensión es $n^{2}$
+
+ O(n,l-n): grupo pseudo-ortogonal de matrices reales con $OgO^+=g$ con la misma g, de dimensión $\frac{n(n-1)}{2}        $. Es el grupo de Lorentz, la g es una pseudo-métrica.
 
 
 ### 4.4 Estudio local de un grupo de Lie: álgebras de Lie
@@ -208,6 +232,7 @@ Condiciones sobre un grupo lineal
 7.5 Campo de Klein-Gordon
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3OTkzNzMwNSwtOTIyMjg2OTA2LDIxMz
-M0Mzg1MjksLTY4MDQxNjc5Niw4NTI5ODY2MDVdfQ==
+eyJoaXN0b3J5IjpbLTE2OTM4OTYzNzksMTM3OTkzNzMwNSwtOT
+IyMjg2OTA2LDIxMzM0Mzg1MjksLTY4MDQxNjc5Niw4NTI5ODY2
+MDVdfQ==
 -->
