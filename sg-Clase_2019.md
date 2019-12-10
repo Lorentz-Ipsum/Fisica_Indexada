@@ -1,17 +1,21 @@
 
-# Grupo B
+# Grupo A
+
+# Tutorias
+Mercedes Martín Benito
+Dpto. FT Despacho 13, 2a pl. oeste
+X: 10:30-13:00 y 14:30-16:00 V: 12:30-14:30
+e-mail
+m.martin.benito@ucm.es
+
+> Avisar antes de las tutorias por mail!
 
 ---
 >.
 ---
 ## Dudas que surgen
 
-- [ ] $<p|x> = e^{-ipx/\hbar}$
-
-- [ ] Definicion de densidad de corriente $\vec{j} = -\frac{i\hbar}{2m}(\psi^*\nabla\psi - \psi \nabla \psi^*)$:
-El que vaya primero la conjugada de donde viene? Tiene que ver con lo del orden normal y antinormal de coherencia optica?
-
-- [ ] Cual es la diferencia entre invariancia Lorentz y relativista?
+- [ ] Diferencia entre operador autoadjunto y hermitico
 - [ ]
 
 
@@ -24,7 +28,6 @@ El que vaya primero la conjugada de donde viene? Tiene que ver con lo del orden 
 ### Problemas propios
 
 
-
 ---
 >.
 ---
@@ -32,8 +35,13 @@ El que vaya primero la conjugada de donde viene? Tiene que ver con lo del orden 
 
 ### Importante
 
-- [ ] Idear ejercicios para pasar de un sistema de unidades a otro.
+- [ ] Leer papers del Campus
+- [ ] Ver video del Campus
 
 ### Extra
 
-- [ ] Ver apéndice del Jackson sobre sistemas de unidades
+- [ ] Buscar segundo teorema de Noether
+- [ ] Leer pdf de la vida de Noether
+- [ ] Charla de [Perimeter Institute]() de Noether
+- [ ] Representar armonicos esfericos y radiales y mirar que clase de simetrias tienen
+- [ ]
