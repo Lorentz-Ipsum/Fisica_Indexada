@@ -1,3 +1,16 @@
+# Index LVL 1
+
+## Index LVL 1 en general (guia docente)
+
+• Nociones generales de teoría de grupos: clases de conjugación, subgrupos normales, cosets, grupo cociente, homomorfismos entre grupos, producto de grupos.
+• Representaciones de los grupos: acciones de grupo, representaciones lineales, equivalencia de representaciones, reducibilidad e irreducibilidad, unitariedad, lemas de Schur, relaciones de ortonormalidad y completitud, producto de representaciones y coeficientes de Clebsch-Gordan, teorema de Wigner-Eckart.
+• Nociones básicas sobre grupos de Lie lineales y álgebras de Lie.
+• Grupos SO(3) y SU(2): generadores infinitesimales, representaciones, medida invariante,
+producto directo, isospín, rotaciones de funciones de onda y de operadores.
+• Grupos de Lorentz y de Poincaré ortocronos propios: álgebra de Lie, representaciones
+irreducibles del grupo de Lorentz, representaciones unitarias del grupo de Poincaré.
+
+## Index LVL 1 OK
 
 ### Tema 1: Introducción. Importancia de las simetrías en física
 

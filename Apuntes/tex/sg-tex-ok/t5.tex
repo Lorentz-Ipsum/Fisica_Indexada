@@ -1,0 +1,567 @@
+
+\section{Rotaciones en $\mathds{R}^3$: SO(3) y SU(2)}
+
+\subsection{Descripción de SO(3)}
+
+Las rotaciones tridimensionales (propias, con det=1) son las transformaciones lineales de los vectores de $\mathds{R}^3$ que dejan invariante su norma preservando la orientación.
+
+En una base ortonormal los elementos de SO(3) son matrices reales, ortogonales y con determinante 1.
+
+La dimensión del grupo es 3, dos parámetros para el eje y uno para el ángulo de giro.
+
+\begin{itemize}
+\item \textbf{Parametrización ángulo-eje}:
+
+Se da un vector unitario $\Vec{n}$ como eje de giro y un ángulo $\uppsi \in [0,\pi]$ de rotación en torno a ese eje.
+
+A su vez, el vector unitario $\Vec{n}$ puede describirse a través de los ángulos polar y acimutal. La rotación se caracteriza por tres parámetros.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width= 0.7\textwidth]{parametrizacion1.png}
+\caption{Representación en el espacio de los parámetros de la parametrización}
+\label{fig:my_label}
+\end{figure}
+
+$$0\leq \uppsi \leq \pi \hspace{0.5cm} 0\leq \Theta \leq \pi \hspace{0.5cm}  0\leq \phi \leq 2\pi $$
+
+\end{itemize}
+\textbf{Redundancia:} .$R_{\Vec{n}}(\pi) = R_{-\Vec{n}}(\pi) $. Puntos en las antípodas quedan identificados por el cociente $S^3/\mathds{Z}_2$. SO(3) es conexo pero no simplemente conexo. Hay dos clases de caminos cerrados (doblemente conexo).
+
+En componentes, las matrices de rotación son:
+
+$$(R_{\Vec{n}}(\uppsi))_{ij}=\delta _{ij} cos \uppsi + n_in_j (1-cos \uppsi) - sen \uppsi \sum _K \epsilon _{ijk} n_k$$
+
+\newpage
+\textbf{Clases de conjugación}
+
+$$RR_{\Vec{n}}(\uppsi ) R^{-1} = R_{\Vec{n}'}(\uppsi)$$
+
+con $\Vec{n}'=R\Vec{n}$ para cualquier rotación en tres dimensiones.
+
+\smallskip
+\textbf{Teorema:} Todas las rotaciones por el mismo ángulo $\uppsi$ independientemente del eje de rotacción pertenecen a la misma clase de conjugación.
+
+\begin{itemize}
+\item \textbf{Parametrización con ángulos de Euler}:
+
+Trata de especificar las rotaciones a través de la configuración relativa de dos referenciales cartesianos, uno ortogonal inicial ($O_x,O_y,O_z$) y otro rotado (OX,OY,OZ).
+
+Este último resulta de la composición de una rotación de ángulo $\alpha$ en torno a $O_z$:
+
+$$ (O_x,O_y,O_z) \longrightarrow (O_u,O_v,O_z)$$
+
+Seguida de una rotación de ángulo $\beta$ en torno a $O_v$:
+
+$$(O_u,O_v,O_z) \longrightarrow (O_{u'},O_v,OZ)$$
+
+Seguida de una rotación de ángulo $\gamma$ en torno a OZ:
+
+$$(O_u',O_v,OZ) \longrightarrow (OX,OY,OZ)$$
+
+De forma que esta parametrización consiste en 3 giros:
+
+$$R(\alpha, \beta , \gamma)=R_{\Vec{Z}(\gamma)}R_{\Vec{v}(\beta)}R_{\Vec{z}(\alpha)}$$
+
+Usando la propiedad de conjugación, podemos escribir la fórmula en torno al referencial inicial (y no a intermedios como estamos haciendo ahora):
+
+$$R(\alpha, \beta , \gamma)=R_{\Vec{z}}(\alpha)R_{\Vec{y}}(\beta)R_{\Vec{z}}(\alpha)$$
+
+\begin{figure}[h!]
+    \centering
+ \includegraphics[width=0.6\textwidth]{parametrizacion2.png}
+    \caption{Representación de las rotaciones que se hacen en la parametrización de ángulos de Euler}
+    \label{fig:my_label}
+\end{figure}
+
+\newpage
+Podemos descomponer cualquier rotación en producto de rotaciones en z y en y.
+
+$$R_{z}(\uppsi )=\left ( \begin{array}{ccc}
+     cos \uppsi & -sen \uppsi  & 0 \\
+     sen \uppsi & cos \uppsi & 0 \\
+     0 & 0 & 1
+\end{array}\right) \hspace{0.5cm} R_{y}(\uppsi )=\left ( \begin{array}{ccc}
+     cos \uppsi & 0 & sen \uppsi \\
+     0 & 1 & 0 \\
+     sen \uppsi & 0 & cos \uppsi
+\end{array}\right)$$
+\end{itemize}
+
+\textbf{Ejercicio:} obtener la expresión explícita de la matriz R($\alpha , \beta , \gamma$) y escribe los ángulos $\phi, \theta , \uppsi $ como funciones de $\alpha , \beta , \gamma$.
+
+\subsection{De SO(3) a SU(2)}
+
+Recordamos que SU(2) son matrices complejas unitarias de determinante 1. Veamos como se asocian con el grupo que acabamos de estudiar.
+
+\smallskip
+Asociemos a la rotación $R_{\Vec{n}}(\uppsi)$ el 4-vecotor unitario $u^\mu =(cos \frac{\uppsi}{2}, \Vec{n}sen \frac{\uppsi}{2})$. La transformación:
+
+$$\uppsi \to \uppsi '= \uppsi + (2n+1) 2\pi$$
+
+Lleva de $\Vec{u}$ (la parte espacial) a $-\Vec{u}$. Entonces hay una biyección entre $R_{\Vec{n}}(\uppsi)$ y el par ($\Vec{u}$,$-\Vec{u}$), es decir, entre SO(3) y $S^3/\mathds{Z}_2$, la esfera con antípodas identificadas.
+
+\smallskip
+Veamos que los 4-vectores u están en correspondencia 1 a 1 con los elementos de SU(2). Para ello introducimos las matrices de Pauli $\sigma ^i$ que junto con la identidad forman base del espacio vectorial de matrices hermíticas 2x2 y satisfacen $\sigma _i \sigma _j = \delta _{ij} \mathds{1} + i\epsilon _{ijk}\sigma _k$.
+
+\smallskip
+Gracias a que se cumple que $(\Vec{n}\cdot \Vec{\sigma})^2=\mathds{1}$ tenemos que $cos \frac{\uppsi}{2} \mathds{1} -isen \frac{\uppsi}{2} \Vec{n} \Vec{\sigma} = e^{-i\frac{\uppsi}{2}\Vec{n}\Vec{\sigma}}$ que es precisamente una matriz unitaria y de determinante unidad.
+
+Entonces, variando $\uppsi$ en [0,2$\pi $) construimos todo SU(2). Es decir, es el conjunto de matrices unitarias que cumplen:
+
+$$SU(2)= \left \lbrace U_{\Vec{n}}(\uppsi) = e^{-i\frac{\uppsi}{2}\Vec{n}\Vec{\sigma}} , 0 \leq \uppsi < 2\pi \right \rbrace$$
+
+\textbf{Ejercicio:} demostrar esta igualdad (la del seno y el coseno).
+
+\smallskip
+Concluimos que SU(2) es isomorfo a $S^3$ (la 3-esfera) y este es un isomorfismo entre grupos: inferimos el producto en $S^3$ (la esfera vista como grupo) del producto de matrices $U_{\Vec{n}}(\uppsi)$. También deducimos que SO(3) $\simeq$ SU(2)/$Z_2$, es decir que SU(2) es el recubridor universal de SO(3).
+
+\smallskip
+Demostremos que en efecto a cada matriz de SU(2) se le puede asociar una matriz SO(3) y que el producto de SU(2) se corresponde con el producto de rotaciones SO(3) (tenemos un homomorfismo de grupos).
+
+\smallskip
+A cada vector $\Vec{x}=(x_1,x_2,x_3) \in \Vec{R}^3$ le asociamos la matriz hermítica:
+
+$$X=\Vec{x}\Vec{\sigma} = \left ( \begin{array}{cc}
+x_3 & x_1-ix_2  \\
+x_1+ix_2 & -x_3
+\end{array}\right ) \to x_i=\frac{1}{2}Tr(X\sigma _i)$$
+
+y hacemos actuar SU(2) por conjugación sobre X, me mapeo X a X' tal que $X'=UXU^+$ (en realidad $X\in su(2)$ pertenece al álgebra y las cosas que viven en el álgebra se transforman por conjugación, es decir, en la representación adjunta del grupo).
+
+Esta transformación me induce una transformación en $\mathds{R}^3$ según:
+
+$$X'=\Vec{x}'\Vec{\sigma} \to \Vec{x}'=T\Vec{x}$$
+
+Como el determinante de X' es el mismo que el de X estamos ante una T que es una isometría, es decir, no cambia la norma del vector. Necesitamos ver su determinante para concluir si se trata de una rotación o de una reflexión.
+
+\smallskip
+Como en el caso trivial U=$\mathds{1}$ , T debe ser también la identidad y se que SU(2) es conexo, la función continua det(T) no puede saltar al valor -1, así que en efecto concluimos que se trata de una rotación en $\mathds{R}^3$.
+
+\smallskip
+
+
+De hecho se puede comprobar que $X'=U_{\Vec{n}}(\uppsi)XU_{\Vec{n}}(\uppsi)^+$ nos devuelve la expresión que vimos antes para las rotaciones pero multiplicada por las matrices de Pauli:
+
+$$X'=[\delta _{ij} cos \uppsi + n_in_j (1-cos \uppsi) - sen \uppsi \sum _K \epsilon _{ijk} n_k ]\Vec{\sigma}$$
+
+\subsection{Generadores infinitesimales y álgebra de Lie.}
+
+\subsubsection{Generadores de SO(3).}
+
+Las rotaciones de eje fijo $\Vec{n}$ dan lugar a un subgrupo uniparamétrico de SO(3), este subgrupo es isomorfo a SO(2). Asociado a cada uno de estos subgrupos existe un generador $J_\Vec{n}$, hermítico o autoadjunto (generador de las rotaciones en torno al eje $\Vec{n}$). Obtenemos el grupo por exponenciación.
+
+$$R_\Vec{n}(\uppsi)=e^{-i\uppsi J_\Vec{n}}$$
+
+Basta tomar una base de generadores en las direcciones cartesianas:
+
+$$J_k=i\left . \frac{dR_k(\uppsi)}{d\uppsi}\right |_{\uppsi =0}$$
+
+Que explicitamente nos da:
+
+$$J_x=\left ( \begin{array}{ccc}
+ 0 & 0 & 0  \\
+ 0 & 0 & -i \\
+  0 & i & 0
+\end{array}\right) \hspace{0.5cm} J_x=\left ( \begin{array}{ccc}
+ 0 & 0 & i  \\
+ 0 & 0 & 0 \\
+  -i & 0 & 0
+\end{array}\right) \hspace{0.5cm}J_x=\left ( \begin{array}{ccc}
+ 0 & -i & 0  \\
+ i & 0 & 0 \\
+  0 & 0 & 0
+\end{array}\right) $$
+
+Cualquier rotación será la exponenciación de una combinación lineal de estos generadores. Llamando $\Vec{J}$ al vector de componentes $J_x,J_y,J_z$ tenemos:
+
+$$R_\Vec{n}(\uppsi) = e^{-i}\uppsi \Vec{n}\cdot \Vec{J}$$
+
+Con la parametrización de ángulos de Euler, la rotación se puede escribir, también en función de estos generadores como:
+
+$$R(\alpha ,\beta ,\gamma)=e^{i\alpha J_z}e^{-i\beta J_y}e^{-i\gamma J_z}$$
+
+Satisfacen la condición de conmutación bien conocida $[J_i,J_j]=i\epsilon _{ijk}J_k$.
+\smallskip
+
+La forma de Killing no es degenerada y el álgebra es simple, solo tienen un operador de casimir que es (salvo cambio de signo) C=$\Vec{J}^2=J_x^2+J_y^2+J_z^2$, es decir, que conmuta con todos los generadores del grupo (es invariante bajo rotaciones). Se puede diagonalizar simultáneamente los generadores y el invariante casimir.
+
+\smallskip
+\textbf{Los generadores $S_k$ tienen las mismas propiedades que los operadores de momento angular de mecánica cuántica.}
+
+\subsubsection{Generadores de SU(2).}
+
+Toda matriz unitaria y compleja 2x2 puede escribirse como la exponenciación de una H (hermítica y de traza nula para que U tenga las características que se le piden):
+
+$$U=e^{iH}$$
+
+El conjunto de estas H forma un espacio vectorial real de dimensión 3, con base formada por las matrices de Pauli (son generadores del álgebra de SU(2)):
+
+$$H=\sum _{i=1}^3 \eta _k\frac{\sigma _k}{2} \longrightarrow U=e^{\frac{i}{2}\Vec{\eta}\cdot \Vec{\sigma}}$$
+
+Luego $\sigma /2$ juega el mismo papel que J, de este modo, sus conmutadores serán iguales que para estos: $[\frac{\sigma _i}{2},\frac{\sigma _j}{2}]=i\epsilon _{ijk}\frac{\sigma _k}{2}$. Luego forman el mismo álgebra que los J. El álgebra de SU(2) es la misma que es álgebra de SO(3), son dos representaciones unitarias distintas de un mismo álgebra de Lie.
+
+\smallskip
+Todas las representaciones de SU(2) son de SO(3) pero habrá alguna de SO(3) que no los sea de SU(2) al ser de dimensión menor.
+
+\newpage
+
+\textbf{En resumen:}
+
+\begin{itemize}
+\item El álgebra de Lie su(2)$\equiv$ so(3) es la generada por tres generadores $J_k$ con ciertas relaciones de conmutación (ya vistos como elementos abstractos del álgebra).
+
+\item A veces usaremos otra base $\lbrace J_z, J_+, J_- \rbrace$ donde $J_+=J_x+iJ_y$ y $J_-=J_x-iJ_y$. En esta base los conmutadores son [$J_z,J_\pm$]=$\pm J_\pm$ y $[J_+,J_-]=2J_z$. El casimir toma la forma $\Vec{J} ^2=J_z^2 + J_z + J_-J_+$.
+
+\item Al estar interesados en representaciones unitarias, los generadores $J_k$ se llaman hermíticos $J_\pm ^+=J_\mp$. Se puede comprobar que el casimir conmuta con los nuevos generadores $J_+$ y $J_-$.
+\end{itemize}
+
+\subsection{Representaciones unitarias irreducibles de SU(2)}
+
+Ya hemos visto una bidimensional (j=1/2) y una tridimensional (j=1) en mecánica cuántica. Vamos a construirlas todas.
+
+\smallskip
+Consideremos $J_\pm ,J_z$, como $J_\pm$ y $\Vec{J}^2$ conmutan comparten autovectores y además, al ser hermíticos, sus autovalores son reales.
+
+Además $\Vec{J}^2$ es semidefinido positivo (es decir tiene autovalores positivos o cero) al ser el cuadrado de un operador hermítico.
+Podemos escribir sus autovalores de la forma j(j+1) con j real y positivo o cero.
+
+\smallskip
+Llamemos $\ket{j \ m}$ a los autovectores comunes de $\Vec{J}^2$ y $J_z$ tal que:
+
+$$\Vec{J}^2 \ket{j \ m}= j(j+1)\ket{ j \ m}$$
+$$J_z\ket{j \ m}=m \ket{j \ m}$$
+
+Con j real positivo y m real. \textbf{Busquemos más propiedades acerca de m.}
+
+\begin{enumerate}
+\item Actuamos con $J_+$ y $J_-$ sobre el vector $\ket{j \ m}$. Aprovechando la relación $J_\mp J_\pm =\Vec{J}^2- J_z^2 \mp J_z$ podemos hallar el siguiente producto escalar:
+
+$$\bra{ j \ m} J_\mp J_\pm  \ket{j \ m}= [j(j+1) - m^2 \mp m]\braket{j \ m}{j \ m}$$
+
+Estamos hallando la norma pues $J_\mp J_\pm =\mathds{1}$ luego esa norma ha de ser positiva:
+
+$$(j+m)(j-m+1) \geq 0 \hspace{2cm} (j-m)(j+m +1) \geq 0$$
+
+Luego $-j \leq m \leq j$. También tenemos que $J_+ \ket{j \ j}$ ha de ser nulo pues no hay elementos mayores que este, del mismo modo $J_- \ket{j \ -j}=0$ por el mismo argumento pero por abajo.
+
+\item Supongamos que m no es ni j ni -j, en este caso se puede escribir lo siguiente:
+
+$$\Vec{J}^2J_\pm \ket{j \ m} =j(j+1) J_\pm \ket{j \ m}$$
+$$J_z J_\pm \ket{ j \ m}= (m\pm 1)J_\pm \ket{j \ m}$$
+
+Luego llegamos a la conclusión de que $J_\pm \ket{j \ m}$ es autovector de $\Vec{J}^2$ y $J_z$ con los autovalores que vemos en las relaciones de arriba.
+
+\item La secuacia de vectores $\ket{j \ m}, \ J_- \ket{j \ m}, \ \ket{J}_-^2 \ket{j \ m}, \ ...$ si no se anulan serán autovectores de los que hemos visto antes con autovalores $m, m-1, m-2, \ ..., m-p$.
+
+Esta secuencia se anula en el momento en el que p es el último entero tal que $J_-^p \ket{ j \ m} \neq 0$ y debe cumplir que $m-p=-j$. En otras palabras j+m es un entero no negativo.
+
+\item Actuando análogamente con $J_+$ se llega a la conclusión de que j-m es un entero no negativo.
+\end{enumerate}
+
+Por tanto j y m son simultáneamente o enteros o semienteros. Los valores que puede tomar son:
+
+$$j=0,1/2,1,3/2, \ ...$$
+$$m=-j,-j+1,-j+2, \ ... \ , j-1, j$$
+
+El autovalor m toma 2j+1 valores, esto me marca la dimensión del espacio. Eligiendo $\ket{ j \ j}$ con norma 1 construimos la base ortonormal $\ket{j \ m}$ del espacio vectorial de dimensión 2j+1 ($V_j$) por aplicación reiterada de $J_-$ y obtenemos:
+
+$$\boxed{J_\pm \ket{j \ m}=\sqrt{j(j+1)-m(m \pm 1)}\ket{ j \ m \pm 1}}$$
+
+$$\boxed{J_z \ket{j \ m} =m \ket{ j \ m}}$$
+
+Que es la representación de espín j del álgebra su(2).
+
+\subsubsection{Representación de espín de SU(2)}
+
+Bajo la acción de una rotación la matríz $D^j$ de la representación de espín j actúa sobre el espacio vectorial $V_j=lin \lbrace \ket{ j \ m } \rbrace$ del siguiente modo:
+
+$$D^j(U)\ket{j \ m} = \sum _{m=-j}^j \ket{j \ m '}D^j_{m,m'}(U)$$
+
+En la parametrización de los ángulos de euler:
+
+$$D^j_{m,m'}(\alpha , \beta , \gamma)= \bra{j \ m'} D(\alpha , \beta , \gamma ) \ket{j \ m} = e^{-i\alpha m'}d^{j}_{m,m'}(\beta) e^{i\gamma m}$$
+
+usando la matriz de Wigner para simplificar la notación: $d^j_{m,m'}=\bra{j \ m'} e^{-i\beta J_y} \ket{j \ m}$.
+
+\textbf{ Hay alguna relación extra que combiene recordar:}
+
+$$D^j_{m,m'}(\Vec{z},\uppsi)= \bra{j \ m'} e^{-i\uppsi J_z} \ket{j \ m}=e^{-i\uppsi m} \bra{j \ m'} \ket{j \ m}=e^{-i\uppsi m} \delta _{m,m'}$$
+
+$$D^j_{m,m'}(\Vec{y},  \uppsi
+) = \bra{j \ m'} e^{-i\uppsi J_y} \ket{j \ m} = d^j_{m,m'}(\uppsi)$$
+
+$$D^j_{m,m'}(\Vec{x},\uppsi)= \bra{j \ m'} e^{-i\frac{\pi}{2} J_z}e^{i\uppsi J_y} e^{i\frac{\pi}{2}J_z} \ket{j \ m}=e^{i\frac{\pi}{2}(m-m')}d^j_{m,m'}(\uppsi)$$
+
+\smallskip
+
+\textbf{Para rotaciones de ángulo $2 \pi$}:
+
+$$D^j(\Vec{z},2\pi)= (-1)^{2j} \mathds{1}$$
+
+\smallskip
+Y por conjugación se puede llegar al general:
+
+$$D^j(\Vec{n},2\pi)=(-1)^{2j}\mathds{1}$$
+
+\textbf{Conclusión:} si j es entero la matriz que representa una rotación de ángulo $2\pi$ es la unidad pero si fuera semientero sería \textbf{menos} la unidad. Los j enteros tienen una representación par, da lugar a representaciones tensoriales de SO(3). Los j semienteros tienen una representación impar que es la representación espinorial de SO(3). \textbf{Los espinores cambian de signo bajo una rotación de $2\pi$}.
+
+
+\subsection{Producto directo de representaciones de SU(2)}
+
+Consideremos el producto directo de representaciones $j_1$ y $ j_2$ y su descompasición en representaciones irreducibles.
+
+Usando las bases $\{ \ket{j_1 \ m_1}\}, \{ \ket{j_2 \ m_2} \}$ tenemos que la base del producto directo es $ \ket{j_1 \ m_1} \otimes \ket{j_2 \ m_2} \equiv \ket{ j _1 \ m_1 , j_2 \ m_2}$.
+
+Sobre la que los generadores infinitesiamles actúan como $\Vec{J}= \Vec{J}^{(1)}\otimes \mathds{1}^{(2)} + \mathds{1}^{(1)}\otimes \Vec{J}^{(2)} =\Vec{J}^{(1)} + \Vec{J}^{(2)}$.
+
+\smallskip
+Queremos descomponer los vectores $\ket{ j _1 \ m_1 , j_2 \ m_2}$ en la base de autovectores de $\Vec{J}^2=(\Vec{J}^{(1)} + \Vec{J}^{(2)})^2$ y $J_z=J_{1z}+J_{2z}$. Como $\left ( \Vec{J}^{(1)}\right)^2$ y $\left ( \Vec{J}^{(2)}\right)^2$ conmutan entre sí y con $\Vec{J}^2$ y $J_z$ tenemos autovalores comunes a estos 4 operadores que llamamos $\ket{j_1 \ j_2 , J \ M}$ con $j_1$ y $j_2$ fijos.
+
+\bigskip
+\textbf{¿Qué valores pueden tomar J y M?}\textbf{¿Cuál es la matriz de cambio de base?}
+
+\smallskip
+Para M tenemos que:
+
+$$J_z\ket{j_1 \ j_2 , J \ M} = M \ket{j_1 \ j_2 , J \ M}$$
+
+$$J_z\ket{j_1 \ m_1 , j_2 \ m_2}=(m_1+m_2)\ket{j_1 \ m_1 , j_2 \ m_2}$$
+
+Se puede tomar complejo conjugado en la segunda ecuación para obtener lo mismo que en la primera, obtenemos que M=$m_1+m_2$.
+
+\smallskip
+Para J tenemos que, dado que $m_1+m_2 \in (-j_1-j_2,j_1+j_2)$ no hay autovectores con M tal que $|M|>j_1+j_2$, entonces, llamando $n(M)$ al número de vectores que hay para un determinado M podemos hallar la multiplicidad $m_S^{j_1j_2}$, el número de veces que la representación de espín J aparece en la descomposición del producto directo de $j_1$ con $j_2$.
+
+\smallskip
+Los n(M) vectores de autovalor M de $J_z$ vienen de los $m_S^{j_1j_2}$ vectores para los diferentes valores de J comparibles con M.
+
+$$n(M)= \sum _{J\geq |M|}m_S^{j_1j_2}$$
+
+Entonces $m_S^{j_1j_2} = n(J)-n(J+1)$ es 1 si no estamos en J=$J_{max}$ o bien 0 en ese caso. En resumen, los ($2j_2 + 1$)($2j_1+1$) vectores de la base $\ket{j_1 \ m_1,j_2 \ m_2}$ se pueden expresar en términos de vectores $\ket{j_1 \ j_2, J \ M}$ a través de unos coeficientes que los relacionan.
+
+\subsubsection{Coeficientes de Clebsch-Gordan para SU(2)}
+
+Se trata de los elementos de la matriz ortonormal del cambio de base $\ket{j_1 \ m_1,j_2 \ m_2}$ a la $\ket{j_1 \ j_2, J \ M}$. Usando la notación del tema 3 tenemos:
+
+$$C_{j_1 \ m_1 \ j_2 \ m_2 | \ J \ M}=\bra{j_1 \ j_2 , J \ M}\ket{j_1 \ m_1, j_2 \m_2}$$
+
+Luego pueden escribirse los cambios de base:
+
+$$\ket{j_1 \ m_1, \ j_2 \ m_2}=\sum _{|j_1-j_2|}^{j_1+j_2} C_{j_1 \ m_1 \ j_2 \ m_2 | \ J \ M} \ket{j_1 \ j_2 , J \ M}$$
+
+$$\ket{j_1 \ j_2, \ J \ M}=\sum _{-j_1}^{j_1} C_{j_1 \ m_1 \ j_2 \ m_2=M-m_1 | \ J \ M} \ket{j_1 \ m_1 , j_2 \ m_2=M-m_1}$$
+
+El valor de estos coeficientes de pueden deducir (salvo fase relativa). El convenio usual es que para valor de J se elige $\bra{j_1 \ j_2 , J \ M}\ket{j_1 \ m_1, j_2 \m_2} \in \mathds{R}$.
+
+El resto de vectores quedan entonces determinados unívocamente por como actúan $J_\pm$ sobre estos estados (todos los coeficientes de C-G son reales).
+
+\textbf{Ejercicio:} calcular la descomposición y coeficientes de CG de $\frac{1}{2}\otimes \frac{1}{2}$.
+
+\subsection{Medida invariante de SU(2)}
+
+Tenemos que si U,V son dos elementos de SU(2) es posible definir una medida invariante por la derecha e invariante por la izquierda además de por inversión. Fijada la normalización, esta medida es única y recibe el nombre de medida de Haar. La forma explícita depende de la parametrización utilizada. En parametrización ángulo-eje:
+
+$$d_\mu (U)=\frac{1}{2}sen^2(\frac{\uppsi}{2})sen(\theta) d\uppsi d\theta d\phi$$
+
+Esta normalizada tal que su volumen sea el de una esfera unidad.
+
+$$V(SU(2))=2\pi ^2$$
+
+Para SO(3) en el que $\uppsi \in [0,\pi )$ (recorre la mitad del intervalo) tenemos que el volumen $V(SO(3))=\pi ^2$.
+
+\smallskip
+En ángulos de euler la medida es:
+
+$$d_\mu (U)=\frac{1}{8}sen \beta d\alpha d\beta d\gamma$$
+
+donde $\gamma \in [0,4\pi], \ \alpha \in [0,2\pi], \ \beta \in [0,\pi]$.
+
+\subsection{Ortogonalidad, completitud y caracteres}
+
+$$(2j+1)\int \frac{d_\mu (U)}{2\pi^2} D^j_{mn}(U)\bar{D}_{m'n'}^{j'}(U)=\delta _{j,j'}\delta _{m,m'}\delta _{n,n'}$$
+
+$$\sum _{j,m,n} (2j+1)D^j_{mn}(U)\bar{D}_{m'n'}^{j'}(U')=2\pi ^2 \delta (U,U')$$
+
+donde esa delta es $\delta (U,U')=\int d_\mu (U')\delta (U,U') f(U') =f(U)$.
+
+Se puede escribir explícitamente en ángulos de euler:
+
+$$\delta (U,U')=\delta (\alpha - \alpha ')\delta (cos \beta - cos \beta ')\delta (\gamma - \gamma ')$$
+
+
+Estas relaciones implican que las $D_{m,n}^j$ forman una base ortogonal y completa del espacio de funciones de cuadrado integrable en SU(2), que es el conocido teorema de Peter-Weyl.
+
+\smallskip
+Los caracteres de las representaciones de SU(2) son
+
+$$\mathcal{X}_j(U)=\mathcal{X}_j(\uppsi)=trD^j(\Vec{n},\uppsi)=trD^j(\Vec{z},\uppsi)=\sum _{m=-j}^j e^{im\uppsi}=\frac{sin (\frac{2j+1}{2}\uppsi)}{sin \frac{\uppsi}{2}}$$
+
+Estos caracteres son los llamados polinomios de Chebyshev de segunda clase de la variable $2cos\frac{\uppsi}{2}$, en particular:
+
+$$\mathcal{X}_0(\uppsi)=1, \hspace{0.2cm} \mathcal{X}_{1/2}(\uppsi)=2cos \frac{\uppsi}{2}, \hspace{0.2cm} \mathcal{X}_1=1+2cos\uppsi , \ ...$$
+
+Estos caracteres tienen propiedades de unitariedad y realidad ($\mathcal{X}_i(U^{-1}=\bar{\mathds{X}}_i(U)=\mathcal{X}_i(U)$), paridad y periodicidad ($\mathcal{X}_j(-U)=\mathcal{X}_j(2\pi + \uppsi) =(-1)^{2j}\mathcal{X}_j(U)$), ortogonalidad y completitud (que no la pongo porque me suda los cojones).
+
+\subsection{Teorema de Wigner-Eckart}
+
+Si un sistema fisico admite el grupo de simetría SU(2) las transformaciones de simetría implican relaciones entre los observables físicos (operadores) que pertenecen a la misma representación irreducible. En otras palabras, cantidades físicas se corresponden con tensores irreducibles.
+
+\smallskip
+Sea un conjunto de operadores tensoriales irreducibles que se transforman de acuerdo a la representación de espín j.
+
+$$D^j(g) Q^{\Tilde{j}}_{\Tilde{m}} D^{j'}(g^{-1})=\sum _{m'}Q^\Tilde{j}_{m'} D^{\Tilde{j}}_{m'\Tilde{m}}(g)$$
+
+Entonces sus elementos de matriz entre estados físicos (vectores) irreducibles satisfacen el teorema de W-E.
+
+$$\bra{j' \ m'}Q^{\Tilde{j}}_{\Tilde{m}} \ket{j \ m}=C_{j \ m, \ \Tilde{j} \ \Tilde{m} \ | \ j' \ m'}(j'||\Tilde{Q}'||j)$$
+
+Sin ningún conocimiento específico de la dinámica del sistema concluimos:
+
+\begin{enumerate}
+\item Reglas de selección, el elemento de matriz reducida se anula a menos que se cumplan las relglas de selección.
+
+
+\end{enumerate}
+
+\subsection{Aplicación física: isospín}
+
+Los hadrones forman multipletes (tienen masas muy parecidas pero distintas cargas eléctricas). Si se ignora la interacción electromagnética cada multiplete está formado por estados degenerados y se corresponde con una representación irreducible del grupo de simetría.
+
+\smallskip
+Aquí el grupo de simetría es SU(2) ya que solo hay un observable cuántico (la carga eléctrica) que distinga los elementos de cada multiplete. El candidato a la simetría es un grupo compacto con un casimir (de rango 1) con representaciones unitarias y finitas.
+
+\smallskip
+A la cantidad conservada bajo la acción de SU(2) se le llama espín isotópico o isospín. Llamamos $\Vec{I}^2$ al casimir e $I_z$ al generador infinitesimal en la dirección z. Sabemos que dada una representación irreducible de SU(2) de espín I tengo una base de autoestados $\ket{I \ I_z}$ tal que la acción del casimir y el generador es:
+
+$$\Vec{I}^2 \ket{I \ I_z} = I(I+1)\ket{I \ I_z}$$
+
+$$I_z \ket{I \ I_z} = I_z \ket{I \ I_z}$$
+
+Se dice que este isospín es un buen número cuántico dado que se conserva en las interacciones que estudiamos (al conmutar con los generadores de la representación de estas interacciones). $I_z$ se corresponde con las diferentes cargas eléctricas dentro del multiplete.
+
+\smallskip
+Los nucleones forman un doblete luego viven en la representación de espín 1/2 que es la representación irreducible de dimensión 2. Los piones forman un triplete y por tanto serán la representación irreducible de espín 1 (de dimensión 3).
+
+$$p=\ket{1/2 \ 1/2} \hspace{1cm} n=\ket{1/2 \ -1/2}$$
+
+$$\pi^+ = \ket{1 \ 1} \hspace{0.5cm} \pi^0 = \ket{1 \ 0} \hspace{0.5cm} \pi^- = \ket{1 \ -1} $$
+
+Podemos ahora analizar procesos nucleares a través de las reglas que habíamos desarrollado para esta representación de SU(2). Veamos por ejemplo la desintegración:
+
+$$N \to N + \pi$$
+$$\ket{1/2 \ -1/2} \to \ket{1/2 \ \pm 1/2} + \ket{1 \ \pm 1,0}$$
+
+En principio está permitido por las reglas de selección aunque solo para algunos valores de la carga.
+
+\smallskip
+Análogamente para procesos de scattering del tipo $N+\pi \to N + \pi$ se pueden aplicar estas reglas, por ejemplo sería posible tener:
+
+$$p + \pi ^+ \to \pi ^+ + p$$
+
+Un proceso que conserva la carga 3/2. Un proceso menos trivial (de $I_z=$1/2) es:
+
+$$p + \pi ^0 \to n + \pi ^+$$
+
+Llamamos T al operador responsable de estas transiciones, se puede deducir a través del teorema de Wigner-Eckart más información de esta simetría.
+
+\smallskip
+La composición $\frac{1}{2}\otimes 1$ da lugar a la siguiente descomposición de Clebsch-Gordan:
+
+$$\ket{\left ( \frac{1}{2},1\right) \ \frac{3}{2} \ \frac{3}{2}}=\ket{\frac{1}{2} \ \frac{1}{2} , \ 1 \ 1}$$
+
+$$\ket{\left ( \frac{1}{2},1\right) \ \frac{3}{2}, \frac{1}{2}}= \frac{1}{\sqrt{3}}\left ( \sqrt{2} \ket{\frac{1}{2} \ \frac{1}{2}, \ 1 \ 0 } + \ket{\frac{1}{2} \ \frac{-1}{2} , \ 1 \ 1}\right)$$
+
+$$\ket{\left ( \frac{1}{2},1\right) \ \frac{3}{2} \ -\frac{1}{2}}= \frac{1}{\sqrt{3}}\left ( \sqrt{2} \ket{\frac{1}{2} \ \frac{1}{2}, \ 1 \ -1} + \ket{\frac{1}{2} \ \frac{-1}{2} , \ 1 \ 0}\right)$$
+
+$$\ket{\left ( \frac{1}{2},1\right) \ \frac{3}{2} \ -\frac{3}{2}}=\ket{\frac{1}{2} \ -\frac{1}{2} , \ 1 \ -1}$$
+
+Y por ortonormalidad sacamos los de isospín 1/2:
+
+$$\ket{\left ( \frac{1}{2},1\right) \ \frac{1}{2} \ \frac{1}{2}}= \frac{1}{\sqrt{3}}(-\ket{\frac{1}{2} \ \frac{1}{2} ,\ 1 \ 0} + \sqrt{2} \ket{\frac{1}{2} \ -\frac{1}{2} ,\ 1 \ 1})$$
+
+$$\ket{\left ( \frac{1}{2},1\right) \ \frac{1}{2} \ -\frac{1}{2}}= \frac{1}{\sqrt{3}}(-\sqrt{2}\ket{\frac{1}{2} \ \frac{1}{2} ,\ 1 \ -1} + \ket{\frac{1}{2} \ -\frac{1}{2} ,\ 1 \ 0})$$
+
+Invirtiendo estas relaciones llegamos a:
+
+$$\ket{p, \ \pi ^-}=\frac{1}{\sqrt{3}}(\ket{\frac{3}{2},\ -\frac{1}{2}} - \sqrt{2} \ket{\frac{1}{2}, \ -\frac{1}{2}})$$
+
+$$\ket{n, \ \pi ^0}=\frac{1}{\sqrt{3}}(\sqrt{2}\ket{\frac{3}{2},\ -\frac{1}{2}} -\ket{\frac{1}{2}, \ -\frac{1}{2}})$$
+
+El teorema de Wigner-Eckart nos dice que esta simetría, al ser isomorfa a SU(2) obliga a una invarianza de isoespín que se traduce en:
+
+$$\bra{I \ I_z}\mathcal{T}\ket{I' \ I'_z}=\mathcal{T}_I \delta _{I, I'}\delta _{I_z \I_z'}$$
+
+Entonces los elementos de matriz del operador de transición entre los diferentes estados solo depende del isospín:
+
+$$\bra{p \ \pi ^+}\mathcal{T}\ket{p \ \pi ^+}=\mathcal{T}_{3/2}$$
+
+$$\bra{p \ \pi ^-}\mathcal{T}\ket{p \ \pi ^-}$$
+
+
+$$\text{Aqui falta algo }\bra{n \ \pi ^0}\mathcal{T}\ket{p \ \pi ^-}$$
+
+Encontramos que las amplitudes de transición satisfacen
+
+$$\sqrt{2} \bra{n \ \pi ^0}\mathcal{T}\ket{p \ \pi ^-} + \bra{p \ \pi}\mathcal{T}\ket{p \ \pi}=\bra{p \ \pi ^+} \mathcal{T} \ket{p \pi ^+} = T_{3/2}$$
+
+Además implica desigualdades triangulares entre los módulos al cuadrado de las amplitudes de transición (o secciones eficaces $\sigma$).
+
+$$[\sqrt{\sigma (\pi ^-p \to \pi ^- \ p)} - \sqrt{2\sigma (\pi ^- \ p \to \pi ^0 n)}]^2\leq \sigma (\pi ^+ \ p \to \pi ^+ p) \leq [\sqrt{\sigma (\pi ^- p \to \pi ^- \ p)} + \sqrt{2\sigma (\pi ^- \ p \to \pi ^0 n)}]^2$$
+
+Que se ha verificado experimentalmente. Es más, se ha encontrado que experimentalmente a una energía de 180MeV las secciones eficaces verifican:
+
+$$\frac{\sigma (\pi ^+ p \to \pi ^+ \ p)}{\sigma (\pi ^-p \to \pi ^- \ p)}=9 \hspace{1cm} \frac{\sigma (\pi ^-p \to \pi ^0 \ p)}{\sigma (\pi ^-p \to \pi ^- \ p)}=2$$
+
+Que sería lo que obtendríamos de los elementos de matriz $\braket{\mathcal{T}}$ si $\mathcal{T}_{1/2}=0$. Esto indica que a dicha energía el canal $I=\frac{3}{2}$ domina y que existe un estado intermedio $\pi N$ de isospín 3/2 correspondiente a una partícula muy inestable (resonancia) y que se denota por $\Delta$ con cuatro estados de carga $\Delta ^{++}, \Delta ^{+}, \Delta ^{0}$ y $\Delta ^{-}$ cuya contribución domina esta amplitud de scattering.
+
+\subsection{Rotación de funciones de onda (en representación de posiciones)}
+
+veamos con más detenimiento las propiedades de transformación inducidas sobre funciones, no solo escalares si no multicomponentes.
+
+$$[f'(\Vec{x}')=f(\Vec{x}) \leftrightarrow f'(\Vec{x})=f(R^{-1}\Vec{x})]$$
+
+Aquí vamos a entender estas funciones como las funciones de onda de un sistema cuántico, luego el espacio vectorial es un espacio de Hilbert.
+
+\smallskip
+Sea el espacio de representación $\mathcal{H}=L^2(\mathds{R}^3,d\Vec{x})$ de vectores (estados) $\ket{\uppsi}=\int d^3\Vec{x} \uppsi (\Vec{x})\ket{\Vec{x}}$
+
+La transformación $\Vec{x} \to \Vec{x}'=R\Vec{x}$ induce la transformación a los vectores de la base:
+
+$$\ket{\Vec{x}'}=\ket{R\Vec{x}}$$
+
+Y a los estados:
+
+$$\ket{\uppsi '}=U(R)\ket{\uppsi}=\int d^3\Vec{x} \uppsi (\Vec{x})(R^{-1}\Vec{x})\ket{\Vec{x}}$$
+
+Se ve que para funciones escalares:
+
+$$\uppsi '(\Vec{x})=\uppsi (R^{-1}\Vec{x})$$
+
+
+Veamos como generalizar eso a multicomponentes en los espinores de Pauli (etiquetados por un número cuántico discreto, es decir espín). Los espinores de Pauli son objetos con espín $\pm \frac{1}{2}$. La base no es solo los autovectores del operador posición si no que se le añade la etiqueta del espín.
+
+$$\{ \ket{\Vec{x} \ \sigma},  \ \sigma = \pm \frac{1}{2}\}$$
+
+Se transforma según (metiendo la D que transforma el espín):
+
+$$U(R)\ket{\Vec{x}, \ \sigma} = \ket{R\Vec{x}, \ \lambda} \ D_{\lambda \ \sigma}^{1/2}(R)$$
+
+Entonces un estado arbitrario se transformará según:
+
+$$\ket{\uppsi} = \sum _\sigma \int d^3\Vec{x} \uppsi _\sigma (\Vec{x}) \ket{\Vec{x}, \ \sigma} \to \ket{\uppsi '}$$
+
+$$\ket{\uppsi '}= \sum _\sigma \int d^3\Vec{x} \uppsi _\sigma (\Vec{x})\ket{R\Vec{x}, \ \lambda} D_{\lambda \ \sigma}^{1/2} (R)$$
+
+Luego la función de onda transformada:
+
+$$\uppsi '_\lambda (\Vec{x})= D^{1/2}_{\lambda \ \sigma}(R) \uppsi _\sigma (R^{-1}\Vec{x})$$
+
+Que se puede generalizar a otro espín sin más que cambiar el superínidice por el espín que toque en cada caso.
+
+\smallskip
+\textbf{Definición:} un conjunto de funciones multicomponente de un vector real se dice que forma una función de onda irreducible o bien un campo irreducible de espín j si esta se transforma bajo rotaciones como hemos expuesto antes. Serán escalares si j=0 y vectoriales si j=1, el espinor de Dirac es la suma de dos de Pauli.
+
+
+\newpage
