@@ -234,9 +234,3 @@ Teorema de reordenamiento
 ### 7.4 Representación sobre estados de una partícula
 
 ### 7.5 Campo de Klein-Gordon
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTg0NTEwOSwxMzc5OTM3MzA1LC05Mj
-IyODY5MDYsMjEzMzQzODUyOSwtNjgwNDE2Nzk2LDg1Mjk4NjYw
-NV19
--->
