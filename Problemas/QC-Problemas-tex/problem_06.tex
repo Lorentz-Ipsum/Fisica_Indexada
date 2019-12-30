@@ -1,0 +1,44 @@
+Demostrar  que  el  hamiltoniano  de  un  campo  electromagnético  libre  contenido  en  una  caja  cúbica  de volumen $V$ con condiciones de contorno periódicas puede escribirse como:
+
+$$
+\hat{H}=\frac{1}{2} \sum_{\bar{k}}\left(\hat{\bar{P}}^{2}+\omega_{\bar{k}}^{2} \hat{\bar{Q}}^{2}\right)
+$$
+
+\begin{solution}\ \\
+Hamiltoniano del campo libre:
+
+$$
+H=\int_{V} d^{3} \vec{x} \frac{1}{2}\left(\vec{E}^{2}+\vec{B}^{2}\right)=\int_{-0} d \vec{x} \frac{1}{2}\left[\dot{\vec{A}}^{2}+(\nabla \times \vec{A})^{2}\right]=\frac{V}{2}\left[\dot{\vec{A}} \vec{A}^{*}+\omega_{2}^{2} A A^{*}\right]
+$$
+
+$$
+\widehat{A}=\sum_{k=1} \hat{a}_{k \times l} e^{-l \omega x}+\hat{a}^{+} e^{k t x}
+$$
+
+$$
+\dot{\hat{A}}=-i \omega\left(\hat{a}_{k \lambda} e^{-i k x}+\hat{a}_{k+1}^{+} e^{+i k x}\right) \quad k x=k^{\mu} x_{\mu}
+$$
+
+$$
+H=\frac{V}{2}\left(\hat{A} \dot{A}^{*}+\omega^{2} \hat{A} \hat{A}^{*}\right)=V \omega^{2}\left(\hat{a} \hat{a}^{+}+\hat{a}^{+} \hat{a}\right)
+$$
+
+$$
+\begin{array}{l}
+{\hat{Q}=\sqrt{V}\left(a+a^{+}\right) ; \hat{P}=-2 \omega \sqrt{V}\left(a-a^{+}\right)} \\
+{\hat{a}=\frac{1}{2 \sqrt{V}}\left(\hat{Q}+\frac{1}{i \omega} \hat{P}\right) \quad ; \quad \hat{a}^{+}=\frac{1}{2 \sqrt{V}}\left(\hat{Q}-\frac{1}{i \omega} \hat{P}\right)}
+\end{array}
+$$
+
+$$
+\begin{array}{l}
+{a^{\prime} \hat{a}=\frac{1}{4 V}\left[\hat{Q}^{2}+\frac{\hat{Q} \hat{P}}{i \omega}-\frac{\hat{P} \hat{Q}}{i \omega}+\frac{1}{\omega^{2}} \hat{P}^{2}\right]} \\
+{\hat{a} \hat{a}^{+}=\frac{1}{4 V}\left[\hat{Q}^{2}-\frac{\hat{Q} \hat{P}}{\hat{\mu}}+\frac{\hat{P Q}}{1 \omega}+\frac{1}{\omega^{2}} \hat{P}^{2}\right]} \\
+{\hat{a}^{+} \hat{a}+a \hat{a}^{+}=\frac{1}{V \omega^{2}}\left(Q^{2} \omega^{2}+\hat{P}^{2}\right)}
+\end{array}
+$$
+
+$$
+\boxed{H=V \omega^{2}\left(\hat{a}^{+} \hat{a}+a \hat{a}^{+}\right)=Q^{2} \omega^{2}+\hat{P}^{2}}
+$$
+\end{solution}
