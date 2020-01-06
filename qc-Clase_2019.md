@@ -23,6 +23,10 @@ El que vaya primero la conjugada de donde viene? Tiene que ver con lo del orden 
 
 ### Problemas propios
 
+# Bibliografia
+Peskin 5 primeros caps
+
+
 
 
 ---

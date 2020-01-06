@@ -46,28 +46,9 @@
 - Un sistema físico se describe por un ket perteneciente al espacio dde estados del sistema
 - La ecolución temporal del estado se obtiene con la actuación del operador de Hamilton
 - Lo que cambia del caso no relativista al relativista es el espacio de estados y la forma del hamiltoniano
-
-> **Ejemplo**: Particula no relativista en una dimensión
-> - Al ser cuántico recurrimos a las reglas de cuantización canónicas:
-
-> Establecemos el espacio de estados del sistema
-
-> Introducimos el hamiltoniano ( el correcto lo da el sistema )
-
-- Representación del sistema:
-	- Coger una base
-		- Base de posiciones: Autovalores del operador $X$
-	 	- Base de momentos: Autovalores del operador $P$
-	- Relación de ortonormalidad
-	- Relación de cierre ( o completitud)
-
-- Partícula en un estado...
-	- Función de onda
-	- Estado abstracto
-
-- Cambio de base
-
-> Función de onda = Amplitud de probabilidad, comonentes del estado del sistema en una base bien definida.
+- Eg: Particula no relativista en una dimensión
+	- Al ser cuántico recurrimos a las reglas de cuantización canónicas:
+- Espacio de estados del sistema
 
 ### 1.2 Ecuación de Klein-Gordon
 
@@ -86,6 +67,7 @@
 	- Ecuaciones de Maxwell
 	- Cuadrivector potencial
 	- Dinámica relativista
+		- Acción
 		- Momento canónico conjugado
 		- Hamiltoniano
 		- Operador cuadrimomento
@@ -94,62 +76,105 @@
 
 ### 1.3 Ecuación de Dirac
 
-- Espinores
-- Hamiltoniano de Dirac
-- Cuadriespinor
+- Propiedades/condiciones
+	- Espinores
+	- Hamiltoniano de Dirac
+	- Cuadriespinor
 - Ecuación de Dirac compacta
 	- Notación de Feynmann
 	- Matrices gamma
 - Representaciones
 	- De Dirac
+		- Matrices de Pauli
 	- De Weyl
 - Propiedades de la matriz de Dirac
 	- Conjugado de Dirac
+	- Conservación de la 4corriente
 - Teoría de Maxwell-Dirac
 	- Densidad lagrangiana
+	- Ecuación de Maxwell-Dirac
 - Límite no relativista de la ecuación de Dirac
+	- Espinores
 	- Funciones de evolución lenta
 	- Reducción no relativista de la ecuación de Dirac
 	- Matrices de espín
 - Ecuación de Pauli
 	- Momento magnético de espín
 	- Radio giromagnético
-- Estructura fina
+- Átomo de hidrógeno
+	- Estructura fina
 	- Potencial del átomo de hidrógeno
 	- Corrección relativista
 	- Efecto Lamb e hiperfina
+- Ecuación de Dirac en el caso general
 	- Representación de Weyl
 		- Onda plana
 		- Ansatz
 		- Biespinor
+		- Soluciones
+			- Problemas de las soluciones
 		- Helicidad
+			- Operadores
 - Solución de la ecuación de Dirac para partícula libre
-- Mar de Dirac
+	- Estados de energia negativa
+	- Mar de Dirac
 
 
 
 --------------------
 
 
-        ██████╗ ███████╗███████╗██╗  ██╗██╗███╗   ██╗
-        ██╔══██╗██╔════╝██╔════╝██║ ██╔╝██║████╗  ██║
-        ██████╔╝█████╗  ███████╗█████╔╝ ██║██╔██╗ ██║
-        ██╔═══╝ ██╔══╝  ╚════██║██╔═██╗ ██║██║╚██╗██║
-        ██║     ███████╗███████║██║  ██╗██║██║ ╚████║
-        ╚═╝     ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
+             ▄███████▄    ▄████████    ▄████████    ▄█   ▄█▄  ▄█  ███▄▄▄▄
+            ███    ███   ███    ███   ███    ███   ███ ▄███▀ ███  ███▀▀▀██▄
+            ███    ███   ███    █▀    ███    █▀    ███▐██▀   ███▌ ███   ███
+            ███    ███  ▄███▄▄▄       ███         ▄█████▀    ███▌ ███   ███
+          ▀█████████▀  ▀▀███▀▀▀     ▀███████████ ▀▀█████▄    ███▌ ███   ███
+            ███          ███    █▄           ███   ███▐██▄   ███  ███   ███
+            ███          ███    ███    ▄█    ███   ███ ▀███▄ ███  ███   ███
+           ▄████▀        ██████████  ▄████████▀    ███   ▀█▀ █▀    ▀█   █▀
+
+
+--------------------
+
+--------------------
+
+        ████████╗    ██████╗
+        ╚══██╔══╝    ╚════██╗
+           ██║        █████╔╝
+           ██║       ██╔═══╝
+           ██║       ███████╗
+           ╚═╝       ╚══════╝
+
+--------------------
+
+##
+
+
+--------------------
+
+        ████████╗    ██████╗
+        ╚══██╔══╝    ╚════██╗
+           ██║        █████╔╝
+           ██║        ╚═══██╗
+           ██║       ██████╔╝
+           ╚═╝       ╚═════╝
+
+--------------------
+
+
 
 
 --------------------
 
 
---------------------
-
-
-         ▄▄ •  ▄▄▄· ▄▄▌  ▪   ▐ ▄ ·▄▄▄▄
-        ▐█ ▀ ▪▐█ ▀█ ██•  ██ •█▌▐███▪ ██ ▪
-        ▄█ ▀█▄▄█▀▀█ ██▪  ▐█·▐█▐▐▌▐█· ▐█▌ ▄█▀▄
-        ▐█▄▪▐█▐█ ▪▐▌▐█▌▐▌▐█▌██▐█▌██. ██ ▐█▌.▐▌
-        ·▀▀▀▀  ▀  ▀ .▀▀▀ ▀▀▀▀▀ █▪▀▀▀▀▀•  ▀█▄▀▪
+             ▄██████▄     ▄████████  ▄█        ▄█  ███▄▄▄▄   ████████▄   ▄██████▄
+            ███    ███   ███    ███ ███       ███  ███▀▀▀██▄ ███   ▀███ ███    ███
+            ███    █▀    ███    ███ ███       ███▌ ███   ███ ███    ███ ███    ███
+           ▄███          ███    ███ ███       ███▌ ███   ███ ███    ███ ███    ███
+          ▀▀███ ████▄  ▀███████████ ███       ███▌ ███   ███ ███    ███ ███    ███
+            ███    ███   ███    ███ ███       ███  ███   ███ ███    ███ ███    ███
+            ███    ███   ███    ███ ███▌    ▄ ███  ███   ███ ███   ▄███ ███    ███
+            ████████▀    ███    █▀  █████▄▄██ █▀    ▀█   █▀  ████████▀   ▀██████▀
 
 
 --------------------
