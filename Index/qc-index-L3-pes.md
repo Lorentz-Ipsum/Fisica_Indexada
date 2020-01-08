@@ -82,11 +82,26 @@
 
 ### 3.5 Cuantización del campo de Dirac
 
-- Espín y estadística: El propagador de Dirac
+#### 3.5.1 Espín y estadística: El propagador de Dirac
+
+	- El campo de Dirac cuantizado
+	- El propagador de Dirac
 
 ### 3.6 Simetrías discretas de la teoría de Dirac
 
-- Paridad, inversión temporal y conjugación de carga
+- Subconjuntos del grupo de Lorentz
+
+#### 3.6.1 Paridad, inversión temporal y conjugación de carga
+
+- Paridad
+	- Par
+	- Impar
+- Inversión temporal
+	- Condición unitaria
+	- Operador antilineal
+	- Inversión temporal de operadores aniquilación
+- Conjugación de carga
+- SUmario de C, P y T
 
 --------------------
 

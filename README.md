@@ -37,3 +37,9 @@ Problemas / [Tex Main](Problemas/QC-Problemas-tex/main.tex)
 Resumen / [Tema 1](Resumen/qc-resumen-t1.md)
 
 ---
+
+
+# Cool Wikipedia Links
+
+[Dirac Spinor](https://en.wikipedia.org/wiki/Dirac_spinor)
+[Gamma Matrices](https://en.wikipedia.org/wiki/Gamma_matrices)

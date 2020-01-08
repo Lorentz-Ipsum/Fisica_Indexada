@@ -28,6 +28,16 @@
 
 - Espín y estadística: El propagador de Dirac
 
+	(3.97) Poisson de los operadores creación y destrucción
+
+	- El campo de Dirac cuantizado
+
+	(3.99) (3.100) Operadores de campo
+
+	(3.101)-(3.102) Reglas de anticonmutación
+
+	- El propagador de Dirac
+
 ### 3.6 Simetrías discretas de la teoría de Dirac
 
 - Paridad, inversión temporal y conjugación de carga
