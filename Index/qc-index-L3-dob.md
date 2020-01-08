@@ -1,4 +1,3 @@
-# Index LVL 2
 
 --------------------
 
@@ -15,10 +14,43 @@
 
 --------------------
 
+
+--------------------
+
+        ████████╗     ██████╗
+        ╚══██╔══╝    ██╔═████╗
+           ██║       ██║██╔██║
+           ██║       ████╔╝██║
+           ██║       ╚██████╔╝
+           ╚═╝        ╚═════╝
+
+--------------------
+
 ## Tema 0: Introducción e historia
 
 - Dos grandes revoluciones en la física en el SXX: QM y GR.
 - Al juntarlas se desarrolla la QED:
+	- Régimen cuantico
+	- Cualquier velocidad
+	- Da lugar a genómenos nuevos:
+		- Existencia de antipartículas
+		- Posibilidad de producir partículas
+		- Conexión espín-estadística:
+			- Entero: BE
+			- Semientero: FD
+		- Teorema CPT
+			- No existe invariancia uno a uno
+			- Si existe la conjunta
+		- Modelo Estándar.
+
+--------------------
+
+        ████████╗     ██╗
+        ╚══██╔══╝    ███║
+           ██║       ╚██║
+           ██║        ██║
+           ██║        ██║
+           ╚═╝        ╚═╝
 
 --------------------
 
@@ -110,6 +142,15 @@
 
 --------------------
 
+        ████████╗    ██████╗
+        ╚══██╔══╝    ╚════██╗
+           ██║        █████╔╝
+           ██║       ██╔═══╝
+           ██║       ███████╗
+           ╚═╝       ╚══════╝
+
+--------------------
+
 ## Tema 2 : Cuantización del campo electromagnético.
 
 ### 2.1 Cuantización canónica
@@ -118,24 +159,75 @@
 - Formalismo Hamiltoniano
 - Cuantización
 - El oscilador armónico cuántico
+	- Resolución algebraica
+	- Operadores escalera y número
+	- Propiedades
 
 ### 2.2 Cuantización del campo electromagnético
 
 - Campo electromagnético clásico
+	- Cuadripotencial y cuadricorriente
+	- Ecuaciones de Maxwell
+	- Gauge
+		- Condición de Lorentz
+	- En el vacío
+	- Gauge de radiación
+		- Vector de polarización
+	- Gauge transverso
+		- Base de polarización
 - Campo electromagnético en una cavidad
+	- Condiciones de contorno periódicas
+	- Desarrollo de Fourier
+	- Densidad de AutoestadosFórmula de cálculo vectorial
+	- Solución más General
+	- Potencial vector en una cavidad
+		- Cambio de variable
 - Cuantización
+	- Operadores
+	- Estados número
+	- Base de números de ocupación
+	- Operadores de campo
+	- Representaciones
+		- Representación de Schrödinger
+		- Representación de Heisenberg
+			- Evolución operadores escalera
+	- Valores esperados
 
 ### 2.3 Emisión y absorción de fotones por átomos
 
 - Estado estacionario
 - Base de Estados
 - Absorción y Emisión de un fotón
+	- Absorción
+		- Aproximación semiclçasica
+	- Emisión
+		- Emisión inducida
+		- Emisión espontánea
 
 ### 2.4 Teoría de perturbaciones dependientes del tiempo
 
 - Hamiltoniano de interacción
+	- Probabilidad
+	- Serie de potencias
 - Elementos de Matriz
-- Aplicaciones: Emisión espontánea
+	- Aproximación de órden 0
+	- Aproximación de órden 1: Aproximación de Born
+- Aplicaciones; Emisión espontánea
+	- Aproximación dipolar
+	- Elementos de Matriz
+	- Hamiltoniano de interacción en Aproximación dipolar
+	- Vida media de un estado excitado
+		- Autoestados con armónicos esféricos
+		- Probabilidad de transición
+
+--------------------
+
+        ████████╗    ██████╗
+        ╚══██╔══╝    ╚════██╗
+           ██║        █████╔╝
+           ██║        ╚═══██╗
+           ██║       ██████╔╝
+           ╚═╝       ╚═════╝
 
 --------------------
 
@@ -205,6 +297,15 @@
 
 --------------------
 
+        ████████╗    ██╗  ██╗
+        ╚══██╔══╝    ██║  ██║
+           ██║       ███████║
+           ██║       ╚════██║
+           ██║            ██║
+           ╚═╝            ╚═╝
+
+--------------------
+
 ## Tema 4: Matriz S, secciones eficaces y vidas medias.
 
 ###
@@ -247,6 +348,15 @@
 
 --------------------
 
+        ████████╗    ███████╗
+        ╚══██╔══╝    ██╔════╝
+           ██║       ███████╗
+           ██║       ╚════██║
+           ██║       ███████║
+           ╚═╝       ╚══════╝
+
+--------------------
+
 ## Tema 5: Cuantización canónica de campos fermiónicos.
 
 - Campos fermiónicos libres
@@ -259,6 +369,16 @@
 - Espacio de Fock
 	- Principio de exclusión de Pauli
 - La función de dos puntos o Propagador
+
+--------------------
+
+        ████████╗     ██████╗
+        ╚══██╔══╝    ██╔════╝
+           ██║       ███████╗
+           ██║       ██╔═══██╗
+           ██║       ╚██████╔╝
+           ╚═╝        ╚═════╝
+
 
 --------------------
 
@@ -286,219 +406,3 @@
 	- Ultrarrelativista
 - Dispersión Bhaba
 - Dispersión Compton
-
-
-
---------------------
-
-
-             ▄███████▄    ▄████████    ▄████████    ▄█   ▄█▄  ▄█  ███▄▄▄▄
-            ███    ███   ███    ███   ███    ███   ███ ▄███▀ ███  ███▀▀▀██▄
-            ███    ███   ███    █▀    ███    █▀    ███▐██▀   ███▌ ███   ███
-            ███    ███  ▄███▄▄▄       ███         ▄█████▀    ███▌ ███   ███
-          ▀█████████▀  ▀▀███▀▀▀     ▀███████████ ▀▀█████▄    ███▌ ███   ███
-            ███          ███    █▄           ███   ███▐██▄   ███  ███   ███
-            ███          ███    ███    ▄█    ███   ███ ▀███▄ ███  ███   ███
-           ▄████▀        ██████████  ▄████████▀    ███   ▀█▀ █▀    ▀█   █▀
-
-
---------------------
-
-## Capitulo 1: Introducción: Producción por pares en la aniquilación e-e+
-
---------------------
-
-## Capitulo 2: El campo de Klein-Gordon
-
-### 2.1 La necesidad del punto de vista de Campos
-
-### 2.2 Elementos de la teoría clásica de Campos
-
-- Teoría de campos lagrangiana
-- Teoría de campos hamiltoniana
-- Teorema de Noether
-
-### 2.3 El campo de Klein-Gordon como osciladores armónicos
-
-### 2.4 El campo de Klein-Gordon en el espaciotiempo
-
-- Causalidad: El propagador de Klein-Gordon
-- Creación de partículas por una fuente clásica
-
---------------------
-
-## Capitulo 3: El campo de Dirac
-
-### 3.1 Invariancia Lorentz de las ecuaciones de Onda
-
-### 3.2 La ecuación de Dirac
-
-- Espinores de Weyl
-
-### 3.3 Soluciones de partículas libres de la ecuación de Dirac
-
-- Suma de espines
-
-### 3.4 Matrices de Dirac y campos de Dirac bilineales
-
-### 3.5 Cuantización del campo de Dirac
-
-- Espín y estadística: El propagador de Dirac
-
-### 3.6 Simetrías discretas de la teoría de Dirac
-
-- Paridad, inversión temporal y conjugación de carga
-
---------------------
-
-## Capitulo 4: Campos en interacción y diagramas de Feynman
-
-### 4.1 Teoría de perturbaciones: Filosofía y ejemplos
-
-### 4.2 Expansión perturbativa de las funciones de correlación
-
-### 4.3 Teorema de Wick
-
-### 4.4 Diagramas de Feynman
-
-### 4.5 Sección eficaz y la matriz S
-
-### 4.6 Calculando los elementos de matriz de S con diagramas de Feynman
-
-### 4.7 Reglas de Feynman para Fermiones
-
-- Teoría de Yukawa
-
-### 4.8 Reglas de Feynman para electrodinámica cuántica
-
-- El potencial de Coulomb
-
---------------------
-
-## Capitulo 5: Procesos elementales en electrodinámica cuántica
-
-### 5.1 $$e^+ e^- \rightarrow \mu^+ \mu^-$$: Introducción
-
-- Trazas
-- Sección eficaz no polarizada
-- $$e^+ e^- \rightarrow$$ Hadrones
-
-### 5.2 $$e^+ e^- \rightarrow \mu^+ \mu^-$$: Helicidad
-
-### 5.3 $$e^+ e^- \rightarrow \mu^+ \mu^-$$: Límite no relativista
-
-- Estados acoplados
-- Producción y decaimientos de vector meson
-
-### 5.4 Simetria cruzada
-
-- Escattering electrón-muón
-- Variables de Mandelstam
-
-### 5.5 Escattering Compton
-
-- Suma de polarizaciones
-- La fórmula de Klein-Nishima
-- Comportamiento a altas energías
-- Aniquilación por pares a fotones
-
-
-
---------------------
-
-
-            ▄▄▄▄███▄▄▄▄    ▄████████   ▄▄▄▄███▄▄▄▄      ▄████████    ▄█    █▄     ▄██████▄  ███▄▄▄▄
-          ▄██▀▀▀███▀▀▀██▄ ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███   ███    ███   ███    ███ ███▀▀▀██▄
-          ███   ███   ███ ███    █▀  ███   ███   ███   ███    ███   ███    ███   ███    ███ ███   ███
-          ███   ███   ███ ███        ███   ███   ███   ███    ███  ▄███▄▄▄▄███▄▄ ███    ███ ███   ███
-          ███   ███   ███ ███        ███   ███   ███ ▀███████████ ▀▀███▀▀▀▀███▀  ███    ███ ███   ███
-          ███   ███   ███ ███    █▄  ███   ███   ███   ███    ███   ███    ███   ███    ███ ███   ███
-          ███   ███   ███ ███    ███ ███   ███   ███   ███    ███   ███    ███   ███    ███ ███   ███
-           ▀█   ███   █▀  ████████▀   ▀█   ███   █▀    ███    █▀    ███    █▀     ▀██████▀   ▀█   █▀
-
-
-
---------------------
-
-## Capitulo 1: Física de particulas y relatividad especial
-
-### 1.1 Relatividad especial
-
-### 1.2 Un repaso rápido a la fisica de parrtículas
-
-### 1.3 Partículas elementales
-
-### 1.4 El mecanismo de Higgs
-
-### 1.5 Gran unificación
-
-### 1.6 Supersimetría
-
-### 1.7 Teoría de cuerdas
-
---------------------
-
-## Capitulo 2: Teoría de campos lagrangiana
-
-### 2.1 Mecánica langrangiana básica
-
-### 2.2 La acción y las ecuaciones de movimiento
-
-### 2.3 Momento canónico y el Hamiltoniano
-
-### 2.4 Teoría de campos lagrangiana
-
-### 2.5 Simetrias y leyes de Conservación
-
-### 2.6 Corrientes conservadas
-
-### 2.7 El campo electromagnético
-
-### 2.8 Transformaciones Gauge
-
---------------------
-
-## Capitulo 3: Una Introducción a la teoría de grupos
-
-### 3.
-
---------------------
-
-## Capitulo 4: Simetrías discretas y números cuánticos
-
-### 3.
-
---------------------
-
-## Capitulo 5: La ecuación de Dirac
-
-### 3.
-
---------------------
-
-## Capitulo 6: Campos escalares
-
-### 3.
-
---------------------
-
-## Capitulo 7: Las reglas de Feynman
-
---------------------
-
-## Capitulo 8: Electrodinámica cuántica
-
---------------------
-
-
-             ▄██████▄     ▄████████  ▄█        ▄█  ███▄▄▄▄   ████████▄   ▄██████▄
-            ███    ███   ███    ███ ███       ███  ███▀▀▀██▄ ███   ▀███ ███    ███
-            ███    █▀    ███    ███ ███       ███▌ ███   ███ ███    ███ ███    ███
-           ▄███          ███    ███ ███       ███▌ ███   ███ ███    ███ ███    ███
-          ▀▀███ ████▄  ▀███████████ ███       ███▌ ███   ███ ███    ███ ███    ███
-            ███    ███   ███    ███ ███       ███  ███   ███ ███    ███ ███    ███
-            ███    ███   ███    ███ ███▌    ▄ ███  ███   ███ ███   ▄███ ███    ███
-            ████████▀    ███    █▀  █████▄▄██ █▀    ▀█   █▀  ████████▀   ▀██████▀
-
-
---------------------
