@@ -57,7 +57,10 @@
 
 ### 1.2 Ecuación de Klein-Gordon
 
-$$\left( \dfrac {\partial ^{2}}{\partial t^{2}}-\nabla ^{2}+m^{2}\right) \Psi =0$$
+- Ecuación de Klein-Gordon
+$$
+\left( \dfrac {\partial ^{2}}{\partial t^{2}}-\nabla ^{2}+m^{2}\right) \Psi =0
+$$
 
 
 ### 1.3 Ecuación de Dirac
