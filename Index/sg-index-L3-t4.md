@@ -1,19 +1,12 @@
 
 --------------------
 
-
-           ▄▄▄▄▄▄▄▄▄▄▄       ▄         ▄
-          ▐░░░░░░░░░░░▌     ▐░▌       ▐░▌
-           ▀▀▀▀█░█▀▀▀▀      ▐░▌       ▐░▌
-               ▐░▌          ▐░▌       ▐░▌
-               ▐░▌          ▐░█▄▄▄▄▄▄▄█░▌
-               ▐░▌          ▐░░░░░░░░░░░▌
-               ▐░▌           ▀▀▀▀▀▀▀▀▀█░▌
-               ▐░▌                    ▐░▌
-               ▐░▌                    ▐░▌
-               ▐░▌                    ▐░▌
-                ▀                      ▀
-
+        ████████╗    ██╗  ██╗
+        ╚══██╔══╝    ██║  ██║
+           ██║       ███████║
+           ██║       ╚════██║
+           ██║            ██║
+           ╚═╝            ╚═╝
 
 --------------------
 
@@ -67,9 +60,52 @@
 	- ¿Son $SO(2)\sim U(1)$ y $SU(2)$ simplemente conexos?
 	- Justificar por qué $SO(1,1)$ no es compacto
 	- ¿Qué grupo es el recubridor universal de $SO(2)$? Buscar el grupo normal de $G$ tal que $S_1 \sim G/H$.
+- Medida de integración invariante
+	- Th: Integral invariante para grupos de Lie compactos
+	- Medida de Lebesgue
 
-### 4.4 Medida de integración invariante
+### 4.4 Estudio local de un grupo de Lie: álgebras de Lie
 
-### 4.5 Estudio local de un grupo de Lie: álgebras de Lie
-### 4.6 Representaciones adjuntas de álgebras y grupos de Lie: constantes de estructura
-### 4.7 Álgebras de Lie simples y semi-simples
+- Def: Álgebra de Lie real
+	- Def: Corchete de Lie
+	- Def:
+		- Subálgebra
+		- Subálgebra invariante
+		- Función exponencial de matrices
+			- Props:
+				- Fórmula de Campbell-Baker-Hausdorff
+- Subgrupo uniparamétrico de un grupo de Lie lineal
+- Generadores del álgebra de Lie
+- Relación entre álgebras de Lie lineales y grupos de Lie linealees
+	- Th: Exponenciación
+	- Th: Subrupos uniparamétrico
+	- Nota:
+	- Eg: Álgebra de Lie real de $SU(n)$
+	- Eg: Álgebra de Lie real de $SL(n, \mathbb{R})$
+	- Ex: Caracterizar el álgebra de Lie $so(2)$
+
+### 4.5 Representaciones adjuntas de álgebras y grupos de Lie: constantes de estructura
+
+- Representación de un álgebra de Lie
+	- Obs: Eqyuvakebcua de reoresentaciones, irreducibilidad, lemas de Schur, Descomposición CB...
+	- Th: Representación analítica n-dimensional
+- Constantes de estructura
+	- Def: Matriz adjunta de $A\in \mathcal{L}$
+	- Def: Representación adjunta del álgebra
+	- Def: Constantes de estructura
+		- Obs:
+		- Props:
+- Representación de un grupo de Lie lineal
+	- Def: Representación adjunta del grupo
+		- Obs:
+	- Th: Representaciones adjuntas
+	- Th: Automorfismo interno del álgebra
+
+### 4.6 Álgebras de Lie simples y semi-simples
+
+- Def: Álgebra de Lie simple
+- Def: Álgebra de Lie semi-simple
+	- Props:
+- Operadores de casimir
+	- Th: Conmutación
+- Def: Forma de Killing

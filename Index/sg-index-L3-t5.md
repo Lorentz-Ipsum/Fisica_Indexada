@@ -1,19 +1,12 @@
 
 --------------------
 
-
-           ▄▄▄▄▄▄▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄▄▄
-          ▐░░░░░░░░░░░▌     ▐░░░░░░░░░░░▌
-           ▀▀▀▀█░█▀▀▀▀      ▐░█▀▀▀▀▀▀▀▀▀
-               ▐░▌          ▐░█▄▄▄▄▄▄▄▄▄
-               ▐░▌          ▐░░░░░░░░░░░▌
-               ▐░▌           ▀▀▀▀▀▀▀▀▀█░▌
-               ▐░▌                    ▐░▌
-               ▐░▌                    ▐░▌
-               ▐░▌           ▄▄▄▄▄▄▄▄▄█░▌
-               ▐░▌          ▐░░░░░░░░░░░▌
-                ▀            ▀▀▀▀▀▀▀▀▀▀▀
-
+        ████████╗    ███████╗
+        ╚══██╔══╝    ██╔════╝
+           ██║       ███████╗
+           ██║       ╚════██║
+           ██║       ███████║
+           ╚═╝       ╚══════╝
 
 --------------------
 
@@ -57,8 +50,9 @@
 
 ### 5.8. Teorema de Wigner-Eckart
 
+- Th: Wigner-Eckart
 - Reglas de selección
--
+
 ### 5.9. Aplicación física: Isospín
 
 - Transiciones
@@ -70,4 +64,8 @@
 
 - Escalares
 - Vectoriales
+	- Eg: Operador de posición
+	- Relación entre coordenadas $V_i$ y $Q^j_m$
 - Tensoriales
+	- Tensor de órden 2
+	- Ex:
