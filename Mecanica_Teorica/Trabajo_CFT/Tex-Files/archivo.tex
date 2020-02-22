@@ -1,0 +1,198 @@
+\documentclass{article}
+
+
+\usepackage{arxiv}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{mathrsfs}       % mathscr
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{dirtytalk}      % citations
+
+\title{Teoría clásica de campos \\ Kaluza-Klein y Yang-Mills}
+
+\everymath{\displaystyle} %esto es para que la math inline sea del mismo tamaño que el resto
+
+\author{
+  Manuel Fdez-Arroyo Soriano
+}
+
+\begin{document}
+\maketitle
+
+\section{Introducción: Teorías de campos}
+\label{sec:in}
+
+Las teorías de campos son una forma de describir medios continuos usando las llamadas \textit{ecuaciones de campo}.
+
+Algunas de las aplicaciones más útiles de las teorías de campos en física son para describir los campos electagnético y gravitatorio, o el movimiento de partículas en un fluido, por ejemplo en meteorología.
+
+\section{Paso al continuo}
+
+Un campo físico es una función toma valores en cada punto del espacio-tiempo (suceso). Dependiendo de la forma en que expresamos estos valores del campo decimos que estamos tratando con un campo escalar, vectorial o tensorial. Cada una de estas categorías tiene sus propias leyes de transformación y propiedades.
+
+% Las ecuaciones de campo nos describen cómo cambian
+
+
+\section{Formalismo lagrangiano}
+
+Para empezar nuestra discusión usaremos el formalismo de Lagrange.
+
+\subsection{Paso al continuo}
+
+Empezamos considerando una red unidimensional de osciladores acoplados, como se suele hacer en física del estado sólido para describir un cristal. El desplazamiento de cada nodo de su posición de equilibrio lo denotaremos por $\xi_i$ con $i$ un índice discreto que recorre todos los puntos de la red.
+
+De esta forma, las energías cinética y potencial del sistema son:
+
+$$
+\begin{array}{c}{\quad T=\frac{1}{2} \sum_{i} m \dot{\eta}_{i}^{2}} {\qquad V=\frac{1}{2} \sum_{i} k\left(\eta_{i+1}-\eta_{i}\right)^{2}}\end{array}
+$$
+
+El lagrangiano del sistema es
+
+$$
+{ L=\frac{1}{2} \sum_{i} a\left[\frac{m}{a} \dot{\eta}_{i}^{2}-k a\left(\frac{\eta_{i+1}-\eta_{i}}{a}\right)^{2}\right]=\sum_{i} a L_{i}}
+$$
+
+Así las ecuaciones de movimiento quedan:
+
+$$
+{ \frac{m}{a} \ddot{\eta}_{i}-k a\left(\frac{\eta_{i+1}-\eta_{i}}{a^{2}}\right)+k a\left(\frac{\eta_{i}-\eta_{i-1}}{a^{2}}\right)=0}
+$$
+
+$$
+F=Y\xi=k\left(\eta_{i+1}-\eta_{i}\right)=k a\left(\frac{\eta_{i+1}-\eta_{i}}{a}\right)
+$$
+
+Podemos identificar
+
+$$
+\begin{array}{l}{\frac{\eta_{i+1}-\eta_{i}}{a} \rightarrow \frac{\eta(x+a)-\eta(x)}{a}} \rightarrow {\frac{d \eta}{d x}}\end{array}
+$$
+
+Así
+
+$$
+{\lim _{a \rightarrow 0}-\frac{Y}{a}\left[\left(\frac{d \eta}{d x}\right)_{x}-\left(\frac{d \eta}{d x}\right)_{x-a}\right]}
+$$
+
+$$
+{\qquad \mu \frac{d^{2} \eta}{d t^{2}}-Y \frac{d^{2} \eta}{d x^{2}}=0}
+$$
+
+\subsection{Principio Variacional}
+
+\subsubsection{Campo escalar}
+$$
+\delta \phi=-\delta \omega_{v}^{\mu} x^{v} \partial_{\mu} \phi=\frac{i}{2} \delta \omega^{\mu \nu} L_{\mu \nu} \phi
+$$
+$$
+\delta \phi=\frac{i}{2} \delta \omega^{\mu \nu} J_{\mu \nu} \phi, \quad \vec{S}^{2} \phi=0
+$$
+
+Condiciones:
+\begin{enumerate}
+    \item \textit{Invariancia relativista.}
+    \item \textit{Localidad.}
+    \item \textit{Carácter real.}
+    \item \textit{Derivadas de órden no superior al primero.}
+    \item \textit{Invariancia respecto a las simetrías internas de la teoría.}
+\end{enumerate}
+
+\subsubsection{Campo vectorial}
+
+Gradiente de campo escalar
+
+Operador de espín
+$$
+\begin{array}{c}{\left(S_{\nu \rho}\right)^{\mu \sigma}=-2 i \delta_{[\nu}^{\mu} \delta_{\rho]}^{\sigma}} \\ {\qquad \delta V^{\mu}=\frac{i}{2} \delta \omega^{\rho \sigma} J_{\rho \sigma} V^{\mu}} \\ {\qquad J_{\rho \sigma}=L_{\rho \sigma}+S_{\rho \sigma} \quad \text { y } \quad S_{\rho \sigma} V^{\mu}=\left(S_{\rho \sigma}\right)_{\nu}^{\mu} V^{\nu}}\end{array}
+$$
+
+Casimires
+$$
+-P_{\mu} P^{\mu}=m^{2} \neq 0, \quad \vec{S}^{2}=W_{\mu} W^{\mu} / m^{2}
+$$
+
+ Campo general
+$$
+\delta B^{\mu}=\frac{i}{2} \delta \omega^{\rho \sigma} J_{\rho \sigma} B^{\mu}
+$$
+
+
+
+\section{Formalismo hamiltoniano}
+
+$$
+\Pi =\frac{\delta L}{\delta\left(\partial_{t} \Phi\right)}=\frac{\partial \mathscr{L}}{\partial\left(\partial_{t} \Phi\right)}
+$$
+
+$$
+H=\left(\int \mathrm{d}^{3} x \Pi \partial_{t} \Phi-L\right)_{\partial_{t} \Phi \rightarrow \Pi}=\int \mathrm{d}^{3} x \mathscr{H}
+$$
+
+$$
+\mathscr{H} =\left(\Pi \partial_{t} \Phi-\mathscr{L}\right)_{\partial_{t} \Phi \rightarrow \Pi}
+$$
+
+\section{Campos electromagnéticos}
+\subsection{Obtención de las ecuaciones de Maxwell a partir del principio variacional}
+$$
+\delta S=-\int\left(\frac{1}{8 \pi} F^{\mu \nu} \delta F_{\mu \nu}+j^\mu \delta A_{\mu}\right) d^{4} x
+$$
+
+$$
+{\delta\left(F_{\mu \nu} F^{\mu \nu}\right)=2 F^{\mu \nu} \delta F_{\mu \nu}}$$
+
+$${\delta S=-\int\left(\frac{1}{4 \pi} \partial_{\nu} F^{\mu \nu}+j^{\mu}\right) \delta A_{\mu} dx^{4}}$$
+
+$$\partial_{\nu} F^{\mu \nu}=-4 \pi j^{\mu}
+$$
+
+\section{Teoría de Yang-Mills}
+
+De \cite{frasca2014exact}De \cite{frasca2014exact}
+
+De \cite{frasca2014exact}
+
+
+
+\section{Conclusiones}
+\label{sec:out}
+
+\begin{thebibliography}{1}
+
+\bibitem{kour2014real}
+George Kour and Raid Saabne.
+\newblock Real-time segmentation of on-line handwritten arabic script.
+\newblock In {\em Frontiers in Handwriting Recognition (ICFHR), 2014 14th
+  International Conference on}, pages 417--422. IEEE, 2014.
+
+\bibitem{kour2014fast}
+George Kour and Raid Saabne.
+\newblock Fast classification of handwritten on-line arabic characters.
+\newblock In {\em Soft Computing and Pattern Recognition (SoCPaR), 2014 6th
+  International Conference of}, pages 312--318. IEEE, 2014.
+
+\bibitem{hadash2018estimate}
+Guy Hadash, Einat Kermany, Boaz Carmeli, Ofer Lavi, George Kour, and Alon
+  Jacovi.
+\newblock Estimate and replace: A novel approach to integrating deep neural
+  networks with existing applications.
+\newblock {\em arXiv preprint arXiv:1804.09028}, 2018.
+
+\bibitem{frasca2014exact}
+Marco Frasca.
+\newblock Exact solutions for classical Yang-Mills fields.
+\newblock {\em arXiv preprint arXiv:1409.2351}, 2014.
+
+\end{thebibliography}
+
+\end{document}
