@@ -31,3 +31,5 @@ Para presentar los conceptos del glosario de una forma más fácil de visualizar
 - Al hacer zoom muestra u oculta los temas más relevantes.
 - Direccionalidad. Los nodos están relacionados entre sí de una forma específica. P.ej: Cronológicamente, cierto experimento lleva a unas sobre la naturaleza conclusiones que podemos condensar en una fórmula.
 - Cronología. Debe ser posible reordenar pulsando un botón los elementos del árbol para ver cómo se desarrollaron los eventos cronológicamente.
+
+> Basado en el proyecto [Hyperphysics](http://hyperphysics.phy-astr.gsu.edu/hbase/index.html) de la Universidad del estado de Georgia.
