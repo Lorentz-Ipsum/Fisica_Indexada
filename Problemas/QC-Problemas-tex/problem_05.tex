@@ -1,0 +1,26 @@
+Dados los operadores $\hat{a}$, $\hat{a}^{\dagger}$ y $\hat{N}$ del oscilador armónico, calcular los conmutadores $\left[\hat{a}, \hat{a}^{\dagger}\right],[\hat{N}, \hat{a}]$ y $[\hat{N}, \hat{a}^{\dagger}]$.
+
+\begin{solution}\ \\
+
+\begin{tcolorbox}
+$$
+[\hat{X}, \hat{P}] = i \hbar = i
+$$
+\end{tcolorbox}
+
+$$
+\begin{aligned}
+\left[\hat{a}, \hat{a}^{\dagger}\right]&=\hat{a} \hat{a}^{\dagger}-\hat{a}^{\dagger} \hat{a}=\frac{m \omega}{2}\left(\hat{X}+\frac{i}{m \omega} \hat{P}\right)\left(\hat{X}-\frac{i}{m \omega} \hat{P}\right)=\\
+&=\frac{m \omega}{2}\left(\frac{-i}{m \omega}[\hat{X}, \hat{P}]+\frac{i}{m \omega}[\hat{P}, \hat{X}]\right)=\frac{-i}{2}([\hat{X}, \hat{P}]+[\hat{X}, \hat{P}])=\frac{-i}{2}(2 i)=1
+\end{aligned}
+$$
+
+$$
+[\hat{N}, \hat{a}]=[\hat{a}^{\dagger}\hat{a}, \hat{a}]=\hat{a}^{\dagger}[\hat{a}, \hat{a}]+[\hat{a}^{\dagger}, \hat{a}] \hat{a}=-[\hat{a}, \hat{a}^{\dagger}] \hat{a}=-\hat{a}
+$$
+
+$$
+\left[\hat{N}, \hat{a}^{\dagger} \right]=\left[\hat{a}^{\dagger} \hat{a}, \hat{a}^{\dagger}\right]=\hat{a}^{\dagger}\left[\hat{a}, \hat{a}^{\dagger}\right]+\left[\hat{a}^{\dagger}, \hat{a}^{\dagger}\right] \hat{a}=\hat{a}^{\dagger}
+$$
+
+\end{solution}

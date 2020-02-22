@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+%\usepackage{esvect}
+\usepackage[a]{esvect}
+\usepackage{verbatim} %% añadido de practica 2
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,tikz,amssymb,tkz-linknodes} %% añadido de practica 2
+\usetikzlibrary{arrows, calc, babel, shapes} %% añadido de practica 2
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{accents}
+\usepackage{tkz-fct} %% añadido de practica 2
+\usepackage{cancel}
+
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+\everymath{\displaystyle}
+
+\newenvironment{solution}
+  {\renewcommand\qedsymbol{$\blacksquare$}
+  \begin{proof}[Solución]\noindent\rule{13cm}{0.4pt}}
+  {\end{proof}\noindent\rule{\linewidth}{0.8pt}}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+
+%% añadido de practica 2:
+\newcommand{\problem}[1]{
+    {\begin{tikzpicture}[outline/.style={draw=red!75!gray,thick,fill=green!80!white}]
+    \node [outline=red] at (0,1) {\bf Problema #1};
+\end{tikzpicture}}
+}
