@@ -1,0 +1,27 @@
+Sea una partícula de masa $m$ cuya dinámica está descrita por el hamiltoniano: 
+
+$$
+{\hat{H}_{0}=\frac{\hat{\bar{p}}^{2}}{2 m}+V(\hat{\bar{x}})}
+$$
+
+y dos estados $| A\rangle$ y $| B \rangle$. Demostrar: 
+
+$$
+{\langle B|\hat{\bar{p}}| A\rangle=i m\langle B\left|\left[\hat{H}_{0}, \hat{\bar{x}} \right] \right| A\rangle}.
+$$
+
+\begin{solution}\ \\
+$$
+\left[\hat{H}_{0}, \hat{\bar{x}}\right]=\hat{H}_{0} \hat{\bar{x}}-\hat{\bar{x}} \hat{H}_{0}=\left(\frac{\hat{\bar{p}}^{2}}{2 m}+V(x)\right) \tilde{\bar{x}}-\tilde{\bar{x}}\left(\frac{\hat{\bar{p}}^{2}}{2 m}+V(x)\right)=
+$$
+
+$$
+=\frac{\hat{p}^{2} \hat{x}}{2 m}+V(x) \hat{x}-\frac{\hat{x} \hat{p}^{2}}{2 m}+\hat{x} V(x)=\frac{1}{2 m}[\hat{p} \hat{p}, \hat{x}]+[V(x), \hat{x}]=
+$$
+
+$=\frac{1}{2 m}(\hat{p}[\hat{p}, \hat{x}]+[\hat{p}, \hat{x}] \hat{p})=\frac{1}{2 m}(i \hat{p}+i \hat{p})=\frac{i}{m} \hat{p}$
+
+$$
+\hat{p}=i m\left[\hat{H}_{0}, \hat{x}\right]
+$$
+\end{solution}
