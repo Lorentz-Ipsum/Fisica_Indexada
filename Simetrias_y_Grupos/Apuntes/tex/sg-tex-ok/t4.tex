@@ -1,0 +1,598 @@
+
+\section{ Grupos y álgebras de Lie}
+
+Un grupo de Lie combina tres estructuras matemáticas diferentes. Verifica:
+
+\begin{itemize}
+\item Los axiomas de grupo.
+\item Los elementos de grupo forman un espacio topológico (grupo topológico).
+\item Los elementos del grupo forman una variedad analítica.
+\end{itemize}
+
+De este modo vemos que un grupo de Lie puede analizarse de formas diferentes. No los estudiaremos aquí de forma exhaustiva de forma topológica pues los grupos de Lie que se utilizan más en física son los grupos de Lie lineales. Tienen propiedades adicionales que nos permiten analizarlo mediante métodos más sencillos.
+
+\subsection{Elementos básicos sobre espacios topológicos}
+
+Un espacio topológico S es un conjunto no vacío de elementos llamados puntos para los cuales hay una correlación $\mathds{T}$ de subconjuntos, llamados conjuntos abiertos, que satisfacen:
+
+\begin{enumerate}
+\item El conjunto vacío $\phi$ y el conjunto S pertenecen a $\mathds{T}$.
+\item La unión de conjuntos de $\mathds{T}$ pertenece a $\mathds{T}$.
+\item La intersección de un número finito de conjuntos de $\mathds{T}$ pertenece a $\mathds{T}$.
+\item La colecció de $\mathds{T}$ se llama topología.
+\item Los complementarios a esos conjuntos se llaman conjuntos cerrados.
+\end{enumerate}
+
+\subsubsection{Compacidad}
+
+Una familia de conjuntos abiertos de un espacio topológico S es un recubrimiento abierto de S si la unión de sus conjuntos abiertos contiene a S. Si por cada recubrimiento abierto de S siempre hay un recubrimiento finito que contiene a S (es decir, unión de un número finito de abiertos), el espacio topológico S se dice que es compacto. En caso contrario se dice que es no compacto.
+
+\subsubsection{Conexion}
+
+Un espacio topológico es conexo si no es la unión de dos conjuntos abiertos disjuntos no vacíos (que no tiene agujeros). Como consecuencia los únicos subconjuntos de S conexo que son a la vez abiertos y cerrados son solo el vacío y el propio S (si S es conexo).
+
+\smallskip
+Un \textbf{camino} en S desde $X_0$ a $X_1$  es un mapa continuo  $\phi: [0,1]\in \mathds{R}\to S$ con $\phi (0)=x_0,\phi (1)=x_1$. Si los puntos son idénticos y los valores del mapa en esos puntos son iguales se dice que el camino es cerrado (\textit{loop}). Dos caminos cerrados son equivalentes u homotópicos si uno puede llebar al otro mediante deformaciones continuas. Todos los loops equivalentes forman una clase de equivalencia.
+
+\begin{itemize}
+\item S es \textbf{arco-conexo} si dados dos puntos de S cualesquiera siempre existe un camino con $\phi (0)=x_0$ y $\phi (1)=x_1$.
+
+\item S arco-conexo es \textbf{simplemente conexo} si todo camino cerrado se puede encoger a un punto con deformaciones contínuas.
+
+Si hay n clases de equivalencia distintas de caminos cerrados entonces S se dice n-veces conexo.
+\end{itemize}
+
+\textbf{Ejemplos:}
+
+\begin{itemize}
+\item Una región X del espacio euclídeo $\mathds{R}^n$ es compacto solo si es finita.
+\item El espacio $\mathds{R}^2$ es simplemente conexo, regiones suyas con agujeros no lo son.
+\end{itemize}
+
+\subsubsection{Mapa homeomórfico}
+
+Dados dos espacios topologicos (S,T) y (S',T'), un mapa de S en S' se dice contínuo en S si para todo abierto de S' la imagen inversa del mapa es un abierto de S. Si el mapa $\phi , \phi ^{-1}$ es contínuo entonces esta aplicación es un homeomorfismo y S y S' son homeomorfos.
+
+\smallskip
+Las propiedades topológicas son invariantes bajo homeomorfismos, también llamados invariantes topológicos.
+
+\subsubsection{Espacio Hausdorff}
+
+Un espacio topológico (S,T) es Hausdorff si dos puntos cualquiera de S pertenecen a subconjuntos abiertos de T disjuntos (axioma de separabilidad).
+
+Un espacio localmente euclídeo de dimensión n es un espacio topológico Hausdorff tal que cada uno de sus puntos está contenido en un conjunto abierto que es homeomorfo a un subconjunto de $\mathds{R}^n$.
+
+
+\subsubsection{Carta}
+Sea V un abierto de dicho espacio y $\phi$ un homeomorfismo de V en un subconjunto de $\mathds{R}^n$ entonces para cada punto de V $p\in V$ existe un conjunto de coordenadas ($x_1,x_2,..,x_n$) tal que $\phi (p)= (x_1,x_2,..,x_n) $. El par $(p, \phi)$ se llama \textbf{carta}.
+
+\subsubsection{Variedad analítica de dimensión n}
+
+Consideremos un espacio localmente euclídeo de dimensión n y tal que posee una base numerable (una base de la topología T es un subconjunto $B \in T$ de abiertos tal que cualquier conjunto abierto es unión de elementos de B) y un homeomorfismo de un abierto $V \subset \mathcal{V}$ en un subconjunto de $\mathds{R}^n$.
+
+\smallskip
+Si para cada par de cartas $(V_\alpha , \phi _\alpha)$ y $(V_\beta , \phi _\beta)$ del subgrupo $\mathcal{V}$ con intersección no vacía, el mapa $\phi _\beta  \hspace{0.1cm} o \hspace{0.1cm} \phi _\alpha ^{-1}$ es una función analítica, entonces $\mathcal{V}$ es una variedad analítica de dimensión n (como por ejemplo $\mathds{R}^n$).
+
+\subsection{Grupo de Lie, definición.}
+
+Un grupo de Lie de dimensión n es un conjunto de elementos que satisfacen las siguientes condiciones:
+
+\begin{enumerate}
+\item Forman grupo.
+\item Forman una variedad analítica de dimensión n.
+\item El mapa $\begin{array}{cc}
+\phi: \hspace{0.2cm} G\times G \to G  \\
+(g_1,g_2)\to \phi (g_1g_2)=g_1g_2
+\end{array}$ es analítico para todo $g_1,g_2 \in G$.
+\item Este mapa es también analítico (es infinitamente diferenciable; esta dado localmente por una serie de potencias convergente).
+\end{enumerate}
+
+La característica básica de un grupo de Lie es que tiene un número no contable de elementos dentro de una región $\textit{cercanos}$ a la identidad y la estructura de estos elementos determina esencialmente la estructura del grupo completo.
+
+\smallskip
+Los elementos de dicha región estarán parametrizados de manera analítica y debemos tener una noción de distancia.
+
+En el caso de grupos de Lie lineales existe una representación natural que permite una definición de distancia precisa, que permite asegurar que el resto de requerimientos topológicos se verifican.
+
+\subsection{Grupos de Lie lineales}
+
+Un grupo G es un grupo lineal de Lie de dimensión n si satisface las cuatro coniciones siguientes:
+
+\begin{enumerate}
+\item G posee una representación matricial D que es fiel y de dimensión finita m.
+
+Definimos la distancia entre dos elementos $g,g'\in G$ como:
+
+$$d(g,g')=\sqrt{\sum _{i,j=1}^m |D(g)_{ij}-D(g')_{ij}|^2}$$
+
+y el conjunto de matrices D(g) satisface las condiciones de espacio métrico.
+
+El conjunto $\lbrace g_i\rbrace$ con $g_i \in G$ tal que $d(g_i,e)<\delta$, con $\delta \in \mathds{R}^+$. Se dice que esta en una bola de radio $\delta$ centrada en la identidad e y denotada por $M_s$ que a veces llamaremos entorno de e.
+
+\item Existe un real positivo tal que los elementos de $M_s$ se pueden parametrizar (de modo diferente) por n parámetros reales independientes ($x_1,...,x_n$) con e correspondiente a $x_1,...,x_n=0$.
+
+Cada elemento de $M_s$ se corresponde con un único punto de $\mathds{R}^n$ que se corresponde con más de un elemento $g_i\in M_s$.
+
+\item Existe un real $\epsilon >0$ tal que cada punto de $\mathds{R}^n$ para el que se cumpla $\sum _{i=1}^n x_1^2 < \epsilon ^2$ se corresponde con algún elemento de $g_i \in M_s$ y la correspondencia es uno a uno.
+
+\item Sea $D(g(x_1,...,x_n))$ la matriz de representación del elemento $g(x_1,...,x_n)\in G$. Entonces cada elemento de matriz de D es una función analítica de ($x_1,...,x_n$) para todo punto de $\mathds{R}^n$ que satisfaga la condición anterior.
+
+\end{enumerate}
+
+\textbf{Nota:} Todo grupo de Lie lineal es isomorfo a algún subgrupo del grupo general lineal de matrices de dimensión adecuada.
+
+\smallskip
+Cada grupo de Lie lineal se dice \textbf{conexo} si el espacio topológico que forman sus elementos es conexo. Análogamente puede ser simplemente conexo o múltiplemente conexo.
+
+\subsubsection{Recubridor universal}
+
+Si G es un grupo de Lie multiplemente conexo existe un grupo $\Tilde{G}$ simplemente conexo (único salvo isomorfismos) tal que G es isomorfo al grupo cociente $\Tilde{G}/Z(\Tilde{G})) \hspace{0.2cm} \left [ Z(\Tilde{G})=\lbrace h\in \Tilde{ G} | hg=gh  \hspace{0.2cm} \forall g  \in \Tilde{G} \rbrace\right]$ o alguno de sus subgrupos.
+
+$\Tilde{G}$ se llama el recubridor universal de G.
+
+\smallskip
+Un grupo de Lie se dice \textbf{compacto} si su espacio topológico es compacto.
+
+\subsubsection{Representaciones unitarias del grupo de Lie}
+
+\begin{enumerate}
+\item Si G es un grupo de Lie compacto, toda representación de G es equivalente a alguna unitaria.
+
+\item Si G es un grupo de Lie compacto toda representación reducible de G es completamente reducible (completamente descomponible).
+
+\item Si G es un grupo de Lie no compacto, entonces no posee representaciones unitarias de dimensión finita no triviales.
+
+\end{enumerate}
+
+\subsubsection{Ejemplos}
+
+\begin{itemize}
+\item    $GL(n,\mathds{C})$: grupo general lineal de matrices complejas M con det M$\neq$ 0 de dimensión 2$n^2$.
+
+\item $SL(n, \mathds{C})$: grupo especial lineal, subgrupo del general con detM=1 de dimensión 2$n^2$ -2 (pues el determinante da dos restricciones; Re(detM)=1 y Im(detM)=0).
+
+\item GL($n,\mathds{R}$): de dimensión $n^2$.
+
+\item $SL(n,\mathds{R})$: de dimensión $n^2-1$.
+
+\item El grupo $U(n)$: grupo unitario de matrices complejas U tal que $U^+U=UU^+=\mathds{1}^n$ de dimensión $n^2$ (en principio es subgrupo de GL pero la condición de conmutación nos quita la mitad).
+
+\item SU(n): grupo especial unitario, subgrupo de U(n) que agrupa las matrices con detU=1, de dimensión $n^2-1$ (como el det U es un complejo de fase libre y norma 1 solo pone 1 condición sobre el detU).
+
+\item O(n): grupo ortogonal de matrices reales que cumplen $OO^+=O^+O=\mathds{1}_n$ de dimensión $\frac{n(n-1)}{2}$.
+
+\item SO(n): grupo ortogonal especia, subgrupo de O(n) con detO=1, de la misma dimensión que O(n).
+
+\item Sp(n): grupo simpléptico, grupo de matrices unitarias (n $\times$ n) con n par. Satisfacen $U^T J U=J$. La matriz J$=\left (\begin{array}{cc}
+0 & \mathds{1}_{n/2} \\
+-\mathds{1}_{n/2} & 0
+\end{array} \right )$ de dimensión $\frac{n(n+1)}{2}$.
+
+\item U(l,n-l): grupo pseudo-unitario de matrices complejas U que satisfacen $UgU^+=g$ siendo g una matriz diagonal de unos y menos unos de forma que $g_{kk}=1$ para $1 \leq k \leq l$ y $g_{kk}=-1$ para $ l+1 \leq k \leq n$. LA dimensión es $n^{2}$
+
+\item O(n,l-n): grupo pseudo-ortogonal de matrices reales con $OgO^+=g$ con la misma g, de dimensión $\frac{n(n-1)}{2}        $. Es el grupo de Lorentz, la g es una pseudo-métrica.
+
+\begin{enumerate}
+\item Compactos: U(n), SU(n), O(n), SO(n), Sp(n).
+
+\item No compactos: GL(n), SL(n), U(n,l-n), O(n,l-n.)
+\end{enumerate}
+\end{itemize}
+
+\subsubsection{Ejercicio: ¿Son O(n) y U(n) grupos conexos?}
+
+O(n) está formado por rotaciones y reflexiones luego no es conexo; sus dos subconjuntos son: rotaciones (subgrupo) y reflexiones (que no es subgrupo pues $(det=-1)^2 \neq -1$). Consiste en dos componentes disjuntas SO(n) (rotaciones) y la componente con det=-1 (reflexiones).
+
+\smallskip
+U(n) por otra parte sí es conexo (es decir no es la unión de conjuntos abiertos disjuntos) pues las fases se pueden parametrizar de forma continua para que tome todos los valores complejos unitarios.
+
+\subsubsection{Ejercicio: ¿Son SO(2)$\simeq $
+U(1) y SU(2) simplemente conexos?}
+
+Cualquier elemento de SO(2) puede escribirse como $\mathcal{R}= \left ( \begin{array}{cc}
+a &  -b\\
+b & a
+\end{array}\right)$ con $a^2+b^2=1$. Es decir, escrita como variedad diferencial, SO(2) es el círculo unidad. Vemos pues que SO(2) no es simplemente conexo (no se puede reducir el círculo a un punto sin cortarlo).
+
+\bigskip
+Ahora para SU(2) tenemos que deben cumplir $|a|^2+|b|^2=1$ siendo ahora a,b $\in \mathds{R}$ y la matriz $\mathcal{R}= \left ( \begin{array}{cc}
+a &  b\\
+-\bar{b} & \bar{a}
+\end{array}\right)$. Así que los U (elementos de SU(2)) pueden identificarse con un punto (x,y,z,w) $\in \mathds{R}^4$ siendo $a=(x,y)$ y $b=(z,w)$. Deberán satisfacer: $x^2 +y^2 + z^2 + w^2=1$ (ecuación de la 3-esfera o hiperesfera de dimensión 4). La 3-esfera es simplemente conexa al ser la generalización de la esfera. Las curvas sobre la esfera pueden '' achicarse '' a un punto sin salirse de la esfera no como con el círculo. Las únicas esferas que son grupos de Lie son la 1-esfera (círculo) y la 3-esfera (por cuestiones de restricciones topológicas).
+
+\newpage
+\subsubsection{Ejercicio: justificar por qué el grupo SO(1,1) no es compacto}
+
+Pista: SO(1,1) es isomorfo a los reales con la operación de suma.
+
+
+\bigskip
+Es el grupo de transformaciones lineales en $\mathds{R}^2$ que dejan invariante el producto interno $\braket{\Vec{v}|\Vec{u}}= v_1u_1 - v_2u_2$ con determinante 1.
+
+\smallskip
+Las matrices $\Lambda$ que me dejan invariante ese producto son aquellas que dejan la métrica invariante $\Lambda g \Lambda ^t =g$ . Son:
+
+$$\Lambda = \left (\begin{array}{cc}
+a  & b \\
+b & a
+\end{array} \right)$$
+
+Además tienen que cumplir que $a^2 -b^2=1$ para que su determinante sea 0, pueden ser cualquier real. El grupo tiene dimensión 1 debido a esta ligadura.
+
+Esta condición es la fundamental de las trigonométricas hiperbólicas, parametrizando según:
+
+$$\left \lbrace \begin{array}{cc}
+a=cosh \mathcal{X}  \\
+b=senh \mathcal{X}
+\end{array} \right .  \longrightarrow \Lambda (\mathcal{X})=\left ( \begin{array}{cc}
+ch\mathcal{X} & sh\mathcal{X} \\
+sh\mathcal{X}   & ch\mathcal{X}
+\end{array}\right)$$
+
+Tenemos un isomorfismo de $\mathds{R}$ a estas matrices. Dado que este espacio es isomorfo a los reales con la suma, como estos no son un grupo compacto este tampoco lo es.
+
+
+\subsubsection{Ejercicio: Acabamos de ver que SO(2) $\simeq$ U(1) $\simeq S^1$  no es simplemente conexo. ¿Qué grupo es su recubridor universal? Buscar el grupo normal de G (H) tal que $S^1 \simeq G/H$ (el grupo cociente es el círculo).}
+
+Pista: la dimensión de $S^1$ es 1. Su recubridor universal tendrá también dimensión 1.
+
+
+\smallskip
+La dimensión del recubridor ha de ser 1 pues la dimensión de $S^1$ es 1. No puede coincidir con $S^1$ pues si no sería él mismo, es entonces la recta real $\mathds{R}$ (toda variedad analítica unidimensional tiene como recubridor universal o bien $S^1$ o bien la recta real salvo isomorfismos).
+
+\smallskip
+Buscamos pues un homomorfismo de grupo que nos lleve de $\mathds{R}$ a $S^1$.
+
+$$\phi: x \to e^{2\pi i x}$$
+
+$$\mathds{R} \to S^1$$
+
+Sabemos que su núcleo es un subgrupo normal, vemos que son los enteros pues son los números que bajo $\phi$ nos llevan a la identidad.
+
+$$ker \phi = \mathds{Z}$$
+
+Obtenemos pues el isomorfismo $S^1 \simeq \mathds{R} / \mathds{Z}$.
+
+\textbf{Moraleja:} si encontramos un homomoerfismo sobreyectivo $\phi: \Tilde{G} \to G$, el núcleo del homomoerfismo es un subgrupo normal de $\Tilde{G}$ y el grupo cociente $\Tilde{G}/ker\phi$ es isomorfo a $\phi (\Tilde{G})=G$ siendo $\Tilde{ G}$ el recubridor universal de G.
+
+
+\subsection{Medida de integración invariante}
+
+Dada una función definida en G con valores complejos f: $\begin{array}{c}
+G \to \mathds{C}  \\
+g \to f(g)
+\end{array}$ tenemos que si G es un grupo finito (por el teorema del reordenamiento) podemos escribir:
+
+$$\sum _{g\in G} f(gg')=\sum _{g\in G} f(g)=\sum _{g\in G} f(gg')$$
+
+decimos que la suma es invariante por la izquierda e invariante por la derecha respectivamente.
+
+\smallskip
+Además, para grupos de Lie (análogamente a lo que ocurría con los grupos finitos) si f(g)=1 $\forall g \in G$, la suma es finita:
+
+$$\sum _{g \in G} 1 =|G|$$
+
+Para grupos de Lie lineales la suma se puede sustituir por una integral que también va a ser invariante por la izquierda y por la derecha.
+
+$$\int _G f(g)d_lg=\int ^{b_1}_{a_1} dx_1...\int ^{b_n}_{a_n} dx_n f(g(x_1,...,x_n))\sigma _l(x_1,...,x_n)$$
+
+Donde $\sigma _l$ es una función peso que hace que la integral sea invariante por la izquierda. Análogamente se haría para que fuera invariante por la derecha:
+
+$$\int _G f(g)d_rg=\int ^{b_1}_{a_1} dx_1...\int ^{b_n}_{a_n} dx_n f(g(x_1,...,x_n))\sigma _r(x_1,...,x_n)$$
+
+Si multiplico por g' por la izquierda a la primera o por g' por la izquierda a la segunda las integrales no cambian.
+
+$$\int _G f(g'g)d_lg=\int _G f(g)d_lg \hspace{1cm} \int _G f(gg')d_rg=\int _G f(g)d_rg=$$
+
+Esto provoca una restricción en las funciones peso que las hace únicas salvo constante.
+
+\bigskip
+\begin{itemize}
+\item      \textbf{Teorema:} si G es un grupo de Lie compacto entonces podemos asegurar que $\sigma _r=\sigma_l=\sigma$. La integral invariante que define, $\int _G f(g)d g$, es por tanto igual por la izquierda que por la derecha. Además existe (converge) y es finita para toda función f(g) continua. Podemos escoger $\sigma$ (que era única salvo constante) para que $\int _G dg=\int ^{b_1}_{a_1} dx_1...\int ^{b_n}_{a_n} dx_n \sigma (x_1,...,x_n)=1$. La medida así definida la llamamos \textbf{medida de Haar} (única e invariante por izquierda y derecha).
+
+\item \textbf{Teorema:} si G es un grupo de Lie no compacto las medidas invariantes por la izquierda y la derecha son infinitas (y por tanto no tiene sentido definir la medida de Haar). Por ejemplo, en el círculo las medidas son:
+
+$$\int ^{2\pi}_0 d\theta f(\theta) \to \int ^{2\pi}_0 d\theta f(\theta +\phi)= \int ^{2\pi + x}_{0+x} d\Tilde{\theta} f(\Tilde{\theta})$$
+
+donde multiplicando por la derecha lo que hacemos es sumar por la derecha. Para que sea medida de Haar basta con normalizarla:
+
+$$\int ^{2\pi}_0 d \theta \frac{1}{2\pi}$$
+
+\end{itemize}
+
+\subsection{Estudio local de un grupo de Lie: álgebras de Lie}
+
+La mayoría de la información de la estructura de un grupo de Lie proviene del análisis de sus propiedades locales (un grupo de Lie es una variedad diferenciable con un álgebra determinado). De este modo, las propiedades vendrán determinadas por álgebras de Lie reales (en el caso de grupos de Lie lineales).
+
+\begin{itemize}
+\item \textbf{Álgebra de Lie real:} un álgebra de Lie real de dimensión mayor o igual a uno es un espacio vectorial real con una ley de composición llamada corchete de Lie $[A,B]$.
+
+\begin{enumerate}
+
+ \item $[A,B] \in \mathcal{L} \hspace{1cm}$ No sale del cuerpo.
+
+ \item $[\alpha A + \beta B,C]=\alpha \alpha[A,C] + \beta [B,C] \in \mathcal{ L} \hspace{0.5cm}$ Es lineal.
+
+\item $[A,B]=-[B,A]$
+
+\item Cumple la identidad de Jacobi $[A,[B,C]]+[B,[C,A]]+[C[A,B]]=0$
+
+En el caso de un álgebra de Lie de matrices el corchete de Lie es el conmutador. Si conmutan el álgebra de Lie es abeliana.
+ \end{enumerate}
+\end{itemize}
+
+Un subálgebra de Lie ($\mathcal{L}'$) es un subconjunto de $\mathcal{L}$ que forma un álgebra de Lie con el mismo corchete que $\mathcal{L}$.
+
+Un subálgebra $\mathcal{L}'$  de un álgebra $\mathcal{L}$ se dice invariante si el conmutador de un elemento del subálgebra con otro del álgebra es 0 para todo elemento de estos conjuntos.
+
+$$[A,B]=0; \hspace{0.2cm} \forall A\in \mathcal{L}' , \hspace{0.1cm} B \in \mathcal{L}$$
+
+\subsubsection{Función exponencial para matrices}
+
+Si A es una matriz mxm $e^A$ es la matriz definida como:
+
+$$e^A=\mathds{1}+\sum _{k=1}^\infty \frac{1}{k!}A^k$$
+
+Esta serie converge para toda matriz. Tiene una serie de propiedades:
+
+\begin{enumerate}
+\item $(e^A)^+=e^{(A^+)}$
+\item $e^A$ es no singular y $(e^A)^{-1}=e^{-A}$
+\item $det(e^{A}) = e^{Tr(A)}$
+\item Si S es una matriz no singular, $e^{SAS^{-1}}=Se^{A}S^{-1}$
+\item Si A tiene una serie de autovalores, los autovalores de $e^{A}$ son la exponencial de los autovalores.
+\item Si S y B son matrices mxm que conmutan entonces $e^{A}$ también conmuta con $e^B$.
+\item Si no conmutan y sus coeficientes son suficientemente pequeños podemos escribir $e^Ae^B=e^C$ con C=A+B+$\frac{1}{2}[A,B]+\frac{1}{12}([A,[A,B]]+[B[A,B]])+... $(fórmula de Campbell-Baker-Hausdorff (CBH)).
+\item El mapa exponencial $\phi (A)=e^A$ es un mapa contínuo 1 a 1 desde un entorno pequeño de la mariz 0 de tamaño mxm ($O_{mxm}$) a un entorno pequeño de la matriz identidad de tamaño mxm.
+\end{enumerate}
+
+\subsubsection{Subgrupos uniparamétricos asociados a grupos de Lie lineales}
+
+Dado un grupo de Lie lineal G de matrices mxm, un subgrupo uniparamétrico de G es un subgrupo de Lie de G formado por matrices etiquetadas por un solo parámetro $T(t)$ real t tal que $T(t)T(t')=T(t+t')$ para cualquier parámetro real. Claramente este subgrupo es abeliano y cumple que T(0)=e.
+
+\smallskip
+El inverso de los elementos de este grupo se obtiene tomando la matriz del parámetro opuesto $T(t)T(-t)=e$. Es un subgrupo de dimensión 1 pues solo dependen de un parámetro.
+
+\smallskip
+Podemos definir $\left . \frac{dT(t)}{dt}\right |_{t=0}\equiv \omega$, que existe y es no trivial, como el vector tangente al subgrupo uniparamétrico evaluado en la identidad. Esto implica que cada subgrupo uniparamétrico de un grupo de matrices de Lie lineal de matrices mxm se forma por exponenciación según:
+
+$$T(t)=e^{\omega t}$$
+
+\subsubsection{Generadores del álgebra de Lie}
+
+De la definición de un grupo de Lie lineal G de dimensión n se sigue que las matrices de representación son funciones de las coordenadas de $\mathds{R}^n$ de forma que $D(g(x_1,...,x_n))=D(x_1,...,x_n)$. Son además funciones analíticas. Las n matrices $A_1,..., A_n$ definidas por:
+
+$$\left . (A_r)_{ij}=\frac{\partial D_{ij}(g)}{\partial x_r} \right |_{x_r=0}$$
+
+los elementos $g\in M_g$ son elementos cercanos a la identidad; estas matrices forman una base de un espacio vectorial real de dimensión n. Este espacio vectorial es el álgebra de Lie asociada al grupo G, siendo el corchete de Lie el conmutador.
+
+Las matrices $A_n$ se llaman generadores del álgebra de Lie, nosotros en concreto las elegimos hermíticas.
+
+
+\subsubsection{Relación entre álgebras de Lie reales y grupos de Lie lineales}
+
+Podemos asociar un álgebra de Lie real de dimensión n a cada grupo de Lie lineal G de la misma dimensión de acuerdo con los siguientes teoremas.
+
+\begin{itemize}
+\item Todo elemento A de un álgebra de Lie real de un grupo de Lie lineal está asociado a un subgrupo uniparamétrico de G definido por $T(t)=e^{At}$.
+
+\item Todo elemento g de un grupo de Lie lineal G en un entorno cercano a la identidad pertenece a un subgrupo uniparamétrico de G.
+
+$$T(0)=\mathds{1}_{mxm}+\cancel{0(t^2)}+...$$
+
+\item Si G es un grupo de Lie lineal compacto todo elemento de un subgrupo conexo de G se puede expresar de la forma $e^A$ donde A es un elemento del álgebra de Lie correspondiente. En particular, si G es compacto y conexo todo elemento $g\in G$ es de la forma $e^A$ con $A\in  \mathcal{L}$.
+
+\textbf{Resumiendo}: el álgebra de Lie es el espacio tangente de un grupo lineal G evaluado en la identidad ($T_eG$) es decir, se trata del espacio vectorial generado por los vectores tangentes a todos los subgrupos uniparamétricos.
+
+$$T(t)=e^{\omega t} \longrightarrow \frac{dT(t)}{dt}=\omega T(t)$$
+
+\end{itemize}
+
+\subsubsection{Ejemplos}
+
+\begin{itemize}
+ \item El álgebra de Lie real del grupo SU(n). Sea $e^{At}$ un subgrupo uniparamétrico de SU(n). Como T es una matriz nxn que satisface $T^+T=T^+=\mathds{1}_{nxn}$ y det(T)=1, obtenemos:
+
+ $$A^+=A; \hspace{2cm} Tr(A)=0$$
+
+ El conjunto de matrices nxn antihermíticas de traza nula son las matrices de representación de SU(n). Las propiedades de A salen de aplicar lo visto en el apartado propiedades a las características del grupo SU(n).
+
+ \item Álgebra de Lie lineal del grupo SL(n,$\mathds{R}$): los elementos de un subgrupo uniparamétrico son matrices reales nxn con determinante 1 con entradas reales. El álgebra de Lie asociada es el conjunto de matrices reales nxn con traza nula.
+\end{itemize}
+
+\subsubsection{Ejercicio: caracteriza el álgebra de Lie so(2) de SO(2), busca una base y muestra que los elementos de SO(2) se obtienen por exponenciación del álgebra.}
+
+
+Las características de SO(2) son que se trata de matrices ortogonales de determinante 1, La traza de A ha de ser 0 y las matrices cumplen $AA^{-1}=\mathds{1}$.
+
+Este ejercicio esta resuelto en el canal de mi amigo el de youtube:
+
+(https://www.youtube.com/user/jamesjamesbondbond) en su curso de grupos de Lie.
+
+\smallskip
+SO(2) son matrices 2x2 ortogonales de det=1, su álgebra de Lie está formada por matrices 2x2 reales, antisimétricas de traza nula:
+
+$$A^t=A; \hspace{0.5cm} \text{Antisimétrica}$$
+
+La dimensión de SO(2) es 1, la base es:
+
+$$T=\left ( \begin{array}{cc}
+ 0 &  1\\
+ -1 & 0
+\end{array}\right)$$
+
+Las matrices de SO(2) las llamamos R por la rotación:
+
+$$R= \left ( \begin{array}{cc}
+ cos \theta & -sen \theta \\
+sen \theta  & cos \theta
+\end{array}\right)$$
+
+Los elementos del álgebra son todas las matrices del tipo:
+
+$$SO(2)=\lbrace \theta T , \theta \in \mathds{R} \rbrace$$
+
+Exponenciando y desarrollando en Taylor:
+
+$$e^{\theta T}= \mathds{1} + \theta T + \frac{1}{2!}(\theta T)^2 + ...$$
+
+Tenemos en cuenta que:
+
+$$T=\left ( \begin{array}{cc}
+ 0 &  1\\
+ -1 & 0
+\end{array}\right); \hspace{0.2cm} T^2=-\left ( \begin{array}{cc}
+ 1 &  0\\
+ 0 & 1
+\end{array}\right); \hspace{0.2cm} T^3=-\left ( \begin{array}{cc}
+ 0 &  1\\
+ -1 & 0
+\end{array}\right); \hspace{0.2cm} ...$$
+
+Y entonces vemos que se puede separar en dos:
+
+$$e^{\theta T}=\sum _{n=0}^\infty \frac{1}{n!} (\theta T)^n = \underbrace{\sum _{n=0}^\infty \frac{(-1)^{n}}{(2n)!}\theta ^{2n} \mathds{1}}_{cos \theta \cdot \mathds{1}} + \underbrace{ \sum _{n=0}^\infty \frac{(-1)^{n}}{(2n+1)!}\theta ^{2n+1} T}_{sen \theta \cdot \mathds{T}}= \left ( \begin{array}{cc}
+ cos \theta & -sen \theta \\
+sen \theta  & cos \theta
+\end{array}\right) $$
+
+
+\subsection{Representaciones adjuntas de álgebras de Lie y de grupos de Lie}
+
+\subsubsection{Representación de un álgebra de Lie}
+
+Suponemos que a cada $A \in \mathcal{L}$ le corresponde una matriz mxm D(A) tal que:
+
+$$\left \lbrace \begin{array}{c}
+  D(\alpha A+\beta B)=\alpha D(A) + \beta D(B)  \\
+  D([A,B])=[D(A),D(B)]
+\end{array} \right .$$
+
+Entonces estas matrices forman una representación de dimensión m del grupo de Lie. Si los elementos de $\mathcal{L}$ son matrices, entonces $D(A)=A$.
+
+\smallskip
+\textbf{Teorema:} sea $D_g$ una representación analítica m-dimensional de un grupo de Lie lineal G. Su correspondiente álgebra de Lie es $\mathcal{L}$.
+
+Se cumple que:
+
+\begin{itemize}
+ \item Existe una representación $D_\mathcal{L} de \mathcal{L}$ definida para todo elemento del álgerbra mediante:
+
+ $$D_\mathcal{L}(A)=\left .\frac{d}{dt}D_G(e^{tA})\right |_{t=0}$$
+
+ \item La exponenciación del álgebra nos da la representación del grupo:
+
+ $$e^{tD_\mathcal{L}(A)}=D_G(e^{tA})$$
+
+ \item Si $D_G'$ es otra representación analítica de G y $D_\mathcal{L}'$ la representación asociada de $\mathcal{L}$ entonces esta representación es equivalente a $D_\mathcal{L}$ si $D_\mathcal{L}'$ es equivalente a $D_\mathcal{L}$. Lo contrario también es cierto si G es conexo.
+
+ \item La representación $D_\mathcal{L}$ es reducible si $D_G$ es reducible y es completamente reducible (o completamente descomponible) si $D_G$ lo es. Lo contrario es cierto si G es conexo.
+
+ La gracia es que si G es conexo el grupo está totalmente determinado por el álgebra y estamos hablando de la misma cosa (nos vale el álgebra para describir el grupo).
+
+ \item Si G es conexo entonces $D_\mathcal{L}$ es irreducible sí y solo si G es irreducible.
+
+ \item Si la representación del grupo ($D_G$) es unitaria la representación del álgebra ($D_\mathcal{L}(A)$ es antihermítica. Lo contrario también es cierto si G es conexo.
+\end{itemize}
+
+
+
+\subsubsection{Representación adjunta de un álgebra de Lie: constantes de estructura}
+
+Sea $\mathcal{L}$ un álgebra de Lie lineal de dimensión n y sea una base de ese álgebra de elementos $\lbrace A_i\rbrace _{i=1}^n$ una base de $\mathcal{L}$. Para cualquier A de este álgebra definimos ad(A) como la matriz nxn que cumple:
+
+$$[A,A_i]=\sum _{i=1}^n (ad(A))_{ji}A_j$$
+
+Visto como operador tendríamos $[A,A_i]=ad(A)A_i$. El conjunto de estas matrices forma una representación de dimensión n (la misma que el álgebra), llamada representación adjunta de $\mathcal{L}$ (sería la representación "natural").
+
+La importancia de esta representación se acentúa en el estudio de álgebras semisimples.
+
+\smallskip
+Podemos definir las constantes de estructura a través de esto de la siguiente manera:
+
+$$[A_i,A_j]=\sum _{k=1}^n c_{ij}^k A_k$$
+
+Como los coeficientes de las relaciones de conmutación en la base que acabamos de ver. Las constantes de estructura me caracterizan completamente el álgebra.
+
+Las constantes de estructura no son independientes, cumplen la identidad de jacobi y la siguiente propiedad de antisimetría:
+
+\begin{enumerate}
+\item $     c_{ij}^k=-c_{ji}^k $
+\item $
+c_{ij}^kc_{lm}^n + c^k_{jl}c_{im}^n+ c_{li}^kc^n_{jm}=0 $
+\end{enumerate}
+
+
+\subsubsection{Representación adjunta de un grupo de Lie lineal}
+
+Sea G un grupo de Lie lineal de dimensión n y sea $\lbrace A_i \rbrace _{i=1}^n$ una base de su álgebra de Lie correspondiente. Para cualquier elemento del grupo se presenta Ad(g) como la matriz nxn definida tal que:
+
+$$gA_ig^{-1}=\sum _{i=1}^n (Ad(g))_{ji} A_j$$
+
+Recordamos que $ge^{A_i}g^{-1}=e^{gA_ig^{-1}}$, es decir, la exponenciación de un elemento del grupo es idéntica a la exponenciación de los elementos del álgebra (pues existe una relación grupo-álgebra).
+
+El conjunto de matrices Ad(g) forman una representación de G analítica de dimensión n con la misma dimensión que el grupo (se llama representación adjunta de G). Esta representación actúa directamente sobre el espacio vectorial que es el álgebra de Lie.
+
+\smallskip
+\textbf{Teorema:} sean ad(g) y Ad(g) las representaciones adjuntas del álgebra y del grupo respectivamente, estas representaciones están relacionadas:
+
+$$ad(A)= \left . \frac{d}{dt}Ad(e^{tA})\right |_{t=0}$$
+
+Además $e^{t ad(A)}=Ad(e^{tA})$ para cualquier A elemento del álgebra y t parámetro real.
+
+\smallskip
+\textbf{Teorema:} sea G un grupo de Lie lineal conexo y $\mathcal{L}$ su álgebra de Lie correspondiente; para cualquier elemento del grupo, el mapa inyectivo definido por:
+
+$$\uppsi _g \cdot \mathcal{L} \to \mathcal{L}$$
+
+$$\uppsi _g (A)=gAg^{-1}$$
+
+es un automorfismo del álgebra (pues el mapa del grupo es lineal y respeta el corchete) y se llama automorfismo interno de $\mathcal{L}$.
+
+$$\uppsi _g (\alpha A + \beta B)=\alpha \uppsi _g (A) + \beta \uppsi _g (B)$$
+
+$$\uppsi _g ([A,B])=[\uppsi _g (A), \uppsi _g (B)]$$
+
+\smallskip
+\textbf{Teorema:} el conjunto de todos los automorfismos de $\mathcal{L}$ forman un grupo, Aut($\mathcal{L}$), y el conjunto de todos los automorfismos internos $Int(\mathcal{L})$ es subgrupo normal de Aut($\mathcal{L}$).
+
+\subsection{Álgebras de Lie simples y semi-simples}
+
+Un álgebra de Lie es \textbf{simple} si no es abeliana y no tiene subálgebras de Lie invariantes no triviales.
+
+Un álgebra de Lie es \textbf{semi-simple} si no es abeliana y no tiene subálgebras de Lie invariantes abelianas.
+
+\begin{itemize}
+\item Toda álgebra semi-simple es suma directa de álgebras de Lie simples.
+\item Un grupo de Lie lineal es simple (semi-simple) si y solo sí su álgebra de Lie es simple (semi-simple).
+\end{itemize}
+
+\subsubsection{Operadores de Casimir}
+
+Consideremos un álgebra de Lie semi-simple con base $\lbrace A_i \rbrace _{i=1}^n$ y corchetes de Lie $[A_i,A_j]=\sum _{k=1}^n c_{ij}^k A_k$. Definamos una matriz h de tamaño nxn dada por:
+
+$$h_{ij}=\sum _{l,k}c^l_{ik}c^k_{jl}$$
+
+El operador de Casimir (de segundo órden) se define por:
+
+$$C=\sum _{ij}h_{i,j}A_i,A_j$$
+
+La característica de los operadores de Casimir es que conmutan con todos los elementos del álgebra (con los generadores del grupo).
+
+$$[C,A_r]=0$$
+
+\subsection{Forma de Killing}
+
+Dados dos elementos A y A' de un álgebra de Lie de dimensión n su forma de Killing se define como:
+
+$$K(A,A')=Tr(ad(A)ad(A'))$$
+
+Las cantidades K($A_i,A_j$) coinciden con $h_{i,j}$.
+
+\textbf{Teorema:} un álgebra de Lie real es semisimple si y solo si el determinante de su forma de Killing es distinto de cero (su forma de Killing no es degenerada).
+
+$$det(B_{ij})\neq 0$$
+
+Las álgebras semisimples son suma directa de simples, existe un sistema para clasificarlas (tiene que ver con las \textit{raices}, no veremos esto) que utiliza los diagramas de Dynkin.
+
+\newpage

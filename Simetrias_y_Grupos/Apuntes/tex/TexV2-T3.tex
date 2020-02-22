@@ -1,0 +1,2243 @@
+\documentclass{article}
+\usepackage{yhmath}
+\usepackage[utf8]{inputenc}
+\usepackage{ upgreek }
+\usepackage{graphicx}
+\usepackage{appendix}
+\usepackage{ amssymb }
+\usepackage{ tipa }
+\usepackage{svg}
+\usepackage{amsmath}
+\setlength{\parindent}{0cm}
+\usepackage[spanish]{babel}
+\usepackage{vmargin}
+\usepackage{subfig}
+\usepackage{ dsfont }
+\newcommand{\rn}[1][n]{\mathds{R}^{#1}}
+\usepackage{pdfpages}
+\usepackage{braket}
+\usepackage{ gensymb }
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\newcommand{\commentedbox}[2]{%
+  \mbox{
+    \begin{tabular}[t]{@{}c@{}}
+    $\boxed{\displaystyle#1}$\\
+    #2
+    \end{tabular}%
+  }%
+}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+\title{Notas de simetrías y teoría de grupos}
+\author{Álvaro Santiago Serrano }
+\date{Septiembre de 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción a las simetrías en física}
+\subsection{La importancia de las simetrías en física}
+
+Llamaos simetrías de un sistema físico a aquellas propiedades del sistema que se preservan bajo alguna transformación. Las simetrías van de la mano a leyes de conservación (ver teorema de Noether) de las ecuaciones que describen estos sistemas.
+
+Hasta el siglo XX se estudiaban las simetrías a partir de las ecuaciones de los sistemas, a partir de Einstein y la revolción de la relatividad se cambia el foco y nos empezamos a fijar directamente en las simetrías (no en las ecuaciones), derivando más tarde las ecuaciones de los sistemas asociadas a tales simetrías.
+
+\subsection{Relación entre simetría y teoría de grupos}
+
+La herramienta fundamental para el estudio de las simetrías es la teoría de grupos. Las transformaciones matemáticas asociadas a cada simetría poseen las propiedades de los grupos algebraicos. Por tanto, para el estudio de las simetrías es necesario conocer teoría de grupos.
+
+Así, por ejemplo, las transformaciones de simetría de la relatividad especial dorman el grupo de Poincaré (traslaciones espacio-temporales, rotaciones espaciales y rotaciones espacio-temporales).
+
+\subsection{Tipos de simetrías}
+
+\subsubsection{Locales y globales}
+Decimos que una simetría es local si las transformaciones de simetría cambian de punto a punto del espacio-tiempo ($\mathcal{X}(\Vec{x},t)$). Las globales por tanto son aquellas invariantes de punto a punto del e-t. Son importantes en teorías gauge.
+
+\subsubsection{Discretas y contínuas}
+
+Una simetría es discreta si su ley de transformación no es contínua (como las simetrías de los cristales o las rotaciones de los poliedros), un ejemplo de gran importancia es la simetría CPT de la cuántica de campos. Las simetrías contínuas son aquellas que sí pueden ser descritas por una transformación contínua (por ejemplo la simetría de rotación del círculo).
+
+\smallskip
+En dinámica clásica las consecuencias de las simetrías contínuas se hacen evidentes a través del principio de mínima acción. Una simetría de un sistema clásico deja invariante la acción bajo su aplicación sobre la misma y por tanto no modifica las ecuaciones del movimiento.
+
+\subsection{Simetría en mecánica cuántica}
+
+En mecánica cuántica las transformaciones de simetría son lineales y existe principio de superposición, provocando que las simetrías tengan profundas consecuencias.
+
+Sea $\ket{\uppsi}$ el estado del sistema y $\mathcal{R}$ un operador lineal unitario que representa una transformación.
+
+$$\mathcal{R}:\ket{\uppsi}\longrightarrow \mathcal{R}\ket{\uppsi}\in \mathcal{H}$$
+
+El estado $\mathcal{R}\ket{\uppsi}$ representa también un estado del sistema si $\mathcal{R}$ es una transformación unitaria (preserva la norma). Por ejemplo, una representación del singlete de rotaciones sería, si $\mathcal{R}=R$ representa el operador rotación $\ket{\phi}$ el estado del sistema y $\ket{\uppsi}$ un estado que puede ser mezcla:
+
+$$\ket{\phi} = \sum _R R\ket{\uppsi} \hspace{1cm} \text{Invariancia bajo rotaciones}$$ 
+
+$$R\ket{\phi}=\sum _{R'}R'R\ket{\uppsi} \hspace{1cm} \text{Como R es grupo, RR'=R'' -otra rotación-}$$
+
+$$R\ket{\phi}= \sum _{R''}R''\ket{\uppsi}=\sum _R R\ket{\uppsi}=\ket{\phi} \hspace{1cm} \text{El estado $\ket{\phi}$ es invariante bajo rotaciones}$$
+
+La teoría de representaciones de grupos discretos y continuos es muy importante en mecánica cuántica para derivar las consecuencias de las simetrías. Las leyes de selección que gobiernan los espectros atómicos son, por ejemplo, consecuencia de la simetría de rotaciones.
+
+Reveló la simetría también la existencia de los fermiones y los bosones, partículas con distinta transformación frente al cambio de partículas idénticas.
+
+\subsection{Transformaciones globales}
+La aplicación de una transformacion de simetría global da lugar a una situación física diferente en la que las observaciones son invariantes bajo dichas transformaciones.
+
+$$\Vec{x}\longrightarrow \Vec{x}+\Vec{v}t$$
+
+Siendo $\Vec{v}t\neq \Vec{v}t(\Vec{x})$ una transformación global.
+
+
+\subsection{Simetrías gauge}
+La aplicación de la transformación gauge solo cambia la descripción de una misma situación física. La primera vez que aparece es en electrodinámica, donde los campos EM pueden presentarse en un potencial cuadrivector $A_\mu=(\phi, \Vec{A})$ que se transforma según:
+
+$$A_\mu \longrightarrow A_\mu +\partial \mu \phi (x)$$
+
+Donde $\partial _\mu \phi (x)=\frac{\partial \phi (x)}{\partial x_\mu}$. 
+
+Transformación que deja completamente invariantes los campos $\Vec{E}$ y $\Vec{B}$. A partir de los años 70 las teorías gauge van a tener una posición central en el estudio de las teorías fundamentales de la naturaleza. Son la base del modelo estándar de partículas, afectando por ejemplo a la dinámica y fuerza de partículas o forzando la existencia de otras tales como el famoso bosón de Higgs (se dice que la simetría dicta la interacción).
+
+\newpage
+\subsection{Ejemplo de aplicación de las simetrías a un caso sencillo}
+
+Sea una partícula en una red periódica unidimensional, su hamiltoniano es del tipo $H=\frac{p^2}{2m}+\phi (x)$ con $\phi (x)$ un potencial periódico con periodicidad $\phi (x)=\phi (x+nb) \hspace{0.1cm} \forall n\in \mathcal{Z}$.
+
+\smallskip
+$\bullet$ Por tener esta periodicidad existe simetría de traslación en la red (pues tanto la parte cinética como la potencial tienen la simetría).
+
+\begin{equation}
+    x\longrightarrow x+nb
+    \label{traslacion}
+\end{equation}
+
+\smallskip
+$\bullet$ Dos sistemas relacionados por (\ref{traslacion}) tienen el mismo comportamiento.
+
+\smallskip
+$\bullet$ Dos observadores relacionados por (\ref{traslacion}) ven las mismas propiedades del sistema (punto de vista activo/pasivo).
+
+En mecánica cuántica tenemos un estado $\ket{\uppsi}$ en $\mathcal{H}=L^2(\mathds{R},dx)$ que se traslada según el operador unitario $\mathcal{T}=T$ que cumple:
+
+$$\mathcal{T}: \ket{\uppsi}\longrightarrow T\ket{\uppsi}=\ket{\uppsi '}$$
+
+$\mathcal{T}$ es una transformación lineal que deja \textbf{invariantes los observables}. Es decir, si $\mathcal{O}$ es un observable:
+
+$$O\ket{\uppsi}=O\ket{\uppsi '}$$
+
+Dado que los obserbables se expresan como $\braket{\phi|\uppsi}$, el operador T debe preservar este producto escalar. T debe ser un operador \textbf{unitario autoadjunto}.
+
+El conjunto de simetrías de la red está representado por el conjunto de operadores unitarios en $\mathcal{H}$. Es decir, forma una representación de transformaciones de simetría del hamiltoniano. Vemos pues que deben transformar también los observables. Hallemos el valor esperado del operador unitario A:
+
+$$\braket{\phi |A|\uppsi}=\braket{\phi |T^{-1}TAT^{-1}T|\uppsi}=\braket{\phi '|TAT^{-1}|\uppsi '}=\braket{\phi '|A'|\uppsi'}$$
+
+Luego vemos que bajo la acción de T:
+
+$$A\longrightarrow TAT^{-1}=A'$$
+
+Volviendo ahora a nuestro sistema, sea $\ket{x}$ un estado del sistema en representación de posición, el operador traslación:
+
+$$T\ket{x}=\ket{x+nb}=\ket{x'}$$
+
+Es evidente ver que H es invariante bajo traslación:
+
+$$THT^{-1}=T\left( \frac{P^2}{2m}+\phi (x)\right)T^{-1}=T \frac{P^2}{2m}T^{-1}+\phi (x+nb)$$
+
+Dado que $\phi (x)=\phi (x+nb)$ solo debemos comprobar que el operador momento lineal en mecánica cuántica se traslade adecuadamente. Sea $P^2=\partial ^2_x\frac{1}{2m}$ la expresión de este operador en la base de posiciones, tenemos:
+
+$$T\frac{\partial ^2}{\partial x^2}\frac{1}{2m}T^{-1}\ket{x}=T\frac{\partial ^2}{\partial x^2}\frac{1}{2m}\ket{x-nb}=\frac{T}{2m}\left ( \frac{\partial ^2}{\partial x^2}\ket{x-nb}\right)$$
+
+Dado que $\frac{\partial ^2}{\partial x^2}\ket{x}=\frac{\partial ^2}{\partial x^2}\ket{x-nb}$, decimos que la parte cinética es invariante bajo traslaciones [H,T]=0 y la base de posiciones que hemos utilizado sería una buena base de autoestados para el hamiltoniano.
+
+\newpage
+\subsubsection{Representación de operadores de traslación discreta}
+La simetría que presenta este sistema es la del grupo de operadores de traslación discreta. Cumplen una serie de propiedades:
+
+\begin{itemize}
+    
+\item T(n)T(m)=T(n+m)
+
+\item T(0)=$\mathds{1}$
+
+\item T(-n)=$T(n)^{-1}$
+
+\end{itemize}
+
+La primera propiedad es la de grupo abeliano y la segunda la de unitario. ¿Cómo implementamos entonces esta simetría?
+
+Escogemos una base de autoestados de T(n) (que conmuten para todo n) que sea base para todo n. Es decir:
+
+$$T(n) \ket{u(\xi)}=t_n(\xi)\ket{u(\xi)}$$
+
+La base $\ket{u(\xi)}$ tiene unos autovalores $t_n(\xi)$ que guardan información sobre n y $\xi$. Estos autovalores tienen una serie de propiedades:
+
+\begin{itemize}
+    \item $t_n (\xi) t_m(\xi) = t_{n+m}(\xi)$
+    \item $t_0(\xi)=1$
+    \item $t_{-n}(\xi)=\frac{1}{t_n(\xi)}$
+    \item $t_n(\xi)t_m(\xi)=t_m(\xi)t_n(\xi)$
+    \item $|t_n(\xi)|^2=1$
+\end{itemize}
+
+Luego, los $t_n(\xi)$ adecuados son $ t_n(\xi)=e^{-i\phi _n(\xi)}$ con $\phi (\xi)$ real e impar. Luego $\phi (\xi)=nf(\xi)$ para cualquier $f(\xi)$ real e impar, por ejemplo $f(\xi)=\xi$. Quedan los autovalores:
+
+$$t_n(\xi)=e^{-i\xi n}$$
+
+Se dice que el cojunto de autovalores $\lbrace t_n(\xi) \rbrace$ proporcionan una representación para el grupo de operadores de traslación discreta de dimensión d: $\mathcal{T}^d$.
+
+\subsubsection{Consecuencias de la simetría}
+Dado que $t_n(\xi)$ es periódica de periodo $2\pi$  tomamos el intervalo $-\pi <k<\pi$. Sea $k=\xi/b$ en el intervalo $-\pi/b<k<\pi/b$ buscamos los $t_n(k)$ que sean autoestados de T y H al mismo tiempo (es decir que definan adecuadamente las traslaciones y la energía de las partículas al mismo tiempo). 
+
+\smallskip
+Sea $U_{E,k}(x)=\braket{x|U(E,k)}$ la función de onda en representacion de posiciones.
+
+$$x=nb+y \hspace{0.2cm} \forall y \in -b/2\leq y \leq b/2$$
+
+$$\ket{x}=T(n)\ket{y}; \hspace{0.2cm}\bra{x}=\bra{y}T^+(n)$$
+$$\overbrace{\braket{x|U(E,k)}}^{U_{E,k}(x)}=\bra{y}T^+(n)\ket{U(E,k)}=\bra{y}T(-n)\ket{U(E,k)}=\braket{y|U(E,k)}e^{iknb}=U_{E,k}(y)e^{ik(x-y)}$$
+
+Lo que acabamos de demostrar, que $e^{-ikx}U(x)=e^{-iky}U(y)$, implica que podemos estudiar una única celda de la red y tendríamos igualmente toda la información de la misma. Se define la función de Bloch como $V_{E,k}(x)=U_{E,k}(x)e^{-ikx}$ , periódica en x de periodo b con k la llamada variable del vector de ondas. La función de Bloch, si recordamos de sólido, nos permite estudiar todo el cristal a partir de uno de sus electrones pues la red posee una simetría de traslación igual a la de la función (al igual que aquí en nuestro ejemplo).
+\newpage
+
+Por tanto, usando la función de onda obtenida en la ecuación de Schrödinger del sistema encontraríamos la solución (sin más que introducir una condición de contorno periódica). Para cualquier k del intervalo admitido se puede encontrar un conjunto de autovalores y autofunciones en forma explícita. En general se obtienen niveles de energía discretos (el Ppio. de exclusión de Pauli limitará luego -o no- el número de partículas por nivel).
+
+\smallskip
+Este ejemplo también ilustra la relación entre la teoría de representación de grupos y el análisis armónico (siendo el ejemplo del de Fourier un caso partícular). En nuestro ejemplo las funciones de representación son la base de ondas planas de las sries de Fourier, satisfacen:
+
+$$1.- \int ^\pi _{-\pi} d\xi e^{in\xi} e^{im\xi} =2\pi \delta _{m,n}$$
+$$2.- \sum _{n=1}^N e^{in\xi}e^{in\xi '}=\delta (\xi-\xi ')$$
+
+Las llamadas relaciones de ortonormalidad y compeltitud. Dada por tanto una función cualquiera $f(\xi)$ con $\xi \in [-\pi,\pi)$ se puede escribir $f(\xi)=\sum _{n=1}^N f_ne^{-in\xi}$ en base de ondas planas con coeficientes $f_n=\frac{1}{2\pi}\int^\pi _{-\pi}d\xi e^{in\xi}f(\xi)$.
+
+
+
+
+
+
+\newpage
+
+\section{Elementos generales de teoría de grupos}
+\subsection{Defininición y ejemplos}
+Un grupo es un conjunto de elemntos $G=\lbrace g\rbrace$ junto con una ley de composición interna (la llamaremos multiplicación).
+
+$$G\times G\rightarrow G$$
+$$(g_1,g_2)\rightarrow g_1g_2 \in G$$
+
+Debe tener las siguientes propiedades:
+
+\begin{enumerate}
+    \item Asociativa, $ (g_1g_2)g_3=g_1(g_2g_3)$
+    \item Existencia del elemento unidad, $\exists e / \hspace{0.2cm} eg=g\hspace{0.2cm} \forall g\in G$
+    \item Existencia de inversa, $\exists g^{-1} / \hspace{0.2cm} g^{-1}g=e \hspace{0.2cm} \forall g\in G$
+\end{enumerate}
+
+Puede probarse facilmente que esas propiedades existen también cuando se multiplica por la derecha en vez de por la izquierda. 
+
+\smallskip
+Definimos el \textbf{grupo abeliano} como aquel grupo que presenta la "propiedad distributiva", $g_ig_j=g_jg_i \hspace{0.2cm} \forall g_ig_j \in G$.
+
+\smallskip
+Definimos el \textbf{orden} como el número de elementos de un grupo, denominado por $|G|$.
+
+\smallskip
+El teorema de reordenamiento nos asegura que $gG=\lbrace gg_i\rbrace =G$ pues g es un elemento de G y la multiplicación de elementos de un grupo no nos saca del grupo.
+
+\subsection{Ejemplos de grupos}
+
+\subsubsection{Grupos finitos}
+
+\begin{itemize}
+    \item Los enteros bajo suma de módulo n $\mathcal{Z}_n$ (grupo cíclico de orden n). Si su suma se sale del conjunto se restan tantos $|n|$ como haga falta para que viva en el conjunto. Veamos por ejemplo la tabla de multiplicar del grupo $\mathcal{Z}_3$:
+    
+    $$\begin{tabular}[b]{ c | c c c }
+
++ & 0 & 1 & 2 \\
+\hline
+0  & 0 & 1 & 2 \\
+
+1 & 1 & 2 & 0 \\
+
+2 & 2 & 0 & 1
+
+\end{tabular} 
+$$
+    
+    \item Los grupos de invariancia rotacional discreta y de reflexión (grupos puntuales de redes regulares discretas).
+    \item Grupo de permutaciones ($S_n$) de n elementos o grupo simétrico. Tiene orden $n!$. Grupo no abeliano.
+\end{itemize}
+
+\subsubsection{Grupos infinitos discretos}
+
+\begin{itemize}
+    \item Los enteros bajo suma $\mathcal{Z}$.
+    \item Los reales bajo multiplicación.
+    \item Los grupos de traslación en redes regulares discretas.
+\end{itemize}
+
+\subsubsection{Grupos continuos compactos}
+\begin{itemize}
+    \item Grupo ortogonal O(n), grupo de matices de orden n (n$\times$n) que satisfacen $O^+(n)=O^{-1}(n)$. Son el grupo de rotaciones y reflexiones en $\mathds{R}^n$.
+    \item Grupo unitario U(n) de matrices n $\times$ n que satisfacen $U^+U=\mathds{1}$.
+    \item SO(n) y SU(n) son subgrupos con det=1 (\textit{ Nota: los grupos con det=-1 no tienen ley de composición interna}). 
+\end{itemize}
+
+\subsubsection{Grupos continuos no compactos}
+
+\begin{itemize}
+    \item $\mathds{R}$, $\mathds{Q}$ y $\mathds{C}$ bajo suma y multiplicación (sin el cero).
+    \item El grupo lineal GL(n,$\mathds{K}$) de amtrices n $\times$ n con coeficientes en el cuerpo $\mathds{K}=\mathds{R},\mathds{C}$ y det $\neq$ 0 y su subgrupo, el grupo espacial lineal de las matrices con determinante 1 (SL(n,$\mathds{K}$)).
+    \item El grupo euclídeo de transformaciones del tipo $\Vec{x}\rightarrow O\Vec{x}+\Vec{b}$ con $O\in O(n)$ y $\Vec{b}$ un vector constante (E(n)).
+    \item El grupo de Poincaré (de isometrías del espacio de Minkowski) y el grupo de Lorentz (subgrupo de isometrías que dejan el origen fijo).
+\end{itemize}
+
+\subsection{Subgrupos}
+
+Se llama subgrupo al conjunto de elementos $H \subset G$ que es a su vez un grupo con la misma operación interna que G.
+
+\smallskip
+$\hspace{0.5cm }$ \textbf{Teorema:} H es subgrupo de G si para cualesquiera 2 elementos de H cumple que $h'h^{-1}\in H$ y $h'h\in H$.
+
+\subsubsection{Definiciones}
+
+\begin{itemize}
+    \item Se dice que un subgrupo es \textbf{propio} si es distinto a G y al elemento identidad.
+    \item Definimos el \textbf{centro} de G, Z(G), como el conjunto de elementos que cumplen $h\in G$ / $hg=gh \hspace{0.2cm} \forall g \in G$. Sera no-propio si no es abeliano (pues si no se cumple trivialmente para cualquier subgrupo de G).
+\end{itemize}
+
+\subsection{Clases de conjugación}
+
+Un elemento $g_1$ de un grupo G se dice conjugado de otro $g_2$ si existe un $h\in G \hspace{0.2cm} / \hspace{0.1cm} g_1=hg_2h^{-1} \leftrightarrow g_1h=hg_2$.
+
+\begin{itemize}
+    \item Si $g_1$ es conjugado a $g_2$ entonces $g_2$ es conjugado a $g_1$.
+    \item Si $g_1,g_2$ son conjugados a $G_3$ y todos pertenecen al mismo grupo G $g_1$ y $g_2$ también son conjugados entre sí.
+\end{itemize} 
+
+Una \textbf{clase de conjugación} es un conjunto de elementos mutuamente conjugados.
+
+\subsubsection{Popiedades}
+
+\begin{enumerate}
+    \item Cada $g\in G$ pertenece a alguna clase de conjugación.
+    \item Ningún g puede pertenecer a dos clases distintas.
+    \item La identidad forma una clase consigo misma.
+    \item Si G es abeliano entonces cada $g\in G$ forma una clase consigo misma.
+\end{enumerate}
+
+\subsection{Subgrupos normales}
+Un subgrupo H de un grupo G es normal (también llamado invariante bajo conjugación) si $ghg^{-1}\in H \hspace{0.2cm} \forall h\in H$ y $\forall g\in G$. Se denota por $H\lhd G$.
+
+$\hspace{0.5cm}$\textbf{Teorema:} $H\subset G$ es un grupo normal de G si H es una unión de clases de conjugación de G. 
+
+$$\text{Si} \hspace{0.1cm} N\subset H \subset G \hspace{0.1cm}\text{son subgrupos y} N\lhd G \hspace{0.1cm} \text{entonces}\hspace{0.1cm} N\lhd H $$
+
+\begin{itemize}
+    \item Se dice que un subgrupo es \textbf{simple} si no tiene subgrupos normales propios (excluyendo a la identidad y al propio grupo que son triviales).
+    \item Un grupo es semi simple si no tiene subgrupos normales abelianos propios. Evidentemente, simple implica semi simple.
+\end{itemize}
+
+\subsection{Cosets}
+Sea $H=\left { h_I\right}$ un subgrupo de G. Se define el coset por la izquierda de H asociado a $g\in H : gH= \left { gh_i\right }$ y el coset por la derecha de H asociado a $g\in H : Hg= \left { h_i g\right }$.
+
+\smallskip
+\textbf{Propiedades} (Valen para los cosets por la derecha o por la izquierda):
+
+\smallskip
+$\bullet$ gH coincide con H si y solo si $g\in H$.
+
+\smallskip
+$\bullet$ Si $g\notin H$ entonces $e\notin gH$ no es subgrupo de G.
+
+\smallskip
+$\bullet$ Cada elemento de G pertenece a algún coset.
+
+\smallskip
+$\bullet$ Si $g'\in gH$, entonces $g'H=gH$.
+
+\smallskip
+$\bullet$ Dos cosets $g_1H, g_2H$ o bien son idénticos o bien son disjuntos.
+
+\smallskip
+A partir de esta propiedades se ve que si H es subgrupo de G, entonces G es una unión disjunta de cosets asociados a H. 
+
+\smallskip
+$\bullet$ Si G es un grupo finito de H es subgrupo de G, el orden de H es divisor del orden de G ($|G|/|H|\in \mathcal{Z}$, Teorema de Lagrange). A esa división se le llama índice y es el número de cosets diferentes de H.
+
+ \subsection{Grupo cociente}
+ Un subgrupo H de un grupo G es normal ($H\lhd G$) si y solo si los cosets por la derecha H coinciden con los cosets por la izquierda. 
+ 
+ Podemos definir el producto de cosets (por la izquierda) de un subgrupo normal $H\in G$ como:
+ 
+ $$g_1H*g_2H=(g_1\cdot g_2)H; \hspace{0.2cm} g_1,g_2 \in G$$
+ 
+ No es obvio que $(g_1\cdot g_2)$ sea consistente pues hay elementos de G diferentes para los que sus cosets son los mismos. Necesitamos una definición que nos da la relación de consistencia:
+ 
+ $$(g_1'g_2')H=(g_1g_2)H$$
+ 
+ Es decir, si los cosets coinciden debe coincidir también la composición. Por sencillez tomemos $g_1=e$, entonces $eH=H=hH \hspace{0.2cm} \forall h\in H$. Ahora, con el anterior producto $(eg)H=eH*gH=hH*gH=(hg)H=gg^{-1}hgH$.
+ 
+ \smallskip
+ Necesitamos que $g^{-1}hgH=H \leftrightarrow g^{-1}hg\in H \hspace{0.2cm} \forall g \in G$, es decir, H tiene que ser grupo normal. En general si $gH=g'H$ entonces $g'=gH$ con $h\in H$.
+ 
+ \smallskip
+ \textbf{Teorema:} el conjunto de cosets (por la izquierda) de un subgrupo normal H de un grupo G forma un grupo respecto a la operación de multiplicación de cosets anteriormente definida por *. Este grupo se llama grupo cociente (\textit{factor group}). Se denota por G/H. Si G es finito, el orden del grupo cociente es el índice.
+ 
+ $$G=\lbrace g_1,...,g_n,g_{n+1},...,g_m\rbrace$$
+ $$H=\lbrace g_1,...,g_n\rbrace$$
+ $$G/H=\left (\lbrace H,g_{n+1}H,...,g_mH\rbrace,*\right )$$
+ 
+ Nótese que $gH=g'H$ define una relación de equivalencia distinta a la conjugación, podemos pensar en el grupo cociente como el conjunto de esas clases de equivalencia bajo esta relación. Nos sirve para clasificar conjuntos. 
+ 
+ La partición de los elementos del grupo G en costets es única y una "factorización" de G basada en esta partición es natural. Veámoslo como un ejemplo:
+ 
+ \smallskip
+ Sea $G=S_3$ y $H=A_3$ del ejemplo anterior. El grupo cociente viene definido por la tabla de multiplicar:
+ \begin{center}
+\begin{tabular}[b]{ c | c c}
+ * & $A_3$ & $\tau _1$ $A_3$\\
+ \hline
+ $A_3$ & $A_3$ & $\tau _1 A_3$ \\
+ 
+ $\tau _1 A_3$ & $\tau _1 A_3$ & $A_3$
+ \end{tabular}
+ 
+ \end{center}
+ 
+ 
+ Cumple:
+ 
+\begin{itemize}
+    \item $A_3*eA_3=(e\cdot e)A_3$
+    \item $A_3*\tau _1A_3=(e\tau _1)A_3$
+ \item (\tau _1A_3)*(\tau _1 A_3)=(\tau _1 \tau _1)A_3=A_3$
+\end{itemize}
+ 
+ \smallskip
+ El grupo cociente $S_3/A_3= \lbrace A_3, \tau _1 A_3\rbrace $ me da información sobre la paridad de los grupos $S_3$ y $A_3$.
+ 
+ \subsection{Homomorfismos entre grupos}
+ Un homomorfismo entre dos grupos G y G' es una aplicación 
+ 
+ $$\phi : \hspace{0.2cm} G \rightarrow G'$$
+ 
+ $$g\rightarrow \phi(g)$$
+ 
+ que verifica que $\phi (g\cdot h)=\phi (g)*\phi (h)$ respetando la estructura de grupo.
+ 
+ \smallskip
+$\bullet$ Un homomorfismo se dice \textbf{fiel} si es inyectivo.
+ 
+ $$\phi (h)=\phi (g) \hspace{0.2cm} \text{si y solo si g=h}$$
+ 
+ \smallskip
+$\bullet$ Un \textbf{isomorfismo} es un homomorfismo biyectivo (inyectivo y suprayectivo). Un mapa uno a uno de G en otro grupo G' del mismo orden que respeta la multiplicación $G\cong G'$.
+ 
+ \smallskip
+$\bullet$ Un \textbf{automorfismo} es un isomorfismo de un grupo en sí mismo (es decir cambio de mapa dentro de un mismo grupo).
+ 
+ \subsubsection{Propiedades de los homomorfismos}
+ 
+ Sean dos grupos $(G,\cdot)\cong (G',*)$ con la identidad bien definida y con homomorfismo entre ellos.
+ 
+ \begin{itemize}
+     \item $\phi (e_g)=e_{g'}$
+     \item $\phi (g^{-1})=(\phi (g))^{-1}$
+     
+     La imagen de $\phi$ denotada por $\phi (G)$ es la parte de G' alcanzada mediante $\phi$, $\phi (G)=\lbrace g' \in G' \hspace{0.1cm} /\hspace{0.1cm} \exists \hspace{0.1cm} g \in G \hspace{0.1cm}\text{con} \hspace{0.1cm} \phi (g)=g' \rbrace \subset G' $
+     
+     \item El núcleo de $\phi$, denotado Ker $\phi$ (o $\phi ^{-1}(e_{g'})$) es el subconjunto de G mapeado bajo $\phi$ a la identidad en G'.
+     
+     $$Ker\phi = \lbrace g\in G \hspace{0.2cm} / \hspace{0.1cm} \phi (g)=e_{g'}\rbrace$$
+     
+     \begin{center}
+     $\phi$ es inyectivo $\leftrightarrow$ Ker $\phi$= $\lbrace e_{g}\rbrace$
+     
+     \end{center}
+      \end{itemize}
+      
+     $\hspace{0.5cm}$\textbf{Teorema de Caley}: todo grupo de orden n es isomorfo a un subgrupo de $S_n$.
+     \bigskip
+     
+
+ 
+ \textbf{Ejemplo}: Consideremos la aplicación $\phi: \hspace{0.2cm} \mathds{R}\rightarrow S^1=\lbrace z\in \mathds{C}, \hspace{0.2cm} |z|=1 \rbrace ; \hspace{0.2cm} x \longrightarrow \phi (x)=e^{ix}$ que es un homomorfismo de ($\mathds{R},+$) en $S^1$.
+ 
+ 
+ $$a+b \longrightarrow \phi (a+b) =e^{i(a+b)}=e^{ia}\cdot e^{ib}=\phi(a)\phi (b)$$
+ 
+ Sin embargo, su Ker $\phi =2\pi \mathds{Z}\neq e_g \rightarrow \phi $ no es un isomorfismo.
+ 
+ \bigskip
+ \textbf{Ejemplo 2}: veamos un ejemplo de isomorfismo entre grupos, el grupo $S_3$ es isomorfo a $D_3$ (el grupo de simetrías en el plano del triángulo equilátero).
+ 
+ \begin{itemize}
+     \item Invariante bajo rotaciones de 0º$\rightarrow \hat{e}$, $120º \rightarrow \hat{\sigma}_1$ y $240º\rightarrow \hat{\sigma} _2$. Reflexiones con respecto a los ejes que pasan por sus vértices.
+     
+     \item  Reflexiones respecto al vértice que pasa por el vértice i-ésimo ($\hat{\tau}_1$).
+ \end{itemize}
+ 
+ \subsubsection{Teoremas}
+ 
+ Sea $\phi : G\rightarrow G'$ un homomorfismo entre grupos, entonces:
+      
+      \begin{enumerate}
+\item Ker $\phi$ es un subgrupo normal de G.
+
+\item La imagen de $\phi (G)$ es subgrupo de G'.
+
+\item El grupo cociente $G/Ker\phi$ es isomorfo a $\phi (G)$, con el isomorfismo dado por
+
+$\hat{\phi} : G/Ker\phi \rightarrow \phi (G)$ (los cosets de Ker$\phi$).
+
+ \end{enumerate}
+ 
+ Veamos la demostración de los teoremas en orden. 
+ 
+ \bigskip
+ Para el \textbf{primero} debemos probar que Ker$\phi$ es subgrupo.
+ 
+ \smallskip
+ Consideremos $g,h\in Ker\phi $ , es decir $\phi (g) =\phi (h)=e_{g'}$. Entonces:
+ 
+ $$\phi (gh^{-1})=\phi (g)\phi (h^{-1})=\phi (g)(\phi(h))^{-1}=e_{g'}e_{g'}^{-1}=e_{g'} \rightarrow gh^{-1} \in Ker \phi $$
+ 
+ y por tanto Ker $\phi$ \textbf{es subgrupo} de G.
+ \smallskip
+ 
+ Para probar que Ker$\phi$ es normal, consideremos cualquier elemento de G, $h\in G$ (no necesariamente en Ker$\phi$); llamemos $g\in Ker \phi$ a cualquier elemento del núcleo. Tenemos:
+ 
+ $$\phi (hgh^{-1})=\phi(h)\phi (g)\phi (h^{-1})=\phi(h)(\phi(h))^{-1}=e_{g'}\rightarrow hgh^{-1}\in Ker\phi$$
+ 
+
+Luego $hKer\phi h^{-1}=Ker \phi \hspace{0.2cm} \forall h\in G$, \textbf{es normal}.
+ 
+ \bigskip
+ Vamos con la del \textbf{segundo}. 
+ \smallskip
+ 
+ Sean $\phi (g),\phi (h)\in  \phi(G)$ entonces:
+ 
+ $$\phi (g)(\phi(h))^{-1}=\phi (g)\phi (h^{-1})=\phi (gh^{-1})\in \phi (G)\rightarrow \phi (G)$$
+ 
+es subgrupo.
+  
+  \bigskip
+  Y el \textbf{tercero}.
+  
+  Veamos que $\hat{\phi}$ esta bien definido (es decir, no existen elementos de G para los que $gKer\phi =g'Ker\phi$), por tanto, hay que asegurarse de que $\hat{\phi} (gKer\phi)=\hat{\phi}(g'Ker\phi)$, es decir que $\phi(g)=\phi (g')$.
+  \smallskip
+  
+  En efecto si $gKer\phi =g'Ker \phi \rightarrow ker\phi=g^{-1}g'Ker\phi \rightarrow g^{-1} g' \in Ker \phi$. Entonces:
+ 
+ $$\phi (g')=\phi (gg^-1g'})=\phi (g)\phi (g^{-1}g')=\phi (g)$$
+ 
+ como queríamos probar. 
+ 
+ \smallskip
+ Necesitamos ahora probar que es \textbf{homomorfismo}, es decir, debemos probar que respeta el producto en el grupo. Si tomamos el producto de los mapas de dos cosets $\hat{\phi} (gKer\phi)\cdot \hat{\phi} (hKer\phi)=\phi (g)\phi (h)=\phi (gh)=\hat{\phi} (ghKer\phi)$ vemos que efectivamente respeta el producto de cosets. 
+ 
+ \smallskip
+ Debemos probar también que es \textbf{inyectivo} (su núcleo es la identidad). Sea el coset $gKer\phi \in Ker\hat{\phi} \leftrightarrow \hat{\phi} (gKer\phi)=e_{g'}\rightarrow \phi (g)=e \rightarrow g\in Ker \phi \rightarrow gKer\phi =Ker\phi$, que es el elemento identidad del grupo cociente y por tanto el núcleo es trivial.
+ 
+ \smallskip
+ Además debe ser \textbf{suprayectivo}; como el mapa es suprayectivo (o sobreyectivo) por construcción, es decir la imagen es todo $\phi (G)$, entonces lo es. Por lo tanto el grupo cociente es efectivamente un isomorfismo de $\phi (G)$.
+ 
+ \bigskip
+ Este teorema proporciona una manera sencilla de ver si un subgrupo es normal, buscando un homomorfismo del cual dicho subgrupo es su núcleo. Se trata además de un criterio exhaustivo ya que para cualquier subgrupo normal $H\lhd G$ el mapa $\uppi : G\rightarrow G/H$;  $g\rightarrow gH$ también es un homomorfismo entre grupos con $Ker\uppi =H$. 
+ 
+ \smallskip
+ \textbf{Corolario}: un subgrupo $H\subset G$ es normal si y solo si existe un homeomorfismo entre grupos $\phi : G\rightarrow G'$ con $Ker\phi =H$.
+ 
+ \newpage
+ Veamos algunos ejemplos.
+ 
+ \begin{itemize}
+     \item Para cualquier grupo matricial sobre un cuerpo $\mathds{K}$, el determinante es un homomorfismo a $\mathds{K}^*$, el cuerpo sin el cero (las matrices de determinante 0 no tienen inverso y no se podran mapear). El núcleo de este mapa consiste en todas las matrices con determinante 1. Que por el teorema 1 vemos que determinan un subgrupo normal y podemos hablar de un grupo cociente. Por el teorema 3, los grupos cocientes son isomorfos a las respectivas imágenes.
+     
+     \item Dentro de grupos matriciales vemos, por ejemplo, el grupo general lineal de matrices $GL(n,\mathds{K})$ tiene el grupo $SL(n,\mathds{K}) \lhd GL(n,\mathds{K})$ y su grupo cociente $GL(n,\mathds{K})/SL(n,\mathds{K})\cong \mathds{K}^*$.
+     
+    \item También el grupo de matrices unitarias $U(n)$ tiene un subgrupo $SU(n)\lhd U(n)$ tal que su cociente $U(n)/SU(n) \cong S^1 \cong U(1)$. 
+ \end{itemize}
+ 
+ \subsection{Veamos un ejemplo con algunas cosillas del tema, el grupo $S_3$ de permutaciones con 3 elementos}
+Sean las siguientes permutaciones:
+
+$$e=\begin{bmatrix}
+1 & 2 & 3 \\
+1 & 2 & 3
+\end{bmatrix} \hspace{0.5cm}
+\tau_1=\begin{bmatrix}
+1 & 2 & 3 \\
+1 & 3 & 2
+\end{bmatrix} \hspace{0.5cm}
+\tau_2=\begin{bmatrix}
+1 & 2 & 3 \\
+3 & 2 & 1
+\end{bmatrix} \hspace{0.5cm}
+\tau_3=\begin{bmatrix}
+1 & 2 & 3 \\
+2 & 1 & 3
+\end{bmatrix} \hspace{0.5cm}
+$$
+$$
+\sigma_1=\begin{bmatrix}
+1 & 2 & 3 \\
+2 & 3 & 1
+\end{bmatrix} \hspace{0.5cm}
+\sigma_2=\begin{bmatrix}
+1 & 2 & 3 \\
+3 & 1 & 2
+\end{bmatrix} \hspace{0.5cm}$$
+
+Sus clases de conjugación son:
+
+ \begin{enumerate}
+     \item La identidad.
+     \item Los ciclios (taus).
+     \item Los 3-ciclos (sigmas).
+ \end{enumerate}
+ 
+ Su tabla de multiplicar:
+
+
+$$\begin{tabular}[b]{ c | c c c c c }
+
+e & $\tau _1$ & $\tau _2$ & $\tau_3$ & $\sigma _1$ & $\sigma _2$\\
+\hline
+$\tau_1$ & e & $\sigma _1$ & $\sigma _2$ & $\tau _2$ & $\tau _3$\\
+
+$\tau _2$ & $\sigma _2$ & e & $\sigma _1$ & $\tau _3$ & $\tau _1$\\
+
+$\tau _3$  & $\sigma _1$ & $\sigma _2$ & e & $\tau 1$ & $\tau _2$\\ 
+
+$\sigma _1$ & $\tau _3$ & $\tau _1$ & $\tau _2$ & $\sigma _2$ & e\\
+
+$\sigma _2$ & $\tau _2$ & $\tau _3$ & $\tau 1$ & e & $\sigma _1$
+
+\end{tabular}  
+
+Tiene dos subgrupos propios, el de los 3 ciclos y el de $\tau _1$ con la unidad:
+
+\begin{center}
+\begin{bmatrix}
+e & \sigma _1 & \sigma _2\\
+\sigma _1 & \sigma _2 & e \\
+\sigma _2 & e & \sigma _1
+\end{bmatrix}$\hspace{3cm}$
+\begin{bmatrix}
+e & \tau _1\\
+\tau _1 & e
+\end{bmatrix}
+\end{center}
+
+Son grupos abelianos.
+
+\smallskip
+Veamos sus clases de conjugación, deben cumplir (para $\sigma _1$):
+
+$$g\sigma _1 g^{-1}=h\in G$$
+
+\smallskip
+
+Con $\sigma _1$ y $\sigma _2$, vemos que forman una clase de conjugación (en este caso subgrupo normal): 
+
+\smallskip
+
+$$\sigma _2\sigma _1 \sigma _2^{-1}=\sigma _2 \sigma _2=\sigma _1$$
+
+$$\tau _1\sigma _1 \tau ^{-1}_1=\tau _1\tau _3=\sigma _2 \leftrightarrow \tau _1 \sigma _2 \tau _1 ^{-1}=\sigma _1$$
+
+$$\tau _2\sigma _1 \tau ^{-1}_2=\tau _2\tau _1=\sigma _2 \leftrightarrow \tau _2 \sigma _2 \tau _2 ^{-1}=\sigma _1$$
+
+$$\tau _3\sigma _1 \tau ^{-1}_3=\tau _3\tau _2=\sigma _2 \leftrightarrow \tau _3 \sigma _2 \tau _3 ^{-1}=\sigma _1$$
+
+\smallskip
+$$\left \lbrace e \right \rbrace U \left \lbrace \sigma _1, \sigma _2 \right \rbrace=A_3$$
+
+Para $\tau _1$:
+
+$$\tau _2 \tau _1 \tau _2^{-1}=\tau _2\tau _1 \tau _2 =\tau _2 \sigma _1=\tau _3$$
+
+$$\tau _3 \tau _1 \tau _3^{-1}=\tau _3\tau _1 \tau _3 =\tau _3 \sigma _2=\tau _2$$
+
+Que es el grupo $\lbrace \tau _1, \tau _2 , \tau _3 \rbrace$.
+
+Busquemos los cosets de $A_3$, deben cumplir que $gA_3=\lbrace ge, g\sigma _1, g\sigma _2\rbrace$.
+
+$$eA_3=A_3$$
+
+$$\sigma _1 A_3=\lbrace \sigma _1, \sigma _2 , e \rbrace=A_3$$
+
+$$\sigma _2 A_3=\lbrace \sigma _2, e, \sigma _1 \rbrace=A_3$$
+
+Vemos que $gH=H$ si $g\in H$.
+
+$$\tau _1 A_3=\lbrace \tau _1, \tau _2, \tau _3\rbrace$$
+
+$$\tau _2 A_3=\lbrace \tau _2, \tau _3, \tau _1\rbrace$$
+
+$$\tau _3 A_3=\lbrace \tau _3, \tau _1, \tau _2\rbrace$$
+
+Y también comprobamos que $\tau _1 A_3=\tau _2 A_3=\tau _3 A_3$.
+
+
+ \subsection{Automorfismos internos}
+ 
+ Definimos los automorfismos como
+ 
+ $$\phi : G \to G$$
+ $$Ker \phi \lhd G$$
+ $$\phi (G) \hspace{0.1cm} \text{es subgrupo de G'}$$
+ $$\exists \hspace{0.1cm} \hat{\phi} \hspace{0.1cm} $$
+  
+  El conjunto de automorfismos internos forman grupo y $g \to \phi _g$ es un homomorfismo de grupos $\phi _g \phi _h=\phi _{gh}$ (el producto de mapas es el mapa del producto).
+  
+  El núcleo de este homeomorfismo es el conjunto de elementos que conmutan con todos los elementos de G, es decir, su centro Z(G). Esto es consistente con que Z(G)$\lhd$G.
+
+\smallskip
+HE LLEGADO TARDE Y AQUI FALTA ALGO IMPORTANTE DE LA DEFINICION DE AUTOMORFISMO.
+
+\subsection{Producto de grupos}
+
+El \textbf{producto directo} de dos grupos $G_1$ y $G_2$ se define como el conjunto
+
+$$G_1\times G_2=\lbrace (g_1,g_2) \hspace{0.1cm}| \hspace{0.1cm} g_1 \in G_1, \hspace{0.1cm} g_2\in G_2\rbrace$$
+
+que tiene estructura de grupo con respecto a la multiplicación $(g_1,g_2)*(g_1'g_2')=(g_1\cdot g_1',g_2\cdot g_2')$. Existe identidad, inverso y el orden del grupo producto es $N_1\times N_2$ siendo los órdenes de $G_1$ y $G_2$ respectivamente (si tienen orden finito).
+
+\begin{itemize}
+        \item $G_1 \times G_2$ tiene subgrupos normales evidentes tales como $(e_g,G_1)=\lbrace (g_1,e_g) \hspace{0.1cm} | \hspace{0.1cm}g_1 \in G_1 \rbrace \cong G_1$ y $(e_g,G_2)=\lbrace (g_2,e_g) \hspace{0.1cm} | \hspace{0.1cm}g_2 \in G_2 \rbrace \cong G_2$, sugieren también unos homomorfismos naturales:
+    
+    $$\pi _1: G_1\times G_2 \to G_1$$
+    $$\pi _2 : G_1\times G_2 \to G_2$$
+    
+    $(e_g,G_1)$ y $(e_g,G_2)$ conmutan entre sí así que cada elemento de $G_1 \times G_2$ se puede escribir de forma única como $(g_1,g_2)=(g_1,e_{G_1})*(g_2,e_{G_2})$.
+    \item Un grupo G' se dice que es grupo producto directo si es isomorfo a algún grupo con esta estructura. Los elementos de G' a priori no necesitan tener una estructura en forma de pares.
+    
+\end{itemize}
+ 
+ \textbf{Teorema}: G es un producto directo de sus subgrupos $G_1$,$G_2$ si se cumplen las siguientes condiciones:
+ 
+ \begin{enumerate}
+     \item $G_1$y $G_2$ son subgrupos normales (o equivalentemente, los elementos de uno conmutan con los elementos del otro).
+     \item $G_1$ y $G_2$ han de ser disjuntos salvo identidad.
+     \item $G_1$ y $G_2$ generan G, es decir, $G=G_1G_2$ (cada elemento de G se puede escribir como producto de elementos de $G_1$ y $G_2$).
+ \end{enumerate}
+ 
+ \textbf{Corolario}: si G es producto directo de dos subgrupos normales $G_1,G_2$ entonces $G/G_1 \cong G_2$ y $G/G_2 \cong G_1$. \textbf{Ojo}, si H es un grupo normal de G y H' es el grupo cociente no significa que $G=H\times H'$.
+ 
+ \bigskip
+ \textbf{Ejemplos:}
+ 
+ \begin{itemize}
+     \item U(n)=U(1)$\times$SU(n); cada matriz unitaria se puede escribir como un producto $e^{i\phi}\mathds{1}\cong U(1)$ y una matriz SU(n) y ambas conmutan.
+     \item O(3)$\cong$ SO(3)$\times G_2$ con $G_2 =\lbrace \mathds{1},-\mathds{1}\rbrace$
+ \end{itemize}
+ 
+ ¿Qué ocurre si alguno de los subgrupos no es normal? Un grupo $G^*$ se dice que es \textbf{producto semidirecto} si posee dos subgrupos $G_1$ y $G_2$ tales que:
+ 
+ \begin{enumerate}
+     \item $G_1$ es subgrupo normal de G.
+     \item $G_1 \cap G_2 =\lbrace e\rbrace$ (como antes, disjutos salvo identidad).
+     \item Cada elemento de $g\in G$ puede escribirse como $g=g_1g_2$.
+ \end{enumerate}
+ 
+ $$G^*\cong G_1\rtimes G_2 \to \text{Producto semidirecto}$$
+ 
+ \newpage
+ \textbf{Ejemplos}:
+ 
+ \begin{itemize}
+     \item $S_3$ y $A_3=\lbrace e,\sigma _1, \sigma _2 \rbrace$.
+     
+    \item E(2), grupo de traslaciones afines en el plano, cuyos elementos vienen especificados por una matriz ortogonal O(2) y un vector traslación. Mientras que las traslaciones forman un subgrupo normal. O(2) no es normal pues no es invariante bajo conjugación. Así, $E(2)\cong \mathds{R}^2\rtimes O(2)$.
+    \item Poincaré $\cong \mathds{R}^4 \rtimes$ Lorentz
+ \end{itemize}
+ 
+ 
+ 
+\subsection{Ejercicios del tema 2}
+ 
+ $\hspace{0.5cm}$ \textbf{1.} Probar que un grupo finito de orden n (primo) debe ser un grupo cíclico  (generado por a).
+ 
+ $$C_n=\lbrace a,a^2,...,a^{n-1},a^n=e\rbrace \cong Z_n$$
+ 
+
+ \bigskip
+ Por el teorema de Lagrange el orden de un subgrupo H de un grupo G debe ser divisor de orden n de G. Por otra parte, cada elemento del grupo genera un subgrupo cíclico y llamamos orden del elemento al orden m del subgrupo cíclico que genera. Por el teorema de Lagrange m debe ser divisor de n y como m es primo $m=\lbrace 1,n\rbrace$.
+ 
+ Si n es primo entonces el orden de los elementos de G ($m_g, \hspace{0.1cm} \forall g\in G$) debe ser n (a excepción de la identidad) y el subgrupo cíclico que generan es el mismo grupo G.
+ 
+ \smallskip
+
+ Deducimos también que dos grupos cualesquiera cuyos órdenes sean el mismo número primo son isomorfos e isomorfos al grupo cíclico de ese orden.
+ 
+ Nota, definiendo el isomorfismo:
+ 
+ $$C_n\cong Z_n, \hspace{2cm} \begin{array}{c}
+ \phi : Z_n \to C_n \\
+ m \to \phi (m)=a^m
+ \end{array} $$
+ 
+ $$m_1+m_2 \to \phi(m_1+m_2)=a^{m_1+m_2}=\phi(m_1)\phi (m_2)$$
+ 
+ \bigskip
+ $\hspace{0.5cm}$ \textbf{2.} Probar que $G=H_1\times H_2$ implica que $G/H_1\cong H_2$.
+ 
+ \bigskip
+ Por ser G producto directo de los otros dos grupos, estos son normales y tiene sentido construir los grupos cociente. $G/H_1$ es grupo con respecto a la multiplicación de cosets. Tenemos que:
+ 
+ $$G/H_1=\lbrace gH_1\rbrace=\lbrace h_1h_2H_1 \rbrace=\lbrace (h_1H_1)(h_2H_1)\rbrace=\lbrace (e,H_1)(h_2H_1)\rbrace=\lbrace h_2 H_1\rbrace$$
+ 
+ Concluimos que los cosets de $H_1$ generados por los elementos de $H_2$ son los únicos elementos del grupo cociente $G/H_1$. Esto sugiere la correspondencia natural uno a uno dada por:
+ 
+ $$ \left . \begin{array}{c}
+ \phi : H_2 \to G/H_1\\
+h_2 \to \phi (h_2)=h_2H_1
+ \end{array} \right | G/H_1\cong H_2$$
+ 
+ Además:
+ 
+ $$\phi (hh')=hh'H_1=(hH_1)(h'H_1)=\phi (h) \phi (h') \hspace{0.1cm}\forall h,h' \in H_2$$
+
+\bigskip
+\textbf{3.} Probar que, salvo isomorfismos, solamente hay dos grupos diferentes de orden 4: el grupo cíclico $C_4$ y el grupo de
+reflexiones en el plano $V_4$ (también llamado grupo de Klein). Demostrar también que el grupo de Klein es producto
+directo de $C_2$ consigo mismo.
+
+\smallskip
+$$C_4=\lbrace  a,a^2,a^3,A^4=e\rbrace$$
+
+$$V_4=\lbrace e,\sigma ,\tau ,\rho \rbrace$$
+
+$$e: \begin{array}{c}
+     x\to x  \\
+     y\to y
+\end{array}; \hspace{0.5cm} \sigma : \begin{array}{c}
+     x\to -x  \\
+     y\to y
+\end{array}; \hspace{0.5cm} \rho : \begin{array}{c}
+     x\to x  \\
+     y\to -y
+\end{array}; \hspace{0.5cm} \tau : \begin{array}{c}
+     x\to -x  \\
+     y\to -y
+\end{array}; \hspace{0.5cm}$$
+
+\smallskip
+La tabla de $V_4$ es (se ve que es un grupo abeliano):
+
+$$\begin{tabular}[b]{ c | c c c c }
+
+V_4 & e & \sigma & \tau & \rho \\
+\hline
+e & e & \sigma & \tau & \rho \\
+\sigma & \sigma & e & \rho & \tau \\
+\tau & \tau & \rho & e & \sigma \\
+\rho & \rho & \tau & \sigma & e
+\end{tabular}  $$
+
+\smallskip
+Para demostrar que solo hay estos grupos de orden 4 sabemos que sus elementos generan subgrupos cíclicos. Por el teorema de Lagrange los ementos de G solo pueden ser o de orden 4 o de orden 2 (divisores de 4). Si G tiene al menos un elemento de orden 4 entonces ese elemnto genera $C_4$ y como $C_4 \in G \to G \cong C_4$. 
+
+Si G no tiene ningún elemento de orden 4 entonces todos sus elementos son de orden 2, llamémoslos $\lbrace e,\sigma ,\tau ,\rho \rbrace$, con e identidad y los cuadrados de todos iguales a la identidad pues generan $C_2$. Nos falta conocer como pueden ser los productos cruzados. Por ejemplo $\sigma \tau =\rho$ necesariamente, ya que $\sigma \tau \neq e$ pues $\sigma \sigma =e$; $\sigma \tau \neq \sigma$ pues $\tau \neq e$ y $\sigma \tau \neq \tau$ pues $\sigma \neq e$. Ocurre lo mismo con el resto de cruzados lo que implica que solo hay esta tabla (este grupo abeliano) y por tanto solo dos grupos de orden 4; el cíclico y el abeliano.
+
+\smallskip
+Para la demostración de que $V_4\cong C_2 \times C_2$, sabemos que $V_4=\mathds{Z}_2 \times \mathds{Z}_2$. Sabemos que $C_2\cong \mathds{Z}_2$ y que son subgrupos normales pues $V_4$ es abeliano. Además, es única (salvo conmutación ya que es abeliano) pues dados los subgrupos normales $\lbrace e, \sigma \rbrace$ y $\lbrace e, \tau \rbrace$ su producto directo genera $V_4$ de forma única (genera $\rho$ únicamente bajo el producto $\tau \sigma$ o $\sigma \tau$ al ser abeliano).
+
+\bigskip
+\textbf{4.} Consideremos el grupo diédrico $D_4$, que es el grupo de simetría de un cuadrado. Si situamos el cuadrado en el
+plano xy, centrado en el origen de coordenadas y con sus lados paralelos a los ejes de coordenadas, entonces el
+grupo consiste en rotaciones en torno al centro y reflexiones con respecto a los ejes vertical, horizontal y diagonales
+de pendiente $\pm 1$. Llamemos e a la identidad, g a la rotación de ángulo $\pi/2$ (en sentido antihorario) y h a la reflexión
+con respecto a la diagonal y = x. Demuestra que el grupo está generado por g y h y escribe su tabla de multiplicar.
+
+\smallskip
+
+Sean las rotaciones:
+
+$$R=\lbrace  g,g^2,g^3,g^4=e\rbrace$$
+
+$$g: \hspace{0.1cm} \text{giro de} \hspace{0.1cm} \pi/2; \hspace{0.5cm} g^2: \hspace{0.1cm} \text{giro de} \hspace{0.1cm} \pi; \hspace{0.5cm} g^3: \hspace{0.1cm} \text{giro de} \hspace{0.1cm} 3\pi /2; \hspace{0.5cm} g^4 :  \hspace{0.1cm} \text{giro de} \hspace{0.1cm} 2\pi=e$$
+
+Y las reflexiones:
+
+$$H=\lbrace h_1, h_2, h_3, h_4 \rbrace$$
+
+$$h_1: \hspace{0.1cm} y=x; \hspace{0.5cm} h_2: \hspace{0.1cm} y=-x; \hspace{0.5cm} h_3: \hspace{0.1cm} x=0; \hspace{0.5cm} h_4: \hspace{0.1cm} y=0$$
+
+La combinación de R con $h_1$ genera el grupo $D_4=R\times H$, lo vemos en su tabla de multiplicar:
+\bigskip
+\begin{center}
+    
+\begin{tabular}[b]{p{0.7cm}| p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm} }
+D$_4$ & e & g & g$^2$ & g$^3$ & h & gh & g$^2$h & g$^3$h \\
+\hline
+e & e & g & g$^2$ & g$^3$ & h & gh & g$^2$h & g$^3$h \\
+g & g & g$^2$ & g$^3$ & e & gh & g$^2$h & g$^3$h & h \\
+g$^2$ & g$^2$ & g$^3$ & g & e & g$^2$h & g$^3$h & h & gh \\
+g$^3$ & g$^3$ & e & g & g$^2$ & g$^3$h & h & gh & g$^2$h \\
+h & h & g$^3$h & g$^2$h & gh & e & g$^3$ & g$^2$ & g \\ 
+gh & gh & h & g$^3$h & g$^2$h & g & e & g$^3$ & g$^2$ \\
+g$^2$h & g$^2$h & gh & h & g$^3$h & g$^2$ & g & e & g$^3$\\
+g$^3$h & h$^3$h & g$^2$h & gh & h & g$^3$ & g$^2$ & g & e
+\end{tabular}
+
+\end{center}
+\bigskip
+
+Que se ve bien como se ha construido la tabla representándolo gráficamente.
+
+% ---------------
+%
+% Nuevo TEMA
+%
+% ---------------
+
+\newpage
+\section{Representación de grupos}
+\subsection{Acciones de grupo}
+Cuando un grupo actúa sobre un espacio vectorial, se obtiene una representación.
+
+Antes de estudiarlas veamos qué es la acción de un grupo sobre un conjunto genérico X. Las biyecciones de este conjunto X forman un grupo, el grupo simétrico de X o sym(X). Notar que si X es finito y contiene n elementos el grupo de biyecciones es sym(X)=$S_n$.
+
+\smallskip
+Una \textbf{acción de grupo} es un homomorfismo de G en sym(X).
+
+$$\begin{array}{c}
+     G \to sim(X)  \\
+     g\to gx \hspace{0.1cm} \forall x\in X
+\end{array}$$
+
+Se suele escribir como multiplicación por la izquierda en lugar de $f_g(X)$. Automáticamente vemos que se satisface que $(gh)x=g(hx)$ y $ex=x$.
+
+\smallskip
+\textbf{Ejemplos}:
+
+\smallskip
+Algunos grupos se definen por su acción:
+
+\begin{itemize}
+    \item El grupo simétrico $S_n$ actúa en el conjunto de n elementos.
+    \item El grupo euclídeo actúa en el espacio afín $\mathds{R}^n$.
+    \item El grupo ortogonal actúa en la esfera unidad $S^{n-1}$.
+    \item Cualquier otro grupo actúa sobre sí mismo de dos maneras: por multiplicación por la izquierda $h\to hg$ (o por la derecha $h \to gh$) o por conjugación $h \to ghg^{-1}$.
+    \end{itemize}
+
+La acción del grupo presenta varias \textbf{propiedades}:
+
+\begin{enumerate}
+    \item La acción es fiel si el homomorfismo es isomorfismo.
+    \item La acción es transitiva si $\forall x,y\in X \hspace{0.1cm}\exists \hspace{0.1cm} g\in G \hspace{0.1cm}/ \hspace{0.1cm} gx=y$.
+    \item La acción es libre si $gx=x \to g=e$.
+    \item La acción es regular si es transitiva y libre.
+\end{enumerate}
+
+\textbf{Definición (1)}: si la accion no es fiel, los elementos de grupo que dejan todos los elementos de X invariantes forman un subgrupo.
+
+$$N= \left \lbrace g \in G, \hspace{0.1cm} gx=x \hspace{0.2cm} \forall x \in X \right \rbrace$$
+
+\textbf{Definición (2)}: fijado un punto $x\in X$ entonces su órbita es el conjunto de imágenes.
+
+$$Gx=\left \lbrace gx \hspace{0.1cm} / g\in G \right \rbrace$$
+
+\textbf{Definición (3)}: inversamente, el estabilizador (o grupo pequeño) es el conjunto de elementos del grupo que dejan X invariante.
+
+$$G_x=\left \lbrace g\in G  \hspace{0.1cm}/ \hspace{0.1cm} gx=x \right \rbrace$$
+
+$\hspace{0.5cm}$ \textbf{Teorema órbita-estabilizador:} Dado un punto x la órbita $Gx$ está en correspondencia uno a uno con el conjunto de cosets por la izquierda del estabilizador.El mapa $gx \hspace{0.1cm}/\hspace{0.1cm} gG_x$ es un isomorfismo $|Gx|=\frac{|G|}{|G_x|}$.
+
+$$gx/gG_x \simeq |Gx| =\frac{|G|}{|G_x|}$$
+
+\newpage
+\subsection{Representaciones lineales}
+
+La multiplicación (o composición) de transformación lineal sobre un espacio vectorial es básicamente una multiplicación de grupo. Un conjunto de trasformaciones lineales invertibles cerrado con respecto a la multiplicación satisface los axiomas de grupo. Tal conjunto forma un grupo de representaciones lineales o grupo de operadores. 
+
+\subsubsection{Representación de grupo G}
+
+Si existe un homomorfismo de un grupo G a un grupo de operadores D(G) en un espacio vectorial V
+
+$$D(G): \hspace{0.1cm} G\to GL(V)$$
+
+decimos que D(G) es una forma de representación lineal de G.
+
+\begin{itemize}
+    \item La dimensión de la representación es la dimensión del espacio vectorial V (consideramos dim(V)$<\infty$ y $V\in \mathds{C}$ aunque muchos resultados se pueden generalizar a dimensión infinita).
+    \item Una representación se dice fiel si el homomorfismo es isomorfismo. Si no es fiel es degenerada. Siendo más específicos, una representación lineal de G en el espacio vectorial V es una aplicación de D que a cada elemento de $g\in G$ le asocia un operador invertible: 
+    
+    $$D(G): \hspace{0.1cm} V \hspace{0.2cm} \to V \hspace{0.1cm}\text{de forma que } \hspace{0.1cm} D(gh)=D(g)D(h)\hspace{0.1cm} \forall g,h \in G$$
+\end{itemize}
+
+\subsubsection{Terminología}
+G actúa sobre V (via D). Los elementos de V se transforman bajo la representación de:
+
+\begin{itemize}
+    \item Representación matricial.
+    
+    $$V=\mathds{C}^n\to GL(V)=GL(n, \mathds{C})$$
+     \item Representación n-dimensional. 
+     
+     Equiparamos aplicaciones lineales $A: \hspace{0.1cm} \mathds{C}^n \to  \mathds{C}^n$ con su matriz en la base canónica de $\mathds{C}^n$. La multiplicación de grupo se traduce a multiplicacción matricial.
+     
+     $$\begin{array}{cc}
+          D: \hspace{0.1cm}G \to GL(n, \mathds{C}) \\
+          g\to D(g)_{ji} 
+     \end{array}$$
+    
+    Actúa sobre la base $\lbrace \Vec{e}_i\rbrace_{i=1,...,n}$ de $\mathds{C}^n$.
+\end{itemize}
+
+\textbf{Ejemplos}:
+
+\begin{itemize}
+    \item Todo grupo posee una representación 1-dimensional trivial. Sea $V=\mathds{C}$ y $D(g)=1$, $\forall \hspace{0.1cm} g$; claramente $D(g_1)D(g_2)=1\cdot 1=1=D(g_1g_2)$.
+    \item Los grupos matriciales $GL(n,\mathds{C})$ y subgrupos de este tienen de forma natural la representación por ellos mismos. Esta represetación se llama representación de definición. 
+    \item Sea G un grupo de matrices, $V\in \mathds{C}$ y $D(g)=det(g)$ esto define una representación 1-dimensional no trivial ya que $det(g_1)det(g_2)=det(g_1g_2)$.
+    \item Recordamos que para cualquier real $\xi$ el intervalo $(-\pi, \pi]$ los números $\lbrace e^{-in\xi}; \hspace{0.1cm} n=0,\pm 1, \pm 2... \rbrace$ forman una representación del grupo e traslaciones discretas en una dimensión espacial.
+\end{itemize}
+
+ \smallskip
+    \textbf{Ejercicio:} sea $G=S^1 \cong U(1)$ demostrar que la aplicación 
+    
+    $$\begin{array}{cc}
+         D: S^1 \to GL(2,\mathds{C})  \\
+         e^{i\theta} \to D(e^{i\theta})= \left (\begin{array}{cc}
+           cos \theta   & -sen \theta  \\
+           sen \theta   & cos \theta
+         \end{array} \right )=R( \theta), \hspace{0.1cm} \theta \in \mathds{R}
+    \end{array}$$
+    
+    es una representación de $S^1$. Lo mismo para:
+    
+     $$\begin{array}{cc}
+         D: S^1 \to GL(3,\mathds{C})  \\
+         e^{i\theta} \to D(e^{i\theta})= \left (\begin{array}{ccc}
+           cos \theta   & -sen \theta  & 0\\
+           sen \theta   & cos \theta & 0 \\
+           0 & 0 & 1
+         \end{array} \right )=R( \theta), \hspace{0.1cm} \theta \in \mathds{R}
+    \end{array}$$
+    
+    \begin{itemize}
+        \item    D está bien definida: $e^{i\theta} =e^{i\theta '} \leftrightarrow \theta =\theta ' + 2\pi k \hspace{0.1cm} k\in \mathds{Z} \to R(\theta)=R(\theta ')$.
+    
+
+ \item  Respeta la estructura de grupo $D(e^{i\theta _1}e^{i\theta _2})=R(\theta _1 +\theta _2)=R(\theta _1)R(\theta _2)^=D(e^{i\theta _1})D(e^{i\theta _2})$.
+    
+   \item Además es una representación fiel pues $D(e^{i\theta _1})=D(e^{i\theta _2})\leftrightarrow \theta _1=\theta _2 +2k\pi \hspace{0.1cm} \forall k\ic \mathds{Z} \leftrightarrow e^{i\theta _1}=e^{i\theta _2}$.
+    
+    La $3\times 3$ lo cumple también pues cumple todo lo anterior.
+    
+        \end{itemize}
+    
+    \bigskip
+    \textbf{Proposiciones:}
+    
+    \begin{itemize}
+        \item Si el subgrupo normal H de G existe, entonces cualquier representación del grupo cociente también es una representación de G (esta es necesariamente degenerada).
+        \item Toda representación no trivial de un grupo simple es fiel.
+    \end{itemize}
+    
+    \textbf{Ejercicio:} da una representación no trivial de $S_3 / A_3$ y demuestra que es una representación no fiel de $S_3$.
+    
+    \bigskip
+    $S_3/A_0 \simeq C_2=\lbrace e,a \rbrace$ tal que $a^2=1$. Una representación del grupo cociente sería $D(e)=1$, $D(a)=-1$; esto nos genera la tabla de multiplciación:
+    
+    $$\begin{tabular}[b]{ c | c c }
+
+ & e & a  \\
+\hline
+e & e & a  \\
+a & a  & e  \\
+
+\end{tabular}  $$
+
+$$S_3 = \lbrace e,\sigma _1, \sigma _2 , \tau _1, \tau _2, \tau _3 \rbrace \hspace{0.2cm} A_3=\lbrace e, \sigma _1, \sigma _2 \rbrace \hspace{0.2cm} S_3/A_3 = \lbrace A_3, \tau _1 A_3 \rbrace$$
+
+Es decir,
+
+$$\begin{array}{cc}
+    D(e)=1 & D(\tau _1)=-1 \\
+   D(\sigma _1)=1  & D(\tau _2)=-1 \\
+   D(\sigma _2)=1 & D(\tau _3)=-1
+\end{array}$$
+
+Por ello esta representación nos recupera la tabla de multiplicar, porque $\tau _1 \tau _j=\sigma _k$, donde $i,j,k=1,2$. Pero a cada elemento de salida le corresponden varios elementos de entrada, por lo que la representación no es fiel.
+
+\subsection{Representación conjugada y contragradiente}
+
+\begin{itemize}
+    \item Si $D:\hspace{0.1cm} G \to GL(n, \mathds{C})$ es una representación matricial de G y la aplicación
+
+$$\begin{array}{cc}
+     \Bar{D}: \hspace{0.1cm} G \to GL(n \mathds{C})  \\
+      g \to \Bar{D}(g)=\overline{D(g)}
+\end{array}$$
+
+es también representación de G y se llama compleja conjugada.
+\item La aplicación 
+
+$$\begin{array}{cc}
+    \Tilde{D}: \hspace{0.1cm} G\to GL(n, \mathds{C})  \\
+     g \to \Tilde{D}(g)=(D(g)^t)^{-1}
+\end{array}$$
+
+es también representación de G y se llama representación contragradiente.
+\end{itemize}
+    
+    \subsection{Equivalencia de representaciones}
+    Dos representaciones D(G) y D'(G) de un grupo de G en un espacio vectorial V. Son equivalentes si están relacionadas a través de una transformación de similaridad. Es decir, si existe un operador lineal invertible:
+    
+    $$A: \hspace{0.1cm} V\to AVA^-1$$
+    $$D'(G)=AD(G)A^{-1}$$
+    
+    $\hspace{0.5cm}$ \textbf{Ejemplo:} una representación 1-dimensional solo puede ser equivalente a sí misma pues A conmuta y por tanto $D'(G)=D(G)AA^{-1}=D(G)$.
+    
+    Lo mismo ocurre con las representaciones de dimensión n cuyas matrices son proporcionales a la matriz unidad de orden n.
+    
+    \subsubsection{¿Cómo podemos decir si dos representaciones son equivalentes o no?}
+    
+    Para contestar habrá que buscar caracterizaciones de la representación que sean invariantes bajo transformaciones de similaridad. Por ejemplo, la traza nos ayuda a definir el carácter de la representación. 
+    
+    \smallskip
+    Definimos el \textbf{carácter de una representación} $\mathcal{X} (g)$ de $g\in G$ en la representación D(G) es la función:
+    
+    $$\begin{array}{cc}
+         \mathcal{X}^D: \hspace{0.1cm} G \to \mathds{C} \\
+         g \to \mathcal{X}^D(g)=Tr(D(g))
+    \end{array}$$
+    
+    Debido a la propiedad cíclica de la traza ($Tr(D(g))=Tr(AD'(g)A^{-1})=Tr(D'(g))$), si tengo dos representaciones equivalentes la traza es independiente de la representación.
+    
+    \smallskip
+    \textbf{Propiedades:}
+    
+    \begin{itemize}
+        \item Dos representaciones equivalentes tienen el mismo carácter.
+        \item El carácter es una función de clase, esto significa que toma el mismo valor para todos los elementos del grupo que viven en la misma clase de conjugación.
+        
+        $$\mathcal{X}(g)=\mathcal{X}(hgh^{-1})$$
+        
+        \item El carácter de la identidad es la dimensión del espacio.
+        
+        $$Tr(\mathds{1}_N)=N=dim V$$
+    \end{itemize}
+    
+    \subsection{Representaciones reducibles e irreducibles}
+    
+    \textbf{Espacio invariante;} sea $D(G)=\lbrace D(g_1),...,D(g_n) \rbrace$ una representación del grupo G en el espacio vectorial V. Decimos que $V_1 \subset V$ es un subespacio invariante con respecto a la representación D(G) si la representación me deja $V_1$ invariante.
+    
+    $$\begin{array}{cc}
+         D(g)v_1\subset V_1 \hspace{0.5cm} \forall \hspace{0.1cm} g \in G, \hspace{0.1cm} \forall \hspace{0.1cm} v_1\in V_1  \\
+         D(G)V_1 \subset V_1
+    \end{array}$$
+    
+    Dos espacios invariantes triviales son el mismo V y $\lbrace \Vec{0}\rbrace \in V$.
+    
+    \begin{itemize}
+        \item Decimos que una representación D(G) en V es irreducible si V no contiene ningún subespacio invariante (no trivial) bajo D(G). En caso contrario es reducible.
+        
+        \textbf{Ejemplo:} toda representación 1-dimensional es irreducible pues un espacio vectorial de dim=1 no tiene subespacios propios.
+        
+        \item Una representación D(G) reducible es descomponible si V se puede descomponer como suma directa de dos subespacios no triviales (propios) invariantes bajo la acción de la reprsentación.
+        
+        Si es suma direta se descompone en la suma de un espacio y su complemento ortogonal. Tiene sentido descomponer la representación en dos acciones, cada una sobre uno de estos dos espacios.
+        
+        $$V=V_1 \oplus V_2\hspace{0.6cm} \forall v \in V, \hspace{0.1cm} v=v_1+v_2 \hspace{0.1cm} \text{de forma única}$$
+        
+        $$D(G)=D_1(G)\oplus D_2(G) \hspace{0.1cm} \text{con} \hspace{0.1cm} D_i(G) \hspace{0.1cm} \text{restricción de} D(G) \hspace{0.1cm} \text{a} \hspace{0.1cm} V_i$$
+        $$D_i(G)V_i=D(G)V_i\subset V_i$$
+        
+        \item Una representación D(G) descomponible es \textbf{completamente reducible} si se descompone en suma directa de representaciones irreducibles.
+        
+        $$\begin{array}{cc}
+             V=V_1 \oplus V_2 \oplus ... V_m  \\
+             D= D_1\oplus D_2 \oplus ... D_m
+        \end{array} \hspace{0.1cm} \text {con} \hspace{0.1cm} D_1(G)V_i=D(G)Vi \subset V_i \hspace{0.1cm} \forall i=1,...,m$$
+        
+        Se dice que $D_i(G)$ es irreducible en $V_i$. Matricialmente:
+    
+    $$D(G)=\left ( \begin{array}{cccc}
+        D_1(g) & 0 & 0 & 0  \\
+        0 & D_2(g) & 0 & 0 \\
+        0 & 0 & ... & 0 \\
+        0 & 0 & 0 & D_m(g)
+    \end{array} \right ) \hspace{0.1cm} \forall g \in G$$
+    
+    \end{itemize}
+    
+    \textbf{Ejercicio:} sea G=($\mathds{C},+$) y sea la aplicación $D(z)=\left ( \begin{array}{cc}
+        1 & z \\
+        0 & 1
+    \end{array} \right ) \hspace{0.1cm} \forall z\in \mathds{C}$. Demostrar que D es una representación reducible de G. ¿Es descomponible?
+    
+    \bigskip
+    Será una representación si cumple los siguientes puntos:
+    
+    \begin{itemize}
+        \item La identidad es z=0
+        
+        $$D(z=0)=\left ( \begin{array}{cc}
+            1 &  0\\
+            0 & 1
+        \end{array} \right )$$
+        
+        \item  ($\mathds{C},+$) el inverso de z es -z (opuesto), se puede comprobar sin más que multiplicar que:
+        
+        $$D(-z)=(D(z))^{-1}$$
+        
+        \item $D(z_1)D(z_2)=D(z_1+Z_2)$
+        
+        $$\left ( \begin{array}{cc}
+            1 & z_1 \\
+            0 & 1
+        \end{array}\right)\left ( \begin{array}{cc}
+            1 & z_2 \\
+            0 & 1
+        \end{array}\right)=\left ( \begin{array}{cc}
+            1 & z_1 +z_2 \\
+            0 & 1
+        \end{array}\right)=D(z_1+z_2)$$
+    \end{itemize}
+    
+    Por otra parte 
+    
+    $$D: \hspace{0.1cm} (\mathds{C},+)\to GL(2, \mathds{C}) \to V=\mathds{C_2}=lin \lbrace \Vec{e}_1,\Vec{e}_2\rbrace$$
+    
+    Es reducible ya que $W= lin \lbrace \left ( \begin{array}{c}
+         1  \\
+         0 
+    \end{array}\right) \rbrace$ es invariante bajo $D(z)\hspace{0.1cm} \forall z \in \mathds{C}$.
+    
+    $$\left ( \begin{array}{cc}
+        1 & z \\
+        0 & 1
+    \end{array}\right) \left( \begin{array}{c}
+         a  \\
+         0 
+    \end{array}\right)=  \left( \begin{array}{c}
+         a  \\
+         0 
+    \end{array}\right)$$
+    
+    \smallskip
+    Por último, ¿es descomponible? Deben ser invariantes W y su complemento ortogonal $W^\bot =lin \lbrace \Vec{e}_2 \rbrace$.
+    
+    $$\left ( \begin{array}{cc}
+        1 & z \\
+        0 & 1
+    \end{array}\right) \left( \begin{array}{c}
+         0  \\
+         1 
+    \end{array}\right)=  \left( \begin{array}{c}
+         z  \\
+         1 
+    \end{array}\right) \notin W^\bot \hspace{0.1cm} \text{si} \hspace{0.1cm} z\neq 0$$
+    
+    
+    Por lo que no es descomponible pues no lo es $\forall z$.
+    
+    \newpage
+    \subsubsection{Suma directa de representaciones}
+    
+    Dadas dos representaciones actuando sobre espacios vectoriales distintos $D_i: \hspace{0.1cm} \to GL(V_i)\hspace{0.1cm} i=1,2$ podemos formar la suma directa $D_1\oplus D_2$ actuando sobre $V_1 \oplus V_2$.
+    
+    $V_1 \oplus V_2$ se entiende como el espacio de pares ($v_1,v_2$) tal que $v=v_1+v_2 \in V \hspace{0.1cm} \text{con} \hspace{0.1cm} v_i\in V_i$ sobre los que actúan la representación combinada como:
+    
+    $$(v_1,v_2)\to (D_1(g)v_1,D_2(g)v_2)$$
+    
+    Esto define una representación (que por construcción es reducible y descomponible pues se construye a partir de dos cosas descompuestas a priori) de mayor dimensión $dim (D_1\oplus D_2)=dim (D_1)+dim (D_2)$.
+    
+    $$(D_1 \oplus D_2)(g)=\left (\begin{array}{cc}
+        D_1(g) & 0 \\
+        0 & D_2(g)
+    \end{array} \right)$$
+    
+    Matriz que representa a g en las bases de $V_1$ (fila 1) y $V_2$ (fila 2) respectivamente.
+    
+    \subsection{Unitariedad }
+    
+    Dado un espacio vectorial V con producto escalar, una representación de un grupo $D: \hspace{0.1cm} G \to GL(V)$ se denomina \textbf{unitaria} si $D(g)$ es un operador lineal unitario $\forall g \in G$.
+    
+    $$D(g)D(g)^{+}=D(g)^{+}D(g)=\mathds{1}_{V}, \hspace{0.1cm} \forall g\in G$$
+    
+    Esto es lo mismo que decir que, tomando el producto escalar de dos vectores es V, el producto escalar no cambia bajo la aplicación de la representación sobre dichos vectores:
+    
+    $$(u,v)=(D(g)u,D(g)v)\hspace{0.1cm} \forall u,v\in V$$
+    
+    \smallskip
+    Por ejemplo, en el caso $V=\mathds{C}^n: \hspace{0.5cm} D(g)\in U(n), \hspace{0.1cm} \forall g\in G$.
+    
+    \smallskip
+    Las representaciones unitarias son de gran importancia para los físicos a la hora de estudiar simetrías. Por ejemplo, en mecánica cuántica es necesario medir los observables a través de una representación que mantenga los productos escalares invariantes.
+    
+    \bigskip
+    $\hspace{0.5cm}$ \textbf{Propiedad fundamental:} si una representación unitaria es reducible es completamente reducible. 
+    
+    Sea $W \subset V$ un espacio invariante tal que $D(g)W\subset W, \hspace{0.2cm} \forall g\in G; \hspace{0.3cm} V=W\oplus W^\bot$. Sea $v\in W^\bot$ y $u\in W$, entonces:
+    
+    $$(u, D(g)v)=(D^+(g)u,v)=(D^{-1}(g)u,v)=(\underbrace{D(g^{-1})u}_{\in W},\underbrace{v}_{\in W^\bot})=0$$
+    
+    Luego $D(g)v\in W^\bot \to W^\bot$ invariante $\to$ D es descomponible.
+    
+    \smallskip
+    Falta demostrar que es irreducible.
+    Si la dimensión de D es 1 entonces es irreducible y por tanto completamente irreducible. Si dimD fuera mayor que 1 se puede demostrar por inducción que $D=D_1\oplusD_2 \oplus ... \oplus D_m$ se puede escribir como suma directa de irreducibles.
+    
+    \bigskip
+    $\hspace{0.5cm}$ \textbf{Teorema de Schur-Auerbach:} toda representación D(g) de un grupo finito G sobre un espacio vectorial V con producto escalar es equivalente a una representación unitaria.
+    
+    \textit{La demostración del teorema la omito pues llegué tarde a clase}.
+    
+    
+    \bigskip
+
+    $$D'(g)=T^{-1}D(g)T \hspace{0.2cm} \text{Representación equivalente a D(g), unitaria respecto al producto escalar de partida}$$
+    
+    La demostración del teorema se hace para grupos finitos pues se necesita que la suma de elementos converja. El producto escalar $\bra{-}\ket{-}$ no existe en general. No obstante para grupos de Lie compactos veremos que existe una única medida dg invariante bajo la acción del grupo (a esta medida se le llama medida de Haar). Se puede hacer el cambio suma-integral, siendo esta integral convergente debido a la compacidad del grupo y por tanto la prueba sigue siendo válida.
+    
+    \newpage
+    Para grupos de Lie no compactos, sus representaciones fieles de dimensión finita nunca son unitarias. No obstante, algunos grupos no compactos pueden tener representaciones unitarias con respecto a algún producto escalar no definido positivo.
+    
+    \smallskip
+    
+    Por ejemplo, el grupo de Lorentz, cuya representación de definición es finita y unitaria con respecto al producto escalar de Minkowski.
+    
+    \bigskip
+    
+    $\hspace{0.5cm}$\textbf{Teorema de Maschke:} todas las representaciones de un grupo finito o un grupo no finito pero compacto son completamente reducibles (pues las unitarias lo son). Basta con estudiar sus representaciones irreducibles.
+    
+    \subsection{Lemas de Schur (1905)}
+    
+    Antes de los lemas de Schur enunciaremos otro lema:
+    
+    \smallskip
+    Sea $D: G\to GL(V)$ y $D': G \to GL(V')$ dos representaciones de G y sea el operador lineal $A: V\to V'$ que entrelaza ambas representaciones.
+    
+    $$AD(g)=D'(G)A \hspace{0.2cm} \forall  \hspace{0.1cm} g\in G$$
+    
+    Los subespacios ker(A) y A(V) son invariantes bajo D(G) y D(G') respectivamente.
+    
+    \smallskip
+    \textbf{Demostración 1:} si $v\in$ ker(A), $A(D(G)v)=D'(G)(Av)=0\longrightarrow D(G)v\in$ ker(A) $\forall  \hspace{0.1cm} g\in G$.
+    
+    \smallskip
+    \textbf{Demostración 2:} si $v'=Av\in A(V)$, $D'(G)v'=D'(G)(Av)=A(D(G)v)\in$ A(V) $\forall g\in V$
+    
+    \subsubsection{Lemas de Schur}
+    
+    Sean D y D' las representaciones de antes, representaciones matriciales y, por hipótesis, irreducibles; y el operador A que las entrelaza. Entonces se verifica:
+    
+    \begin{itemize}
+        \item Si la dim(D)$\neq$ dim(D'), entonces A=0 forzosamente (no se pueden entrelazar más allá de la forma trivial). Por eso cuando estudiábamos representaciones equivalentes consideramos que V' era isomorfo a V.
+        
+        \item Si dim(D)=dim(D') entonces o bien A=0 o bien A es un isomorfismo en cuyo caso D es equivalente a D'.
+        \item Si D=D', es decir, $AD(G)=D(G)A$ $\forall  \hspace{0.1cm} g\in G$ entonces A=$\lambda \mathds{1}$ (multiplo de la identidad). En otras palabras, si D es una representación irreducible de un grupo G y A es un operador que conmuta con todos los operadores D(g) de la representación entonces no nos queda otra más que A sea múltiplo de la identidad.
+    \end{itemize}
+    
+    \smallskip
+    
+    \textbf{Proposición:} sea $D: G\to GL(V)$ una representación de un grupo G que es finito o compacto y supongamos que los únicos operadores lineales de V en V que conmutan con todos los operadores D(g) son los múltiplos de la identidad. Entonces D es irreducible.
+    
+    \smallskip
+    \textbf{Proposición:} una represemtación de un grupo abeliano es irreducible si y solo si es unidimensional.
+    
+    \smallskip
+    \textbf{Corolario:} Todas las representaciones irreducibles de un grupo abeliano finito o compacto son unitarias.
+    
+    \newpage
+    \textbf{Ejercicio:} consideremos el grupo cíclico de tres elementos $C_3$ cuya tabla de multiplicar es:
+
+ $$\begin{tabular}[b]{ c | c c c}
+
+ & e & a & a^2  \\
+\hline
+e & e & a & a^2 \\
+a & a & a^2 & e  \\
+a^2 & a^2 & e & a
+\end{tabular}  $$    
+
+Una representación de este grupo es $D: C_3\to GL(3, \mathds{C})$:
+
+$$D(e)=\left (\begin{array}{ccc}
+    1 & 0 & 0  \\
+     0 & 1 & 0 \\
+     0 & 0 & 1
+\end{array} \right ) \hspace{1.5cm} D(a)=\left (\begin{array}{ccc}
+    0 & 0 & 1  \\
+     1 & 0 & 0 \\
+     0 & 1 & 0
+\end{array} \right ) \hspace{1.5cm} D(a^2)=\left (\begin{array}{ccc}
+    0 & 1 & 0  \\
+     0 & 0 & 1 \\
+     1 & 0 & 0
+\end{array} \right )  $$
+    
+Como no es unidimensional y el grupo es abeliano ha de ser reducible, además por los teoremas de Maschke y los lemas de Schur podemos afirmar que es completamente reducible. Es decir, se puede descomponer en la suma directa de 3 representaciones irreducibles unidimensionales y unitarias.
+    
+
+\smallskip
+Para ello observamos que los autovalores de D(a) son $\lbrace 1,e^{\frac{2\pi i}{3}}, e^{\frac{4\pi i}{3}}\rbrace$ y que por tanto existe $T\in GL(3,\mathds{C})$ (matriz de cambio de base) que me diagonaliza D(a).
+    
+    $$D(a)=T\left ( \begin{array}{ccc}
+         1 & 0 & 0 \\
+         0 & e^{\frac{2\pi i}{3}} & 0 \\
+         0 & 0 & e^{\frac{4\pi i}{3}}
+    \end{array}\right )T^{-1}$$
+
+Y que también me diagonaliza $D(a^2)$ al ser simplemente el cuadrado de D(a):
+
+$$D(a^2)=T\left ( \begin{array}{ccc}
+         1 & 0 & 0 \\
+         0 & e^{\frac{2\pi i}{3}} & 0 \\
+         0 & 0 & e^{\frac{4\pi i}{3}}
+    \end{array}\right )T^{-1} \hspace{0.2cm} T\left ( \begin{array}{ccc}
+         1 & 0 & 0 \\
+         0 & e^{\frac{2\pi i}{3}} & 0 \\
+         0 & 0 & e^{\frac{4\pi i}{3}}
+    \end{array}\right )T^{-1}=T\left ( \begin{array}{ccc}
+         1 & 0 & 0 \\
+         0 & e^{\frac{4\pi i}{3}} & 0 \\
+         0 & 0 & e^{\frac{2\pi i}{3}}
+    \end{array}\right )T^{-1}$$
+    
+    \smallskip
+    Denotemos por $v_k$ a los autovectores de D(a), $T=(v_0 |v_1 | v_2)$ de modo que $D(a)v_k=e^{\frac{2\pi i k}{3}} v_k$.
+    
+    \smallskip
+    Se tiene que $\mathds{C}^3=V_0\oplus V_1 \oplus V_2$ siendo $V_k=lin\lbrace v_k \rbrace$ invariante bajo D. 
+    
+    $$D(a)=I_0 \oplus \left ( e^{\frac{2\pi i}{3}}I_1\right) \oplus \left( e^{\frac{4\pi i}{3}}I_2\right) \hspace{0.2cm} \text{con} \hspace{0.1cm} I_k \hspace{0.1cm} \text{la identidad en} \hspace{0.1cm} V_k$$
+    
+    Este espacio es isomorfo a $D^{(0)}\oplus D^{(1)}\oplus D^{(2)}$ con $D^{(k)}(a^j)=e^{\frac{2\pi jk}{3}}$
+    
+    \bigskip
+    \textbf{Ejercicio:} dada la representación del grupo bidimensional
+    
+    $$\begin{array}{cc}
+         D: S^1 \to DL(2, \mathds{C})  \\
+         e^{i\Theta}\to D(e^{i\Theta})= \left (\begin{array}{cc}
+            cos \theta  & -sen \theta  \\
+            sen \theta  & cos \theta
+         \end{array}\right )
+    \end{array}$$
+    
+    encontrar un operador A que conmute con $\mathds{R}(\theta)$ y que no sea la identidad (tal A existe pues D no es irreducible en $V=\mathds{C}$). Encontrar los subespacios de $\mathds{C}^2$ invariantes bajo D y descomponer D en suma directa de representaciones irreducibles.
+    
+    \bigskip
+    
+    Pista, los autovectores de un D concreto son autovectores de todos los Ds, es decir son subespacios de todos los Ds.
+    
+    \bigskip
+    Un ejemplo de matriz que conmuta con R($\theta$) es A=$\left (\begin{array}{cc}
+        0 & -1 \\
+        1 & 0
+    \end{array} \right)$
+    
+    Autovalores de R($\theta$), su polinomio carácterístico es $1-2\lambda +\lambda ^2=0$. Sus autovalores son entonces:
+    
+    $$\lambda_\pm =e^{\pm i\theta}$$
+    
+    Sus subespacios propios son W=lin $\left \lbrace \left ( \begin{array}{c}
+         1  \\
+         \pm i 
+    \end{array}\right) \right\rbrace $.  Por ello, P= $ \frac{1}{\sqrt{2}}\left ( \begin{array}{cc}
+         1 & 1 \\
+         -i & i
+    \end{array}\right) $ de modo que:
+    
+    $$R(\theta)=P\left( \begin{array}{cc}
+        e^{i\theta} & 0 \\
+        0 & e^{-i\theta}
+    \end{array}\right)P^{+} \to D(e^{i\theta})=D_+(e^{i\theta})\oplus D_-(e^{-i\theta})$$
+    
+    donde $D_+(e^{i\theta})=e^{i\theta}\mathds{1}$ y $D_-(e^{-i\theta})=e^{-i\theta}\mathds{1}$.
+    
+    \subsection{Relaciones de ortonormalidad y completitud}
+    
+    Sea un grupo finito o compacto y sean $D^{(\rho)}(G)=\lbrace D^{(1)}(G), D^{(2)}(G)\rbrace$ sus representaciones irreducibles inequivalentes (y que podemos tomar unitarias) etiqueadas por el índice discreto $\rho$, con dimensión dim D$^{(\rho)}(G)$=$d_\rho <\infty$.
+    
+    Sea $D^{(\rho)}(G)$ la matriz en una base ortonormal que representa a $g\in G$ en la representación $D^{(\rho )}(G)$. Estas matrices cumplen la relación de ortonormalidad:
+    
+    $$\text{G finito:} \hspace{0.3cm} \frac{1}{|G|}\sum _g D_{ij}^\rho (g) \bar{D}_{i'j'}^{\rho '}(g)=\frac{1}{d \rho}\delta _{\rho , \rho '}\delta _{i, i'}\delta _{j,j'}$$
+    
+    $$\text{G compacto:} \hspace{0.3cm} \frac{1}{v(G)}\int _G d\mu (g) D_{ij}^{(\rho )} (g) \bar{D}_{i'j'}^{ (\rho ')}(g)=\frac{1}{d\rho}\delta _{\rho , \rho '}\delta _{i, i'}\delta _{j,j'}$$
+    
+    donde v(G) es el volumen del grupo (si este es compacto). Estas relaciones se pueden usar para construir representaciones irreducibles a partir de otras repreentaciones ireducibles conocidas.
+    
+    \smallskip
+    
+    \textbf{Ejemplo:} consideremos el grupo de Klein $V_4=C_2 \times C_2$ de elementos $\lbrace e, \rho , \sigma , \tau \rbrace $, que es abeliano con $\sigma ^2 = \rho ^2 = \tau ^2 =e^2 =e$, $\sigma \rho = \tau$ subgrupos normales que nos permiten definir el grupo cociente:
+    
+    $$V_4/V_\sigma \cong \frac{V_4}{V_\tau}\cong V_4/V_\rho \cong C_2 $$
+    
+    $$\begin{array}{c}
+         V_\sigma =\lbrace e, \sigma \rbrace \cong C_2  \\
+         V_\tau = \lbrace e, \tau \rbrace \cong C_2 \\
+         V_\rho = \lbrace e, \rho \rbrace  \cong C_2
+    \end{array}$$
+    
+    \smallskip
+    Consideramos por ejemplo $V_4/V_\sigma =\lbrace \lbrace e, \sigma \rbrace , \lbrace e, \tau \rbrace \rbrace$.
+    \bigskip
+    
+    Construyamos representaciones irreducibles de $V_\sigma $ y con ellas las de $V_4$. La más fácil es la representación trivial $D^{(1)}=D^{(1)}(e)=1$, $D^{(1)}(\sigma)=1$.
+    
+    \smallskip
+    La relación de ortonormalidad para $\rho =1$ y $\rho '=2$ implica:
+    
+    $$D^{(1)}(e)D^{(2)}(e)+D^{(1)}(\sigma)D^{(2)}(\sigma)=0 \to D^{2}(e)=1, D^{(2)}(\sigma)=-1$$
+    
+    Por consiguiente, al ser ambos grupos isomorfos:
+    
+    $$V_4/V_\sigma =\lbrace eV_\sigma, \tau V_\sigma \rbrace =\lbrace E, \Sigma \rbrace; \hspace{0.5cm} E=\lbrace e, \sigma \rbrace; \Sigma = \lbrace e, \tau \rbrace$$
+    
+    $$D^{(1)}(E)=1, \hspace{0.2cm} D^{(1)}(\Sigma)=-1, \hspace{0.2cm} D^{(2)}(E)=1, \hspace{0.2cm} D^{(2)}(\Sigma)=-1, \hspace{0.2cm}$$
+    
+    $$D^{(1)} \hspace{0.1cm} \text{de} \hspace{0.1cm} V_4/V_\sigma \to D^{(1)}(e)=1, D^{(1)}(\rho)=1, D^{(1)}(\tau)=1, D^{(1)}(\sigma)=1$$
+    
+    $$D^{(2)} \hspace{0.1cm} \text{de} \hspace{0.1cm} V_4/V_\sigma \to D^{(2)}(e)=1, D^{(2)}(\rho)=-1, D^{(2)}(\tau)=-1, D^{(2)}(\sigma)=1$$
+    
+    Y lo mismo para $V_4/V_\sigma$ y $V_4/V_\tau$.
+    
+    \newpage
+    Se puede ver que estas representaciones para $V_4$ verifican que las relaciones de ortonormalidad son las únicas permitidas por tales relaciones:
+    
+    $$\begin{tabular}[b]{ c | c c c c }
+
+g/w & e & \sigma & \rho & \tau \\
+\hline
+1 & 1 & 1 & 1 & 1 \\
+2 & 1 & 1 & -1 & -1 \\
+3 & 1 & -1 & 1 & -1 \\
+4 & 1 & -1 & -1 & 1
+\end{tabular}  $$
+    
+    Las matrices de representación cumplen la siguiente relación de completitud:
+    
+    $$\text{G finito:} \hspace{0.3cm} \frac{1}{|G|}\sum _\rho d\rho \sum _{ij} \underbrace{D_{ij}^{(\rho)}\bar{D}_{ij}^{(\rho ')}(g')}_{\mathcal{X}^{(\rho)}(gg'^{-1})}=\delta _{\rho, \rho '}$$
+    
+    Se tiene para grupos finitos, haciendo g=g':
+    
+    $$\sum _\rho d\rho ^2 =|G|^2$$
+    
+    Y para grupos compactos:
+    
+     $$\text{G compacto:} \hspace{0.3cm} \frac{1}{v(G)}\sum _\rho d\rho \sum _{ij} \underbrace{D_{ij}^{(\rho)}\bar{D}_{ij}^{(\rho ')}(g')}_{\mathcal{X}^{(\rho)}(gg'^{-1})}=\delta (g,g')$$
+    
+    donde $\delta (g,g')$ es la delta de Dirac adaptada a la medida de Haar del grupo
+    
+    $$f(g')=\int _G d\mu (g)\delta (g,g')f(g)$$
+    
+    Por tanto, esta relación de completitud nos dice que cualquier función $f: G \to \mathds{C}$ continua o de cuadrado sumable (integrable) puede expandirse en funciones $D^{(\rho)}_{ij}(g)$.
+    
+    \smallskip
+    \textbf{Teorema de Peter-Weyl:}
+    
+    $$f(g)=\sum _{g'}\delta _{g,g'}f(g')=\sum _{\rho,i,j}D_{ij}^{(\rho)}(G)\sum _g \frac{1}{|G|}D_{ij}^{(rho)}^{+}(g')f(g')=\sum _{\rho ,i, j} d\rho D_{ij}^{(\rho)}(g)f_{ij}^{(\rho)}$$
+    
+    \smallskip
+     En el caso en el que G=$S^1\cong U(1)$ recuperamos la descomposición de Fourier:
+     
+     $$\int _G d \mu (G)=\int ^{2\pi}_0 d\theta$$
+    
+    \subsubsection{Representaciones de ortonormalidad y completitud con caracteres}
+    
+    Mientras que las matrices de representación dependen de la base escogida los caracteres no lo hacen y además no cambian dentro de la misma clase de conjugación. Por tanto es más útil expresar las relaciones de ortonormalidad y completitud en función de estos caracteres.
+        
+         $$\text{G finito:} \hspace{0.3cm} \frac{1}{|G|}\sum _g\mathcal{X}^{(\rho)}(g)\mathcal{X}^{(\rho ')}(g)=\delta _{\rho , \rho '}$$
+         
+         $$\frac{1}{|G|}\sum _{i=1}^m |e_i|\mathcal{X}_i^{(\rho)}(g)\bar{\mathcal{X}}_i^{\rho '}(g')=\delta _{\rho , \rho '}$$
+         
+         donde m es el numero de clases de conjugación, $|e_i|$ es el número de elementos en la clase $e_i$ y $\mathcal{X}_i^{(\rho)}$ el caracter de la representación.
+         
+         \textbf{Se tiene que el numero de representaciones irreducibles equivalentes es el número de clases de conjugación.}
+         
+          $$\text{G compacto:} \hspace{0.3cm} \frac{1}{v(G)}\int _G d\mu (g) \mathcal{X}^{(\rho)}(g)\mathcal{X}^{(\rho ')}(g)=\delta _{\rho , \rho '}$$
+         
+         $$\frac{1}{v(G)}\sum _\rho d\rho \mathcal{X}_i^{(\rho)}\bar{\mathcal{X}}_i^{\rho '}(g')=\delta ({g,g')$$
+        
+  \subsubsection{Tabla de caracteres:}
+  
+  \smallskip
+  $\mathcal{X}_i^{(\rho)}$ con $\rho $=1,...,m y i=1,...,m puede usarse como una matriz o tabla cuadrada con $\rho$ el índice de la fila e i el de la columna.
+  
+  \smallskip
+  
+  \textbf{Ejemplo:} Para grupos abelianos cada elemento del grupo forma una clase por si mismo y todas las representaciones irreducibles son unidimensionales. De este modo, las tablas $D^{(\rho)}(g)$ también son tablas de caracteres.
+\smallskip
+    
+    \textbf{Consecuencias}(de las propiedades de los caracteres):
+    
+    \begin{itemize}
+        \item Debido a que cualquier representación es totalmente reducible, $D= \oplus _\rho m_\rho D^{(\rho)}$, el carácter se puede descomponer según:
+        
+        $$\mathcal{X}=\sum _{\rho} m_\rho \mathcal{X}^{(\rho)}$$
+        
+        Las multiplicidades vienen dadas a partir de los caracteres como:
+        
+        $$m_\rho =\frac{1}{|G|}\sum _i |e_i|\mathcal{X}\bar{\mathcal{X}}_i^{(\rho)}=\frac{1}{v(G)}\int _G d_\mu (g)\mathds{X}(g)\Bar{\mathcal{X}}^{(\rho)}(g)$$
+        
+        \item También es cierto que:
+        
+        $$||\mathcal{X}||^2=\frac{1}{|G|}\sum _g|\mathcal{X}(g)|^2=\sum _\rho m_\rho ^2$$
+        
+        y una representación es irreducible si y  solo si  $||\mathcal{X}||^2=1$.
+        
+        \item Dos representaciones de un grupo finito o compacto son equivalentes si y solo si tienen los mismos caracteres.
+        
+        \item \textbf{Peter Weyl}: cualquier función de clase se puede expandir en caracteres irreducibles (una función es de clase si es invariante bajo conjugación).
+        
+    \end{itemize}
+    
+    \subsection{Producto tensorial de representaciones y coeficientes de Clebsch-Gordan}
+    
+    Un método habitual para construir representaciones irreducibles de un grupo dado consiste en construir el producto tensorial de representaciones conocidas y descomponerlo en irreducibles.
+    
+    \subsubsection{Tensores}
+    
+    Dados dos espacios vectoriales $V_1$ y $V_2$ podemos formar su producto directo o producto tensorial $V_1 \otimes V_2$.
+    
+    Dadas bases $\lbrace v_i\rbrace _{i=1}^{dim V_1}$ y $\lbrace w_j\rbrace _{j=1}^{dim V_2}$ de $V_1$ y $V_2$ respectivamente, entonces una base de $V=V_1 \otimes V_2$ está dada por el conjunto de pares ordenados $\lbrace v_i \otimes W_j \rbrace$ es decir los vectores de V son todas las combinaciones lineales de los elementos de la base de la forma:
+    
+    $$\sum _{i=1}^{d_1=dim V_1}\sum _{j=1}^{d_2=dimV_2} a^{ij}(v_i\otimes w_j)=a^{ij}(v_i \otimes w_j)$$
+    
+    donde en el último paso utilizamos el criterio de suma de índices repetidos. Están caracterizados por las componentes:
+    
+    $$a^{ij}=\left ( \begin{array}{ccc}
+        a^{11} & ... & a^{1d_2} \\
+        ... & ... & ... \\
+        a^{d_11} & ... & a^{d_1d_2}
+    \end{array}\right) \hspace{0.2cm} \text{tensor de rango 2 (puede entenderse como una matriz)}$$
+    
+    \smallskip
+    
+    Es posible generalizar esta definición para tensores de mayor rango. Claramente:
+    \begin{center}
+    dimV=dim$V_1 \cdot $ dim $V_2$.
+    
+    \end{center}
+    
+    \textbf{Nota:} si agrupamos índices $(i,j)=k$ con k=1,...,$d_1d_2$ podríamos llamar $a^{ij}=a^k$
+    
+    \subsubsection{Producto tensorial de operadores}
+    
+    Dados dos operadores $D_1$ y $D_2$ actuando sobre los espacios $V_1$ y $V_2$ respectivamente, podemos definir su producto tensorial actuando sobre $V_1 \otimes V_2$ como:
+    
+    $$(D_1\otimes D_2)(v\otimes w)=D_1v \otimes D_2w  \hspace{0.1cm} \in V_1 \otimes V_2$$
+
+Usando los elementos de matriz $(D_1)^j_i$, $(D_2)^m_l$ (índices abajo son fila e índices arriba son columna) de estos operadores en sus respectivas bases podemos obtener los elementos de matriz del producto tensorial $D_1 \otimes D_2$ en la base $\lbrace v_i\otimes w_j \rbrace$.
+
+$$(D_1 \otimes D_2)^{nm}_{ij}=(D_1)^j_i (D_2)^m_l$$
+
+La acción de $(D_1\otimes D_2)$ sobre V entonces viene dada por:
+
+$$D_1 \otimes D_2: \hspace{0.2cm} a^{ij} (v_i\otimes w_j) \to ((D_1 \otimes D_2)^{ij}_{nm}a^{nm})v_i\otimes w_j$$
+    
+    $$a^k \to (D_1\otimes D_2)^ka^N \hspace{0.2cm} \text{Regla usual de transferencia de vectores}$$
+    
+\subsubsection{Producto tensorial de representaciones}
+
+Sean $D_1$ y $D_2$ representaciones de un grupo G sobre los espacios vectoriales $V_1$ y $V_2$ el producto tensorial $D_1 \otimes D_2$ da lugar a otra representación de G de dimension D= dim $D_1 \cdot$ dim $D_2$.
+
+\smallskip
+\textbf{Propiedad:} el carácter en la representación producto tensorial es el producto de los caracteres en cada una de las representaciones de partida.
+
+$$\mathcal{X}_D(g)=\mathcal{X}_{D_1}(g)\mathcal{X}_{D_2}(g)$$
+
+\subsubsection{Descomposición de Clebsch-Gordan}
+
+EL producto tensorial de dos representaciones irreducibles D y D' en general no es irreducible; sí es completamente irreducible (como es el caso para representaciones unitarias). De este modo podemos llevar a cabo la descomposición en suma directa de irreducibles o descomposición de Clebsch-Gordan.  
+
+$$D\otimes D'=\oplus _j D_j$$
+
+siendo $D_j$ representaciones irreducibles y $\oplus _j$ indica suma directa de los j elementos.
+
+\smallskip
+Si G es finito o compacto y clasificamos con un índice discreto $\rho$ sus representaciones irreducibles inequivalentes, entonces tendremos:
+
+$$D^{(\sigma)}\otimes D^{(\tau)}=\uplus _\rho m_\rho ^{\sigma \tau} D^{(\rho)}$$
+
+donde $m_\rho ^{\sigma \tau}$ es la multiplicidad de $D^{(\rho)}$ en esta descomposición.
+
+$$m_\rho ^{\sigma \tau} =\frac{1}{|G|} \sum _g \mathcal{X}^{(\sigma)}(g)\mathcal{X}^{(\tau)}\bar{\mathcal{X}}^{(\rho)}(g)$$
+
+$$\mathcal{X}^{(\sigma)}(g)\mathcal{X}^{(\tau)}= \sum _\rho m_\rho ^{\sigma \tau}\mathcal{X}^{(\rho)}$$
+
+$$dimD^{(\sigma)}dim D^{(\tau)}=\sum _\rho m_\rho ^{\sigma \tau} dimD^{(\rho)}$$
+    
+O bien en vez de la suma a los $g_s$ la integral $\frac{1}{v(G)}\int _G d_\mu (g)$ si el grupo es compacto.
+
+\smallskip
+\textbf{Proposición:} la representación trivial aparece en el producto $D_^{(\sigma)}\otimes D^{(\tau)}$ si y solo si $D^{(\tau)}= \bar{D}^{\sigma}$.
+
+\smallskip
+\textbf{Ejercicio:} dada la representación irreducible unitaria $D^{(2)}$ de $S_3$, construye $D^{(2)}\otimes D^{(2)}$ y descomponlas en suma directa de representaciones irreducibles (recordar que eran: la identidad, $D^{(0)}$; la paridad $D^{(1)}$ y la que teniamos que contruir para el ejercicio $D^{(2)}$).
+
+$$D^{(2)}\otimes D^{(2)}=m_{(0)}D^{(0)}+m_{(1)}D^{(1)}+m_{(2)}D^{(2)}$$
+
+\textbf{Ejercicio:}
+    
+    \smallskip
+    Tabla de caracteres de $S_3$:
+    
+    \smallskip
+    $S_3$ tiene 3 clases de conjugación: $C_1=\lbrace e \rbrace, C_2= \lbrace \tau _3=(12),\tau _1=(23), \tau _1=(31)\rbrace, C_3=\lbrace \sigma _1=(123),\sigma _2=(321)$. Tiene por tanto tres representaciones irreducibles no equivalentes.
+    
+    \begin{itemize}
+        \item La trivial, que siempre existe $D^{(0)}$ (unidimensional).
+        
+        $$\mathcal{X}^{(1)}_1=1 \hspace{0.2cm} \mathcal{X}^{(1)}_2=1 \hspace{0.2cm} \mathcal{X}^{(1)}_3=1 \hspace{0.2cm}$$
+        
+        \item $S_3/A_3 \cong C_2$ tiene una representación fiel (asignar a un elemento el 1 y a otro el -1) llamada representación paridad $D^{(1)}$.
+        
+        $$D^{(1)}(e)=D^{(1)}(\sigma _1)=D^{(1)}(\sigma _2)=1$$
+        
+        $$D^{(1)}(\tau _1)=D^{(1)}(\tau _2)=D^{(1)}(\tau _3)=-1$$
+        
+        $$\mathcal{X}^{(1)}_1=1 \hspace{0.2cm}\mathcal{X}^{(1)}_2=-1 \hspace{0.2cm}\mathcal{X}^{(1)}_3=1 \hspace{0.2cm}$$
+        
+    \item Nos falta saber los caracteres de la tercera representaión irreducible $D^{(2)}$. Primero calculamos su dimensión:
+    
+    $$|G|=\sum  _\rho d_\rho ^2 \to 6=1+1+d_{(2)}^2 \to d^2_{(2)}=4$$
+    
+    Luego la tercera representación es bidimensional (matrices 2 $\times$ 2).
+    
+    $$D^{(2)}(e)= \left ( \begin{array}{cc}
+       1 1 & 0 \\
+        0 & 1
+    \end{array} \right); \hspace{0.5cm} \mathcal{X}_1^{(2)}=2$$
+    
+    No conocemos sin embargo el resto de $D^{(2)}(g)$.
+    
+    $$\begin{tabular}[b]{ c | c c c  }
+ & G_1 & G_2 & G_3 \\
+\hline
+\mathcal{X}^{(0)} & 1 & 1 & 1 \\
+\mathcal{X}^{(1)} & 1 & -1 & 1  \\
+\mathcal{X}^{(2)} & 2 & x & y 
+\end{tabular}$$
+    
+    De las relaciones de completitud:
+    
+    $$\frac{|e_i|}{|G|}\sum _\rho \mathcal{X}_i^{(\rho)}\Bar{\mathcal{X}}_j^{(\rho)}=\delta _{ij}$$
+    
+    $$0=1\cdot 1+1(-1)+ 2x \to x=0$$
+    $$0=1\cdot 1+1\cdot 1 +2y \to y=-1$$
+    
+    Podrian haberse utilizado las relaciones de ortonormalidad:
+    
+    $$\frac{1}{|G|}\sum _{i=1}^m |e_i|\mathcal{X}_i^{(\rho)}\mathcal{X}_i^{(\rho ')}=\delta _{\rho , \rho '}$$
+    
+    $$0=1\cdot 2+3\cdot 1\cdot x+2\cdot 1\cdot y; \hspace{0.3cm} \rho =(0), \rho '=(2)$$
+    $$0=1\cdot 2-3\cdot 1\cdot x +2 \cdot 1\cdot y; \hspace{0.3cm} \rho =(1),\rho '=(2)$$
+    $$x=0, \hspace{0.2cm} y=-1$$
+    \end{itemize}
+    
+    \textbf{Ejercicio:} construir la representación bidimensional irreducible y unitaria de $S_3$.
+    
+    
+    \newpage
+    
+    \subsubsection{Coeficientes de Clebsch-Gordan}
+La descomposición de CG describe como se descomponen las matrices de representación en representaciones irreducibles bajo la acción de un grupo. También es importante saber como se descomponen los vectores del espacio vectorial de representación.
+
+Sea $\lbrace v_\alpha (\sigma)\rbrace^{dim D(\sigma)}_{\alpha =1}$ una base ortonormal de vectores del espacio $V_\tau$ sobre el que actúa $D^{(\sigma)}$. Queremos expandir el producto tensorial
+
+$$V_i^{(\sigma)}\otimes V_J^{(\rho)}=\sum _\tau \sum _k ...V_k^{(\tau)}$$
+
+Como la representación $D^{(\tau)}$ podrá aparecer $m_\tau \rho ^\sigma$ veces introducimos un índice extra $a=1,..., m_\tau \rho ^\sigma$ tal que:
+
+$$V_i^{(\rho)}\otimes V_j^{(\sigma)}=\sum _{\tau , a, k}C_{\rho , i, \sigma, j | \tau, a, k}V_k^{(\tau)}$$
+    
+En notación Dirac:
+
+$$\ket{\rho, i, ,\sigma , j}\equiv \ket{\rho, i} \otimes \ket{\sigma , j}=\sum _{\tau , a,k}\bra{\tau , a, k}\ket{\rho, i,  \sigma ,j } \ket{\tau , a, k}$$
+
+Los coeficientes de CG se obtienen por identificación:
+
+$$C_{\rho , i, \sigma, j | \tau, a, k}=\sum_{\tau , a,k}\bra{\tau , a, k}\ket{\rho, i,  \sigma ,j } $$
+     
+     
+     \textbf{Ejercicio:} calcularlos para $D^{(2)}\otimes D^{(2)}$
+     
+     \smallskip
+     Si las representaciones son unitarias y las bases se eligen ortonormales, los coeficientes de CG cumplen las relaciones de ortogonalidad y por tanto:
+     
+     
+    $$\sum_{\tau , a,k}\bra{\tau , a, k}\ket{\rho, i,  \sigma ,j } \cdot \underbrace{\bra{\rho, i',  \sigma ,j '}}_{\text{Complejo conj}} \ket{\tau , a, k}=\delta _{i,i'}\delta _{j,j'}$$
+    
+       $$\sum_{\tau , a,k}\bra{\tau , a, k}\ket{\rho, i,  \sigma ,j } \cdot {\bra{\rho, i,  \sigma ,j }}} \ket{\tau ' , a', k'}=\delta _{a,a'}\delta _{\tau,\tau '}\delta _{k, k'}$$
+       
+       
+       Y podemos invertir la relación original
+       
+       $$\ket{\tau, a, k}=\underbrace{\sum _{ij} \bra{e,i, \sigma , j} \ket{ \tau , a ,k}}_{\text{Coeficiente conj.}} \underbrace{\ket{e,i,\sigma ,j}}_{Prod. espacios}$$
+       
+      \subsection{Teorema de Wigner-Eckart}
+       
+       \begin{itemize}
+           \item \textbf{Conjunto de operadores tensoriales irreducibles.}
+           
+           Sean $V_\rho$ y $V_\sigma$ espacios vectoriales con producto escalar y $D^{(\rho)}$, $D^{(\sigma)}$ representaciones irreducibles de un grupo G sobre dichos espacios respectivamente. Sea Q: $V_\rho \to V_\sigma$ un operador lineal ( $Q \in L(V_\rho ,C_\sigma)$) de modo que  $Qv\in V_\sigma \hspace{0.2cm} \forall v\in V_\sigma$.
+           
+           El conjunto de tales operadores forma un espacio vectorial con suma $(Q_1+Q_2)V=Q_1v+Q_2v$, producto escalar complejo $(aQ)v=a(Qv)$ y cero $0v=\Vec{0}$. Si las dimensiones de $V_\sigma, V_\rho$ son $d_\sigma, d_ \rho$, la dimensión de este nuevo espacio L es $d_ \sigma d_\rho$.
+           
+           Definamos ahora, para cada $g\in G$ un operador D'(g) que actúa en L de la siguiente forma:
+           
+           $$D'Q=DQD^{-1} \hspace{0.2cm}\forall Q\in L$$
+           
+           Entonces D' es un operador lineal y dados $g_1, g_2 \in G$ se tiene:
+           
+           $$D'(g_1)D'(g_2)=D'(g_1g_2); \hspace{0.4cm} (g_1g_2)^{-1}=g_1^{-1}g_2^{-1}$$
+           
+           Por tanto, el conjunto de operadores D' da lugar a una representación de G sobre el espacio vectorial L, en general reducible.
+           
+           Supongamos que D'(G) es completamente reducible y que $D^{(\tau)}$ es una representación de las representaciones irreducibles que aparece en su reducción. Sea $\lbrace Q_1,Q_2,...,Q_{d_\tau}\rbrace$ una base del subespacio correspondiente de L donde actúa $D^{(\tau)}$. Entonces:
+           
+           $$D'Q_i=\sum _{j=1}^{d_\tau} D_{ji}Q_j \hspace{0.2cm} \forall i=1,..., d_\tau$$
+           
+           y por la definición dada de D':
+           
+           $$DQ_iD^{-1}=\sum _{j=1}^{d_\tau} D_{ji}Q_j \hspace{0.2cm} \forall i=1,..., d_\tau$$
+           
+           este conjunto $\lbrace Q_i\rbrace$ de operadores se llama conjunto de operadores tensoriales irreducibles de la representación $D^{(\tau)}$ de G.
+       \end{itemize}
+       
+       \smallskip
+       \textbf{Teorema de Wigner-Eckart:}
+
+\smallskip
+Sea G finito o compacto, sean $D^{(\sigma)}, D^{(\tau)}$ y $D^{(\rho)}$ representaciones unitarias irreducibles de G de dimensiones $d_\sigma,d_\tau, d_\rho$ respectivamente y sean $\lbrace v_i^{\sigma}\rbrace, \lbrace v_i^{\rho}\rbrace $ dos bases ortonormales asociados a sus respectivos espacios $V_\sigma, V_\rho$ sobre los que están definidas estas representaciones unitarias.
+
+Finalmente, sea $\lbrace Q_k^{(\tau)}_{k=1}^{d_\tau}$ un conjunto de operadores irreducibles de $D^{(\tau)}$. Entonces:
+
+$$(V_j^{(\sigma)}, V_k^{(\tau)}, V_i^{(\rho)})=\sum _{a=1}^{m_\sigma ^{\rho \tau}} \bar{C}_{\rho, i, \tau ,k | \sigma , a, j}\cdot (\sigma || Q^{(\tau)}||\rho)_a$$
+
+donde el último término forma un conjunto de $m^{\rho \tau}$ (elementos de matriz reducidos) que son independientes de i,j y k.
+
+Este teorema muestra que la dependencia en estos índices de las cantidades $(V_j^{(\sigma)}, V_k^{(\tau)}, V_i^{(\rho)})$ está completamente recogida en los coeficientes de CG y que la totalidad del conjunto $D_\sigma d_\rho d_\tau$ que forman depende solo de $m^{\rho \tau}_\sigma$ elementos de matriz reducidos.
+
+\smallskip
+\textbf{Nota:} se puede generalizar para mucgos grupos no compactos, como grupos de Lie semisimples con representación finita o con representación unitaria de dimensión infinita.
+Las reglas de selección atómicas salen de aplicar este teorema al grupo SU(2).
+
+\subsection{Representaciones del producto directo de grupos}
+
+Sean $D_1(G_1)$ y $D_2 (G_2)$ representaciones de los grupos $G_1, G_2$ respectivamente. El conjunto de operadores $D((g_1,g_2))$ por:
+
+$$D((g_1,g_2))=D_1(g_1)\otimes D_2(g_2)$$
+
+da lugar a una representación del producto directo $G_1\times G_2$ que es unitaria si $D_1(G_1)$ y $D_2(G_2)$ lo son y son fieles si son representaciones irreducibles de $G_1$ y $G_2$ respectivamente entonces D es una representación irreducible de $G_1 \times G_2$. Además, cada representación irreducible de $G_1 \times G_2$ es equivalente a una construida de esta forma.
+
+\newpage
+\subsection{Ejercicios}
+
+\begin{enumerate}
+    \item Dada una representación de un grupo sobre los complejos, los vectores de $\mathds{C}$ que se transforman bajo la acción de D:
+    
+    $$D: \hspace{0.2cm} G \to GL(n,\mathds{C})$$
+    $$\Vec{x}\to \Vec{x}'-D(g)\Vec{x}$$
+    
+    Si consideramos funciones de $\mathds{C}^n$ en $C$ tales como $f'(\Vec{x})=f(\Vec{x})$ tenemos que $f(D(g)\Vec{x})=f(\Vec{x})$ y concluimos que:
+    
+    $$f\longrightarrow f'$$
+    $$f'(\Vec{x})=f(D^{-1}(g)\Vec{x})[A]$$
+    
+    Demostrar que este mapa es un homeomorfismo en el espacio de funciones y que por tanto el conjunto de transformaciones [A] forman una representación del grupo sobre dicho espacio.
+    
+    $$\begin{array}{cc}
+         D: \hspace{0.2cm} \Vec{x}\to \Vec{x}'  \\
+         D': \hspace{0.2cm} f(\Vec{x})\to f'(\Vec{x})
+    \end{array} \hspace{2cm} \text{De forma que} \hspace{0.2cm} f'\equiv D'(f)$$
+    
+    \smallskip
+    $\hspace{1cm}$ Para demostrar que este mapa define una representación del grupo G debemos probar que respeta la estructura de grupo, es decir, que si $g=g''g'$ entonces $f\overset{g}{\longrightarrow} f''$ coincide con la composición de $f \overset{g'}{\longrightarrow} f'$ con $f'\overset{g''}{\longrightarrow}f''$. Tenemos que:
+    
+    $$f'(\Vec{x})=f(D^{-1}(g),\Vec{x})$$
+    $$f''(\Vec{x})=f'(D^{-1}(g), \Vec{x})=f(D^{-1}(g')D^{-1}(g''),\Vec{x
+    })=f(D(g''g')^{-1},\Vec{x})=f(D((g)^{-1},\Vec{x})$$
+    
+    Como queríamos demostrar.
+    
+    \item Consideramos la representación bidimensional irreducible de $S_3 \cong D_3$, denotada anteriormente por $D^{(2)}(S_3)$, y dos vectores en el espacio complejo de dos dimensiones de coordenadas $(x^1,y^1)$ y $(x^2,y^2)$ que se transforman independientemente bajo la acción de la representación D. Esta representación da lugar a una representación de dimensión 4 W($S_3$) dada por la envolvente lineal de los monomios $X^1x^1, x^1y^2,y^1x^2$ y $y^1y^2$. 
+    
+    \begin{enumerate}
+        \item Calcular las matrices de representación W(g) siendo g un elemento de $S_3$.
+        
+        $$f: \hspace{0.2cm} (x^1,x^2)\otimes (y^1,y^2) \to \mathds{C}$$
+        $$\hspace{0cm} V_1 \hspace{0.5cm}\otimes \hspace{0.5cm} V_2 $$
+        
+        Por ejemplo $\tau _3 \tau _1=\sigma _1$, $\sigma _1^{-1}=\sigma _2$, $\tau _1 \sigma _1=\tau _2$.
+        
+        Partiendo de $D^{(2)}(\tau _1)=\left ( \begin{array}{cc}
+           -1  & 0 \\
+            0 & 1
+        \end{array}\right)$ y $D^{(2)(\tau _3)}=\frac{-1}{2}\left ( \begin{array}{cc}
+           -1  & \sqrt{3} \\
+            \sqrt{3} & 1
+        \end{array}\right)$.
+        
+        Con estas dos podemos construir $W(\tau _1)$ y $W(\tau _3)$, y con ellas podemos construir todas las demás mediante la tabla de multiplicación:
+        
+        $$\tau _1: \begin{array}{cc}
+            x^1\to -x^1 & x^2\to -x^2  \\
+            y^1\to y^1 & y^2 \to y^2
+        \end{array}$$
+        
+        $$x^1x^2\overset{\tau _1}{\to} (x^1x^2)^1=x^1x^2$$
+        $$x^1y^2\overset{\tau _1}{\to} (x^1y^2)^1=-x^1y^2$$
+        $$y^1x^2\overset{\tau _1}{\to} (y^1x^2)^1=-y^1x^2$$
+        $$y^1y^2\overset{\tau _1}{\to} (y^1y^2)^1=y^1y^2$$
+        
+        $$V=lin\lbrace x^1x^2,x^1y^2,y^1x^2,y^1y^2 \rbrace; \hspace{1cm} f'(\Vec{x})=W(\tau _1)f(\Vec{x})=f(W(\tau _1)^{-1}\Vec{x})$$
+        
+        Ahora tomando la base ortonormal más sencilla:
+        
+        $$x^1x^2=\left( \begin{array}{c}
+             1  \\
+             0 \\
+             0 \\
+             0
+        \end{array} \right ); \hspace{0.2cm} x^1y^2=\left( \begin{array}{c}
+             0  \\
+             1 \\
+             0 \\
+             0
+        \end{array} \right ); \hspace{0.2cm} y^1x^2=\left( \begin{array}{c}
+             0  \\
+             0 \\
+             1 \\
+             0
+        \end{array} \right ); \hspace{0.2cm} y^1y^2=\left( \begin{array}{c}
+             0  \\
+             0 \\
+             0 \\
+             1
+        \end{array} \right )$$
+        
+        Queda la representación:
+        
+        $$W(\tau _1)=\left (\begin{array}{cccc}
+           1  & 0 & 0 & 0 \\
+           0  & -1 & 0 & 0 \\
+             0 & 0 & -1 & 0 \\
+             0 & 0 & 0 & 1
+        \end{array} \right)$$
+        
+        Ahora, para $W(\tau _3)$ tenemos que sigue la siguiente relación:
+        
+        $$\left ( \begin{array}{c}
+             x^{(i)^1}  \\
+               y^{(i)^1}
+        \end{array}\right) = D^{(2)} \left ( \begin{array}{c}
+             x^{(i)}  \\
+               y^{(i)}
+        \end{array}\right)=\frac{-1}{2}\left ( \begin{array}{cc}
+            -1 & \sqrt{3} \\
+               \sqrt{3} & 1
+        \end{array}\right)\left ( \begin{array}{c}
+             x^{(i)}  \\
+               y^{(i)}
+        \end{array}\right)= \left ( \begin{array}{cc}
+             \frac{x^{(i)}}{2} & \frac{-\sqrt{3}}{2}y^{(i)}  \\
+             \frac{-\sqrt{3}}{2}y^{(i)}  & \frac{-1}{2}y^{(i)}
+        \end{array}\right)$$
+        
+        Por lo que las transformaciones son del estilo:
+        
+        $$x^1x^2 \overset{\tau _3}{\longrightarrow} (x^1 x^2)^1=\left ( \frac{x^1}{2}-\frac{\sqrt{3}}{2}y^1 \right) \left ( \frac{x^2}{2}-\frac{\sqrt{3}}{2}y^2 \right)$$
+        
+        Y los elementos de la base se transforman a:
+        
+        $$(x^1x^2) \longrightarrow (x^1x^2)^1$$
+        
+        $$\left( \begin{array}{c}
+             1  \\
+             0 \\
+             0 \\
+             0
+        \end{array} \right )\longrightarrow \frac{1}{2} \left( \begin{array}{c}
+             1  \\
+             -\sqrt{3} \\
+             -\sqrt{3}\\
+             3
+        \end{array} \right )$$
+        
+        Repitiendo este procedimiento podemos hallar la transformación para cada elemento de la base de V. Por tanto, es posible hallarnos $W(\tau _3)$ y con ella obtener $W(\tau _2)$, $W(\sigma _1)$ y $W(\sigma _2)$ mediante el producto adecuado de matrices.
+    \end{enumerate}
+\end{enumerate}
+  
+
+% ---------------
+%
+% Nuevo TEMA
+%
+% ---------------
+  
+\newpage
+
+\section{ Grupos y álgebras de Lie}
+
+Un grupo de Lie combina tres estructuras matemáticas diferentes. Verifica:
+
+\begin{itemize}
+    \item Los axiomas de grupo.
+    \item Los elementos de grupo forman un espacio topológico (grupo topológico).
+    \item Los elementos del grupo forman una variedad analítica.
+\end{itemize}
+
+De este modo vemos que un grupo de Lie puede analizarse de formas diferentes. No los estudiaremos aquí de forma exhaustiva de forma topológica pues los grupos de Lie que se utilizan más en física son los grupos de Lie lineales. Tienen propiedades adicionales que nos permiten analizarlo mediante métodos más sencillos.
+
+\subsection{Elementos básicos sobre espacios topológicos}
+
+Un espacio topológico S es un conjunto no vacío de elementos llamados puntos para los cuales hay una correlación $\mathds{T}$ de subconjuntos, llamados conjuntos abiertos, que satisfacen:
+
+\begin{enumerate}
+    \item El conjunto vacío $\phi$ y el conjunto S pertenecen a $\mathds{T}$.
+    \item La unión de conjuntos de $\mathds{T}$ pertenece a $\mathds{T}$.
+    \item La intersección de un número finito de conjuntos de $\mathds{T}$ pertenece a $\mathds{T}$.
+    \item La colecció de $\mathds{T}$ se llama topología.
+    \item Los complementarios a esos conjuntos se llaman conjuntos cerrados.
+\end{enumerate}
+
+\subsubsection{Compacidad}
+
+Una familia de conjuntos abiertos de un espacio topológico S es un recubrimiento abierto de S si la unión de sus conjuntos abiertos contiene a S. Si por cada recubrimiento abierto de S siempre hay un recubrimiento finito que contiene a S (es decir, unión de un número finito de abiertos), el espacio topológico S se dice que es compacto. En caso contrario se dice que es no compacto.
+
+\subsubsection{Conexion}
+
+Un espacio topológico es conexo si no es la unión de dos conjuntos abiertos disjuntos no vacíos (que no tiene agujeros). Como consecuencia los únicos subconjuntos de S conexo que son a la vez abiertos y cerrados son solo el vacío y el propio S (si S es conexo).
+
+\smallskip
+Un \textbf{camino} en S desde $X_0$ a $X_1$  es un mapa continuo  $\phi: [0,1]\in \mathds{R}\to S$ con $\phi (0)=x_0,\phi (1)=x_1$. Si los puntos son idénticos y los valores del mapa en esos puntos son iguales se dice que el camino es cerrado (\textit{loop}). Dos caminos cerrados son equivalentes u homotópicos si uno puede llebar al otro mediante deformaciones continuas. Todos los loops equivalentes forman una clase de equivalencia.
+
+\begin{itemize}
+    \item S es \textbf{arco-conexo} si dados dos puntos de S cualesquiera siempre existe un camino con $\phi (0)=x_0$ y $\phi (1)=x_1$.
+    
+    \item S arco-conexo es \textbf{simplemente conexo} si todo camino cerrado se puede encoger a un punto con deformaciones contínuas.
+    
+    Si hay n clases de equivalencia distintas de caminos cerrados entonces S se dice n-veces conexo.
+\end{itemize}
+
+\textbf{Ejemplos:}
+
+\begin{itemize}
+    \item Una región X del espacio euclídeo $\mathds{R}^n$ es compacto solo si es finita.
+    \item El espacio $\mathds{R}^2$ es simplemente conexo, regiones suyas con agujeros no lo son.
+\end{itemize}
+ 
+ \subsubsection{Mapa homeomórfico}
+ 
+ Dados dos espacios topologicos (S,T) y (S',T'), un mapa de S en S' se dice contínuo en S si para todo abierto de S' la imagen inversa del mapa es un abierto de S. Si el mapa $\phi , \phi ^{-1}$ es contínuo entonces esta aplicación es un homeomorfismo y S y S' son homeomorfos.
+ 
+ \smallskip
+ Las propiedades topológicas son invariantes bajo homeomorfismos, también llamados invariantes topológicos.
+ 
+ \subsubsection{Espacio Hausdorff}
+ 
+ Un espacio topológico (S,T) es Hausdorff si dos puntos cualquiera de S pertenecen a subconjuntos abiertos de T disjuntos (axioma de separabilidad).
+ 
+ Un espacio localmente euclídeo de dimensión n es un espacio topológico Hausdorff tal que cada uno de sus puntos está contenido en un conjunto abierto que es homeomorfo a un subconjunto de $\mathds{R}^n$.
+ 
+ 
+ \subsubsection{Carta}
+ Sea V un abierto de dicho espacio y $\phi$ un homeomorfismo de V en un subconjunto de $\mathds{R}^n$ entonces para cada punto de V $p\in V$ existe un conjunto de coordenadas ($x_1,x_2,..,x_n$) tal que $\phi (p)= (x_1,x_2,..,x_n) $. El par $(p, \phi)$ se llama \textbf{carta}.
+ 
+ \subsubsection{Variedad analítica de dimensión n}
+ 
+ Consideremos un espacio localmente euclídeo de dimensión n y tal que posee una base numerable (una base de la topología T es un subconjunto $B \in T$ de abiertos tal que cualquier conjunto abierto es unión de elementos de B) y un homeomorfismo de un abierto $V \subset \mathcal{V}$ en un subconjunto de $\mathds{R}^n$.
+ 
+ \smallskip
+ Si para cada par de cartas $(V_\alpha , \phi _\alpha)$ y $(V_\beta , \phi _\beta)$ del subgrupo $\mathcal{V}$ con intersección no vacía, el mapa $\phi _\beta \o \phi _\alpha ^{-1}$ es una función analítica, entonces $\mathcal{V}$ es una variedad analítica de dimensión n (como por ejemplo $\mathds{R}^n$).
+ 
+ \subsection{Grupo de Lie, definición.}
+ 
+ Un grupo de Lie de dimensión n es un conjunto de elementos que satisfacen las siguientes condiciones:
+ 
+ \begin{enumerate}
+     \item Forman grupo.
+     \item Forman una variedad analítica de dimensión n.
+     \item El mapa $\begin{array}{cc}
+         \phi: \hspace{0.2cm} G\times G \to G  \\
+          (g_1,g_2)\to \phi (g_1g_2)=g_1g_2
+     \end{array}$ es analítico para todo $g_1,g_2 \in G$.
+     \item Este mapa es también analítico (es infinitamente diferenciable; esta dado localmente por una serie de potencias convergente).
+      \end{enumerate}
+      
+     La característica básica de un grupo de Lie es que tiene un número no contable de elementos dentro de una región $\textit{cercanos}$ a la identidad y la estructura de estos elementos determina esencialmente la estructura del grupo completo.
+     
+     \smallskip
+     Los elementos de dicha región estarán parametrizados de manera analítica y debemos tener una noción de distancia.
+     
+     En el caso de grupos de Lie lineales existe una representación natural que permite una definición de distancia precisa, que permite asegurar que el resto de requerimientos topológicos se verifican.
+     
+     \subsection{Grupos de Lie lineales}
+     
+     Un grupo G es un grupo lineal de Lie de dimensión n si satisface las cuatro coniciones siguientes:
+     
+     \begin{enumerate}
+         \item G posee una representación matricial D que es fiel y de dimensión finita m.
+         
+         Definimos la distancia entre dos elementos $g,g'\in G$ como:
+         
+         $$d(g,g')=\sqrt{\sum _{i,j=1}^m |D(g)_{ij}-D(g')_{ij}|^2}$$
+         
+         y el conjunto de matrices D(g) satisface las condiciones de espacio métrico.
+         
+         El conjunto $\lbrace g_i\rbrace$ con $g_i \in G$ tal que $d(g_i,e)<\delta$, con $\delta \in \mathds{R}^+$. Se dice que esta en una bola de radio $\delta$ centrada en la identidad e y denotada por $M_s$ que a veces llamaremos entorno de e.
+         
+         \item Existe un real positivo tal que los elementos de $M_s$ se pueden parametrizar (de modo diferente) por n parámetros reales independientes ($x_1,...,x_n$) con e correspondiente a $x_1,...,x_n=0$.
+         
+         Cada elemento de $M_s$ se corresponde con un único punto de $\mathds{R}^n$ que se corresponde con más de un elemento $g_i\in M_s$.
+         
+         \item Existe un real $\epsilon >0$ tal que cada punto de $\mathds{R}^n$ para el que se cumpla $\sum _{i=1}^n x_1^2 < \epsilon ^2$ se corresponde con algún elemento de $g_i \in M_s$ y la correspondencia es uno a uno.
+         
+         \item Sea $D(g(x_1,...,x_n))$ la matriz de representación del elemento $g(x_1,...,x_n)\in G$. Entonces cada elemento de matriz de D es una función analítica de ($x_1,...,x_n$) para todo punto de $\mathds{R}^n$ que satisfaga la condición anterior.
+        
+     \end{enumerate}
+     
+       \textbf{Nota:} Todo grupo de Lie lineal es isomorfo a algún subgrupo del grupo general lineal de matrices de dimensión adecuada.
+     
+     \smallskip
+     Cada grupo de Lie lineal se dice \textbf{conexo} si el espacio topológico que forman sus elementos es conexo. Análogamente puede ser simplemente conexo o múltiplemente conexo.
+     
+     \subsubsection{Recubridor universal}
+     
+     Si G es un grupo de Lie multiplemente conexo existe un grupo $\Tilde{G}$ simplemente conexo (único salvo isomorfismos) tal que G es isomorfo al grupo cociente $\Tilde{G}/Z(\Tilde{G})) \hspace{0.2cm} \left [ Z(\Tilde{G})=\lbrace h\in \Tilde{ G} | hg=gh  \hspace{0.2cm} \forall g  \in \Tilde{G} \rbrace\right]$ o alguno de sus subgrupos.
+     
+     $\Tilde{G}$ se llama el recubridor universal de G.
+     
+     \smallskip
+     Un grupo de Lie se dice \textbf{compacto} si su espacio topológico es compacto.
+     
+     \subsubsection{Representaciones unitarias del grupo de Lie}
+     
+     \begin{enumerate}
+         \item Si G es un grupo de Lie compacto, toda representación de G es equivalente a alguna unitaria.
+     
+     \item Si G es un grupo de Lie compacto toda representación reducible de G es completamente reducible (completamente descomponible).
+     
+     \item Si G es un grupo de Lie no compacto, entonces no posee representaciones unitarias de dimensión finita no triviales.
+     
+        \end{enumerate}
+
+\subsubsection{Ejemplos}
+    
+    \begin{itemize}
+        \item    $GL(n,\mathds{C})$: grupo general lineal de matrices complejas M con det M$\neq$ 0 de dimensión 2$n^2$.
+        
+        \item $SL(n, \mathds{C})$: grupo especial lineal, subgrupo del general con detM=1 de dimensión 2$n^2$ -2 (pues el determinante da dos restricciones; Re(detM)=1 y Im(detM)=0).
+        
+        \item GL($n,\mathds{R}$): de dimensión $n^2$.
+        
+        \item $SL(n,\mathds{R})$: de dimensión $n^2-1$.
+        
+        \item El grupo $U(n)$: grupo unitario de matrices complejas U tal que $U^+U=UU^+=\mathds{1}^n$ de dimensión $n^2$ (en principio es subgrupo de GL pero la condición de conmutación nos quita la mitad).
+        
+        \item SU(n): grupo especial unitario, subgrupo de U(n) que agrupa las matrices con detU=1, de dimensión $n^2-1$ (como el det U es un complejo de fase libre y norma 1 solo pone 1 condición sobre el detU).
+        
+        \item O(n): grupo ortogonal de matrices reales que cumplen $OO^+=O^+O=\mathds{1}_n$ de dimensión $\frac{n(n-1)}{2}$.
+        
+        \item SO(n): grupo ortogonal especia, subgrupo de O(n) con detO=1, de la misma dimensión que O(n).
+        
+        \item Sp(n): grupo simpléptico, grupo de matrices unitarias (n $\times$ n) con n par. Satisfacen $U^T J U=J$. La matriz J$=\left (\begin{array}{cc}
+            0 & \mathds{1}_{n/2} \\
+            -\mathds{1}_{n/2} & 0
+        \end{array} \right )$ de dimensión $\frac{n(n+1)}{2}$.
+        
+        \item U(l,n-l): grupo pseudo-unitario de matrices complejas U que satisfacen $UgU^+=g$ siendo g una matriz diagonal de unos y menos unos de forma que $g_{kk}=1$ para $1 \leq k \leq l$ y $g_{kk}=-1$ para $ l+1 \leq k \leq n$. LA dimensión es $n^{2}$
+        
+        \item O(n,l-n): grupo pseudo-ortogonal de matrices reales con $OgO^+=g$ con la misma g, de dimensión $\frac{n(n-1)}{2}        $. Es el grupo de Lorentz, la g es una pseudo-métrica.
+        
+        \begin{enumerate}
+            \item Compactos: U(n), SU(n), O(n), SO(n), Sp(n).
+            
+            \item No compactos: GL(n), SL(n), U(n,l-n), O(n,l-n.)
+        \end{enumerate}
+     \end{itemize}
+     
+     \subsubsection{Ejercicio: ¿Son O(n) y U(n) grupos conexos?}
+     
+     O(n) está formado por rotaciones y reflexiones luego no es conexo; sus dos subconjuntos son: rotaciones (subgrupo) y reflexiones (que no es subgrupo pues $(det=-1)^2 \neq -1$). Consiste en dos componentes disjuntas SO(n) (rotaciones) y la componente con det=-1 (reflexiones).
+     
+     \smallskip
+     U(n) por otra parte sí es conexo (es decir no es la unión de conjuntos abiertos disjuntos) pues las fases se pueden parametrizar de forma continua para que tome todos los valores complejos unitarios.
+     
+     \subsubsection{Ejercicio: ¿Son SO(2)$\simeq $
+     U(1) y SU(2) simplemente conexos?}
+     
+     Cualquier elemento de SO(2) puede escribirse como $\mathcal{R}= \left ( \begin{array}{cc}
+         a &  -b\\
+         b & a 
+     \end{array}\right)$ con $a^2+b^2=1$. Es decir, escrita como variedad diferencial, SO(2) es el círculo unidad. Vemos pues que SO(2) no es simplemente conexo (no se puede reducir el círculo a un punto sin cortarlo).
+     
+     \bigskip
+     Ahora para SU(2) tenemos que deben cumplir $|a|^2+|b|^2=1$ siendo ahora a,b $\in \mathds{R}$ y la matriz $\mathcal{R}= \left ( \begin{array}{cc}
+         a &  b\\
+         -\bar{b} & \bar{a} 
+     \end{array}\right)$. Así que los U (elementos de SU(2)) pueden identificarse con un punto (x,y,z,w) $\in \mathds{R}^4$ siendo $a=(x,y)$ y $b=(z,w)$. Deberán satisfacer: $x^2 +y^2 + z^2 + w^2=1$ (ecuación de la 3-esfera o hiperesfera de dimensión 4). La 3-esfera es simplemente conexa al ser la generalización de la esfera. Las curvas sobre la esfera pueden '' achicarse '' a un punto sin salirse de la esfera no como con el círculo. Las únicas esferas que son grupos de Lie son la 1-esfera (círculo) y la 3-esfera (por cuestiones de restricciones topológicas).
+     
+     \subsubsection{Ejercicio: justificar por qué el grupo SO(1,1) no es compacto}
+     
+     Pista: SO(1,1) es isomorfo a los reales con la operación de suma.
+     
+     \subsubsection{Ejercicio: Acabamos de ver que SO(2) $\simeq$ U(1) $\simeq S^1$  no es simplemente conexo. ¿Qué grupo es su recubridor universal? Buscar el grupo normal de G (H) tal que $S^1 \simeq G/H$ (el grupo cociente es el círculo).}
+     
+     Pista: la dimensión de $S^1$ es 1. Su recubridor universal tendrá también dimensión 1.
+     
+     \subsection{Medida de integración invariante}
+     
+     Dada una función definida en G con valores complejos f: $\begin{array}{c}
+         G \to \mathds{C}  \\
+          g \to f(g)
+     \end{array}$ tenemos que si G es un grupo finito (por el teorema del reordenamiento) podemos escribir:
+     
+     $$\sum _{g\in G} f(gg')=\sum _{g\in G} f(g)=\sum _{g\in G} f(gg')$$
+     
+     decimos que la suma es invariante por la izquierda e invariante por la derecha respectivamente.
+     
+     \smallskip
+     Además, para grupos de Lie (análogamente a lo que ocurría con los grupos finitos) si f(g)=1 $\forall g \in G$, la suma es finita:
+     
+     $$\sum _{g \in G} 1 =|G|$$
+     
+     Para grupos de Lie lineales la suma se puede sustituir por una integral que también va a ser invariante por la izquierda y por la derecha.
+     
+     $$\int _G f(g)d_lg=\int ^{b_1}_{a_1} dx_1...\int ^{b_n}_{a_n} dx_n f(g(x_1,...,x_n))\sigma _l(x_1,...,x_n)$$
+     
+     Donde $\sigma _l$ es una función peso que hace que la integral sea invariante por la izquierda. Análogamente se haría para que fuera invariante por la derecha:
+     
+     $$\int _G f(g)d_rg=\int ^{b_1}_{a_1} dx_1...\int ^{b_n}_{a_n} dx_n f(g(x_1,...,x_n))\sigma _r(x_1,...,x_n)$$
+     
+     Si multiplico por g' por la izquierda a la primera o por g' por la izquierda a la segunda las integrales no cambian.
+     
+     $$\int _G f(g'g)d_lg=\int _G f(g)d_lg \hspace{1cm} \int _G f(gg')d_rg=\int _G f(g)d_rg=$$
+     
+     Esto provoca una restricción en las funciones peso que las hace únicas salvo constante.
+     
+     \bigskip
+     \begin{itemize}
+         \item      \textbf{Teorema:} si G es un grupo de Lie compacto entonces podemos asegurar que $\sigma _r=\sigma_l=\sigma$. La integral invariante que define, $\int _G f(g)d g$, es por tanto igual por la izquierda que por la derecha. Además existe (converge) y es finita para toda función f(g) continua. Podemos escoger $\sigma$ (que era única salvo constante) para que $\int _G dg=\int ^{b_1}_{a_1} dx_1...\int ^{b_n}_{a_n} dx_n \sigma (x_1,...,x_n)=1$. La medida así definida la llamamos \textbf{medida de Haar} (única e invariante por izquierda y derecha).
+         
+         \item \textbf{Teorema:} si G es un grupo de Lie no compacto las medidas invariantes por la izquierda y la derecha son infinitas (y por tanto no tiene sentido definir la medida de Haar). Por ejemplo, en el círculo las medidas son:
+         
+         $$\int ^{2\pi}_0 d\theta f(\theta) \to \int ^{2\pi}_0 d\theta f(\theta +\phi)= \int ^{2\pi + x}_{0+x} d\Tilde{\theta} f(\Tilde{\theta})$$
+         
+         donde multiplicando por la derecha lo que hacemos es sumar por la derecha. Para que sea medida de Haar basta con normalizarla:
+         
+         $$\int ^{2\pi}_0 d \theta \frac{1}{2\pi}$$
+         
+     \end{itemize} 
+\end{document}

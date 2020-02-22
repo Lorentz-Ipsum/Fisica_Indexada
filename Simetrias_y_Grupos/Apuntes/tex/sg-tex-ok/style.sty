@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{yhmath}
+\usepackage[utf8]{inputenc}
+\usepackage{ upgreek }
+\usepackage{graphicx}
+\usepackage{appendix}
+\usepackage{ amssymb }
+\usepackage{ tipa }
+\usepackage{svg}
+\usepackage{amsmath}
+\setlength{\parindent}{0cm}
+\usepackage[spanish]{babel}
+\usepackage{vmargin}
+\usepackage{subfig}
+\usepackage{cancel}
+\usepackage{ dsfont }
+\newcommand{\rn}[1][n]{\mathds{R}^{#1}}
+\usepackage{pdfpages}
+\usepackage{braket}
+\usepackage{ gensymb }
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\newcommand{\commentedbox}[2]{%
+  \mbox{
+    \begin{tabular}[t]{@{}c@{}}
+    $\boxed{\displaystyle#1}$\\
+    #2
+    \end{tabular}%
+  }%
+}
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}%
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
