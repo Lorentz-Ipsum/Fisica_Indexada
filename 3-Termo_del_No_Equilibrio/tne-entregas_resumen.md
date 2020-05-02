@@ -1,3 +1,5 @@
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+
 # TNE- Resumen de las Entregas 2019/2020
 
 # Entrega 1: Principios de Producción de Entropía Minima y Máxima
