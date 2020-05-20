@@ -1,3 +1,6 @@
+# Fisica_Estado_Solido-019
+Apuntes y desglose de física del estado sólido
+
 Resultados del aprendizaje (según Documento de Verificación de la Titulación)
 
 
@@ -128,4 +131,4 @@ Prof: Jacobo Santamaria
 
 Pedir apuntes de jacobo a wifli que lo tiene:
 
-> El examen son básicamente los problemas entregables 
+> El examen son básicamente los problemas entregables

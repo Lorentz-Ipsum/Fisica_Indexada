@@ -1,11 +1,13 @@
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 # TNE- Resumen de las Entregas 2019/2020
 
 # Entrega 1: Principios de Producción de Entropía Minima y Máxima
 ## Artículo 1: Mínima producción
 ### Resumen corto
--
+> - El teorema de Prigogine se aplica a sistemas abiertos fuera del equilibrio en estado estacionario (o cerca del estado esstacionario).
+> - La formulación integral intenta generalizar el principio a una gama más amplia de procesos, pero falla excepto para casos muy específicos.
+
 ### 1. Introducción
 - La entropía ha sido relegada a ser una cantidad que describe el progreso de los procesos disipativos fuera del equilibrio.
 - Dos investigadores: R. Clausius e I. Prigogine.
@@ -90,7 +92,9 @@
 
 ## Artículo 2: Máxima producción
 ### Resumen corto
--
+> - Aunque menos conocido que el principio de Prigogine, MEPP prueba ser más útil y aplicable.
+> -
+
 ### 0. Introducción
 - El principio de máxima producción de entropía (MEPP) se conoce mucho menos que el de mínima.
 - Características principales en relación a los otros dos enunciados sobre la entropía:
@@ -185,176 +189,3 @@
 - Comparado con otras formulaciones variacionales, la de Ziegler es más simple.
 
 ### 2. MEPP en física estadística del no equilibrio
-
-# Entrega 2: Ecuación del calor
-## 1. Resolución del problema
-
-<details><summary>Código LaTeX </summary>
-
-```latex {.line-numbers}
-Varilla delgada de longitud $L$, usaremos la ecuación del calor en una dimensión.
-
-\subsection{Condiciones iniciales y de contorno}
-
-Inicialmente toda la varilla está a una temperatura $T_1$. Entonces cada extremo se pone en contacto con un foco térmico: el extremo izquierdo a $T_1$ y el derecho a $T_2$. Esto lo podemos resumir en las siguientes condiciones:
-
-\begin{enumerate}
-    \item Condiciones iniciales: $T(x, 0)=T_1$
-    \item Condiciones de contorno: $\left\{\begin{array}{l}T(0, t)=T_{1} \\ T(L,t)=T_{2}\end{array}\right.$
-\end{enumerate}
-
-La ecuación que describe la dinámica del sistema, según lo visto en clase, será la ecuación del calor:
-
-$$
-\frac{\partial T(\vec{x}, t)}{\partial t}=k^{2} \frac{\partial^{2} T(\vec{x}, t)}{\partial x^{2}}
-$$
-
-Tenemos una ecuación en derivadas parciales con condiciones de contorno inhomogeneas.
-
-\subsection{Teoría de perturbaciones}
-
-Queremos reducir el problema a una EDP con condiciones de contorno homogéneas. Para ello definimas la función $V(x)$ tal que:
-
-$$
-V(x)=\left[1-\frac{x}{L}\right] T_{1}-\frac{x}{L} T_{2}
-$$
-
-Y reescribimos el problema en función de una función $W(x,t) = T(x,t) - V(x)$ de forma que:
-
-$$
-\frac{\partial W(\vec{x}, t)}{\partial t}=k^{2} \frac{\partial^{2} W(\vec{x}, t)}{\partial x^{2}}
-$$
-
-Y las condiciones sobre el problema quedan:
-
-\begin{enumerate}
-    \item Condiciones iniciales: $W(x, 0)=T_1 - V(x)$
-    \item Condiciones de contorno: $W(0,t) = W(L,t) = 0$
-\end{enumerate}
-
-\subsection{Método de separación de variables}
-
-Suponemos que la función $W$ es el producto de dos funciones que, cada una, depende de las variables del sistema:
-
-\begin{enumerate}
-    \item Proponemos una solución del tipo: $W(x,t) = X(x) T(t)$
-    \item Derivamos y sustituimos en la ecuación del calor:
-        $$
-        \frac{\partial W(\vec{x}, t)}{\partial t}= X(x) T'(t) ,
-        \qquad
-        \frac{\partial^{2} W(\vec{x}, t)}{\partial x^{2}} = X''(x) T(t)
-        $$
-
-        $$
-        \Rightarrow X(x) T'(t) = k^2 X''(x) T(t)
-        $$
-    \item Sustituimos las condiciones de contorno:
-        $$
-        \begin{array}{l}
-            X(0) T(t) = X(L) T(t) = 0 \Rightarrow X(0) = 0 X(L) ??? \\
-            X(x) T(0) =T_1 - V(x)
-        \end{array}
-        $$
-\end{enumerate}
-
-Podemos escribir:
-
-$$
-\frac{T'(t)}{T(t)} \frac{1}{k^2} = \frac{X''(x)}{X(x)} = \lambda
-$$
-
-Así que tenemos dos ecuaciones diferenciales:
-
-$$
-\left\{ \begin{array}{l}
-    X'' = \lambda X \\
-    T' = \lambda k^2 T
-\end{array}\right.
-$$
-
-Que podemos resolver:
-
-$$
-\begin{array}{c}
-    X'' - \lambda X = 0 \\
-    \omega^2 - \lambda = 0 \\
-    \omega_1 = - \sqrt{\lambda}, \qquad \omega_2 = \sqrt{\lambda} \\
-    X_1(x) = e^{\sqrt{\lambda} x}, \qquad X_2(x) = e^{-\sqrt{\lambda} x}
-\end{array}
-$$
-
-Y la segunda:
-
-$$
-\begin{array}{c}
-    \int \frac{dT}{T} = \int \lambda k^2 dt \\
-    \ln T = \lambda k^2 t + c_0 \\
-    T= C_1 e^{\lambda k^2 t}, \qquad C_1 = e^{C_0}
-\end{array}
-$$
-
-Estas soluciones nunca se hacen $0$ y eso contradice nuestras condiciones de frontera.
-
-Con $\lambda < 0$:
-
-$$
-X(x) = C_1 \cos (\sqrt{-\lambda} x) + C_2 \sin (\sqrt{-\lambda} x)
-$$
-
-Con condiciones de frontera $X(0) = X(L) = 0 \Rightarrow X(0) = C_1 = 0$, y sabemos que $X(L) = C_2 \sin (\sqrt{-\lambda} L) = 0 \Rightarrow \sqrt{-\lambda} L = n \pi \Rightarrow \lambda_n = \frac{(n \pi)^2}{L^2}, n \in \mathcal{N}$
-
-Así que tenemos infinitas soluciones para $X(x)$:
-
-$$
-X_n(x) = C_n \sin \left( \frac{n \pi}{L} x \right)
-$$
-
-Y las soluciones finales será:
-
-$$
-W_n (x, t) = C_n \sin \left( \frac{n \pi}{L} x \right) e^{-\left( \frac{n \pi}{L} k \right)^2 t}
-$$
-
-O de forma general:
-
-$$
-W (x, t) = \sum_{n=1} ^{\infty}C_n \sin \left( \frac{n \pi}{L} x \right) e^{-\left( \frac{n \pi}{L} k \right)^2 t}
-$$
-
-Pero como $T(x, t) = V(x) + W(x, t)$:
-
-$$
-T(x, t) = \left[ 1- \frac{x}{L} \right] T_1 + \frac{x}{L} T_2 + \sum_{n=1} ^{\infty}C_n e^{-\left( \frac{n \pi}{L} k \right)^2 t} \sin \left( \frac{n \pi}{L} x \right)
-$$
-
-Con condiciones iniciales:
-
-$$
-T(x, 0) = \left( 1 - \frac{x}{L} \right) T_1 + \frac{x}{L} T_2 + \sum_{n=1} ^{\infty}C_n \sin \left( \frac{n \pi}{L} x \right)
-$$
-
-Y con coeficientes:
-
-$$
-\begin{array}{rl}
-C_n &= \frac{2}{L} \int_0^L \left[ T_1 - \left(1 - \frac{x}{L} \right) - \frac{x}{L} T_2 \right] \sin \left( \frac{n \pi}{L} x \right) dx \\
-&= \frac{2}{L} (T_1 - T_2) \int_0^L x\sin \left( \frac{n \pi}{L} x \right) dx \\
-&= \frac{2L^2}{n\pi}
-\end{array}
-$$
-
-\subsection{Producción local de entropía}
-
-Formulación 1D:
-
-$$
-\sigma = \frac{\chi}{T^2}\left[ \frac{\partial T(x,t)}{\partial x} \right]^2
-$$
-
-$$
-
-$$
-```
-</details>
-
-## 2. Simulación en Python
