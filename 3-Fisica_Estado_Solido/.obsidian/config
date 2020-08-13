@@ -1,0 +1,42 @@
+{
+  "theme": "obsidian",
+  "pluginEnabledStatus": {
+    "File explorer": true,
+    "Search": true,
+    "Quick switcher": true,
+    "Graph view": true,
+    "Backlinks": true,
+    "Command palette": true,
+    "Markdown format importer": true,
+    "Word count": true
+  },
+  "isSidebarCollapsed": false,
+  "isRightSidedockCollapsed": true,
+  "lastOpenSidebarTab": "File explorer",
+  "workspaceLayout": {
+    "id": "18853b6085e8003a",
+    "type": "split",
+    "dimension": null,
+    "direction": "vertical",
+    "children": [
+      {
+        "id": "dbcd2a4289b55306",
+        "type": "leaf",
+        "dimension": null,
+        "active": true,
+        "master": "",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ]
+  },
+  "lastOpenFiles": [
+    "Index/index-jacobo.md",
+    "Problemas/Problemas_de_clase.md",
+    "Colecciones/Experimental.md"
+  ],
+  "promptDelete": false,
+  "lastOpenRightSidedockTab": "Backlinks"
+}

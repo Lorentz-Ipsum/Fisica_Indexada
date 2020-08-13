@@ -147,3 +147,109 @@
 - Medir experimentalmente la superficie de Fermi
 - Discretización de los niveles
     - Niveles de Landau
+
+
+
+--------------------------------------------------------------------
+👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅👅
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+# Apuntes / Diapositivas de clase
+
+## 4. Fonones / Vibraciones de la red
+
+
+## 5. Magnetismo
+### 5.0. Introducción
+- Teoría clásica
+  - Momento angular Orbital
+    - Magnetón de Bohr
+  - Momento angular de espín
+  - Factor giromagnético orbital y de espín
+  - Momento magnético total de un electrón
+- Principio de Aufbau de llenado de capas electrónicas
+  - Aumenta $n+l$
+- Reglas de Hund (Esquema de acoplo de Russel-Saunders)
+  - 1. Maximizar S cumpliendo Ppio exclusion Pauli
+  - 2. Los estados de mayor $m_L$ se llenan antes
+  - 3. Si la capa está menos de medio llena: $J=L-S$. Si está más de medio llena: $J= L+S$
+  - Momento magnético atómico: Acoplo espín-orbita
+- Multiplete: Ground state
+  - Ejemplos
+- Momento magnético total
+  - Factor de Landé
+- Función de onda de los electrones: ¿Por qué se alinean los momentos?
+  - Fdo antisimétrica + Pauli
+
+### 5.1. Ferro y antiferromagnetismo
+- ¿Cómo interactuan los momentos magnéticos d los electrones?
+  - Promedio térmico de la magnetización
+  - Susceptibilidad magnética
+  - Clasificación de sólidos
+    - Paramagnetismo: $\chi> 0$. El campo induce momentos en su dirección.
+    - Diamagnetismo: $\chi<0$. El campo induce momentos en dirección opuesta.
+    - Ferromagnetismo: Es como si ya hubiera un campo efectivo.
+  - Hamiltoniano
+    - Término paramagnético
+      - Expansión a baja temperatur
+      - En función de $J$
+    - Término diamagnético
+      - Diamagnetismo de Larmor
+      - Propiedades del diamagnetismo de Langevin
+      - Ejemplos de diamagnetismo
+      - Fórmula de Langevin
+    - Resumen de términos de H
+- Sólidos diamagnéticos
+  - Susceptibilidad de Larmor
+- Paramagnetismo de Pauli en metales
+
+### 5.2. Magnetismo de momentos que interaccionan
+- Interacción dipolar
+- Interacción de canje
+  - Hamiltoniano de Heisenberg
+  - Signo interacción de canje determina ferro (J>0) o antiferro (J<0).
+- Revisión del Tight Binding
+  - Combinación lineal de orbitales atómicos
+  - Teoría de perturbaciones
+  - Aproximación de Hückel
+  - Calculando autovaloires
+  - Términos integrales, etc.
+  - Aproximación de electrones independientes
+  - Aproximación de Heitler-London
+  - Expresión para la escala de energía de la interacción de intercambio
+- Dos Electrones
+  - Interacción de canje
+  - Hamiltoniano de Heisenberg
+- En Sólidos
+  - Hamiltoniano de Heisenberg (de espín)
+  - Interacción entre vecinos
+  - Problema de Hubbard
+  - Bether-Slater Curve
+- Teoría de campo mediod el ferromagnetismo: Ferromagnetismo de Weiss
+  - Campo molecular de Weiss
+  - Hamiltoniano de Hubbard
+- Magnetización espontánea (Paramagnetismo)
+  - Temperatura crítica
+  - Respuesta paramagnética
+    - Ley de Curie-Weiss
+  - Comportamiento de para, ferro, y antiferro cerca de la temperatura crítica
+  - Ferromagnetismo de Stoner
+    - Desdoblamiento de las bandas por el campo molecular
+    - Criterio de Stoner para el campo molecular
+    - [FALTAN COSAS]
+
+### 5.3. Ondas de espín
+-  Precesión de un campo magnético en un campo magnético
+  - Precesión de Larmor
+  - Campo molecular
+  - Relación de dispersión
+  - Momento angular de espín y matrices de Pauli
+  - Actuación del hamiltoniano de Heisenberg
+  - Voltear un espín
+  - Número de magnones
+  - Ley de 3/2 de Bloch
+  - Anisotropía
+  -
+
+## 6. Superconductividad
