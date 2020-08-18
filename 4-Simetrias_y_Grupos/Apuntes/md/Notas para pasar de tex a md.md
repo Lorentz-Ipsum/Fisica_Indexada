@@ -32,6 +32,12 @@ para pasar de __ a ___
 \mathds |-> \mathbb
 ```
 
+Ojo al pasar esto porque mathbb no tiene fuentes para números. Para asegurarnos de que las identidades se ven bien además hay que hacer:
+
+```
+\mathbb{1} |-> \mathbb{I}
+```
+
 ```
 $\hspace{0.5cm}$ |-> >
 ```
@@ -94,6 +100,40 @@ a^2 & a^2 & e & a
 $$
 ```
 
+### Ecuaciones con $$
+
+No me suele gustar que los $$ estén en la misma fila que el resto. las prefiero formateadas así:
+
+```
+$$
+(M_{12},M_{23},M_{31})=(J_3,J_1,J_2)
+$$
+```
+
+Es más fácil distinguirlas.
+
+Para cambiarlas nos vale la regex:
+
+```
+\${2}((.+?\n?){1,})\${2}
+```
+
+a
+
+```
+$$$
+$1
+$$$
+```
+
+pero hay que tener cuidado de que no haya dos ecuaciones seguidas:
+
+```
+$$(M_{12},M_{23},M_{31})=(J_3,J_1,J_2)$$
+$$(M_{01},M_{02},M_{03})=(K_1,K_2,K_3)$$
+```
+
+Habría que separarlas antes o la regex nos jugará una mala pasada.
 
 ---
 
@@ -116,3 +156,58 @@ Sólo habría que añadir un breve estilo al anchor para que esté subrayado:
 ```
 <a href="defs.html#definicion-de-accion" style="text-decoration:underline;"><strong><span style="color:blue">Definición:</span> Acción de grupo.</strong></a>
 ```
+
+---
+Para encontrarlas podemos usar:
+
+```
+\*\*\<span style\=\"color\:(.+?)\"\>(.*)\:<\/span\>(.*)\*\*
+```
+
+Donde se nos devuelve:
+
+```
+color: $1 tipo: $2 descri: $2
+```
+
+**Nota:** Coger el espacio en $2 es importante, por aquellas marcas sin descripción.
+
+Así que queremos sustituirlo por:
+
+```
+**<span style="color:$1">$2:</span> $3**
+```
+
+Lo que nos interesa es hacer:
+
+```
+<details>
+	<summary>
+	</summary>
+</details>
+```
+
+O sea:
+
+```
+<details>
+	<summary>
+	<strong>
+	<span style="color:$1">$2:</span> $3
+	</strong>
+	</summary>
+	Y aquí dentro irá lo de dentro.
+</details>
+```
+
+**Nota:** Los dobles asteriscos no funcionan dentro del summary.
+
+---
+Me queda encontrar una forma de matchear de un marcador al siguiente para no tener que mover el details de arriba abajo.
+
+Tal vez añadiendo una marca especial antes de las marcas y los títulos...
+
+---
+También habría que mirar si se puede hacer de alguna forma un botón de collapse/expande all o si tendré que buscar cómo hacerlo con javascript.
+
+Seguro que coon javascript es más fácil a la larga. Tendría que añadir ids a cada span, o mejor a los strong? Si quiero que alguno sea título tendría que llevar el id...

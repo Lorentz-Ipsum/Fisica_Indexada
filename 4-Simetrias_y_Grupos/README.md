@@ -40,8 +40,64 @@ Problemas / [Tema 2](Problemas/ProblemasV1-T2.md)
 >.
 ---
 
+# Guía docente
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTQwOTEzMTIsMTA2MDI4Mjg5OCwtNz
-I1OTcyMDUyXX0=
--->
+## Resultados del aprendizaje
+
+
+Aprender a aplicar los conceptos y métodos de la teoría de grupos finitos y continuos al estudio de la simetría en problemas físicos.
+
+
+## Breve descripción de contenidos
+
+
+Teoria de grupos. Grupos de Lie, sus representaciones y aplicaciones en física. Grupo de Lorentz y Poincaré y sus representaciones y aplicaciones en física. Grupos finitos.
+
+
+## Conocimientos previos necesarios
+
+
+Primero y segundo de grado. Mecánica Cuántica.
+
+## Tutorias
+Mercedes Martín Benito
+Dpto. FT Despacho 13, 2a pl. oeste
+X: 10:30-13:00 y 14:30-16:00 V: 12:30-14:30
+e-mail
+m.martin.benito@ucm.es
+
+> Avisar antes de las tutorias por mail!
+
+## Programa de la asignatura
+
+• Nociones generales de teoría de grupos: clases de conjugación, subgrupos normales, cosets, grupo cociente, homomorfismos entre grupos, producto de grupos.
+• Representaciones de los grupos: acciones de grupo, representaciones lineales, equivalencia de representaciones, reducibilidad e irreducibilidad, unitariedad, lemas de Schur, relaciones de ortonormalidad y completitud, producto de representaciones y coeficientes de Clebsch-Gordan, teorema de Wigner-Eckart.
+• Nociones básicas sobre grupos de Lie lineales y álgebras de Lie.
+• Grupos SO(3) y SU(2): generadores infinitesimales, representaciones, medida invariante,
+producto directo, isospín, rotaciones de funciones de onda y de operadores.
+• Grupos de Lorentz y de Poincaré ortocronos propios: álgebra de Lie, representaciones
+irreducibles del grupo de Lorentz, representaciones unitarias del grupo de Poincaré.
+
+
+
+## Bibliografía
+
+### Básica
+• J.F. Cornwell, Group Theory in Physics : An Introduction, Elsevier, 1997.
+• G. Costa, G. Fogli, Symmetries and Group Theory in Particle Physics, Springer-Verlag, 2012
+• Wu-ki Tung, Group Theory in Physics, World Scientific, Singapore, 1985.
+• Some chapters of M. Maggiore A Modern Introduction to quantum field theory Oxford
+University Press, 2005
+
+### Complementaria
+• B.C. Hall, Lie Groups, Lie Algebras, and Representations. An Elementary Introduction, Springer-Verlag, 2003.
+• D.H. Sattinger and O.L. Weaver, Lie Groups and Algebras with Applications to Physics, Geometry and Mechanics, Springer-Verlag, New York, 1986.
+• S. Sternberg, Group Theory and Physics, Cambridge University Press, 1995.
+• A.W. Joshi, Elements of Group Theory for Physicists (4th ed.), New Age International
+Publishers, New Delhi, 1997.
+• F. Iachello, Lie Algebras and applications, Springer (2006)
+• G. de Franceschi, L. Maiani: An Introduction to Group Theory and to Unitary Symmetry Models
+Fortschritte der Physik 13, 279-384 (1965)
+• J. Fuchs, C. Schweigert, Symmetries, Lie Algebras and Representations, Cambridge
+University Press, 1997
+• A. González López, Simetrías y Grupos en Física. Notas de curso, UCM, 2013.
