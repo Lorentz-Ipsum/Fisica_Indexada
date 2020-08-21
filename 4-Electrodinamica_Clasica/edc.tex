@@ -1,0 +1,243 @@
+\documentclass[11pt,a4paper,catalan]{article}
+\usepackage[catalan]{babel}          \usepackage[latin1]{inputenc}\usepackage{lmodern}
+\usepackage{amsmath}        \usepackage{amsthm}
+\usepackage{amsfonts}       \usepackage[dvips]{epsfig}
+\usepackage{indentfirst}
+\usepackage[a4paper,right=2cm,top=2.5cm]{geometry}
+
+\setlength\arraycolsep{2pt}
+
+\newcommand{\RR}{\mathbb{R}}    \newcommand{\MM}{\mathbb{M}}    \newcommand{\NN}{\mathbb{N}}
+\newcommand{\J}{\mathrm{J}}   \newcommand{\K}{\mathcal{K}}    \newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\dd}{\mathrm{d}}    \newcommand{\tg}{\mathrm{tg}}   \newcommand{\tgh}{\mathrm{tgh}}
+\newcommand{\cotg}{\mathrm{cotg}} \newcommand{\dB}{\mathrm{dB}}   \newcommand{\Np}{\mathrm{Np}}
+\newcommand{\eV}{\mathrm{eV}}   \newcommand{\hatn}{\hat{n}}     \newcommand{\expon}[1]{\mathrm{e}^{#1}}
+\newcommand{\tr}{\mathrm{tr}}   \newcommand{\dx}{\dd x}     \newcommand{\s}{\mathrm{s}}
+\newcommand{\MeV}{\mathrm{MeV}} \newcommand{\dr}{\dd r}     \newcommand{\dtr}{\dd^3 r}
+\newcommand{\dt}{\dd t}     \newcommand{\cte}{\mathrm{cte}} \newcommand{\ds}{\dd s}
+%
+\newcommand{\parcial}[2][]{\frac{\partial #1}{\partial #2}}         \newcommand{\deriv}[2][]{\frac{\dd #1}{\dd #2}}
+\newcommand{\E}[1]{\times 10^{#1}}                  \newcommand{\AAA}{\ensuremath{\,\mathrm{\AA}}}
+\newcommand{\cm}{\mathrm{cm}} 
+%
+\newcommand{\vD}{\vec{D}}     \newcommand{\vH}{\vec{H}}     \newcommand{\vj}{\vec{\jmath}}
+\newcommand{\vE}{\vec{E}}     \newcommand{\vB}{\vec{B}}     \newcommand{\vP}{\vec{P}}
+\newcommand{\vM}{\vec{M}}     \newcommand{\vN}{\vec{N}}     \newcommand{\vS}{\vec{S}}
+\newcommand{\va}{\vec{a}}     \newcommand{\vnabla}{\vec{\nabla}}  \newcommand{\vL}{\vec{L}}
+\newcommand{\vr}{\vec{r}}     \newcommand{\vp}{\vec{p}}     \newcommand{\vsigma}{\vec{\sigma}}
+\newcommand{\vR}{\vec{R}}     \newcommand{\vA}{\vec{A}}     \newcommand{\vepsilon}{\vec{\varepsilon}}
+\newcommand{\vJ}{\vec{J}}     \newcommand{\vk}{\vec{k}}     \newcommand{\vv}{\vec{v}}
+\newcommand{\vX}{\vec{X}}     \newcommand{\vY}{\vec{Y}}     \newcommand{\ve}{\vec{e}}
+\newcommand{\vx}{\vec{x}}     \newcommand{\vu}{\vec{u}}     \newcommand{\vy}{\vec{y}}
+\newcommand{\vxi}{\vec{\xi}}    \newcommand{\vbeta}{\vec{\beta}}  \newcommand{\vn}{\vec{n}}
+\newcommand{\vomega}{\vec{\omega}}\newcommand{\vK}{\vec{K}}     \newcommand{\vF}{\vec{F}}
+\newcommand{\vz}{\vec{z}}     \newcommand{\vm}{\vec{m}    } \newcommand{\vq}{\vec{q}}
+\newcommand{\parcte}[3]{ \left( \parcial{#1}{#2} \right)_{\!#3} }
+\newcommand{\sep}{\vspace{1mm} \hrule \vspace{1mm} \noindent}
+\newcommand{\inv}[1]{{#1}^{-1}}
+%
+\newcommand{\la}{\left<}            \newcommand{\ra}{\right>} \newcommand{\bok}[3]{ \la #1 \right| #2 \left| #3 \ra }
+\newcommand{\ketbra}[2]{ \left| #1 \ra\la #2 \right| }  \newcommand{\commut}[2]{\left[ #1 , #2 \right]}
+
+\author{pod}
+\title{Electrodinamica classica}
+\date{Otono, 2001}
+
+
+\begin{document}
+\maketitle
+
+\noindent
+ $$ \vec{r'}_\bot =\vec{r}_\bot \: , \qquad r'_\| =\gamma ( r_\| - v t )  \: ,  \qquad t' =\gamma(t-\frac{1}{c}\vr\vbeta)$$\\
+ $$ x' = x \cosh\xi - c t \sinh \xi \: , \qquad c t' = ct \cosh\xi - x \sinh\xi $$ \\
+ $$ \vec{r'} = \vec{r} + \left( \frac{\gamma-1}{v^2} \vec{r}\cdot\vec{v} - \gamma t \right) \vec{v} \: , \qquad
+   t' = \gamma \left( t - \frac{\vec{v}\cdot\vec{r}}{c^2} \right) $$ \\
+ $$\begin{array}{rll}
+ i,j \leq 3 & L^{i'}_{\,j} = & \delta^{i'}_{\,j} + \frac{\gamma-1}{\beta^2} \beta^{i'} \beta_{\,j} \\
+ i   \leq 3 & L^{i'}_{\,4} = & L^{4'}_{\,i} = - \gamma \beta^i \\
+            & L^{4'}_{\,4} = & \gamma
+ \end{array} $$
+
+\sep
+ Contraccio longituds: $$ \Delta\vec{x'}_\bot = \Delta\vec{x}_\bot \; , \qquad \Delta x'_\| = \gamma \Delta x_\| $$ \\
+ $$ l = l' \sqrt{1-\left(\frac{v}{c}\right)^2 \cos^2\alpha'} = \frac{l'}{\sqrt{\gamma^2 \cos^2\alpha+\sin^2\alpha}} \ ,$$
+ $$ \tg\alpha' = \frac{1}{\gamma} \tg\alpha $$ \\
+ Temps: $$ \Delta t = \gamma \Delta t' = \gamma \tau $$
+
+\sep
+ Velocitats: $$ \vec{u'}_\bot = \frac{\vec{u}_\bot}{\gamma\left(1-\frac{\vec{v}\cdot\vec{u}}{c^2}\right)} \: , \quad
+    u'_\| = \frac{u_\| - v}{1-\frac{\vec{u}\cdot\vec{v}}{c^2}} \ , \quad \phi' = \phi - \xi $$ \\
+ $$ \vec{u'} = \frac{\vec{u}+\frac{\gamma-1}{v^2}\vec{u}\cdot\vec{v}-\gamma\vec{v}}{\gamma\left(1-\frac{\vec{v}\cdot\vec{u}}
+ {c^2}\right)} \ , \quad  \tg\theta' = \frac{u\sin\theta}{\gamma \big( u \cos\theta - v \big)} \ , \ v = c\, \tgh \xi$$ \\
+ $$ u' = \frac{\sqrt{u^2+v^2-2uv\cos\theta - \left(\frac{vu}{c}\sin\theta\right)^2}}
+{1-\frac{\vec{v}\cdot\vec{u}}{c^2}} \ , \quad  \gamma'_u = \gamma_u \gamma_v \left( 1 - \frac{uv}{c^2} \right) $$ \\
+
+\sep
+ Ones planes: $$\vn = \vk / 2\pi = \hatn / \lambda$$ \\
+ $$ \vec{n'} = \vec{n} + \frac{\gamma-1}{c^2}(\vec{v}\cdot\vec{n})\vec{v} - \frac{\gamma\nu}{c^2}\vec{v} \ , \quad
+   \nu' = \gamma \big( \nu - \vec{v}\cdot\vec{n} \big) $$ \\
+ Doppler: $$ \nu_R = {\nu_E}\Big/\, {\gamma\left(1-\frac{\vec{v}\cdot\hat{n}_R}{c_{1,R}}\right)} $$ \\
+ D. rad (lluny): $$ \nu_R = \nu_E \sqrt{\frac{1-v/c}{1+v/c}} $$ , tg: $$\nu_R = {\nu_E} / {\gamma}$$\\
+ Aberracio:
+ $$\sin\alpha'  =  \frac{\sin\alpha}{\gamma ( 1 + \beta \cos\alpha)} \ , \qquad$$
+ $$\cos\alpha'  =  \frac{\cos\alpha + \beta}{1+\beta \cos\alpha}$$ \\
+ Fresnel: $$c'_1 =c_1 \frac{1-\frac{v}{c_1}\cos\alpha}{\sqrt{1-2\cos\alpha \frac{v c_1}{c^2}-
+ \left(\frac{v}{c}\sin\alpha\right)^2}} \approx c_1 - v \left(1-\frac{1}{r_1^2}\right)$$
+
+\sep
+ Quadrivectors: $$ v^{\mu'} = \Lambda^{\mu'}_{\,\nu} v^\nu \ , \ \Lambda = L\cdot R $$  \\
+ t. propi $$\Delta\tau = \gamma^{-1}\Delta t = \frac{1}{c} \int^\lambda_{\lambda_0} \dd\lambda \sqrt{-\dot{X}^\mu
+ \dot{X}_\mu}$$ \\
+ 4-vel: $$u^\mu = \frac{\dd X^\mu}{\dd\tau}=\gamma(\vec{\omega},c) \ , \ (u)^2 = -c^2 \ , \
+ \vec{\beta} = \frac{\vec{\omega}}{c} = \frac{\vec{u}}{u^4}$$ \\
+ 4-acc: $$b^\mu = \frac{\dd u^\mu}{\dd\tau} \ , \ b^4 = \gamma^4
+ \frac{\vec{\omega}\cdot\vec{a}}{c} = \frac{\vec{b}\cdot \vec{\omega}}{c} = \frac{\vec{u}\cdot \vec{b}}{u^4} \ , \
+ b^\mu u_\mu = 0$$ \\
+ $$\vec{b} = \gamma^2\vec{a} + \gamma^4\left(\frac{\vec{\omega}\cdot\vec{a}}{c^2}\right)\vec{\omega} =
+ \gamma^4\big(\vec{a} + \frac{1}{c^2} \vec{\omega}\times(\vec{a}\times\vec{\omega})\big)$$ \\
+ $$\frac{\dd\gamma}{\dd t} = \frac{1}{c^2}\vec{\omega}\cdot\vec{a}\gamma^3 \ , \quad b^\mu b_\mu = \gamma^4 \left( \vec{a}^2 +
+ \gamma^4 \frac{\vec{\omega}\cdot\vec{a}}{c^2}\right) $$ \\
+
+\sep
+ 4-p: $$ p^\mu = m u^\mu = m \gamma ( \vomega , c ) \ , \ p^\mu p_\mu = - m^2 c^2 \ , \ E = c p^4$$ \\
+ $$ E^2 = (c\vp)^2+(mc^2)^2 \ ,\ \vbeta = \vp / p^4 \ , \ c |\vp| = \sqrt{T(T+2mc^2)} $$ \\
+ $$\vp_{cm} = 0 \ , \ \vv_{cm} = c \vp / p^4 \ , \qquad \vK = h\nu/c (\hatn , 1)$$
+
+\sep
+ Dinamica: $$f^\mu = \deriv{\tau} p^\mu = \gamma ( \vF , \vv \vF / c ) $$ \\
+ $$\vec{F}= m\gamma\vec{a} + m\gamma^3\frac{\vec{v}\cdot\vec{a}}{c^2}\vec{v} \longrightarrow_{(\vv\bot\va)} m \gamma^3 \va $$
+
+\sep
+ $$ L = -mc^2\sqrt{1-\frac{v^2}{c^2}} \: , \ H = c\sqrt{m^2c^2 + \vec{p}^2}$$ \\
+ Accio $$S = \int L\dd t = -mc^2\int\dd\tau$$
+
+\sep\sep
+ $$\vnabla\cdot\vB  = 0 \  ,\quad \vnabla\times\vE+\partial_t\vB  = 0           \ ,\quad \vD =\epsilon_0\vE+\vec{P} =
+   \epsilon \vE $$ \\
+ $$\vnabla\cdot\vD  =\rho\ ,\quad \vnabla\times\vH-\partial_t\vD = \vec{\jmath} \ ,\quad \vH =\frac{\vB}{\mu_0}-\vec{M} =
+   \mu \vB $$ \\
+ 4-corrent: $$ j^\mu = (\vj , c\rho) \ ,\quad \textrm{Continuïtat:}  \parcial{x^\mu} j^\mu = 0 $$ \\
+ Força de Lorentz $$ f^\mu = q F^\mu_{\ \nu} u^\nu$$ \\
+ Tensor electromagnètic $$F_{i4} = - F_{4i} = E_i/c $$ \\ $$ F_{ij} = \epsilon_{ijk} B^k \ ;\quad
+ E_i = c F_{i4} = - c F_{4i} \ , \quad B^k = \frac{1}{2}\epsilon^{ijk} F_{ij}$$ \\
+ Camp E: $$ E'_\| = E_\| \ , \ \vE'_\bot = \gamma \left( \vE_\bot + \vv \times \vB \right) $$ \\
+ Camp B: $$ B'_\| = B_\| \ , \ \vB'_\bot = \gamma \left( \vB_\bot - \frac{1}{c^2}\vv \times \vE \right)$$ \\
+ $$\to \vE' = \vE + \gamma(\vv \times \vB) + \frac{1-\gamma}{v^2} \vv \times (\vv \times \vE) $$ \\
+ $$\to \vB' = \vB - \frac{\gamma}{c^2}(\vv \times \vE) + \frac{1-\gamma}{v^2} \vv \times (\vv \times \vB) $$ \\
+ Invariants $$ \vE\cdot\vB \qquad \ , \quad \vB^2 - \frac{1}{c^2}\vE^2 $$
+
+\sep
+ Maxwell $$ \partial_\rho F^{\nu\rho}  =  \mu_0 j^\nu \ , \quad
+ \partial_\alpha F_{\beta\gamma} + \partial_\beta F_{\gamma\alpha} + \partial_\gamma F_{\alpha\beta}  = 0 $$ \\
+ 4-potecial $$A^\nu = (\vec{A},\phi/c) \ ,\quad F_{\mu\nu} =\partial_\mu A_\nu - \partial_\nu A_\mu $$ \\
+ $$ \to $$ Maxwell $$\partial^\nu\partial_\rho A^\rho - \partial_\rho\partial^\rho A^\nu = \mu_0 j^\nu$$ \\
+ Galga Coulomb $$\vnabla\cdot\vA = 0$$ \\
+ Lorentz $$\partial_\mu A^\mu = 0$$
+
+\sep
+ Energía $$\vnabla\cdot\vS + \parcial[U]{t} = - \vj \cdot \vE \ ,\quad \vS = \vE\times\vH$$ \\
+ Energia-impuls $$\theta^{\mu\alpha} = \epsilon_0 c^2 \left( F^{\nu\mu} F_\nu^\alpha - \frac{\eta}{4} F^{\sigma\rho}
+ F_{\sigma\rho} \right)$$ \\
+ $$\theta^{44} = U \: , \qquad \theta^{i4} = \theta^{4i} = S_i/c $$ \\
+ $$\qquad \theta^{ij} = -\epsilon_0 \left[ E^i E^j + c^2 B^i B^j - \frac{1}{2}\delta^{ij}(\vE^2+c^2\vB^2)\right]
+ =-T^{ij}$$\\
+ Conservacio $$\partial_\mu \theta^{\mu\alpha} = j_\nu F^{\nu\alpha}$$ \\
+ Moment $$ \deriv{t}\int_v (\rho E_i+(\vj \times \vB)_i)\dd v = -\frac{1}{c^2} \deriv{t}\int_v S_i \dd v +
+ \int_A T^{ij} \hat{n}_i \dd^2 A $$
+
+\sep
+ $$ L(\vx,t) = - m c^2 \sqrt{1-\frac{v^2}{c^2}} + q (\vv \times \vA) - q \phi $$ \\
+ $$ P_i = \parcial[L]{v^i} = m\gamma v_i + qA_i$$ \\
+ $$ H (P,\vx,t) = \sqrt{m^2c^4 + c^2(\vP-q\vA)^2} + q\phi $$
+
+\sep\sep
+ Telegrafia $$\nabla^2 \vE - \mu\epsilon \parcial[^2]{t^2}\vE - \sigma \parcial{t} \vE = 0 $$ \\
+ si $$\vE = \vE(\vr) \expon{-i\omega t} \to \nabla^2 \vE + \left(1+\frac{\sigma}{\mu\epsilon}\right) \mu\epsilon\vE = 0$$\\
+ Transversalitat $$ c_1 \vB = \hatn \times \vE $$ \\
+ Temps retardat $$ \tau_r = t- \frac{1}{c} |\vx-\vy| \ ,\ c^2 (t-t_r)^2 -(\vx-\vz_r)^2=0$$
+
+\sep
+ Radiacio multipolar \\ $$ A^\mu(\vx, t)  =
+ \frac{\mu_0}{4\pi} \int_{R^3} \dd^3\vy \frac{j^\mu\left(\vy, t \mp \frac{|\vy -
+    \vx|}{c}\right)}{|\vx - \vy|} \theta\left(\pm t - \frac{|\vx - \vy|}{c} \right) \pm $$\\ $$ \pm  \frac{1}{4\pi}\int_{R^3}
+    \frac{\dd^3\vy}{|\vx - \vy|} \left[\frac{1}{c} \partial_t A^\mu(\vy,0) \delta( c t \mp |\vx - \vy| ) +\right.$$\\
+    $$\left. + A^\mu(\vy,0)    \delta'(c t \mp |\vx - \vy|)
+    \right] $$ \\
+Part. lliures a $$t\to - \infty$$ \\ $$ \to A^\mu = \frac{\mu_0}{4\pi} \int_{R^3} \dd^3\vy \frac{j^\mu \left(\vy, t \mp
+\frac{|\vy - \vx|}{c}\right)}{|\vx - \vy|} $$
+
+\sep
+ Font localitzada. Camps proxims \\
+ $$ \vE_I = \frac{1}{4\pi\epsilon_0} \int_{\RR^3} \dd^3\vy \frac{\rho(\vy)}{|x-y|^2} \expon{-i k|\vx-\vy|} $$ \\
+ $$ \vB_I =-\frac{\mu_0}{4\pi} \int_{\RR^3} \dd^3\vy \frac{\hatn\times\vj(\vy)}{|\vx-\vy|^2}\expon{-i k|\vx-\vy|} $$ \\
+ Camps de radiacio. Camps de radiacio \\
+ $$ \vE_{II} = \frac{i k}{4\pi\epsilon_0} \int_{\RR^3} \dd^3\vy \frac{\expon{-i k|\vx-\vy|}}{|\vx-\vy|} ( \rho \hatn -
+ \frac{1}{c} \vj(\vy)) = i \omega \hat{r} \times (\hat{r}\times\vA $$) \\
+ $$ \vB_{II} =-\frac{i k \mu_0}{4\pi} \int_{\RR^3} \dd^3\vy \frac{\expon{-i k|\vx-\vy|}}{|\vx-\vy|}\hatn\times\vj(\vy)) =
+ - \frac{i \omega}{c} \hat{r} \times \vA $$ \\
+ $$ \vA = \frac{\mu_0}{4\pi} \frac{\expon{-i k r}}{r} \int_V \dd^3\vy \expon{i k \hat{r}\vy} \vj(\vy) $$\\
+
+\sep
+ Radiacio dipolar magnètica ($$\expon{i k \hat{r} \vy} \approx 1$$)\\
+ $$ \vA = i \frac{\mu_0 \omega}{4\pi} \frac{\expon{-i k r}}{r} \vp \ ,\quad \vp = \int_v \dd^3\vr \rho(\vy) \vy $$ \\
+ Moment dipolar magnètic (part antisimétrica) \\
+ $$ \vA = -\frac{ik\mu_0}{4\pi} \frac{\expon{-i k r}}{r} \hat{r} \times \vm \ ,\ \vm = \int_v \dd^3\vy\ \vM = \int_v
+ \dd^3\vy\ \frac{1}{2} \vy \times \vj(\vy) $$ \\
+ Moment quadrupolar elèctric (part simètrica) \\
+ $$ \vB = -i\frac{c k^2}{24\pi}\mu_0 \frac{\expon{-ikr}}{r} \hat{r}\times\vq \ ,\
+ \vE = -i\frac{c^2k^3}{24\pi} \mu_0 \frac{\expon{-ikr}}{r} (\hat{r}\times\vq)\times\hat{r} $$\\
+ $$ a^{ij} = \int_v \dd^3 \vy ( 3 y^i y^j - \vy^2 \delta^{ij} ) \rho(\vy) \ ,\ q^j = \hat{r}_i a^{ij} $$ \\
+ $$\hat{r} \times \vq = 3 \hat{r} \times \int_v \dd^3 \vy (\vy \hat{r}) \vy \rho(\vy)$$
+
+\sep
+ Partícules en moviment $$j^\mu = q \delta(\vy-\vz(t)) (\vv(t),c) \ ,\ R^\rho = x^\rho - y^\rho \ ,\ \rho_r = |\vx-\vz|$$ \\
+ $$ A^\nu(\vx,t_r) = -\frac{\mu_0c}{4\pi} q \frac{\dot{z}^nu}{(\vx-\vz)^\rho \dot{z}_\rho} $$\\
+ $$ F^{\mu\nu}_I =-\frac{q}{4\pi\epsilon_0 c} \frac{\dot{z}^\mu r^\nu - \dot{z}^\nu r^\mu}{\rho_r^2} $$ \\
+ $$ F^{\mu\nu}_{II}=-\frac{q}{4\pi\epsilon_0 c} \left\{ \frac{\ddot{z}^\mu r^\nu - \ddot{z}^\nu r^\mu}{c \rho_r} +
+ \frac{\dot{z}^\mu r^\nu - \dot{z}^\nu r^\mu}{c \rho_r} (r \ddot{z}) \right\}$$ \\
+ a $$t, \tau_r \to -\infty \ ,\ \ddot{z} = 0 \to F_{II} = 0 $$ \\
+ $$ \vE_{II} = \frac{q}{4\pi\epsilon_0 c |\vx-\vz| (1-\hatn\vbeta)^3} \hatn \times (\hatn-\vbeta)\times\dot{\vbeta} $$
+ $$ \vB_{II} = \frac{q}{4\pi\epsilon_0 c^3 |\vx-\vz| (1-\hatn\vbeta)} \left( (1-\vbeta\hatn)(\va\times\hatn) \right. $$
+ $$+ \left. (\va\hatn) (\vbeta\times\hatn) \right) = \frac{1}{c} \hatn \times \vE_{II} $$
+ 4-moment radiat $$ \deriv{\tau} p^\mu = \frac{q^2}{6\pi\epsilon_0 c^5} (\ddot{z}^\nu\ddot{z}_\nu) \dot{z}^\mu $$  \\
+ Energía: $$ \deriv{t} \varepsilon = \frac{q \gamma^6}{6\pi\epsilon c^3} ( \va^2 - (\vbeta\times\va)^2 ) $$ \\
+ formula de Larmor $$ \deriv{t}\varepsilon = \frac{q^2}{6\pi\epsilon_0 c^3} \va^2 $$
+
+\sep
+ Distribucio angular $$ \deriv{t} \varepsilon = \vS \dd^2 \vA $$ \\
+ observador $$\deriv[^2 \epsilon]{t \dd^2\Omega} = \frac{q^2}{16\pi^2 \epsilon_0 c} \frac{1}{(1-\hatn\vbeta)^6} \left(
+ \hatn \times \left( (\hatn-\vbeta) \times \dot{\vbeta} \right) \right)^2$$
+ carrega (t. retardat) $$\deriv[^2 \epsilon]{t \dd^2\Omega} = \frac{q^2}{16\pi^2 \epsilon_0 c} \frac{1}{(1-\hatn\vbeta)^5} \left(
+ \hatn \times \left( (\hatn-\vbeta) \times \dot{\vbeta} \right) \right)^2$$
+
+\sep
+ Accelerador lineal $$\deriv{t} \varepsilon = \frac{q^2 \gamma^6}{6\pi\epsilon_0 c^3} \va^2 \ ,\quad \deriv{t}\varepsilon =
+ m \gamma^3 \vv \va$$ \\
+ $$ \deriv[\varepsilon_{rad}]{\varepsilon}=\frac{q^2}{6\pi\epsilon_0 c^3 m^2 v} \deriv[\varepsilon]{x} \ , \quad
+ \dd\varepsilon = m\gamma^3 v a \dt = m \gamma^3 a \dx$$ \\
+ Distribucio angular
+ $$ \deriv[^2W]{\Omega^2} = \frac{q^2 \dot{v}^2}{16\pi^2 \epsilon_0 c^3} \frac{\sin^2\theta}{(1-\beta\cos\theta)^5} $$ \\
+ $$ f(\theta) = \frac{3(1-\beta^2)}{8\pi} \frac{\sin^2\theta}{(1-\beta \cos\theta)^5} \ ,\quad \cos\theta_\textrm{max} =
+ \frac{-1+\sqrt{1+15\beta^2}}{3\beta}$$ \\
+ resultats $$ \deriv[^2W]{\Omega^2} \propto \gamma^8 \ ,\quad \Delta\theta \propto \gamma^{-1} $$ \\
+ triem $$\vbeta = \beta \hat{k} \ , \quad \hatn = ( \sin\theta \cos\varphi , \sin\theta \cos\varphi , \sin\varphi)$$
+
+\sep
+ Accelerador circular $$\deriv{t}\omega = \frac{q^2 \gamma^4}{6\pi\epsilon_0 c^3} a^2$$ \\
+ $$ \frac{\Delta \varepsilon_{rad,1rev}}{\varepsilon} = \frac{\Delta \varepsilon}{m\gamma c^2} = \frac{q^2 \epsilon^2
+ \beta^3}{3 \epsilon_0 R m^4 c^8} $$ \\
+ $$ \deriv[^2W]{\Omega^2} = \frac{q^2 \dot{\beta}^2}{16\pi^2 \epsilon_0 c (1-\beta\cos\theta)^5} \left[
+ (1-\beta\cos\theta)^2 - (1-\beta^2) \sin^\theta \cos^\varphi \right] $$ \\
+ $$ \rho = \frac{3}{8\pi\gamma^4(1-\beta\cos\theta)^3} \left[ 1 - \frac{\sin^2\theta \cos^2\varphi}{\gamma^2 (1-\beta
+ \cos\theta)^2} \right] $$ \\
+ $$\textrm{si} {\gamma\uparrow} \to \rho \approx \frac{1}{(1+\gamma^2\theta^2)} \left( 1-\gamma^2 \frac{\theta^2
+ \cos^2\varphi}{(1+\gamma^2\theta^2)^2}  \right)$$ \\
+ triem $$\vbeta = \beta \hat{k} \ ,\quad \dot{\vbeta} = \dot{\beta} \hat{\imath} $$
+
+\sep
+ Sincroto $$\delta t = 2 \delta \theta R (1/\beta-1= \approx \gamma^{-3} / \omega_0 $$ \\
+ Radi de radiacio $$ \delta \omega \approx \omega_0 \gamma^3 $$
+
+
+
+\end{document}

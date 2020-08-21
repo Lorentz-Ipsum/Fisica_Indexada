@@ -1,7 +1,7 @@
 ---
 title: Ejercicios
 author: Lorentz Ipsum
-date: 14 de agosto de 2020
+date: 19 de agosto de 2020
 fontfamily: times
 ---
 
@@ -24,7 +24,7 @@ fontfamily: times
 # T2: Elementos generales
 
 ---
-### **<span style="color:red">Ejercicio:</span> 1. Grupo cíclico**
+### <span style="color:red">Ejercicio:</span> 1. Grupo cíclico
 
 Probar que un grupo finito de orden n (primo) debe ser un grupo cíclico (generado por a).
 
@@ -33,7 +33,7 @@ C_n=\lbrace a,a^2,...,a^{n-1},a^n=e\rbrace \cong Z_n
 $$
 
 ---
-**<span style="color:darkcyan">Solución:</span> 1.**
+<span style="color:darkcyan">Solución:</span>
 
 Por el teorema de Lagrange el orden de un subgrupo H de un grupo G debe ser divisor de orden n de G. Por otra parte, cada elemento del grupo genera un subgrupo cíclico y llamamos orden del elemento al orden m del subgrupo cíclico que genera. Por el teorema de Lagrange m debe ser divisor de n y como m es primo $m=\lbrace 1,n\rbrace$.
 
@@ -42,8 +42,10 @@ Si n es primo entonces el orden de los elementos de G ($m_g, \hspace{0.1cm} \for
 ---
 Deducimos también que dos grupos cualesquiera cuyos órdenes sean el mismo número primo son isomorfos e isomorfos al grupo cíclico de ese orden.
 
+\\
+
 ---
-**<span style="color:violet">Observaciones:</span> Nota**
+<span style="color:violet">Observaciones:</span> Nota
 
 Definiendo el isomorfismo:
 
@@ -58,13 +60,17 @@ $$
 m_1+m_2 \to \phi(m_1+m_2)=a^{m_1+m_2}=\phi(m_1)\phi (m_2)
 $$
 
+\\
+
+\\\\
+
 ---
-### **<span style="color:red">Ejercicio:</span> 2. Grupo cociente**
+### <span style="color:red">Ejercicio:</span> 2. Grupo cociente
 
 Probar que $G=H_1\times H_2$ implica que $G/H_1\cong H_2$.
 
 ---
-**<span style="color:darkcyan">Solución:</span> 2.**
+<span style="color:darkcyan">Solución:</span>
 
 Por ser G producto directo de los otros dos grupos, estos son normales y tiene sentido construir los grupos cociente. $G/H_1$ es grupo con respecto a la multiplicación de cosets. Tenemos que:
 
@@ -87,15 +93,27 @@ $$
 \phi (hh')=hh'H_1=(hH_1)(h'H_1)=\phi (h) \phi (h') \hspace{0.1cm}\forall h,h' \in H_2
 $$
 
+\\\\
+
 ---
-### **<span style="color:red">Ejercicio:</span> 3. Grupos de órden 4**
+### <span style="color:red">Ejercicio:</span> 3. Isomorfismos
+
+Construye un isomorfismo que demuestre que el grupo de reales positivos, con la regla de multiplicación de grupo dada por la suma usual de números, es decir $(\mathbb{R}^+, \cdot) \cong (\mathbb{R}, +)$
+
+---
+<span style="color:darkcyan">Solución:</span>
+
+\\\\
+
+---
+### <span style="color:red">Ejercicio:</span> 4. Grupos de órden 4
 
 Probar que, salvo isomorfismos, solamente hay dos grupos diferentes de orden 4: el grupo cíclico $C_4$ y el grupo de reflexiones en el plano $V_4$ (también llamado grupo de Klein).
 
 Demostrar también que el grupo de Klein es producto directo de $C_2$ consigo mismo.
 
 ---
-**<span style="color:darkcyan">Solución:</span> 3.**
+<span style="color:darkcyan">Solución:</span>
 
 $$
 C_4=\lbrace  a,a^2,a^3,A^4=e\rbrace
@@ -143,17 +161,20 @@ Si G no tiene ningún elemento de orden 4 entonces todos sus elementos son de or
 ---
 Para la demostración de que $V_4\cong C_2 \times C_2$, sabemos que $V_4=\mathbb{Z}_2 \times \mathbb{Z}_2$. Sabemos que $C_2\cong \mathbb{Z}_2$ y que son subgrupos normales pues $V_4$ es abeliano. Además, es única (salvo conmutación ya que es abeliano) pues dados los subgrupos normales $\lbrace e, \sigma \rbrace$ y $\lbrace e, \tau \rbrace$ su producto directo genera $V_4$ de forma única (genera $\rho$ únicamente bajo el producto $\tau \sigma$ o $\sigma \tau$ al ser abeliano).
 
+\\\\
+
 ---
-### **<span style="color:red">Ejercicio:</span> 4. Grupo diédrico**
+### <span style="color:red">Ejercicio:</span> 5. Grupo diédrico
 
 Consideremos el grupo diédrico $D_4$, que es el grupo de simetría de un cuadrado.
-Si situamos el cuadrado en el plano xy, centrado en el origen de coordenadas y con sus lados paralelos a los ejes de coordenadas, entonces el grupo consiste en rotaciones en torno al centro y reflexiones con respecto a los ejes vertical, horizontal y diagonales de pendiente $\pm 1$.
-Llamemos e a la identidad, g a la rotación de ángulo $\pi/2$ (en sentido antihorario) y h a la reflexión con respecto a la diagonal y = x.
+Si situamos el cuadrado en el plano $xy$, centrado en el origen de coordenadas y con sus lados paralelos a los ejes de coordenadas, entonces el grupo consiste en rotaciones en torno al centro y reflexiones con respecto a los ejes vertical, horizontal y diagonales de pendiente $\pm 1$.
 
-Demuestra que el grupo está generado por g y h y escribe su tabla de multiplicar.
+Llamemos $e$ a la identidad, $g$ a la rotación de ángulo $\pi/2$ (en sentido antihorario) y $h$ a la reflexión con respecto a la diagonal $y = x$.
+
+Demuestra que el grupo está generado por $g$ y $h$ y escribe su tabla de multiplicar.
 
 ---
-**<span style="color:darkcyan">Solución:</span> 4.**
+<span style="color:darkcyan">Solución:</span>
 
 Sean las rotaciones:
 
@@ -187,6 +208,8 @@ g^3h & h^3h & g^2h & gh & h & g^3 & g^2 & g & e
 \end{array}
 $$
 
+\\\\
+
 ---
 Que se ve bien como se ha construido la tabla representándolo gráficamente.
 
@@ -205,7 +228,7 @@ Que se ve bien como se ha construido la tabla representándolo gráficamente.
 # T3: Representaciones
 
 ---
-### **<span style="color:red">Ejercicio:</span> 1. Representación sobre GL(n,C)**
+### <span style="color:red">Ejercicio:</span> 1. Representación sobre GL(n,C)
 
 Dada una representación de un grupo sobre los complejos, los vectores de $\mathbb{C}$ que se transforman bajo la acción de D:
 
@@ -237,7 +260,7 @@ D': \hspace{0.2cm} f(\vec{x})\to f'(\vec{x})
 $$
 
 ---
-**<span style="color:darkcyan">Solución:</span> 1.**
+<span style="color:darkcyan">Solución:</span>
 
 Para demostrar que este mapa define una representación del grupo G debemos probar que respeta la estructura de grupo, es decir, que si $g=g''g'$ entonces $f\overset{g}{\longrightarrow} f''$ coincide con la composición de $f \overset{g'}{\longrightarrow} f'$ con $f'\overset{g''}{\longrightarrow}f''$. Tenemos que:
 
@@ -250,8 +273,10 @@ $$
 
 Como queríamos demostrar.
 
+\\\\
+
 ---
-### **<span style="color:red">Ejercicio:</span> 2. Representación de S3**
+### <span style="color:red">Ejercicio:</span> 2. Representación de S3
 
 Consideramos la representación bidimensional irreducible de $S_3 \cong D_3$, denotada anteriormente por $D^{(2)}(S_3)$, y dos vectores en el espacio complejo de dos dimensiones de coordenadas $(x^1,y^1)$ y $(x^2,y^2)$ que se transforman independientemente bajo la acción de la representación D. Esta representación da lugar a una representación de dimensión 4 W($S_3$) dada por la envolvente lineal de los monomios $X^1x^1, x^1y^2,y^1x^2$ y $y^1y^2$.
 
@@ -268,7 +293,7 @@ $$
 Por ejemplo $\tau _3 \tau _1=\sigma _1$, $\sigma _1^{-1}=\sigma _2$, $\tau _1 \sigma _1=\tau _2$.
 
 ---
-**<span style="color:darkcyan">Solución:</span> 2.**
+<span style="color:darkcyan">Solución:</span>
 
 Partiendo de $D^{(2)}(\tau _1)=\left ( \begin{array}{cc}-1  & 0 \\0 & 1\end{array}\right)$ y $D^{(2)(\tau _3)}=\frac{-1}{2}\left ( \begin{array}{cc}-1  & \sqrt{3} \\\sqrt{3} & 1\end{array}\right)$.
 
@@ -386,3 +411,5 @@ $$
 $$
 
 Repitiendo este procedimiento podemos hallar la transformación para cada elemento de la base de V. Por tanto, es posible hallarnos $W(\tau _3)$ y con ella obtener $W(\tau _2)$, $W(\sigma _1)$ y $W(\sigma _2)$ mediante el producto adecuado de matrices.
+
+\\\\

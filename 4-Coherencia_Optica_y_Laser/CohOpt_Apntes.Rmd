@@ -1,0 +1,779 @@
+---
+title: "Coherencia Óptica - Apuntes"
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
+---
+
+# Introducción
+
+## Objetivos {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Hechos básicos {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Intuición y definición de coherencia {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Manual de uso y agradecimientos. {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+
+# Coherencia clásica
+
+## Interferencia {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+La coherencia se manifiesta en multitud de aspectos de la óptica. De todos ellos el más popular y considerado en la bibliografía es la interferencia. En este capítulo vamos a usar la interferencia como hilo conductor, como territorio en el que desarrollar la idea de coherencia en sus aspectos más básicos en el área de la óptica clásica. Y de todos los interferómetros el más útil a efectos didácticos es el interferómetro de Young.
+
+Pero ha de quedar claro que todo lo que se diga aquí vale para cualquier otra manifestación de coherencia distinta de la interferencia o cualquier otro interferómetro distinto del Young.
+
+> Uno de mis primeros recuerdos en el departamento de óptica, es esta imagen portada de una revista, quizás Applied Optics, o Ver y Oír, sobre un expositor de publicaciones en el departamento. No es un interferómetro de Young, es un fotómetro. François d'Aguilon, Franciscus Aguilonius 1611.
+
+
+
+
+
+
+
+## Micro y macro {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Promedios {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Función de coherencia mutua {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Estadística {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Promedios sobre realizaciones {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Promedio temporal {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Estacionariedad {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Ergodicidad {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Grado de coherencia {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Coherencia completa {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Incoherencia {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Límites al grado de coherencia, linealidad y resolución {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Descomposición modal {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Modos {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Coherencia temporal {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Teorema de Wiener-Khintchine {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Densidad espectral mutua {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Tiempo de coherencia, longitud de coherencia {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Análisis espectral {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Coherencia espacial {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Teorema de van Cittert-Zernike {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Interferómetro estelar {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Coherencia y direccionalidad {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Área de coherencia {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Volumen de coherencia {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Degeneración. {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+
+# Apéndices coherencia clásica
+
+## Parámetros de Stokes {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Coherencia y grado de polarización {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Complementariedad clásica {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Descomposición modal {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Batidos de coherencia temporal {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Batidos de coherencia espacial {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Interferencia de intensidad {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Correlación no es causalidad. {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+
+# Óptica cuántica
+
+## Evidencias y no evidencias de la naturaleza cuántica de la luz {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Antibunching {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Cuantificación {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Observables y estados: número de fotones, cuadraturas, fase, coherentes, comprimidos, Stokes {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Representación de cuadraturas. {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+
+# Coherencia cuántica
+
+## Coherencia en mecánica cuántica {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Gatos de Schrödinger {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Problemas de orden {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Funciones de correlación {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Funciones características {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Distribuciones de amplitud compleja {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Funciones Q, P y W {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Orden normal antinormal y simétrico {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Teorema de equivalencia óptico. {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+
+# Apéndices coherencia cuántica
+
+## Interferencia clásica y cuántica {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Detección homodina {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Doble detección homodina {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Comentario sobre la varianza {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+
+
+
+
+
+## Decoherencia y medida. {.tabset .tabset-fade .tabset-pills}
+
+### Resumen
+
+### Tema
+
+
+
+

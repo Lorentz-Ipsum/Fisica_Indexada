@@ -1,0 +1,217 @@
+EstructuraTemario.txt
+
+
+	Index
+
+		1. Introducción a los átomos polielectrónicos
+			Repaso del átomo hidrogenoide. 
+			Sistemas de varios electrones. 
+			Aproximación de campo central. 
+			Estados fundamentales y tabla periódica. 
+			Acoplamiento LS de momentos angulares de spin y orbital. 
+			Excitaciones. 
+			Métodos de Thomas-Fermi y Hartree-Fock.
+
+			Efecto Zeeman.
+			Efecto Stark.
+
+		2. Fundamentos de la estructura molecular
+			Aproximación de Born-Oppenheimer. 
+			Orbitales moleculares. 
+			Tipos de enlace. Espectros de rotación, vibración, electrónicos.
+
+		3. Estructura subatómica de la materia
+			Partículas e interacciones. 
+			Hadrones y leptones. 
+			Masas y números cuánticos. 
+			Quarks. 
+			El nucleón. 
+			Isoespin.
+
+		4. Introducción al Núcleo Atómico
+			Composición del núcleo. 
+			Masas y tamaños nucleares. 
+			Estabilidad. 
+			Desintegraciones. 
+			Modelos. 
+			Reacciones. 
+			Fisión y fusión nuclear. 
+			Nucleosíntesis.
+
+		5. Introducción a la Física de partículas
+			Clasificación detallada, segunda y tercera familias de quarks y leptones. 
+			Partículas compuestas. 
+			Modelo quark. 
+			Bosones mediadores. 
+			Producción y detección de partículas. 
+			Desintegraciones.
+
+
+	Apuntes
+
+
+		1. Fisica Atomica 
+			Atomos 1 e.
+				Resolucion Ecuacion Schrodinger
+				Correcciones
+			Multielectronicos
+				Resolucion no exacta
+				Correcciones
+			Interacciones con campos externos
+				Con B :: Zeeman
+				Con E :: Stark
+
+		2. Fisica molecular
+			Aproximación de Born-Oppenheimer. 
+			Orbitales moleculares. 
+			Tipos de enlace. 
+			Espectros de rotación, vibración, electrónicos.
+
+		3. Fisica Nuclear
+			Propiedades generales
+			Desintegracion Nuclear
+			Reacciones nuclearess
+			Fision y fusion nclear
+			Nucleosintesis
+
+		4. Física de partículas
+			Clasificacion
+				Modelo Estandar
+			Interacciones
+				Nuclear Fuerte
+				Nuclear Debil
+
+
+
+
+		REPASO
+				
+				I CLASE
+
+
+						//**
+
+					Atomos con 1 electron
+
+						Bohr 1912-13
+
+						Tamaño Atomo  10^-9..-10 m
+						Tamaño Nucleo 10^-10..-15 m
+
+						A = nº masico (E_p+E_n)
+						Z = nº protones (Nº atómico)
+						N = A - Z
+						Nucleón (p,n)
+						Atomos son neutros.. p=n
+
+						m_e ≈ 0,51 Mev
+						m_p ≈ 2^10^3 m_e ≈ 1Gev
+
+						q_e = -q_p
+						q_m = 0
+
+						Unión electron Nucleo electromagnetica.
+
+						1 eV = Energia q_e mueve 1V ≈ 1,6*10^-29 C*J					 		(1q_e = 1,6*10^-29 C)
+
+						LISTA DE Tera, Mega, Giga, Pico.....
+
+						E = hv =...
+
+						repaso radiacion.GRAFICA 1
+
+				***		Unidades de Hartree: Sistema de Unidades atómicas
+							TABLA 1 
+
+				***		Atomo de H.. CLASE I.2
+							REPASARRRRRR 		CUANTIC 1
+
+
+						**//
+
+
+
+		TEMA 1
+
+
+					Introduccion
+						Ordenes de Magnitud
+							Tamaño atomos, nucleos
+						Nomenclatura A, Z, N
+						Unidades eV
+							Sistema de Hartree
+
+					Atomo de Hidrogeno
+						Aproximacion de orden 0
+							Nucleo en reposo
+							Nucleo Puntual
+						Espectro
+							Limite de Ionizacion
+							Estado Fundamental
+							Espectro Emision/Absorcion
+							Energia Excitacion/ligadura
+							Correccion isotópica
+							Tiempo de residencia de los e
+							Resolucion de Shcrodinger
+								Desplazamiento Isotopico
+							Cuantizacion del Momento Angular
+								Cte Apantallamiento
+								Cuantizacion espacial
+								Degeneracion Intrinseca del momento angular
+								Degeneracion COulombiana
+							Estados metaestables
+						Funcion de onda de un electron en un campo de fuerzas centrales
+							Forma de la parte angular
+							Forma de los Orbitales
+							Forma de la parte radial
+						Tipos de correccion de atomos aislados/no aislados
+							Correccion Relativista
+								Efecto con metodo clasico
+								Efecto con metodo cuantico (teoria perturbaciones)
+							Efecto Zeeman
+						Spin
+							Stern-Gerlach
+							Repaso composicion de Momentos angulares
+							Interaccion spin orbita
+							Ordenes de magnitud
+							Estructura fina
+
+
+
+				II CLASE
+
+
+
+
+
+				III CLASE
+				IV CLASE
+				V CLASE
+				VI CLASE
+				VII CLASE
+				VII CLASE
+				IX CLASE
+				X CLASE
+				XI CLASE
+				XII CLASE
+
+
+
+		TEMA 2
+		TEMA 3
+		TEMA 4
+
+
+	Colección
+
+		Unidades
+
+		Constantes
+
+			h
+			Rydberg
+
+		Magnitudes
+
+		Variables
+

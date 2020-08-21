@@ -1,0 +1,890 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDC Index Landau</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li>
+<ul>
+<li><a href="#chapter-1.-the-principle-of-relativity">Chapter 1. The Principle of Relativity</a>
+<ul>
+<li><a href="#velocity-of-propagation-of-interaction">1 Velocity of propagation of interaction</a></li>
+<li><a href="#intervals">2 Intervals</a></li>
+<li><a href="#proper-time">3 Proper time</a></li>
+<li><a href="#the-lorentz-transformation">4 The Lorentz transformation</a></li>
+<li><a href="#transformation-of-velocities">5 Transformation of velocities</a></li>
+<li><a href="#four-vectors">6 Four-vectors</a></li>
+<li><a href="#four-dimensional-velocity">7 Four-dimensional velocity</a></li>
+</ul>
+</li>
+<li><a href="#chapter-2.-relativistic-mechanics">Chapter 2. Relativistic Mechanics</a>
+<ul>
+<li><a href="#the-principle-of-least-action">8 The principle of least action</a></li>
+<li><a href="#energy-and-momentum">9 Energy and momentum</a></li>
+<li><a href="#transformation-of-distribution-functions">10 Transformation of distribution functions</a></li>
+<li><a href="#decay-of-particles">11 Decay of particles</a></li>
+<li><a href="#invariant-cross-section">12 Invariant cross-section</a></li>
+<li><a href="#elastic-collisions-of-particles">13 Elastic collisions of particles</a></li>
+<li><a href="#angular-momentum">14 Angular momentum</a></li>
+</ul>
+</li>
+<li><a href="#chapter-3.-charges-in-electromagnetic-fields">Chapter 3. Charges in Electromagnetic Fields</a>
+<ul>
+<li><a href="#elementary-particles-in-the-theory-of-relativity">15 Elementary particles in the theory of relativity</a></li>
+<li><a href="#four-potential-of-a-field">16 Four-potential of a field</a></li>
+<li><a href="#equations-of-motion-of-a-charge-in-a-field">17 Equations of motion of a charge in a field</a></li>
+<li><a href="#gauge-invariance">18 Gauge invariance</a></li>
+<li><a href="#constant-electromagnetic-field">19 Constant electromagnetic field</a></li>
+<li><a href="#motion-in-a-constant-uniform-electric-field">20 Motion in a constant uniform electric field</a></li>
+<li><a href="#motion-in-a-constant-uniform-magnetic-field">21 Motion in a constant uniform magnetic field</a></li>
+<li><a href="#motion-of-a-charge-in-constant-uniform-electric-and-magnetic-fields">22 Motion of a charge in constant uniform electric and magnetic fields</a></li>
+<li><a href="#the-electromagnetic-field-tensor">23 The electromagnetic field tensor</a></li>
+<li><a href="#lorentz-transformation-of-the-field">24 Lorentz transformation of the field</a></li>
+<li><a href="#invariants-of-the-field">25 Invariants of the field</a></li>
+</ul>
+</li>
+<li><a href="#chapter-4.-the-electromagnetic-field-equations">Chapter 4. The Electromagnetic Field Equations</a>
+<ul>
+<li><a href="#the-first-pair-of-maxwells-equations">26 The first pair of Maxwell’s equations</a></li>
+<li><a href="#the-action-function-of-the-electromagnetic-field">27 The action function of the electromagnetic field</a></li>
+<li><a href="#the-four-dimensional-current-vector">28 The four-dimensional current vector</a></li>
+<li><a href="#the-equation-of-continuity">29 The equation of continuity</a></li>
+<li><a href="#the-second-pair-of-maxwell-equations">30 The second pair of Maxwell equations</a></li>
+<li><a href="#energy-density-and-energy-flux">31 Energy density and energy flux</a></li>
+<li><a href="#the-energy-momentum-tensor">32 The energy-momentum tensor</a></li>
+<li><a href="#energy-momentum-tensor-of-the-electromagnetic-field">33 Energy-momentum tensor of the electromagnetic field</a></li>
+<li><a href="#the-virial-theorem">34 The virial theorem</a></li>
+<li><a href="#the-nergy-momentum-tensor-for-macroscopic-bodies">35 The nergy-momentum tensor for macroscopic bodies</a></li>
+</ul>
+</li>
+<li><a href="#chapter-5.-constant-electromagnetic-fields">Chapter 5. Constant Electromagnetic Fields</a>
+<ul>
+<li><a href="#coulombs-law">36 Coulomb’s law</a></li>
+<li><a href="#electrostatic-energy-of-charges">37 Electrostatic energy of charges</a></li>
+<li><a href="#the-field-of-a-uniformly-moving-charge">38 The field of a uniformly moving charge</a></li>
+<li><a href="#motion-in-the-coulomb-field">39 Motion in the Coulomb field</a></li>
+<li><a href="#the-dipole-moment">40 The dipole moment</a></li>
+<li><a href="#multipole-moments">41 Multipole moments</a></li>
+<li><a href="#system-of-charges-in-an-external-field">42 System of charges in an external field</a></li>
+<li><a href="#constant-magnetic-field">43 Constant magnetic field</a></li>
+<li><a href="#magnetic-moments">44 Magnetic moments</a></li>
+<li><a href="#larmors-theorem">45 Larmor’s theorem</a></li>
+</ul>
+</li>
+<li><a href="#chapter-6.-electromagnetic-waves">Chapter 6. Electromagnetic Waves</a>
+<ul>
+<li><a href="#the-wave-equation">46 The wave equation</a></li>
+<li><a href="#plane-waves">47 Plane waves</a></li>
+<li><a href="#monochromatic-plane-waves">48 Monochromatic plane waves</a></li>
+<li><a href="#spectral-resolution">49 Spectral resolution</a></li>
+<li><a href="#partially-polarized-light">50 Partially polarized light</a></li>
+<li><a href="#the-fourier-resolution-of-the-electrostatic-field">51 The Fourier resolution of the electrostatic field</a></li>
+<li><a href="#characteristic-vibrations-of-the-field">52 Characteristic vibrations of the field</a></li>
+</ul>
+</li>
+<li><a href="#chapter-7.-the-propagation-of-light">Chapter 7. The Propagation of Light</a>
+<ul>
+<li><a href="#geometrical-optics">53 Geometrical optics</a></li>
+<li><a href="#intensity">54 Intensity</a></li>
+<li><a href="#the-angular-eikonal">55 The angular eikonal</a></li>
+<li><a href="#narrow-bundles-of-rays">56 Narrow bundles of rays</a></li>
+<li><a href="#image-formation-with-broad-bundles-of-rays">57 Image formation with broad bundles of rays</a></li>
+<li><a href="#the-limits-of-geometrical-optics">58 The limits of geometrical optics</a></li>
+<li><a href="#diffraction">59 Diffraction</a></li>
+<li><a href="#fresnel-diffraction">60 Fresnel diffraction</a></li>
+<li><a href="#fraunhofer-diffraction">61 Fraunhofer diffraction</a></li>
+</ul>
+</li>
+<li><a href="#chapter-8.-the-field-of-moving-charges">Chapter 8. The Field of Moving Charges</a>
+<ul>
+<li><a href="#the-retarded-potentials">62 The retarded potentials</a></li>
+<li><a href="#the-lienard-wiechert-potentials">63 The Lienard-Wiechert potentials</a></li>
+<li><a href="#spectral-resolution-of-the-retarded-potentials">64 Spectral resolution of the retarded potentials</a></li>
+<li><a href="#the-lagrangian-to-terms-of-second-order">65 The Lagrangian to terms of second order</a></li>
+</ul>
+</li>
+<li><a href="#chapter-9.-radiation-of-electromagnetic-waves">Chapter 9. Radiation of Electromagnetic Waves</a>
+<ul>
+<li><a href="#the-field-of-a-system-of-charges-at-large-distances">66 The field of a system of charges at large distances</a></li>
+<li><a href="#dipole-radiation">67 Dipole radiation</a></li>
+<li><a href="#dipole-radiation-during-collisions">68 Dipole radiation during collisions</a></li>
+<li><a href="#radiation-of-low-frequency-in-collisions">69 Radiation of low frequency in collisions</a></li>
+<li><a href="#radiation-in-the-case-of-coulomb-interaction">70 Radiation in the case of Coulomb interaction</a></li>
+<li><a href="#quadrupole-and-magnetic-dipole-radiation">71 Quadrupole and magnetic dipole radiation</a></li>
+<li><a href="#the-field-of-the-radiation-at-near-distances">72 The field of the radiation at near distances</a></li>
+<li><a href="#radiation-from-a-rapidly-moving-charge">73 Radiation from a rapidly moving charge</a></li>
+<li><a href="#synchrotron-radiation-magnetic-bremsstrahlung">74 Synchrotron radiation (magnetic bremsstrahlung)</a></li>
+<li><a href="#radiation-damping">75 Radiation damping</a></li>
+<li><a href="#radiation-damping-in-the-relativistic-case">76 Radiation damping in the relativistic case</a></li>
+<li><a href="#spectral-resolution-of-the-radiation-in-the-ultrarelativistic-case">77 Spectral resolution of the radiation in the ultrarelativistic case</a></li>
+<li><a href="#scattering-by-free-charges">78 Scattering by free charges</a></li>
+<li><a href="#scattering-of-low-frequency-waves">79 Scattering of low-frequency waves</a></li>
+<li><a href="#scattering-of-high-frequency-waves">80 Scattering of high-frequency waves</a></li>
+</ul>
+</li>
+<li><a href="#chapter-10.-particle-in-a-gravitational-field">Chapter 10. Particle in a Gravitational Field</a>
+<ul>
+<li><a href="#gravitational-fields-in-nonrelativistic-mechanics">81 Gravitational fields in nonrelativistic mechanics</a></li>
+<li><a href="#the-gravitational-field-in-relativistic-mechanics">82 The gravitational field in relativistic mechanics</a></li>
+<li><a href="#curvilinear-coordinates">83 Curvilinear coordinates</a></li>
+<li><a href="#distances-and-time-intervals">84 Distances and time intervals</a></li>
+<li><a href="#covariant-differentiation">85 Covariant differentiation</a></li>
+<li><a href="#the-relation-of-the-christoffel-symbols-to-the-metric-tensor">86 The relation of the Christoffel symbols to the metric tensor</a></li>
+<li><a href="#motion-of-a-particle-in-a-gravitational-field">87 Motion of a particle in a gravitational field</a></li>
+<li><a href="#the-constant-gravitational-field">88 The constant gravitational field</a></li>
+<li><a href="#rotation">89 Rotation</a></li>
+<li><a href="#the-equations-of-electrodynamics-in-the-presence-of-a-gravitational-field">90 The equations of electrodynamics in the presence of a gravitational field</a></li>
+</ul>
+</li>
+<li><a href="#chapter-11.-the-gravitational-field-equations">Chapter 11. The Gravitational Field Equations</a>
+<ul>
+<li><a href="#the-curvature-tensor">91 The curvature tensor</a></li>
+<li><a href="#properties-of-the-curvature-tensor">92 Properties of the curvature tensor</a></li>
+<li><a href="#the-action-function-for-the-gravitational-field">93 The action function for the gravitational field</a></li>
+<li><a href="#the-energy-momentum-tensor-1">94 The energy-momentum tensor</a></li>
+<li><a href="#the-gravitational-field-equations">95 The gravitational field equations</a></li>
+<li><a href="#newtons-law">96 Newton’s law</a></li>
+<li><a href="#the-centrally-symmetric-gravitational-field">97 The centrally symmetric gravitational field</a></li>
+<li><a href="#motion-in-a-centrally-symmetric-gravitational-field">98 Motion in a centrally symmetric gravitational field</a></li>
+<li><a href="#the-synchronous-reference-system">99 The synchronous reference system</a></li>
+<li><a href="#gravitational-collapse">100 Gravitational collapse</a></li>
+<li><a href="#the-energy-momentum-pseudotensor">101 The energy-momentum pseudotensor</a></li>
+<li><a href="#gravitational-waves">102 Gravitational waves</a></li>
+<li><a href="#exact-solutions-of-the-gravitational-field-equations-depending-on-one-variable">103 Exact solutions of the gravitational field equations depending on one variable</a></li>
+<li><a href="#gravitational-fields-at-large-distances-from-bodies">104 Gravitational fields at large distances from bodies</a></li>
+<li><a href="#radiation-of-gravitational-waves">105 Radiation of gravitational waves</a></li>
+<li><a href="#the-equations-of-motion-of-a-system-of-bodies-in-the-second-approximation">106 The equations of motion of a system of bodies in the second approximation</a></li>
+</ul>
+</li>
+<li><a href="#chapter-12.-cosmological-problems">Chapter 12. Cosmological Problems</a>
+<ul>
+<li><a href="#isotropic-space">107 Isotropic space</a></li>
+<li><a href="#space-time-metric-in-the-closed-isotropic-model">108 Space-time metric in the closed isotropic model</a></li>
+<li><a href="#space-time-metric-for-the-open-isotropic-model">109 Space-time metric for the open isotropic model</a></li>
+<li><a href="#the-red-shift">110 The red shift</a></li>
+<li><a href="#gravitational-stability-of-an-isotropic-universe">111 Gravitational stability of an isotropic universe</a></li>
+<li><a href="#homogeneous-spaces">112 Homogeneous spaces</a></li>
+<li><a href="#oscillating-regime-of-approach-to-a-singular-point">113 Oscillating regime of approach to a singular point</a></li>
+<li><a href="#the-character-of-the-singularity-in-the-general-cosmological-solution-of-the-gravitational-equations--chapter-1.-the-principle-of-relativity">114 The character of the singularity in the general cosmological solution of the gravitational equations # Chapter 1. The Principle of Relativity</a></li>
+<li><a href="#velocity-of-propagation-of-interaction-1">1 Velocity of propagation of interaction</a></li>
+<li><a href="#intervals-1">2 Intervals</a></li>
+<li><a href="#proper-time-1">3 Proper time</a></li>
+<li><a href="#the-lorentz-transformation-1">4 The Lorentz transformation</a></li>
+<li><a href="#transformation-of-velocities-1">5 Transformation of velocities</a></li>
+<li><a href="#four-vectors-1">6 Four-vectors</a></li>
+<li><a href="#four-dimensional-velocity-1">7 Four-dimensional velocity</a></li>
+</ul>
+</li>
+<li><a href="#chapter-2.-relativistic-mechanics-1">Chapter 2. Relativistic Mechanics</a>
+<ul>
+<li><a href="#the-principle-of-least-action-1">8 The principle of least action</a></li>
+<li><a href="#energy-and-momentum-1">9 Energy and momentum</a></li>
+<li><a href="#transformation-of-distribution-functions-1">10 Transformation of distribution functions</a></li>
+<li><a href="#decay-of-particles-1">11 Decay of particles</a></li>
+<li><a href="#invariant-cross-section-1">12 Invariant cross-section</a></li>
+<li><a href="#elastic-collisions-of-particles-1">13 Elastic collisions of particles</a></li>
+<li><a href="#angular-momentum-1">14 Angular momentum</a></li>
+</ul>
+</li>
+<li><a href="#chapter-3.-charges-in-electromagnetic-fields-1">Chapter 3. Charges in Electromagnetic Fields</a>
+<ul>
+<li><a href="#elementary-particles-in-the-theory-of-relativity-1">15 Elementary particles in the theory of relativity</a></li>
+<li><a href="#four-potential-of-a-field-1">16 Four-potential of a field</a></li>
+<li><a href="#equations-of-motion-of-a-charge-in-a-field-1">17 Equations of motion of a charge in a field</a></li>
+<li><a href="#gauge-invariance-1">18 Gauge invariance</a></li>
+<li><a href="#constant-electromagnetic-field-1">19 Constant electromagnetic field</a></li>
+<li><a href="#motion-in-a-constant-uniform-electric-field-1">20 Motion in a constant uniform electric field</a></li>
+<li><a href="#motion-in-a-constant-uniform-magnetic-field-1">21 Motion in a constant uniform magnetic field</a></li>
+<li><a href="#motion-of-a-charge-in-constant-uniform-electric-and-magnetic-fields-1">22 Motion of a charge in constant uniform electric and magnetic fields</a></li>
+<li><a href="#the-electromagnetic-field-tensor-1">23 The electromagnetic field tensor</a></li>
+<li><a href="#lorentz-transformation-of-the-field-1">24 Lorentz transformation of the field</a></li>
+<li><a href="#invariants-of-the-field-1">25 Invariants of the field</a></li>
+</ul>
+</li>
+<li><a href="#chapter-4.-the-electromagnetic-field-equations-1">Chapter 4. The Electromagnetic Field Equations</a>
+<ul>
+<li><a href="#the-first-pair-of-maxwells-equations-1">26 The first pair of Maxwell’s equations</a></li>
+<li><a href="#the-action-function-of-the-electromagnetic-field-1">27 The action function of the electromagnetic field</a></li>
+<li><a href="#the-four-dimensional-current-vector-1">28 The four-dimensional current vector</a></li>
+<li><a href="#the-equation-of-continuity-1">29 The equation of continuity</a></li>
+<li><a href="#the-second-pair-of-maxwell-equations-1">30 The second pair of Maxwell equations</a></li>
+<li><a href="#energy-density-and-energy-flux-1">31 Energy density and energy flux</a></li>
+<li><a href="#the-energy-momentum-tensor-2">32 The energy-momentum tensor</a></li>
+<li><a href="#energy-momentum-tensor-of-the-electromagnetic-field-1">33 Energy-momentum tensor of the electromagnetic field</a></li>
+<li><a href="#the-virial-theorem-1">34 The virial theorem</a></li>
+<li><a href="#the-nergy-momentum-tensor-for-macroscopic-bodies-1">35 The nergy-momentum tensor for macroscopic bodies</a></li>
+</ul>
+</li>
+<li><a href="#chapter-5.-constant-electromagnetic-fields-1">Chapter 5. Constant Electromagnetic Fields</a>
+<ul>
+<li><a href="#coulombs-law-1">36 Coulomb’s law</a></li>
+<li><a href="#electrostatic-energy-of-charges-1">37 Electrostatic energy of charges</a></li>
+<li><a href="#the-field-of-a-uniformly-moving-charge-1">38 The field of a uniformly moving charge</a></li>
+<li><a href="#motion-in-the-coulomb-field-1">39 Motion in the Coulomb field</a></li>
+<li><a href="#the-dipole-moment-1">40 The dipole moment</a></li>
+<li><a href="#multipole-moments-1">41 Multipole moments</a></li>
+<li><a href="#system-of-charges-in-an-external-field-1">42 System of charges in an external field</a></li>
+<li><a href="#constant-magnetic-field-1">43 Constant magnetic field</a></li>
+<li><a href="#magnetic-moments-1">44 Magnetic moments</a></li>
+<li><a href="#larmors-theorem-1">45 Larmor’s theorem</a></li>
+</ul>
+</li>
+<li><a href="#chapter-6.-electromagnetic-waves-1">Chapter 6. Electromagnetic Waves</a>
+<ul>
+<li><a href="#the-wave-equation-1">46 The wave equation</a></li>
+<li><a href="#plane-waves-1">47 Plane waves</a></li>
+<li><a href="#monochromatic-plane-waves-1">48 Monochromatic plane waves</a></li>
+<li><a href="#spectral-resolution-1">49 Spectral resolution</a></li>
+<li><a href="#partially-polarized-light-1">50 Partially polarized light</a></li>
+<li><a href="#the-fourier-resolution-of-the-electrostatic-field-1">51 The Fourier resolution of the electrostatic field</a></li>
+<li><a href="#characteristic-vibrations-of-the-field-1">52 Characteristic vibrations of the field</a></li>
+</ul>
+</li>
+<li><a href="#chapter-7.-the-propagation-of-light-1">Chapter 7. The Propagation of Light</a>
+<ul>
+<li><a href="#geometrical-optics-1">53 Geometrical optics</a></li>
+<li><a href="#intensity-1">54 Intensity</a></li>
+<li><a href="#the-angular-eikonal-1">55 The angular eikonal</a></li>
+<li><a href="#narrow-bundles-of-rays-1">56 Narrow bundles of rays</a></li>
+<li><a href="#image-formation-with-broad-bundles-of-rays-1">57 Image formation with broad bundles of rays</a></li>
+<li><a href="#the-limits-of-geometrical-optics-1">58 The limits of geometrical optics</a></li>
+<li><a href="#diffraction-1">59 Diffraction</a></li>
+<li><a href="#fresnel-diffraction-1">60 Fresnel diffraction</a></li>
+<li><a href="#fraunhofer-diffraction-1">61 Fraunhofer diffraction</a></li>
+</ul>
+</li>
+<li><a href="#chapter-8.-the-field-of-moving-charges-1">Chapter 8. The Field of Moving Charges</a>
+<ul>
+<li><a href="#the-retarded-potentials-1">62 The retarded potentials</a></li>
+<li><a href="#the-lienard-wiechert-potentials-1">63 The Lienard-Wiechert potentials</a></li>
+<li><a href="#spectral-resolution-of-the-retarded-potentials-1">64 Spectral resolution of the retarded potentials</a></li>
+<li><a href="#the-lagrangian-to-terms-of-second-order-1">65 The Lagrangian to terms of second order</a></li>
+</ul>
+</li>
+<li><a href="#chapter-9.-radiation-of-electromagnetic-waves-1">Chapter 9. Radiation of Electromagnetic Waves</a>
+<ul>
+<li><a href="#the-field-of-a-system-of-charges-at-large-distances-1">66 The field of a system of charges at large distances</a></li>
+<li><a href="#dipole-radiation-1">67 Dipole radiation</a></li>
+<li><a href="#dipole-radiation-during-collisions-1">68 Dipole radiation during collisions</a></li>
+<li><a href="#radiation-of-low-frequency-in-collisions-1">69 Radiation of low frequency in collisions</a></li>
+<li><a href="#radiation-in-the-case-of-coulomb-interaction-1">70 Radiation in the case of Coulomb interaction</a></li>
+<li><a href="#quadrupole-and-magnetic-dipole-radiation-1">71 Quadrupole and magnetic dipole radiation</a></li>
+<li><a href="#the-field-of-the-radiation-at-near-distances-1">72 The field of the radiation at near distances</a></li>
+<li><a href="#radiation-from-a-rapidly-moving-charge-1">73 Radiation from a rapidly moving charge</a></li>
+<li><a href="#synchrotron-radiation-magnetic-bremsstrahlung-1">74 Synchrotron radiation (magnetic bremsstrahlung)</a></li>
+<li><a href="#radiation-damping-1">75 Radiation damping</a></li>
+<li><a href="#radiation-damping-in-the-relativistic-case-1">76 Radiation damping in the relativistic case</a></li>
+<li><a href="#spectral-resolution-of-the-radiation-in-the-ultrarelativistic-case-1">77 Spectral resolution of the radiation in the ultrarelativistic case</a></li>
+<li><a href="#scattering-by-free-charges-1">78 Scattering by free charges</a></li>
+<li><a href="#scattering-of-low-frequency-waves-1">79 Scattering of low-frequency waves</a></li>
+<li><a href="#scattering-of-high-frequency-waves-1">80 Scattering of high-frequency waves</a></li>
+</ul>
+</li>
+<li><a href="#chapter-10.-particle-in-a-gravitational-field-1">Chapter 10. Particle in a Gravitational Field</a>
+<ul>
+<li><a href="#gravitational-fields-in-nonrelativistic-mechanics-1">81 Gravitational fields in nonrelativistic mechanics</a></li>
+<li><a href="#the-gravitational-field-in-relativistic-mechanics-1">82 The gravitational field in relativistic mechanics</a></li>
+<li><a href="#curvilinear-coordinates-1">83 Curvilinear coordinates</a></li>
+<li><a href="#distances-and-time-intervals-1">84 Distances and time intervals</a></li>
+<li><a href="#covariant-differentiation-1">85 Covariant differentiation</a></li>
+<li><a href="#the-relation-of-the-christoffel-symbols-to-the-metric-tensor-1">86 The relation of the Christoffel symbols to the metric tensor</a></li>
+<li><a href="#motion-of-a-particle-in-a-gravitational-field-1">87 Motion of a particle in a gravitational field</a></li>
+<li><a href="#the-constant-gravitational-field-1">88 The constant gravitational field</a></li>
+<li><a href="#rotation-1">89 Rotation</a></li>
+<li><a href="#the-equations-of-electrodynamics-in-the-presence-of-a-gravitational-field-1">90 The equations of electrodynamics in the presence of a gravitational field</a></li>
+</ul>
+</li>
+<li><a href="#chapter-11.-the-gravitational-field-equations-1">Chapter 11. The Gravitational Field Equations</a>
+<ul>
+<li><a href="#the-curvature-tensor-1">91 The curvature tensor</a></li>
+<li><a href="#properties-of-the-curvature-tensor-1">92 Properties of the curvature tensor</a></li>
+<li><a href="#the-action-function-for-the-gravitational-field-1">93 The action function for the gravitational field</a></li>
+<li><a href="#the-energy-momentum-tensor-3">94 The energy-momentum tensor</a></li>
+<li><a href="#the-gravitational-field-equations-1">95 The gravitational field equations</a></li>
+<li><a href="#newtons-law-1">96 Newton’s law</a></li>
+<li><a href="#the-centrally-symmetric-gravitational-field-1">97 The centrally symmetric gravitational field</a></li>
+<li><a href="#motion-in-a-centrally-symmetric-gravitational-field-1">98 Motion in a centrally symmetric gravitational field</a></li>
+<li><a href="#the-synchronous-reference-system-1">99 The synchronous reference system</a></li>
+<li><a href="#gravitational-collapse-1">100 Gravitational collapse</a></li>
+<li><a href="#the-energy-momentum-pseudotensor-1">101 The energy-momentum pseudotensor</a></li>
+<li><a href="#gravitational-waves-1">102 Gravitational waves</a></li>
+<li><a href="#exact-solutions-of-the-gravitational-field-equations-depending-on-one-variable-1">103 Exact solutions of the gravitational field equations depending on one variable</a></li>
+<li><a href="#gravitational-fields-at-large-distances-from-bodies-1">104 Gravitational fields at large distances from bodies</a></li>
+<li><a href="#radiation-of-gravitational-waves-1">105 Radiation of gravitational waves</a></li>
+<li><a href="#the-equations-of-motion-of-a-system-of-bodies-in-the-second-approximation-1">106 The equations of motion of a system of bodies in the second approximation</a></li>
+</ul>
+</li>
+<li><a href="#chapter-12.-cosmological-problems-1">Chapter 12. Cosmological Problems</a>
+<ul>
+<li><a href="#isotropic-space-1">107 Isotropic space</a></li>
+<li><a href="#space-time-metric-in-the-closed-isotropic-model-1">108 Space-time metric in the closed isotropic model</a></li>
+<li><a href="#space-time-metric-for-the-open-isotropic-model-1">109 Space-time metric for the open isotropic model</a></li>
+<li><a href="#the-red-shift-1">110 The red shift</a></li>
+<li><a href="#gravitational-stability-of-an-isotropic-universe-1">111 Gravitational stability of an isotropic universe</a></li>
+<li><a href="#homogeneous-spaces-1">112 Homogeneous spaces</a></li>
+<li><a href="#oscillating-regime-of-approach-to-a-singular-point-1">113 Oscillating regime of approach to a singular point</a></li>
+<li><a href="#the-character-of-the-singularity-in-the-general-cosmological-solution-of-the-gravitational-equations">114 The character of the singularity in the general cosmological solution of the gravitational equations</a></li>
+</ul>
+</li>
+<li><a href="#chapter-1.-the-principle-of-relativity-1">Chapter 1. The Principle of Relativity</a>
+<ul>
+<li><a href="#velocity-of-propagation-of-interaction-2">1 Velocity of propagation of interaction</a></li>
+<li><a href="#intervals-2">2 Intervals</a></li>
+<li><a href="#proper-time-2">3 Proper time</a></li>
+<li><a href="#the-lorentz-transformation-2">4 The Lorentz transformation</a></li>
+<li><a href="#transformation-of-velocities-2">5 Transformation of velocities</a></li>
+<li><a href="#four-vectors-2">6 Four-vectors</a></li>
+<li><a href="#four-dimensional-velocity-2">7 Four-dimensional velocity</a></li>
+</ul>
+</li>
+<li><a href="#chapter-2.-relativistic-mechanics-2">Chapter 2. Relativistic Mechanics</a>
+<ul>
+<li><a href="#the-principle-of-least-action-2">8 The principle of least action</a></li>
+<li><a href="#energy-and-momentum-2">9 Energy and momentum</a></li>
+<li><a href="#transformation-of-distribution-functions-2">10 Transformation of distribution functions</a></li>
+<li><a href="#decay-of-particles-2">11 Decay of particles</a></li>
+<li><a href="#invariant-cross-section-2">12 Invariant cross-section</a></li>
+<li><a href="#elastic-collisions-of-particles-2">13 Elastic collisions of particles</a></li>
+<li><a href="#angular-momentum-2">14 Angular momentum</a></li>
+</ul>
+</li>
+<li><a href="#chapter-3.-charges-in-electromagnetic-fields-2">Chapter 3. Charges in Electromagnetic Fields</a>
+<ul>
+<li><a href="#elementary-particles-in-the-theory-of-relativity-2">15 Elementary particles in the theory of relativity</a></li>
+<li><a href="#four-potential-of-a-field-2">16 Four-potential of a field</a></li>
+<li><a href="#equations-of-motion-of-a-charge-in-a-field-2">17 Equations of motion of a charge in a field</a></li>
+<li><a href="#gauge-invariance-2">18 Gauge invariance</a></li>
+<li><a href="#constant-electromagnetic-field-2">19 Constant electromagnetic field</a></li>
+<li><a href="#motion-in-a-constant-uniform-electric-field-2">20 Motion in a constant uniform electric field</a></li>
+<li><a href="#motion-in-a-constant-uniform-magnetic-field-2">21 Motion in a constant uniform magnetic field</a></li>
+<li><a href="#motion-of-a-charge-in-constant-uniform-electric-and-magnetic-fields-2">22 Motion of a charge in constant uniform electric and magnetic fields</a></li>
+<li><a href="#the-electromagnetic-field-tensor-2">23 The electromagnetic field tensor</a></li>
+<li><a href="#lorentz-transformation-of-the-field-2">24 Lorentz transformation of the field</a></li>
+<li><a href="#invariants-of-the-field-2">25 Invariants of the field</a></li>
+</ul>
+</li>
+<li><a href="#chapter-4.-the-electromagnetic-field-equations-2">Chapter 4. The Electromagnetic Field Equations</a>
+<ul>
+<li><a href="#the-first-pair-of-maxwells-equations-2">26 The first pair of Maxwell’s equations</a></li>
+<li><a href="#the-action-function-of-the-electromagnetic-field-2">27 The action function of the electromagnetic field</a></li>
+<li><a href="#the-four-dimensional-current-vector-2">28 The four-dimensional current vector</a></li>
+<li><a href="#the-equation-of-continuity-2">29 The equation of continuity</a></li>
+<li><a href="#the-second-pair-of-maxwell-equations-2">30 The second pair of Maxwell equations</a></li>
+<li><a href="#energy-density-and-energy-flux-2">31 Energy density and energy flux</a></li>
+<li><a href="#the-energy-momentum-tensor-4">32 The energy-momentum tensor</a></li>
+<li><a href="#energy-momentum-tensor-of-the-electromagnetic-field-2">33 Energy-momentum tensor of the electromagnetic field</a></li>
+<li><a href="#the-virial-theorem-2">34 The virial theorem</a></li>
+<li><a href="#the-nergy-momentum-tensor-for-macroscopic-bodies-2">35 The nergy-momentum tensor for macroscopic bodies</a></li>
+</ul>
+</li>
+<li><a href="#chapter-5.-constant-electromagnetic-fields-2">Chapter 5. Constant Electromagnetic Fields</a>
+<ul>
+<li><a href="#coulombs-law-2">36 Coulomb’s law</a></li>
+<li><a href="#electrostatic-energy-of-charges-2">37 Electrostatic energy of charges</a></li>
+<li><a href="#the-field-of-a-uniformly-moving-charge-2">38 The field of a uniformly moving charge</a></li>
+<li><a href="#motion-in-the-coulomb-field-2">39 Motion in the Coulomb field</a></li>
+<li><a href="#the-dipole-moment-2">40 The dipole moment</a></li>
+<li><a href="#multipole-moments-2">41 Multipole moments</a></li>
+<li><a href="#system-of-charges-in-an-external-field-2">42 System of charges in an external field</a></li>
+<li><a href="#constant-magnetic-field-2">43 Constant magnetic field</a></li>
+<li><a href="#magnetic-moments-2">44 Magnetic moments</a></li>
+<li><a href="#larmors-theorem-2">45 Larmor’s theorem</a></li>
+</ul>
+</li>
+<li><a href="#chapter-6.-electromagnetic-waves-2">Chapter 6. Electromagnetic Waves</a>
+<ul>
+<li><a href="#the-wave-equation-2">46 The wave equation</a></li>
+<li><a href="#plane-waves-2">47 Plane waves</a></li>
+<li><a href="#monochromatic-plane-waves-2">48 Monochromatic plane waves</a></li>
+<li><a href="#spectral-resolution-2">49 Spectral resolution</a></li>
+<li><a href="#partially-polarized-light-2">50 Partially polarized light</a></li>
+<li><a href="#the-fourier-resolution-of-the-electrostatic-field-2">51 The Fourier resolution of the electrostatic field</a></li>
+<li><a href="#characteristic-vibrations-of-the-field-2">52 Characteristic vibrations of the field</a></li>
+</ul>
+</li>
+<li><a href="#chapter-7.-the-propagation-of-light-2">Chapter 7. The Propagation of Light</a>
+<ul>
+<li><a href="#geometrical-optics-2">53 Geometrical optics</a></li>
+<li><a href="#intensity-2">54 Intensity</a></li>
+<li><a href="#the-angular-eikonal-2">55 The angular eikonal</a></li>
+<li><a href="#narrow-bundles-of-rays-2">56 Narrow bundles of rays</a></li>
+<li><a href="#image-formation-with-broad-bundles-of-rays-2">57 Image formation with broad bundles of rays</a></li>
+<li><a href="#the-limits-of-geometrical-optics-2">58 The limits of geometrical optics</a></li>
+<li><a href="#diffraction-2">59 Diffraction</a></li>
+<li><a href="#fresnel-diffraction-2">60 Fresnel diffraction</a></li>
+<li><a href="#fraunhofer-diffraction-2">61 Fraunhofer diffraction</a></li>
+</ul>
+</li>
+<li><a href="#chapter-8.-the-field-of-moving-charges-2">Chapter 8. The Field of Moving Charges</a>
+<ul>
+<li><a href="#the-retarded-potentials-2">62 The retarded potentials</a></li>
+<li><a href="#the-lienard-wiechert-potentials-2">63 The Lienard-Wiechert potentials</a></li>
+<li><a href="#spectral-resolution-of-the-retarded-potentials-2">64 Spectral resolution of the retarded potentials</a></li>
+<li><a href="#the-lagrangian-to-terms-of-second-order-2">65 The Lagrangian to terms of second order</a></li>
+</ul>
+</li>
+<li><a href="#chapter-9.-radiation-of-electromagnetic-waves-2">Chapter 9. Radiation of Electromagnetic Waves</a>
+<ul>
+<li><a href="#the-field-of-a-system-of-charges-at-large-distances-2">66 The field of a system of charges at large distances</a></li>
+<li><a href="#dipole-radiation-2">67 Dipole radiation</a></li>
+<li><a href="#dipole-radiation-during-collisions-2">68 Dipole radiation during collisions</a></li>
+<li><a href="#radiation-of-low-frequency-in-collisions-2">69 Radiation of low frequency in collisions</a></li>
+<li><a href="#radiation-in-the-case-of-coulomb-interaction-2">70 Radiation in the case of Coulomb interaction</a></li>
+<li><a href="#quadrupole-and-magnetic-dipole-radiation-2">71 Quadrupole and magnetic dipole radiation</a></li>
+<li><a href="#the-field-of-the-radiation-at-near-distances-2">72 The field of the radiation at near distances</a></li>
+<li><a href="#radiation-from-a-rapidly-moving-charge-2">73 Radiation from a rapidly moving charge</a></li>
+<li><a href="#synchrotron-radiation-magnetic-bremsstrahlung-2">74 Synchrotron radiation (magnetic bremsstrahlung)</a></li>
+<li><a href="#radiation-damping-2">75 Radiation damping</a></li>
+<li><a href="#radiation-damping-in-the-relativistic-case-2">76 Radiation damping in the relativistic case</a></li>
+<li><a href="#spectral-resolution-of-the-radiation-in-the-ultrarelativistic-case-2">77 Spectral resolution of the radiation in the ultrarelativistic case</a></li>
+<li><a href="#scattering-by-free-charges-2">78 Scattering by free charges</a></li>
+<li><a href="#scattering-of-low-frequency-waves-2">79 Scattering of low-frequency waves</a></li>
+<li><a href="#scattering-of-high-frequency-waves-2">80 Scattering of high-frequency waves</a></li>
+</ul>
+</li>
+<li><a href="#chapter-10.-particle-in-a-gravitational-field-2">Chapter 10. Particle in a Gravitational Field</a>
+<ul>
+<li><a href="#gravitational-fields-in-nonrelativistic-mechanics-2">81 Gravitational fields in nonrelativistic mechanics</a></li>
+<li><a href="#the-gravitational-field-in-relativistic-mechanics-2">82 The gravitational field in relativistic mechanics</a></li>
+<li><a href="#curvilinear-coordinates-2">83 Curvilinear coordinates</a></li>
+<li><a href="#distances-and-time-intervals-2">84 Distances and time intervals</a></li>
+<li><a href="#covariant-differentiation-2">85 Covariant differentiation</a></li>
+<li><a href="#the-relation-of-the-christoffel-symbols-to-the-metric-tensor-2">86 The relation of the Christoffel symbols to the metric tensor</a></li>
+<li><a href="#motion-of-a-particle-in-a-gravitational-field-2">87 Motion of a particle in a gravitational field</a></li>
+<li><a href="#the-constant-gravitational-field-2">88 The constant gravitational field</a></li>
+<li><a href="#rotation-2">89 Rotation</a></li>
+<li><a href="#the-equations-of-electrodynamics-in-the-presence-of-a-gravitational-field-2">90 The equations of electrodynamics in the presence of a gravitational field</a></li>
+</ul>
+</li>
+<li><a href="#chapter-11.-the-gravitational-field-equations-2">Chapter 11. The Gravitational Field Equations</a>
+<ul>
+<li><a href="#the-curvature-tensor-2">91 The curvature tensor</a></li>
+<li><a href="#properties-of-the-curvature-tensor-2">92 Properties of the curvature tensor</a></li>
+<li><a href="#the-action-function-for-the-gravitational-field-2">93 The action function for the gravitational field</a></li>
+<li><a href="#the-energy-momentum-tensor-5">94 The energy-momentum tensor</a></li>
+<li><a href="#the-gravitational-field-equations-2">95 The gravitational field equations</a></li>
+<li><a href="#newtons-law-2">96 Newton’s law</a></li>
+<li><a href="#the-centrally-symmetric-gravitational-field-2">97 The centrally symmetric gravitational field</a></li>
+<li><a href="#motion-in-a-centrally-symmetric-gravitational-field-2">98 Motion in a centrally symmetric gravitational field</a></li>
+<li><a href="#the-synchronous-reference-system-2">99 The synchronous reference system</a></li>
+<li><a href="#gravitational-collapse-2">100 Gravitational collapse</a></li>
+<li><a href="#the-energy-momentum-pseudotensor-2">101 The energy-momentum pseudotensor</a></li>
+<li><a href="#gravitational-waves-2">102 Gravitational waves</a></li>
+<li><a href="#exact-solutions-of-the-gravitational-field-equations-depending-on-one-variable-2">103 Exact solutions of the gravitational field equations depending on one variable</a></li>
+<li><a href="#gravitational-fields-at-large-distances-from-bodies-2">104 Gravitational fields at large distances from bodies</a></li>
+<li><a href="#radiation-of-gravitational-waves-2">105 Radiation of gravitational waves</a></li>
+<li><a href="#the-equations-of-motion-of-a-system-of-bodies-in-the-second-approximation-2">106 The equations of motion of a system of bodies in the second approximation</a></li>
+</ul>
+</li>
+<li><a href="#chapter-12.-cosmological-problems-2">Chapter 12. Cosmological Problems</a>
+<ul>
+<li><a href="#isotropic-space-2">107 Isotropic space</a></li>
+<li><a href="#space-time-metric-in-the-closed-isotropic-model-2">108 Space-time metric in the closed isotropic model</a></li>
+<li><a href="#space-time-metric-for-the-open-isotropic-model-2">109 Space-time metric for the open isotropic model</a></li>
+<li><a href="#the-red-shift-2">110 The red shift</a></li>
+<li><a href="#gravitational-stability-of-an-isotropic-universe-2">111 Gravitational stability of an isotropic universe</a></li>
+<li><a href="#homogeneous-spaces-2">112 Homogeneous spaces</a></li>
+<li><a href="#oscillating-regime-of-approach-to-a-singular-point-2">113 Oscillating regime of approach to a singular point</a></li>
+<li><a href="#the-character-of-the-singularity-in-the-general-cosmological-solution-of-the-gravitational-equations-1">114 The character of the singularity in the general cosmological solution of the gravitational equations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h2 id="chapter-1.-the-principle-of-relativity">Chapter 1. The Principle of Relativity</h2>
+<h3 id="velocity-of-propagation-of-interaction">1 Velocity of propagation of interaction</h3>
+<h3 id="intervals">2 Intervals</h3>
+<h3 id="proper-time">3 Proper time</h3>
+<h3 id="the-lorentz-transformation">4 The Lorentz transformation</h3>
+<h3 id="transformation-of-velocities">5 Transformation of velocities</h3>
+<h3 id="four-vectors">6 Four-vectors</h3>
+<h3 id="four-dimensional-velocity">7 Four-dimensional velocity</h3>
+<h2 id="chapter-2.-relativistic-mechanics">Chapter 2. Relativistic Mechanics</h2>
+<h3 id="the-principle-of-least-action">8 The principle of least action</h3>
+<h3 id="energy-and-momentum">9 Energy and momentum</h3>
+<h3 id="transformation-of-distribution-functions">10 Transformation of distribution functions</h3>
+<h3 id="decay-of-particles">11 Decay of particles</h3>
+<h3 id="invariant-cross-section">12 Invariant cross-section</h3>
+<h3 id="elastic-collisions-of-particles">13 Elastic collisions of particles</h3>
+<h3 id="angular-momentum">14 Angular momentum</h3>
+<h2 id="chapter-3.-charges-in-electromagnetic-fields">Chapter 3. Charges in Electromagnetic Fields</h2>
+<h3 id="elementary-particles-in-the-theory-of-relativity">15 Elementary particles in the theory of relativity</h3>
+<h3 id="four-potential-of-a-field">16 Four-potential of a field</h3>
+<h3 id="equations-of-motion-of-a-charge-in-a-field">17 Equations of motion of a charge in a field</h3>
+<h3 id="gauge-invariance">18 Gauge invariance</h3>
+<h3 id="constant-electromagnetic-field">19 Constant electromagnetic field</h3>
+<h3 id="motion-in-a-constant-uniform-electric-field">20 Motion in a constant uniform electric field</h3>
+<h3 id="motion-in-a-constant-uniform-magnetic-field">21 Motion in a constant uniform magnetic field</h3>
+<h3 id="motion-of-a-charge-in-constant-uniform-electric-and-magnetic-fields">22 Motion of a charge in constant uniform electric and magnetic fields</h3>
+<h3 id="the-electromagnetic-field-tensor">23 The electromagnetic field tensor</h3>
+<h3 id="lorentz-transformation-of-the-field">24 Lorentz transformation of the field</h3>
+<h3 id="invariants-of-the-field">25 Invariants of the field</h3>
+<h2 id="chapter-4.-the-electromagnetic-field-equations">Chapter 4. The Electromagnetic Field Equations</h2>
+<h3 id="the-first-pair-of-maxwells-equations">26 The first pair of Maxwell’s equations</h3>
+<h3 id="the-action-function-of-the-electromagnetic-field">27 The action function of the electromagnetic field</h3>
+<h3 id="the-four-dimensional-current-vector">28 The four-dimensional current vector</h3>
+<h3 id="the-equation-of-continuity">29 The equation of continuity</h3>
+<h3 id="the-second-pair-of-maxwell-equations">30 The second pair of Maxwell equations</h3>
+<h3 id="energy-density-and-energy-flux">31 Energy density and energy flux</h3>
+<h3 id="the-energy-momentum-tensor">32 The energy-momentum tensor</h3>
+<h3 id="energy-momentum-tensor-of-the-electromagnetic-field">33 Energy-momentum tensor of the electromagnetic field</h3>
+<h3 id="the-virial-theorem">34 The virial theorem</h3>
+<h3 id="the-nergy-momentum-tensor-for-macroscopic-bodies">35 The nergy-momentum tensor for macroscopic bodies</h3>
+<h2 id="chapter-5.-constant-electromagnetic-fields">Chapter 5. Constant Electromagnetic Fields</h2>
+<h3 id="coulombs-law">36 Coulomb’s law</h3>
+<h3 id="electrostatic-energy-of-charges">37 Electrostatic energy of charges</h3>
+<h3 id="the-field-of-a-uniformly-moving-charge">38 The field of a uniformly moving charge</h3>
+<h3 id="motion-in-the-coulomb-field">39 Motion in the Coulomb field</h3>
+<h3 id="the-dipole-moment">40 The dipole moment</h3>
+<h3 id="multipole-moments">41 Multipole moments</h3>
+<h3 id="system-of-charges-in-an-external-field">42 System of charges in an external field</h3>
+<h3 id="constant-magnetic-field">43 Constant magnetic field</h3>
+<h3 id="magnetic-moments">44 Magnetic moments</h3>
+<h3 id="larmors-theorem">45 Larmor’s theorem</h3>
+<h2 id="chapter-6.-electromagnetic-waves">Chapter 6. Electromagnetic Waves</h2>
+<h3 id="the-wave-equation">46 The wave equation</h3>
+<h3 id="plane-waves">47 Plane waves</h3>
+<h3 id="monochromatic-plane-waves">48 Monochromatic plane waves</h3>
+<h3 id="spectral-resolution">49 Spectral resolution</h3>
+<h3 id="partially-polarized-light">50 Partially polarized light</h3>
+<h3 id="the-fourier-resolution-of-the-electrostatic-field">51 The Fourier resolution of the electrostatic field</h3>
+<h3 id="characteristic-vibrations-of-the-field">52 Characteristic vibrations of the field</h3>
+<h2 id="chapter-7.-the-propagation-of-light">Chapter 7. The Propagation of Light</h2>
+<h3 id="geometrical-optics">53 Geometrical optics</h3>
+<h3 id="intensity">54 Intensity</h3>
+<h3 id="the-angular-eikonal">55 The angular eikonal</h3>
+<h3 id="narrow-bundles-of-rays">56 Narrow bundles of rays</h3>
+<h3 id="image-formation-with-broad-bundles-of-rays">57 Image formation with broad bundles of rays</h3>
+<h3 id="the-limits-of-geometrical-optics">58 The limits of geometrical optics</h3>
+<h3 id="diffraction">59 Diffraction</h3>
+<h3 id="fresnel-diffraction">60 Fresnel diffraction</h3>
+<h3 id="fraunhofer-diffraction">61 Fraunhofer diffraction</h3>
+<h2 id="chapter-8.-the-field-of-moving-charges">Chapter 8. The Field of Moving Charges</h2>
+<h3 id="the-retarded-potentials">62 The retarded potentials</h3>
+<h3 id="the-lienard-wiechert-potentials">63 The Lienard-Wiechert potentials</h3>
+<h3 id="spectral-resolution-of-the-retarded-potentials">64 Spectral resolution of the retarded potentials</h3>
+<h3 id="the-lagrangian-to-terms-of-second-order">65 The Lagrangian to terms of second order</h3>
+<h2 id="chapter-9.-radiation-of-electromagnetic-waves">Chapter 9. Radiation of Electromagnetic Waves</h2>
+<h3 id="the-field-of-a-system-of-charges-at-large-distances">66 The field of a system of charges at large distances</h3>
+<h3 id="dipole-radiation">67 Dipole radiation</h3>
+<h3 id="dipole-radiation-during-collisions">68 Dipole radiation during collisions</h3>
+<h3 id="radiation-of-low-frequency-in-collisions">69 Radiation of low frequency in collisions</h3>
+<h3 id="radiation-in-the-case-of-coulomb-interaction">70 Radiation in the case of Coulomb interaction</h3>
+<h3 id="quadrupole-and-magnetic-dipole-radiation">71 Quadrupole and magnetic dipole radiation</h3>
+<h3 id="the-field-of-the-radiation-at-near-distances">72 The field of the radiation at near distances</h3>
+<h3 id="radiation-from-a-rapidly-moving-charge">73 Radiation from a rapidly moving charge</h3>
+<h3 id="synchrotron-radiation-magnetic-bremsstrahlung">74 Synchrotron radiation (magnetic bremsstrahlung)</h3>
+<h3 id="radiation-damping">75 Radiation damping</h3>
+<h3 id="radiation-damping-in-the-relativistic-case">76 Radiation damping in the relativistic case</h3>
+<h3 id="spectral-resolution-of-the-radiation-in-the-ultrarelativistic-case">77 Spectral resolution of the radiation in the ultrarelativistic case</h3>
+<h3 id="scattering-by-free-charges">78 Scattering by free charges</h3>
+<h3 id="scattering-of-low-frequency-waves">79 Scattering of low-frequency waves</h3>
+<h3 id="scattering-of-high-frequency-waves">80 Scattering of high-frequency waves</h3>
+<h2 id="chapter-10.-particle-in-a-gravitational-field">Chapter 10. Particle in a Gravitational Field</h2>
+<h3 id="gravitational-fields-in-nonrelativistic-mechanics">81 Gravitational fields in nonrelativistic mechanics</h3>
+<h3 id="the-gravitational-field-in-relativistic-mechanics">82 The gravitational field in relativistic mechanics</h3>
+<h3 id="curvilinear-coordinates">83 Curvilinear coordinates</h3>
+<h3 id="distances-and-time-intervals">84 Distances and time intervals</h3>
+<h3 id="covariant-differentiation">85 Covariant differentiation</h3>
+<h3 id="the-relation-of-the-christoffel-symbols-to-the-metric-tensor">86 The relation of the Christoffel symbols to the metric tensor</h3>
+<h3 id="motion-of-a-particle-in-a-gravitational-field">87 Motion of a particle in a gravitational field</h3>
+<h3 id="the-constant-gravitational-field">88 The constant gravitational field</h3>
+<h3 id="rotation">89 Rotation</h3>
+<h3 id="the-equations-of-electrodynamics-in-the-presence-of-a-gravitational-field">90 The equations of electrodynamics in the presence of a gravitational field</h3>
+<h2 id="chapter-11.-the-gravitational-field-equations">Chapter 11. The Gravitational Field Equations</h2>
+<h3 id="the-curvature-tensor">91 The curvature tensor</h3>
+<h3 id="properties-of-the-curvature-tensor">92 Properties of the curvature tensor</h3>
+<h3 id="the-action-function-for-the-gravitational-field">93 The action function for the gravitational field</h3>
+<h3 id="the-energy-momentum-tensor-1">94 The energy-momentum tensor</h3>
+<h3 id="the-gravitational-field-equations">95 The gravitational field equations</h3>
+<h3 id="newtons-law">96 Newton’s law</h3>
+<h3 id="the-centrally-symmetric-gravitational-field">97 The centrally symmetric gravitational field</h3>
+<h3 id="motion-in-a-centrally-symmetric-gravitational-field">98 Motion in a centrally symmetric gravitational field</h3>
+<h3 id="the-synchronous-reference-system">99 The synchronous reference system</h3>
+<h3 id="gravitational-collapse">100 Gravitational collapse</h3>
+<h3 id="the-energy-momentum-pseudotensor">101 The energy-momentum pseudotensor</h3>
+<h3 id="gravitational-waves">102 Gravitational waves</h3>
+<h3 id="exact-solutions-of-the-gravitational-field-equations-depending-on-one-variable">103 Exact solutions of the gravitational field equations depending on one variable</h3>
+<h3 id="gravitational-fields-at-large-distances-from-bodies">104 Gravitational fields at large distances from bodies</h3>
+<h3 id="radiation-of-gravitational-waves">105 Radiation of gravitational waves</h3>
+<h3 id="the-equations-of-motion-of-a-system-of-bodies-in-the-second-approximation">106 The equations of motion of a system of bodies in the second approximation</h3>
+<h2 id="chapter-12.-cosmological-problems">Chapter 12. Cosmological Problems</h2>
+<h3 id="isotropic-space">107 Isotropic space</h3>
+<h3 id="space-time-metric-in-the-closed-isotropic-model">108 Space-time metric in the closed isotropic model</h3>
+<h3 id="space-time-metric-for-the-open-isotropic-model">109 Space-time metric for the open isotropic model</h3>
+<h3 id="the-red-shift">110 The red shift</h3>
+<h3 id="gravitational-stability-of-an-isotropic-universe">111 Gravitational stability of an isotropic universe</h3>
+<h3 id="homogeneous-spaces">112 Homogeneous spaces</h3>
+<h3 id="oscillating-regime-of-approach-to-a-singular-point">113 Oscillating regime of approach to a singular point</h3>
+<h3 id="the-character-of-the-singularity-in-the-general-cosmological-solution-of-the-gravitational-equations--chapter-1.-the-principle-of-relativity">114 The character of the singularity in the general cosmological solution of the gravitational equations # Chapter 1. The Principle of Relativity</h3>
+<h3 id="velocity-of-propagation-of-interaction-1">1 Velocity of propagation of interaction</h3>
+<h3 id="intervals-1">2 Intervals</h3>
+<h3 id="proper-time-1">3 Proper time</h3>
+<h3 id="the-lorentz-transformation-1">4 The Lorentz transformation</h3>
+<h3 id="transformation-of-velocities-1">5 Transformation of velocities</h3>
+<h3 id="four-vectors-1">6 Four-vectors</h3>
+<h3 id="four-dimensional-velocity-1">7 Four-dimensional velocity</h3>
+<h2 id="chapter-2.-relativistic-mechanics-1">Chapter 2. Relativistic Mechanics</h2>
+<h3 id="the-principle-of-least-action-1">8 The principle of least action</h3>
+<h3 id="energy-and-momentum-1">9 Energy and momentum</h3>
+<h3 id="transformation-of-distribution-functions-1">10 Transformation of distribution functions</h3>
+<h3 id="decay-of-particles-1">11 Decay of particles</h3>
+<h3 id="invariant-cross-section-1">12 Invariant cross-section</h3>
+<h3 id="elastic-collisions-of-particles-1">13 Elastic collisions of particles</h3>
+<h3 id="angular-momentum-1">14 Angular momentum</h3>
+<h2 id="chapter-3.-charges-in-electromagnetic-fields-1">Chapter 3. Charges in Electromagnetic Fields</h2>
+<h3 id="elementary-particles-in-the-theory-of-relativity-1">15 Elementary particles in the theory of relativity</h3>
+<h3 id="four-potential-of-a-field-1">16 Four-potential of a field</h3>
+<h3 id="equations-of-motion-of-a-charge-in-a-field-1">17 Equations of motion of a charge in a field</h3>
+<h3 id="gauge-invariance-1">18 Gauge invariance</h3>
+<h3 id="constant-electromagnetic-field-1">19 Constant electromagnetic field</h3>
+<h3 id="motion-in-a-constant-uniform-electric-field-1">20 Motion in a constant uniform electric field</h3>
+<h3 id="motion-in-a-constant-uniform-magnetic-field-1">21 Motion in a constant uniform magnetic field</h3>
+<h3 id="motion-of-a-charge-in-constant-uniform-electric-and-magnetic-fields-1">22 Motion of a charge in constant uniform electric and magnetic fields</h3>
+<h3 id="the-electromagnetic-field-tensor-1">23 The electromagnetic field tensor</h3>
+<h3 id="lorentz-transformation-of-the-field-1">24 Lorentz transformation of the field</h3>
+<h3 id="invariants-of-the-field-1">25 Invariants of the field</h3>
+<h2 id="chapter-4.-the-electromagnetic-field-equations-1">Chapter 4. The Electromagnetic Field Equations</h2>
+<h3 id="the-first-pair-of-maxwells-equations-1">26 The first pair of Maxwell’s equations</h3>
+<h3 id="the-action-function-of-the-electromagnetic-field-1">27 The action function of the electromagnetic field</h3>
+<h3 id="the-four-dimensional-current-vector-1">28 The four-dimensional current vector</h3>
+<h3 id="the-equation-of-continuity-1">29 The equation of continuity</h3>
+<h3 id="the-second-pair-of-maxwell-equations-1">30 The second pair of Maxwell equations</h3>
+<h3 id="energy-density-and-energy-flux-1">31 Energy density and energy flux</h3>
+<h3 id="the-energy-momentum-tensor-2">32 The energy-momentum tensor</h3>
+<h3 id="energy-momentum-tensor-of-the-electromagnetic-field-1">33 Energy-momentum tensor of the electromagnetic field</h3>
+<h3 id="the-virial-theorem-1">34 The virial theorem</h3>
+<h3 id="the-nergy-momentum-tensor-for-macroscopic-bodies-1">35 The nergy-momentum tensor for macroscopic bodies</h3>
+<h2 id="chapter-5.-constant-electromagnetic-fields-1">Chapter 5. Constant Electromagnetic Fields</h2>
+<h3 id="coulombs-law-1">36 Coulomb’s law</h3>
+<h3 id="electrostatic-energy-of-charges-1">37 Electrostatic energy of charges</h3>
+<h3 id="the-field-of-a-uniformly-moving-charge-1">38 The field of a uniformly moving charge</h3>
+<h3 id="motion-in-the-coulomb-field-1">39 Motion in the Coulomb field</h3>
+<h3 id="the-dipole-moment-1">40 The dipole moment</h3>
+<h3 id="multipole-moments-1">41 Multipole moments</h3>
+<h3 id="system-of-charges-in-an-external-field-1">42 System of charges in an external field</h3>
+<h3 id="constant-magnetic-field-1">43 Constant magnetic field</h3>
+<h3 id="magnetic-moments-1">44 Magnetic moments</h3>
+<h3 id="larmors-theorem-1">45 Larmor’s theorem</h3>
+<h2 id="chapter-6.-electromagnetic-waves-1">Chapter 6. Electromagnetic Waves</h2>
+<h3 id="the-wave-equation-1">46 The wave equation</h3>
+<h3 id="plane-waves-1">47 Plane waves</h3>
+<h3 id="monochromatic-plane-waves-1">48 Monochromatic plane waves</h3>
+<h3 id="spectral-resolution-1">49 Spectral resolution</h3>
+<h3 id="partially-polarized-light-1">50 Partially polarized light</h3>
+<h3 id="the-fourier-resolution-of-the-electrostatic-field-1">51 The Fourier resolution of the electrostatic field</h3>
+<h3 id="characteristic-vibrations-of-the-field-1">52 Characteristic vibrations of the field</h3>
+<h2 id="chapter-7.-the-propagation-of-light-1">Chapter 7. The Propagation of Light</h2>
+<h3 id="geometrical-optics-1">53 Geometrical optics</h3>
+<h3 id="intensity-1">54 Intensity</h3>
+<h3 id="the-angular-eikonal-1">55 The angular eikonal</h3>
+<h3 id="narrow-bundles-of-rays-1">56 Narrow bundles of rays</h3>
+<h3 id="image-formation-with-broad-bundles-of-rays-1">57 Image formation with broad bundles of rays</h3>
+<h3 id="the-limits-of-geometrical-optics-1">58 The limits of geometrical optics</h3>
+<h3 id="diffraction-1">59 Diffraction</h3>
+<h3 id="fresnel-diffraction-1">60 Fresnel diffraction</h3>
+<h3 id="fraunhofer-diffraction-1">61 Fraunhofer diffraction</h3>
+<h2 id="chapter-8.-the-field-of-moving-charges-1">Chapter 8. The Field of Moving Charges</h2>
+<h3 id="the-retarded-potentials-1">62 The retarded potentials</h3>
+<h3 id="the-lienard-wiechert-potentials-1">63 The Lienard-Wiechert potentials</h3>
+<h3 id="spectral-resolution-of-the-retarded-potentials-1">64 Spectral resolution of the retarded potentials</h3>
+<h3 id="the-lagrangian-to-terms-of-second-order-1">65 The Lagrangian to terms of second order</h3>
+<h2 id="chapter-9.-radiation-of-electromagnetic-waves-1">Chapter 9. Radiation of Electromagnetic Waves</h2>
+<h3 id="the-field-of-a-system-of-charges-at-large-distances-1">66 The field of a system of charges at large distances</h3>
+<h3 id="dipole-radiation-1">67 Dipole radiation</h3>
+<h3 id="dipole-radiation-during-collisions-1">68 Dipole radiation during collisions</h3>
+<h3 id="radiation-of-low-frequency-in-collisions-1">69 Radiation of low frequency in collisions</h3>
+<h3 id="radiation-in-the-case-of-coulomb-interaction-1">70 Radiation in the case of Coulomb interaction</h3>
+<h3 id="quadrupole-and-magnetic-dipole-radiation-1">71 Quadrupole and magnetic dipole radiation</h3>
+<h3 id="the-field-of-the-radiation-at-near-distances-1">72 The field of the radiation at near distances</h3>
+<h3 id="radiation-from-a-rapidly-moving-charge-1">73 Radiation from a rapidly moving charge</h3>
+<h3 id="synchrotron-radiation-magnetic-bremsstrahlung-1">74 Synchrotron radiation (magnetic bremsstrahlung)</h3>
+<h3 id="radiation-damping-1">75 Radiation damping</h3>
+<h3 id="radiation-damping-in-the-relativistic-case-1">76 Radiation damping in the relativistic case</h3>
+<h3 id="spectral-resolution-of-the-radiation-in-the-ultrarelativistic-case-1">77 Spectral resolution of the radiation in the ultrarelativistic case</h3>
+<h3 id="scattering-by-free-charges-1">78 Scattering by free charges</h3>
+<h3 id="scattering-of-low-frequency-waves-1">79 Scattering of low-frequency waves</h3>
+<h3 id="scattering-of-high-frequency-waves-1">80 Scattering of high-frequency waves</h3>
+<h2 id="chapter-10.-particle-in-a-gravitational-field-1">Chapter 10. Particle in a Gravitational Field</h2>
+<h3 id="gravitational-fields-in-nonrelativistic-mechanics-1">81 Gravitational fields in nonrelativistic mechanics</h3>
+<h3 id="the-gravitational-field-in-relativistic-mechanics-1">82 The gravitational field in relativistic mechanics</h3>
+<h3 id="curvilinear-coordinates-1">83 Curvilinear coordinates</h3>
+<h3 id="distances-and-time-intervals-1">84 Distances and time intervals</h3>
+<h3 id="covariant-differentiation-1">85 Covariant differentiation</h3>
+<h3 id="the-relation-of-the-christoffel-symbols-to-the-metric-tensor-1">86 The relation of the Christoffel symbols to the metric tensor</h3>
+<h3 id="motion-of-a-particle-in-a-gravitational-field-1">87 Motion of a particle in a gravitational field</h3>
+<h3 id="the-constant-gravitational-field-1">88 The constant gravitational field</h3>
+<h3 id="rotation-1">89 Rotation</h3>
+<h3 id="the-equations-of-electrodynamics-in-the-presence-of-a-gravitational-field-1">90 The equations of electrodynamics in the presence of a gravitational field</h3>
+<h2 id="chapter-11.-the-gravitational-field-equations-1">Chapter 11. The Gravitational Field Equations</h2>
+<h3 id="the-curvature-tensor-1">91 The curvature tensor</h3>
+<h3 id="properties-of-the-curvature-tensor-1">92 Properties of the curvature tensor</h3>
+<h3 id="the-action-function-for-the-gravitational-field-1">93 The action function for the gravitational field</h3>
+<h3 id="the-energy-momentum-tensor-3">94 The energy-momentum tensor</h3>
+<h3 id="the-gravitational-field-equations-1">95 The gravitational field equations</h3>
+<h3 id="newtons-law-1">96 Newton’s law</h3>
+<h3 id="the-centrally-symmetric-gravitational-field-1">97 The centrally symmetric gravitational field</h3>
+<h3 id="motion-in-a-centrally-symmetric-gravitational-field-1">98 Motion in a centrally symmetric gravitational field</h3>
+<h3 id="the-synchronous-reference-system-1">99 The synchronous reference system</h3>
+<h3 id="gravitational-collapse-1">100 Gravitational collapse</h3>
+<h3 id="the-energy-momentum-pseudotensor-1">101 The energy-momentum pseudotensor</h3>
+<h3 id="gravitational-waves-1">102 Gravitational waves</h3>
+<h3 id="exact-solutions-of-the-gravitational-field-equations-depending-on-one-variable-1">103 Exact solutions of the gravitational field equations depending on one variable</h3>
+<h3 id="gravitational-fields-at-large-distances-from-bodies-1">104 Gravitational fields at large distances from bodies</h3>
+<h3 id="radiation-of-gravitational-waves-1">105 Radiation of gravitational waves</h3>
+<h3 id="the-equations-of-motion-of-a-system-of-bodies-in-the-second-approximation-1">106 The equations of motion of a system of bodies in the second approximation</h3>
+<h2 id="chapter-12.-cosmological-problems-1">Chapter 12. Cosmological Problems</h2>
+<h3 id="isotropic-space-1">107 Isotropic space</h3>
+<h3 id="space-time-metric-in-the-closed-isotropic-model-1">108 Space-time metric in the closed isotropic model</h3>
+<h3 id="space-time-metric-for-the-open-isotropic-model-1">109 Space-time metric for the open isotropic model</h3>
+<h3 id="the-red-shift-1">110 The red shift</h3>
+<h3 id="gravitational-stability-of-an-isotropic-universe-1">111 Gravitational stability of an isotropic universe</h3>
+<h3 id="homogeneous-spaces-1">112 Homogeneous spaces</h3>
+<h3 id="oscillating-regime-of-approach-to-a-singular-point-1">113 Oscillating regime of approach to a singular point</h3>
+<h3 id="the-character-of-the-singularity-in-the-general-cosmological-solution-of-the-gravitational-equations">114 The character of the singularity in the general cosmological solution of the gravitational equations</h3>
+<h2 id="chapter-1.-the-principle-of-relativity-1">Chapter 1. The Principle of Relativity</h2>
+<h3 id="velocity-of-propagation-of-interaction-2">1 Velocity of propagation of interaction</h3>
+<h3 id="intervals-2">2 Intervals</h3>
+<h3 id="proper-time-2">3 Proper time</h3>
+<h3 id="the-lorentz-transformation-2">4 The Lorentz transformation</h3>
+<h3 id="transformation-of-velocities-2">5 Transformation of velocities</h3>
+<h3 id="four-vectors-2">6 Four-vectors</h3>
+<h3 id="four-dimensional-velocity-2">7 Four-dimensional velocity</h3>
+<h2 id="chapter-2.-relativistic-mechanics-2">Chapter 2. Relativistic Mechanics</h2>
+<h3 id="the-principle-of-least-action-2">8 The principle of least action</h3>
+<h3 id="energy-and-momentum-2">9 Energy and momentum</h3>
+<h3 id="transformation-of-distribution-functions-2">10 Transformation of distribution functions</h3>
+<h3 id="decay-of-particles-2">11 Decay of particles</h3>
+<h3 id="invariant-cross-section-2">12 Invariant cross-section</h3>
+<h3 id="elastic-collisions-of-particles-2">13 Elastic collisions of particles</h3>
+<h3 id="angular-momentum-2">14 Angular momentum</h3>
+<h2 id="chapter-3.-charges-in-electromagnetic-fields-2">Chapter 3. Charges in Electromagnetic Fields</h2>
+<h3 id="elementary-particles-in-the-theory-of-relativity-2">15 Elementary particles in the theory of relativity</h3>
+<h3 id="four-potential-of-a-field-2">16 Four-potential of a field</h3>
+<h3 id="equations-of-motion-of-a-charge-in-a-field-2">17 Equations of motion of a charge in a field</h3>
+<h3 id="gauge-invariance-2">18 Gauge invariance</h3>
+<h3 id="constant-electromagnetic-field-2">19 Constant electromagnetic field</h3>
+<h3 id="motion-in-a-constant-uniform-electric-field-2">20 Motion in a constant uniform electric field</h3>
+<h3 id="motion-in-a-constant-uniform-magnetic-field-2">21 Motion in a constant uniform magnetic field</h3>
+<h3 id="motion-of-a-charge-in-constant-uniform-electric-and-magnetic-fields-2">22 Motion of a charge in constant uniform electric and magnetic fields</h3>
+<h3 id="the-electromagnetic-field-tensor-2">23 The electromagnetic field tensor</h3>
+<h3 id="lorentz-transformation-of-the-field-2">24 Lorentz transformation of the field</h3>
+<h3 id="invariants-of-the-field-2">25 Invariants of the field</h3>
+<h2 id="chapter-4.-the-electromagnetic-field-equations-2">Chapter 4. The Electromagnetic Field Equations</h2>
+<h3 id="the-first-pair-of-maxwells-equations-2">26 The first pair of Maxwell’s equations</h3>
+<h3 id="the-action-function-of-the-electromagnetic-field-2">27 The action function of the electromagnetic field</h3>
+<h3 id="the-four-dimensional-current-vector-2">28 The four-dimensional current vector</h3>
+<h3 id="the-equation-of-continuity-2">29 The equation of continuity</h3>
+<h3 id="the-second-pair-of-maxwell-equations-2">30 The second pair of Maxwell equations</h3>
+<h3 id="energy-density-and-energy-flux-2">31 Energy density and energy flux</h3>
+<h3 id="the-energy-momentum-tensor-4">32 The energy-momentum tensor</h3>
+<h3 id="energy-momentum-tensor-of-the-electromagnetic-field-2">33 Energy-momentum tensor of the electromagnetic field</h3>
+<h3 id="the-virial-theorem-2">34 The virial theorem</h3>
+<h3 id="the-nergy-momentum-tensor-for-macroscopic-bodies-2">35 The nergy-momentum tensor for macroscopic bodies</h3>
+<h2 id="chapter-5.-constant-electromagnetic-fields-2">Chapter 5. Constant Electromagnetic Fields</h2>
+<h3 id="coulombs-law-2">36 Coulomb’s law</h3>
+<h3 id="electrostatic-energy-of-charges-2">37 Electrostatic energy of charges</h3>
+<h3 id="the-field-of-a-uniformly-moving-charge-2">38 The field of a uniformly moving charge</h3>
+<h3 id="motion-in-the-coulomb-field-2">39 Motion in the Coulomb field</h3>
+<h3 id="the-dipole-moment-2">40 The dipole moment</h3>
+<h3 id="multipole-moments-2">41 Multipole moments</h3>
+<h3 id="system-of-charges-in-an-external-field-2">42 System of charges in an external field</h3>
+<h3 id="constant-magnetic-field-2">43 Constant magnetic field</h3>
+<h3 id="magnetic-moments-2">44 Magnetic moments</h3>
+<h3 id="larmors-theorem-2">45 Larmor’s theorem</h3>
+<h2 id="chapter-6.-electromagnetic-waves-2">Chapter 6. Electromagnetic Waves</h2>
+<h3 id="the-wave-equation-2">46 The wave equation</h3>
+<h3 id="plane-waves-2">47 Plane waves</h3>
+<h3 id="monochromatic-plane-waves-2">48 Monochromatic plane waves</h3>
+<h3 id="spectral-resolution-2">49 Spectral resolution</h3>
+<h3 id="partially-polarized-light-2">50 Partially polarized light</h3>
+<h3 id="the-fourier-resolution-of-the-electrostatic-field-2">51 The Fourier resolution of the electrostatic field</h3>
+<h3 id="characteristic-vibrations-of-the-field-2">52 Characteristic vibrations of the field</h3>
+<h2 id="chapter-7.-the-propagation-of-light-2">Chapter 7. The Propagation of Light</h2>
+<h3 id="geometrical-optics-2">53 Geometrical optics</h3>
+<h3 id="intensity-2">54 Intensity</h3>
+<h3 id="the-angular-eikonal-2">55 The angular eikonal</h3>
+<h3 id="narrow-bundles-of-rays-2">56 Narrow bundles of rays</h3>
+<h3 id="image-formation-with-broad-bundles-of-rays-2">57 Image formation with broad bundles of rays</h3>
+<h3 id="the-limits-of-geometrical-optics-2">58 The limits of geometrical optics</h3>
+<h3 id="diffraction-2">59 Diffraction</h3>
+<h3 id="fresnel-diffraction-2">60 Fresnel diffraction</h3>
+<h3 id="fraunhofer-diffraction-2">61 Fraunhofer diffraction</h3>
+<h2 id="chapter-8.-the-field-of-moving-charges-2">Chapter 8. The Field of Moving Charges</h2>
+<h3 id="the-retarded-potentials-2">62 The retarded potentials</h3>
+<h3 id="the-lienard-wiechert-potentials-2">63 The Lienard-Wiechert potentials</h3>
+<h3 id="spectral-resolution-of-the-retarded-potentials-2">64 Spectral resolution of the retarded potentials</h3>
+<h3 id="the-lagrangian-to-terms-of-second-order-2">65 The Lagrangian to terms of second order</h3>
+<h2 id="chapter-9.-radiation-of-electromagnetic-waves-2">Chapter 9. Radiation of Electromagnetic Waves</h2>
+<h3 id="the-field-of-a-system-of-charges-at-large-distances-2">66 The field of a system of charges at large distances</h3>
+<h3 id="dipole-radiation-2">67 Dipole radiation</h3>
+<h3 id="dipole-radiation-during-collisions-2">68 Dipole radiation during collisions</h3>
+<h3 id="radiation-of-low-frequency-in-collisions-2">69 Radiation of low frequency in collisions</h3>
+<h3 id="radiation-in-the-case-of-coulomb-interaction-2">70 Radiation in the case of Coulomb interaction</h3>
+<h3 id="quadrupole-and-magnetic-dipole-radiation-2">71 Quadrupole and magnetic dipole radiation</h3>
+<h3 id="the-field-of-the-radiation-at-near-distances-2">72 The field of the radiation at near distances</h3>
+<h3 id="radiation-from-a-rapidly-moving-charge-2">73 Radiation from a rapidly moving charge</h3>
+<h3 id="synchrotron-radiation-magnetic-bremsstrahlung-2">74 Synchrotron radiation (magnetic bremsstrahlung)</h3>
+<h3 id="radiation-damping-2">75 Radiation damping</h3>
+<h3 id="radiation-damping-in-the-relativistic-case-2">76 Radiation damping in the relativistic case</h3>
+<h3 id="spectral-resolution-of-the-radiation-in-the-ultrarelativistic-case-2">77 Spectral resolution of the radiation in the ultrarelativistic case</h3>
+<h3 id="scattering-by-free-charges-2">78 Scattering by free charges</h3>
+<h3 id="scattering-of-low-frequency-waves-2">79 Scattering of low-frequency waves</h3>
+<h3 id="scattering-of-high-frequency-waves-2">80 Scattering of high-frequency waves</h3>
+<h2 id="chapter-10.-particle-in-a-gravitational-field-2">Chapter 10. Particle in a Gravitational Field</h2>
+<h3 id="gravitational-fields-in-nonrelativistic-mechanics-2">81 Gravitational fields in nonrelativistic mechanics</h3>
+<h3 id="the-gravitational-field-in-relativistic-mechanics-2">82 The gravitational field in relativistic mechanics</h3>
+<h3 id="curvilinear-coordinates-2">83 Curvilinear coordinates</h3>
+<h3 id="distances-and-time-intervals-2">84 Distances and time intervals</h3>
+<h3 id="covariant-differentiation-2">85 Covariant differentiation</h3>
+<h3 id="the-relation-of-the-christoffel-symbols-to-the-metric-tensor-2">86 The relation of the Christoffel symbols to the metric tensor</h3>
+<h3 id="motion-of-a-particle-in-a-gravitational-field-2">87 Motion of a particle in a gravitational field</h3>
+<h3 id="the-constant-gravitational-field-2">88 The constant gravitational field</h3>
+<h3 id="rotation-2">89 Rotation</h3>
+<h3 id="the-equations-of-electrodynamics-in-the-presence-of-a-gravitational-field-2">90 The equations of electrodynamics in the presence of a gravitational field</h3>
+<h2 id="chapter-11.-the-gravitational-field-equations-2">Chapter 11. The Gravitational Field Equations</h2>
+<h3 id="the-curvature-tensor-2">91 The curvature tensor</h3>
+<h3 id="properties-of-the-curvature-tensor-2">92 Properties of the curvature tensor</h3>
+<h3 id="the-action-function-for-the-gravitational-field-2">93 The action function for the gravitational field</h3>
+<h3 id="the-energy-momentum-tensor-5">94 The energy-momentum tensor</h3>
+<h3 id="the-gravitational-field-equations-2">95 The gravitational field equations</h3>
+<h3 id="newtons-law-2">96 Newton’s law</h3>
+<h3 id="the-centrally-symmetric-gravitational-field-2">97 The centrally symmetric gravitational field</h3>
+<h3 id="motion-in-a-centrally-symmetric-gravitational-field-2">98 Motion in a centrally symmetric gravitational field</h3>
+<h3 id="the-synchronous-reference-system-2">99 The synchronous reference system</h3>
+<h3 id="gravitational-collapse-2">100 Gravitational collapse</h3>
+<h3 id="the-energy-momentum-pseudotensor-2">101 The energy-momentum pseudotensor</h3>
+<h3 id="gravitational-waves-2">102 Gravitational waves</h3>
+<h3 id="exact-solutions-of-the-gravitational-field-equations-depending-on-one-variable-2">103 Exact solutions of the gravitational field equations depending on one variable</h3>
+<h3 id="gravitational-fields-at-large-distances-from-bodies-2">104 Gravitational fields at large distances from bodies</h3>
+<h3 id="radiation-of-gravitational-waves-2">105 Radiation of gravitational waves</h3>
+<h3 id="the-equations-of-motion-of-a-system-of-bodies-in-the-second-approximation-2">106 The equations of motion of a system of bodies in the second approximation</h3>
+<h2 id="chapter-12.-cosmological-problems-2">Chapter 12. Cosmological Problems</h2>
+<h3 id="isotropic-space-2">107 Isotropic space</h3>
+<h3 id="space-time-metric-in-the-closed-isotropic-model-2">108 Space-time metric in the closed isotropic model</h3>
+<h3 id="space-time-metric-for-the-open-isotropic-model-2">109 Space-time metric for the open isotropic model</h3>
+<h3 id="the-red-shift-2">110 The red shift</h3>
+<h3 id="gravitational-stability-of-an-isotropic-universe-2">111 Gravitational stability of an isotropic universe</h3>
+<h3 id="homogeneous-spaces-2">112 Homogeneous spaces</h3>
+<h3 id="oscillating-regime-of-approach-to-a-singular-point-2">113 Oscillating regime of approach to a singular point</h3>
+<h3 id="the-character-of-the-singularity-in-the-general-cosmological-solution-of-the-gravitational-equations-1">114 The character of the singularity in the general cosmological solution of the gravitational equations</h3>
+
+    </div>
+  </div>
+</body>
+
+</html>

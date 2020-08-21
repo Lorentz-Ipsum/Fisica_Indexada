@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomica Apuntes T1</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#dia-1">Dia 1</a></li>
+<li><a href="#dia-2">Dia 2</a>
+<ul>
+<li>
+<ul>
+<li><a href="#efectos-de-masa">Efectos de Masa</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section">11</a></li>
+<li><a href="#introduccion-a-los-atomos-polielectronicos">1 Introduccion a los atomos polielectronicos</a>
+<ul>
+<li><a href="#atomos-polielectronicos">ATOMOS POLIELECTRONICOS</a></li>
+<li><a href="#aproximación-básica-campo-central.">AProximación básica: Campo central.</a></li>
+<li><a href="#solución-h_c--sigma-h_i">Solución Hc=ΣHiH_c = \Sigma H_iHc​=ΣHi​</a></li>
+<li><a href="#aproximación-de-campo-central-i">Aproximación de campo central I</a>
+<ul>
+<li><a href="#cuestiones-básicas">Cuestiones básicas</a>
+<ul>
+<li><a href="#soluciones-al-problema-de-un-electron">Soluciones al problema de un electron</a></li>
+</ul>
+</li>
+<li><a href="#resultados">Resultados:</a>
+<ul>
+<li><a href="#efecto-de-algunas-correciones-relativistas-y-nucleares">Efecto de algunas correciones (relativistas y nucleares</a></li>
+<li><a href="#ejemplos-en-que-basta-esta-aproximacion">Ejemplos en que “basta” esta aproximacion</a></li>
+<li><a href="#funciones-de-onda-en-esta-aproximación-determinantes-de-slater">Funciones de onda en esta aproximación (Determinantes de SLater)</a></li>
+<li><a href="#determinación-de-los-potenciales-vr">Determinación de los potenciales V®</a></li>
+</ul>
+</li>
+<li><a href="#solucion-al-problema-de-campo-central">Solucion al problema de campo central</a>
+<ul>
+<li><a href="#buscamos-soluciones-que-separen-en-parte-radial-y-orbital">Buscamos soluciones que separen en parte radial y orbital</a></li>
+<li><a href="#schrödinger-en-una-dimension">Schrödinger en una dimension</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-1">12</a></li>
+<li><a href="#section-2">13</a>
+<ul>
+<li><a href="#resultados-1">Resultados:</a>
+<ul>
+<li><a href="#funciones-de-onda-etiquetadas-32-índices-numeros-cuánticos">Funciones de onda etiquetadas 3+2 “índices” (numeros cuánticos)</a></li>
+<li><a href="#energía-sólo-dependiente-de-dos-números-cuçanticos">Energía sólo dependiente de dos números cuçanticos</a>
+<ul>
+<li><a href="#degeneración-en-los-otros">Degeneración en los otros</a></li>
+<li><a href="#definido-por-el-número-de-ceros-de-pr">Definido por el número de ceros de P®</a></li>
+<li><a href="#el-origen-de-la-degeneraciçon-en-m_p-es-la-simetría-esférica-y-desaparece-bajo-campos-externos-zeeman-cristales">El origen de la degeneraciçon en M_p es la simetría esférica y desaparece bajo campos externos (zeeman, cristales)</a></li>
+</ul>
+</li>
+<li><a href="#caso-particular-hidrogenoide">Caso particular: Hidrogenoide</a>
+<ul>
+<li><a href="#p_nl">P_{nl}</a></li>
+<li><a href="#e_nl">E_{nl}</a></li>
+<li><a href="#degeneración-accidental">Degeneración “accidental”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#efectos-de-masa-1">Efectos de masa</a>
+<ul>
+<li><a href="#isotopico-de-masa">Isotopico de masa</a>
+<ul>
+<li><a href="#trabajando-en-c.m.">Trabajando en C.M.</a></li>
+</ul>
+</li>
+<li><a href="#atomo-muónico">Atomo muónico</a></li>
+<li><a href="#positronio">Positronio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-3">14</a>
+<ul>
+<li><a href="#armónicos-esféricos">=Armónicos esféricos=</a></li>
+</ul>
+</li>
+<li><a href="#section-4">15</a>
+<ul>
+<li><a href="#aproximación-de-campo-central-ii">Aproximación de campo central II</a>
+<ul>
+<li><a href="#aspecto-típico-de-los-niveles-de-energía">Aspecto típico de los niveles de energía</a>
+<ul>
+<li><a href="#fórmula-de-rydberg">Fórmula de Rydberg</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#introducción-spin">Introducción Spin</a>
+<ul>
+<li><a href="#función-de-ondas-de-spin">Función de ondas de Spin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-5">16</a>
+<ul>
+<li><a href="#distribución-de-probabilidad-electrónica">Distribución de probabilidad electrónica</a>
+<ul>
+<li><a href="#segun-phi">Segun Phi</a></li>
+<li><a href="#segun-r">Segun r</a></li>
+<li><a href="#segun-theta">segun theta</a></li>
+</ul>
+</li>
+<li><a href="#propiedades-comunes-a-todo-momento-angular">Propiedades comunes a todo momento angular</a>
+<ul>
+<li><a href="#definición">Definición</a></li>
+<li><a href="#autovectores">Autovectores</a></li>
+<li><a href="#operadores">Operadores</a></li>
+<li><a href="#representacion-matricial">Representacion matricial</a></li>
+<li><a href="#conmutación">Conmutación</a>
+<ul>
+<li><a href="#combinación">Combinación</a></li>
+<li><a href="#numeros-cuanticos">Numeros cuanticos</a></li>
+<li><a href="#coeficientes-cambio-de-base">Coeficientes cambio de base</a></li>
+<li><a href="#combinaciones-lineales">Combinaciones lineales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-6">17</a>
+<ul>
+<li><a href="#efectos-relativistas-ecuación-de-dirac">Efectos Relativistas (Ecuación de Dirac)</a>
+<ul>
+<li><a href="#correcciones-relativistas-al-campo-central">Correcciones Relativistas al campo central</a>
+<ul>
+<li><a href="#solución-de-la-ecuación-de-dirac">Solución de la ecuación de Dirac</a></li>
+<li><a href="#energía-de-un-dipolo-en-un-campo-magnético">Energía de un dipolo en un campo magnético</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-7">18</a>
+<ul>
+<li><a href="#resumen-de-teoría-de-perturbaciones">Resumen de teoría de perturbaciones</a>
+<ul>
+<li><a href="#caso-no-degenerado">Caso no degenerado</a></li>
+<li><a href="#caso-degenerado">Caso degenerado</a>
+<ul>
+<li><a href="#conclusión">Conclusión</a></li>
+<li><a href="#atajo">Atajo!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#efectos-relativistas-en-h-estructura-fina">Efectos relativistas en H (Estructura Fina)</a>
+<ul>
+<li><a href="#h_0">H_0</a></li>
+<li><a href="#h_m-y-h_d">H_m y H_D</a></li>
+<li><a href="#h_so">H_{SO}</a></li>
+<li><a href="#juntando-todo">Juntando todo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-8">19</a>
+<ul>
+<li><a href="#espectro-del-h">Espectro del H</a>
+<ul>
+<li><a href="#estructura-fina">Estructura fina</a></li>
+<li><a href="#reglas-de-selección-dipolares-eléctricas-ei">Reglas de selección dipolares eléctricas (EI)</a></li>
+</ul>
+</li>
+<li><a href="#acoplamiento-ls-para-un-solo-electrón">Acoplamiento LS para un solo electrón</a>
+<ul>
+<li><a href="#ejemplo-obtener-explícitamente-los-casos-de-l1">Ejemplo: Obtener explícitamente los casos de l=1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="dia-1">Dia 1</h1>
+<p><span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>=</mo><mi>σ</mi><mo>(</mo><mfrac><mi>p</mi><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mo>−</mo><mfrac><mrow><mn>2</mn><msup><mi>e</mi><mn>2</mn></msup></mrow><msub><mi>r</mi><mi>i</mi></msub></mfrac><mo>)</mo><mo>+</mo><mi>σ</mi><mfrac><msup><mi>e</mi><mn>2</mn></msup><msub><mi>r</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mfrac><mo>+</mo><mo>(</mo><mi>F</mi><mi>I</mi><mi>N</mi><mi>A</mi><mi mathvariant="normal">/</mi><mi>H</mi><mi>I</mi><mi>P</mi><mi>E</mi><mi>R</mi><mi>F</mi><mi>I</mi><mi>N</mi><mi>A</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">
+H = \sigma (\frac{p}{2m}-\frac{2e^2}{r_i})+\sigma\frac{e^2}{r_{ij}} + (FINA/HIPERFINA)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1.79356em; vertical-align: -0.686em;"></span><span class="mord mathit" style="margin-right: 0.03588em;">σ</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.10756em;"><span class="" style="top: -2.314em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathit">m</span></span></span><span class="" style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span class="" style="top: -3.677em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord mathit">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.686em;"><span class=""></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 2.32711em; vertical-align: -0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.49111em;"><span class="" style="top: -2.314em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord"><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: -0.02778em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span><span class="" style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span class="" style="top: -3.677em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord">2</span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.836em;"><span class=""></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 2.46322em; vertical-align: -0.972108em;"></span><span class="mord mathit" style="margin-right: 0.03588em;">σ</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.49111em;"><span class="" style="top: -2.314em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord"><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: -0.02778em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight" style="margin-right: 0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.286108em;"><span class=""></span></span></span></span></span></span></span></span><span class="" style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span class="" style="top: -3.677em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.972108em;"><span class=""></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.13889em;">F</span><span class="mord mathit" style="margin-right: 0.07847em;">I</span><span class="mord mathit" style="margin-right: 0.10903em;">N</span><span class="mord mathit">A</span><span class="mord">/</span><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="mord mathit" style="margin-right: 0.07847em;">I</span><span class="mord mathit" style="margin-right: 0.13889em;">P</span><span class="mord mathit" style="margin-right: 0.05764em;">E</span><span class="mord mathit" style="margin-right: 0.00773em;">R</span><span class="mord mathit" style="margin-right: 0.13889em;">F</span><span class="mord mathit" style="margin-right: 0.07847em;">I</span><span class="mord mathit" style="margin-right: 0.10903em;">N</span><span class="mord mathit">A</span><span class="mclose">)</span></span></span></span></span></span></p>
+<ul>
+<li>Con unidades <strong>CGS</strong> el <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">1/4\pi\epsilon_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">1</span><span class="mord">/</span><span class="mord">4</span><span class="mord mathit" style="margin-right: 0.03588em;">π</span><span class="mord"><span class="mord mathit">ϵ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> desaparece</li>
+<li>C.L. de soluciones de H_c también será solucion del sistema.</li>
+<li>Armónicos esféricos</li>
+</ul>
+<h1 id="dia-2">Dia 2</h1>
+<pre><code>Notas generales.....
+</code></pre>
+<blockquote>
+<p>Mirar CGS y unidades Planck (y Rydberg)</p>
+</blockquote>
+<ul>
+<li>a_0 Radio de Bohr = 1 Unidad propia(mas comun) de longitud</li>
+<li>nm 10^-9 = 10 A</li>
+<li>Energía de Hartee/ Rydberg =13,6</li>
+<li>1 hartree = 2Ry Aunque normalmente Ry tiene unidades de longitud</li>
+<li>t= \hbar / E_h</li>
+<li>E_h = energía de Hartree</li>
+<li>Unidades Rydberg:
+<ul>
+<li>\hbar = 4\pi\epsilon_0 = e^2/2 = 2m = 1</li>
+<li>Unidad de energía -&gt; Rydberg</li>
+</ul>
+</li>
+<li>Schrödinger en 1 dimensión
+<ul>
+<li>Comportamiento asintótico</li>
+<li>2E y 2Z/r tienden a cero cuando r tiende a cero
+<ul>
+<li>Probabilidad no nula de que el e esté en el origen</li>
+</ul>
+</li>
+<li>r a infinito</li>
+<li>Decae si E-</li>
+<li>Estado ligado si E+</li>
+</ul>
+</li>
+<li>Pongamos que buscamos una determinada funcion para P® “que se comporte adecuadamente”: iteramos en la ecuación diferencial.</li>
+<li>E(ev) = 1240/\lambda(nm)</li>
+<li><strong>Gráfica de fdo en la energía</strong>
+<ul>
+<li>Representa numero de modos de una fdo</li>
+</ul>
+</li>
+<li>Degeneración accidental:
+<ul>
+<li>Para un n dado hay que sumar para todos los valores posibles de l</li>
+<li><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi mathvariant="normal">Σ</mi><mn>0</mn><mrow><mi>n</mi><mo>−</mo><mi>l</mi></mrow></msubsup><mo>(</mo><mn>2</mn><mi>l</mi><mo>+</mo><mn>1</mn><mo>)</mo><mo>=</mo><msup><mi>n</mi><mn>2</mn></msup><mo separator="true">,</mo><msubsup><mi mathvariant="normal">Σ</mi><mn>0</mn><mi>n</mi></msubsup><mo>=</mo><mi>n</mi><mo>(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>)</mo><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\Sigma^{n-l}_{0} (2l+1) = n^2, \Sigma^n_0 = n(n+1)/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.15555em; vertical-align: -0.266308em;"></span><span class="mord"><span class="mord">Σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.889239em;"><span class="" style="top: -2.43369em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span><span class="" style="top: -3.10313em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">−</span><span class="mord mathit mtight" style="margin-right: 0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.266308em;"><span class=""></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">2</span><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1.06222em; vertical-align: -0.248108em;"></span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord">Σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.664392em;"><span class="" style="top: -2.45189em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.248108em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathit">n</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord">/</span><span class="mord">2</span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h3 id="efectos-de-masa">Efectos de Masa</h3>
+<ul>
+<li>M reducida</li>
+</ul>
+<blockquote>
+<p>Hacer calculotes de corrección a_0 ¿Cómo se mide la correción?<br>
+Atomo muónico/ rayos cósmicos… El muón sustituye a un e…<br>
+Se pega a una distancia 200 mas pequeña a la del electrón<br>
+Si el atomo es pesado el muón estaría dentro del núcleo.</p>
+</blockquote>
+<ul>
+<li>V\approx Z_{ef}/r … \sigma_{nl} es la constante de apantallamiento. Depende del orbital.
+<ul>
+<li>Es debido a los electrones que ya están ligados al núcleo.</li>
+<li>Depende mayormente de n</li>
+<li>Coincide aproximadamente con el número de electrones que hay en las capas por debajo.</li>
+</ul>
+</li>
+<li>V_l ® correción al eorbial porque el electrón no penetra en el nucleo.
+<ul>
+<li>n-\delta_l correción efectiva. Más grande para primeros orbitales.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Fórmula de Rydberg. El resultado se obtiene con <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>(</mo><mi>r</mi><mo>)</mo><mo>=</mo><mo>−</mo><mi>Z</mi><mi mathvariant="normal">/</mi><mi>r</mi><mo>−</mo><mi>c</mi><mo>(</mo><mi>l</mi><mo>)</mo><mi mathvariant="normal">/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">V(r) = -Z/r -c(l)/r^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathit" style="margin-right: 0.22222em;">V</span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">−</span><span class="mord mathit" style="margin-right: 0.07153em;">Z</span><span class="mord">/</span><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathit">c</span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="mclose">)</span><span class="mord">/</span><span class="mord"><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
+</blockquote>
+<h1 id="section">11</h1>
+<h1 id="introduccion-a-los-atomos-polielectronicos">1 Introduccion a los atomos polielectronicos</h1>
+<h2 id="atomos-polielectronicos">ATOMOS POLIELECTRONICOS</h2>
+<p>[N =n de e, Z = n atomico, m = masa e]<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex"> H = </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span></span></span></span></span></span></p>
+<ul>
+<li>AProximación básica: Campo central.
+<ul>
+<li>Cada electrón ve un potencial promedio debido al resto de eletrones y al nucleo<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex"> H= </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>Solución $H_c = $<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mi>i</mi></msub><mo>=</mo></mrow><annotation encoding="application/x-tex"> H_i =
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span></span></span></span></span></span><br>
+Resuelto cada <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mi>i</mi></msub><msub><mi>ϕ</mi><mi>i</mi></msub><mo>=</mo><msub><mi>E</mi><mi>i</mi></msub><msub><mi>ϕ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">H_i\phi_i = E_i\phi_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mord"><span class="mord mathit">ϕ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: -0.05764em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mord"><span class="mord mathit">ϕ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> una solucion al <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mi>c</mi></msub><mi>ϕ</mi><mo>=</mo><mi>E</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">H_c\phi = E\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.151392em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mord mathit">ϕ</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord mathit" style="margin-right: 0.05764em;">E</span><span class="mord mathit">ϕ</span></span></span></span></span>  es:<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϕ</mi><mo>(</mo><msub><mi>r</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex"> \phi(r_1
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathit">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: -0.02778em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span></span></li>
+<li>O cualquier permitacion de las <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">r_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.58056em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: -0.02778em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span>, y por linealidad, cualquier C.l. de ellas</li>
+</ul>
+<h2 id="aproximación-básica-campo-central.">AProximación básica: Campo central.</h2>
+<h2 id="solución-h_c--sigma-h_i">Solución <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mi>c</mi></msub><mo>=</mo><mi mathvariant="normal">Σ</mi><msub><mi>H</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">H_c = \Sigma H_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.151392em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord">Σ</span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span></h2>
+<h2 id="aproximación-de-campo-central-i">Aproximación de campo central I</h2>
+<h3 id="cuestiones-básicas">Cuestiones básicas</h3>
+<ul>
+<li>Soluciones al problema de un electron</li>
+<li>Efecto de añgunas correciones(relativistas y nucleares</li>
+<li>Ejemplos en que “basta” esta aproximacion</li>
+<li>Funciones de onda en esta aproximación (Determinantes de SLater)</li>
+<li>Determinación de los potenciales V®</li>
+</ul>
+<h4 id="soluciones-al-problema-de-un-electron">Soluciones al problema de un electron</h4>
+<p>En mecánica clásica se trata separando <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathit" style="margin-right: 0.13889em;">P</span></span></span></span></span>.<br>
+Aqui tambien pero son operadores.<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="mord mathit">p</span></span></span></span></span></span><br>
+Esfericas</p>
+<p>Buscamos soluciones que separen en parte radial y orbital</p>
+<p>Desarrollando y multiplicando por <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mi>m</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">2mr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">2</span><span class="mord mathit">m</span><span class="mord mathit" style="margin-right: 0.02778em;">r</span></span></span></span></span></p>
+<p>Problema <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>L</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">L^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.814108em; vertical-align: 0em;"></span><span class="mord"><span class="mord mathit">L</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> bien conocido por los matemáticos.<br>
+Solución:<br>
+<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Y</mi><mrow><mi>m</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">Y_{ml}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.336108em;"><span class="" style="top: -2.55em; margin-left: -0.22222em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">m</span><span class="mord mathit mtight" style="margin-right: 0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> amilia de funciones ortonormales tabuladas.</p>
+<p>Con esto uestro problema se reduce a<br>
+<span class="katex--display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mo>(</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex"> R(r)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathit" style="margin-right: 0.00773em;">R</span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="mclose">)</span></span></span></span></span></span><br>
+mejora su aspecto con un cambio <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mo>(</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">R(r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathit" style="margin-right: 0.00773em;">R</span><span class="mopen">(</span><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="mclose">)</span></span></span></span></span></p>
+<p>Schrödinger en una dimension</p>
+<p>Simplificamos convenientemente:<br>
+a) Estilo matemático<br>
+b) Estilo físico: Cambio de unicades</p>
+<ul>
+<li>Comportamiento asintótico</li>
+</ul>
+<p>Soluciones para cualquier E.<br>
+Si E&lt;0 sólo algunos valores discretos permitidos</p>
+<h3 id="resultados">Resultados:</h3>
+<ul>
+<li>Funciones de onda etiquetadas 3+2 “índices” (numeros cuánticos)</li>
+<li>Energía sólo dependiente de dos números cuçanticos
+<ul>
+<li>Degeneración en los otros</li>
+<li>Definido por el número de ceros de P®</li>
+<li>El origen de la degeneraciçon en M_p es la simetría esférica y desaparece bajo campos externos (zeeman, cristales)</li>
+</ul>
+</li>
+<li>Caso particular: Hidrogenoide
+<ul>
+<li>P_{nl}</li>
+<li>E_{nl}</li>
+<li>Degeneración “accidental”</li>
+</ul>
+</li>
+</ul>
+<h4 id="efecto-de-algunas-correciones-relativistas-y-nucleares">Efecto de algunas correciones (relativistas y nucleares</h4>
+<h4 id="ejemplos-en-que-basta-esta-aproximacion">Ejemplos en que “basta” esta aproximacion</h4>
+<h4 id="funciones-de-onda-en-esta-aproximación-determinantes-de-slater">Funciones de onda en esta aproximación (Determinantes de SLater)</h4>
+<h4 id="determinación-de-los-potenciales-vr">Determinación de los potenciales V®</h4>
+<h3 id="solucion-al-problema-de-campo-central">Solucion al problema de campo central</h3>
+<h4 id="buscamos-soluciones-que-separen-en-parte-radial-y-orbital">Buscamos soluciones que separen en parte radial y orbital</h4>
+<h4 id="schrödinger-en-una-dimension">Schrödinger en una dimension</h4>
+<h1 id="section-1">12</h1>
+<h1 id="section-2">13</h1>
+<h2 id="resultados-1">Resultados:</h2>
+<h3 id="funciones-de-onda-etiquetadas-32-índices-numeros-cuánticos">Funciones de onda etiquetadas 3+2 “índices” (numeros cuánticos)</h3>
+<h3 id="energía-sólo-dependiente-de-dos-números-cuçanticos">Energía sólo dependiente de dos números cuçanticos</h3>
+<h4 id="degeneración-en-los-otros">Degeneración en los otros</h4>
+<h4 id="definido-por-el-número-de-ceros-de-pr">Definido por el número de ceros de P®</h4>
+<h4 id="el-origen-de-la-degeneraciçon-en-m_p-es-la-simetría-esférica-y-desaparece-bajo-campos-externos-zeeman-cristales">El origen de la degeneraciçon en M_p es la simetría esférica y desaparece bajo campos externos (zeeman, cristales)</h4>
+<h3 id="caso-particular-hidrogenoide">Caso particular: Hidrogenoide</h3>
+<h4 id="p_nl">P_{nl}</h4>
+<h4 id="e_nl">E_{nl}</h4>
+<h4 id="degeneración-accidental">Degeneración “accidental”</h4>
+<h2 id="efectos-de-masa-1">Efectos de masa</h2>
+<h3 id="isotopico-de-masa">Isotopico de masa</h3>
+<h4 id="trabajando-en-c.m.">Trabajando en C.M.</h4>
+<h3 id="atomo-muónico">Atomo muónico</h3>
+<h3 id="positronio">Positronio</h3>
+<h1 id="section-3">14</h1>
+<h2 id="armónicos-esféricos">=Armónicos esféricos=</h2>
+<h1 id="section-4">15</h1>
+<h2 id="aproximación-de-campo-central-ii">Aproximación de campo central II</h2>
+<h3 id="aspecto-típico-de-los-niveles-de-energía">Aspecto típico de los niveles de energía</h3>
+<h4 id="fórmula-de-rydberg">Fórmula de Rydberg</h4>
+<h2 id="introducción-spin">Introducción Spin</h2>
+<h3 id="función-de-ondas-de-spin">Función de ondas de Spin</h3>
+<h1 id="section-5">16</h1>
+<h2 id="distribución-de-probabilidad-electrónica">Distribución de probabilidad electrónica</h2>
+<h3 id="segun-phi">Segun Phi</h3>
+<h3 id="segun-r">Segun r</h3>
+<h3 id="segun-theta">segun theta</h3>
+<h2 id="propiedades-comunes-a-todo-momento-angular">Propiedades comunes a todo momento angular</h2>
+<h3 id="definición">Definición</h3>
+<h3 id="autovectores">Autovectores</h3>
+<h3 id="operadores">Operadores</h3>
+<h3 id="representacion-matricial">Representacion matricial</h3>
+<h3 id="conmutación">Conmutación</h3>
+<h4 id="combinación">Combinación</h4>
+<h4 id="numeros-cuanticos">Numeros cuanticos</h4>
+<h4 id="coeficientes-cambio-de-base">Coeficientes cambio de base</h4>
+<h5 id="propiedades-de-simetria">Propiedades de simetria</h5>
+<h4 id="combinaciones-lineales">Combinaciones lineales</h4>
+<h1 id="section-6">17</h1>
+<h2 id="efectos-relativistas-ecuación-de-dirac">Efectos Relativistas (Ecuación de Dirac)</h2>
+<h3 id="correcciones-relativistas-al-campo-central">Correcciones Relativistas al campo central</h3>
+<h4 id="solución-de-la-ecuación-de-dirac">Solución de la ecuación de Dirac</h4>
+<h4 id="energía-de-un-dipolo-en-un-campo-magnético">Energía de un dipolo en un campo magnético</h4>
+<h1 id="section-7">18</h1>
+<h2 id="resumen-de-teoría-de-perturbaciones">Resumen de teoría de perturbaciones</h2>
+<h3 id="caso-no-degenerado">Caso no degenerado</h3>
+<h3 id="caso-degenerado">Caso degenerado</h3>
+<h4 id="conclusión">Conclusión</h4>
+<h4 id="atajo">Atajo!</h4>
+<h2 id="efectos-relativistas-en-h-estructura-fina">Efectos relativistas en H (Estructura Fina)</h2>
+<h3 id="h_0">H_0</h3>
+<h3 id="h_m-y-h_d">H_m y H_D</h3>
+<h3 id="h_so">H_{SO}</h3>
+<h3 id="juntando-todo">Juntando todo</h3>
+<h1 id="section-8">19</h1>
+<h2 id="espectro-del-h">Espectro del H</h2>
+<h3 id="estructura-fina">Estructura fina</h3>
+<h3 id="reglas-de-selección-dipolares-eléctricas-ei">Reglas de selección dipolares eléctricas (EI)</h3>
+<h2 id="acoplamiento-ls-para-un-solo-electrón">Acoplamiento LS para un solo electrón</h2>
+<h3 id="ejemplo-obtener-explícitamente-los-casos-de-l1">Ejemplo: Obtener explícitamente los casos de l=1</h3>
+
+    </div>
+  </div>
+</body>
+
+</html>

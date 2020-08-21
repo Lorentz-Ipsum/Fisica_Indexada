@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomica Apuntes T5</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#section">51</a>
+<ul>
+<li><a href="#interaccionspinorbita">interaccionSpinOrbita</a>
+<ul>
+<li><a href="#aproximacion-russell-saunders">Aproximacion Russell-Saunders</a></li>
+<li><a href="#en-base-de-detslatu">En base de detSlatu</a></li>
+<li><a href="#en-base-de-termsel">En base de TermsEl</a></li>
+<li><a href="#conservacion-de-traza">Conservacion de traza</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-1">52</a>
+<ul>
+<li><a href="#resultado-delta-e_-so-en-aproxrussaun">Resultado ΔESO\Delta E_ {SO}ΔESO​ en AproxRusSaun</a></li>
+<li><a href="#conocida-su-a-5-l">conocida su A(5l)A( ^5 l)A(5l)</a></li>
+<li><a href="#integrales-mathe-_-nl">Integrales KaTeX parse error: Expected 'EOF', got '\math' at position 1: \̲m̲a̲t̲h̲{E} _ {nl}</a></li>
+<li><a href="#para-configuraciones-l-m">Para configuraciones lml ^mlm</a></li>
+<li><a href="#se-justifica-regla-de-los-intervalos-de-landé">Se justifica Regla de los intervalos de Landé</a></li>
+<li><a href="#ejemplos-cálculo-delta-e_-so">Ejemplos cálculo ΔESO\Delta E_ {SO}ΔESO​</a></li>
+</ul>
+</li>
+<li><a href="#section-2">53</a>
+<ul>
+<li><a href="#matriz-de-energias-para-las-correciones-por-interaccion-electrostatica">Matriz de energias para las correciones por interaccion Electrostatica</a></li>
+<li><a href="#otros-tipos-de-acoplamiento">Otros tipos de acoplamiento</a>
+<ul>
+<li><a href="#ejemplos">Ejemplos</a>
+<ul>
+<li><a href="#n-l-n-l">nln′l′n l n&#x27; l&#x27;nln′l′</a></li>
+<li><a href="#p-5--n-l">p5 nlp ^5 \ n lp5 nl</a></li>
+</ul>
+</li>
+<li><a href="#observación">Observación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-3">54</a>
+<ul>
+<li><a href="#tratamiento-en-acoplamiento-intermedio">Tratamiento en “Acoplamiento Intermedio”</a>
+<ul>
+<li><a href="#caso-general">Caso general</a></li>
+<li><a href="#ejemplo">Ejemplo</a>
+<ul>
+<li><a href="#p-s">psp sps</a></li>
+<li><a href="#c--1-s-2-2-s-2-2-p-3-s">C 1s22s22p3sC \ 1 s ^2 2 s ^2 2 p 3 sC 1s22s22p3s</a></li>
+<li><a href="#ne--2-p-5-n-s">Ne 2p5nsNe \ 2 p ^5 n sNe 2p5ns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-4">55</a>
+<ul>
+<li><a href="#indicios-de-fallo-en-aprox-rusell-saunders">Indicios de Fallo en Aprox Rusell# Saunders</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="section">51</h1>
+<h2 id="interaccionspinorbita">interaccionSpinOrbita</h2>
+<ul>
+<li>En átomos pesados es la core</li>
+<li>reacción relativista más importante.</li>
+<li><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="bold">L</mi></mrow><annotation encoding="application/x-tex">\mathbf {L}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68611em; vertical-align: 0em;"></span><span class="mord"><span class="mord mathbf">L</span></span></span></span></span></span> y <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="bold">S</mi></mrow><annotation encoding="application/x-tex">\mathbf {S}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68611em; vertical-align: 0em;"></span><span class="mord"><span class="mord mathbf">S</span></span></span></span></span></span> dejan de ser conservados pero sigue siéndolo J. <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi mathvariant="bold">L</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf {L}^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.814108em; vertical-align: 0em;"></span><span class="mord"><span class="mord"><span class="mord mathbf">L</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> y <span class="katex--inline">KaTeX parse error: Expected '}', got 'EOF' at end of input: \mathbf {S^2</span></li>
+</ul>
+<h3 id="aproximacion-russell-saunders">Aproximacion Russell-Saunders</h3>
+<ul>
+<li>Cuando $\Delta H_{SO} \gg \Delta E</li>
+<li>Cálculo <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mrow><mi>S</mi><mi>O</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta H_ {SO}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right: 0.05764em;">S</span><span class="mord mathit mtight" style="margin-right: 0.02778em;">O</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> en AproxRusSaun</li>
+</ul>
+<h3 id="en-base-de-detslatu">En base de detSlatu</h3>
+<h3 id="en-base-de-termsel">En base de TermsEl</h3>
+<h3 id="conservacion-de-traza">Conservacion de traza</h3>
+<h1 id="section-1">52</h1>
+<h2 id="resultado-delta-e_-so-en-aproxrussaun">Resultado <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>E</mi><mrow><mi>S</mi><mi>O</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta E_ {SO}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathit" style="margin-right: 0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: -0.05764em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right: 0.05764em;">S</span><span class="mord mathit mtight" style="margin-right: 0.02778em;">O</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> en AproxRusSaun</h2>
+<h2 id="conocida-su-a-5-l">conocida su <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mo>(</mo><mn>5</mn></msup><mi>l</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">A( ^5 l)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathit">A</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="mclose">)</span></span></span></span></span></h2>
+<h2 id="integrales-mathe-_-nl">Integrales <span class="katex--inline">KaTeX parse error: Expected 'EOF', got '\math' at position 1: \̲m̲a̲t̲h̲{E} _ {nl}</span></h2>
+<h2 id="para-configuraciones-l-m">Para configuraciones <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>l</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">l ^m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.664392em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">m</span></span></span></span></span></span></span></span></span></span></span></span></h2>
+<h2 id="se-justifica-regla-de-los-intervalos-de-landé">Se justifica Regla de los intervalos de Landé</h2>
+<h2 id="ejemplos-cálculo-delta-e_-so"><strong>Ejemplos cálculo <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>E</mi><mrow><mi>S</mi><mi>O</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta E_ {SO}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathit" style="margin-right: 0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: -0.05764em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right: 0.05764em;">S</span><span class="mord mathit mtight" style="margin-right: 0.02778em;">O</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span></strong></h2>
+<h1 id="section-2">53</h1>
+<h2 id="matriz-de-energias-para-las-correciones-por-interaccion-electrostatica">Matriz de energias para las correciones por interaccion Electrostatica</h2>
+<h2 id="otros-tipos-de-acoplamiento"><em>Otros tipos de acoplamiento</em></h2>
+<h3 id="ejemplos">Ejemplos</h3>
+<h4 id="n-l-n-l"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>l</mi><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup><msup><mi>l</mi><mo mathvariant="normal">′</mo></msup></mrow><annotation encoding="application/x-tex">n l n&amp;#x27; l&amp;#x27;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.751892em; vertical-align: 0em;"></span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.751892em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.751892em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span></h4>
+<h4 id="p-5--n-l"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>p</mi><mn>5</mn></msup><mtext>&nbsp;</mtext><mi>n</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">p ^5 \ n l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.00855em; vertical-align: -0.19444em;"></span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mspace">&nbsp;</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right: 0.01968em;">l</span></span></span></span></span></h4>
+<h3 id="observación">Observación</h3>
+<h1 id="section-3">54</h1>
+<h2 id="tratamiento-en-acoplamiento-intermedio">Tratamiento en “Acoplamiento Intermedio”</h2>
+<h3 id="caso-general">Caso general</h3>
+<h3 id="ejemplo">Ejemplo</h3>
+<h4 id="p-s"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">p s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="mord mathit">p</span><span class="mord mathit">s</span></span></span></span></span></h4>
+<h5 id="autovalores">Autovalores</h5>
+<h4 id="c--1-s-2-2-s-2-2-p-3-s"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mtext>&nbsp;</mtext><mn>1</mn><msup><mi>s</mi><mn>2</mn></msup><mn>2</mn><msup><mi>s</mi><mn>2</mn></msup><mn>2</mn><mi>p</mi><mn>3</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">C \ 1 s ^2 2 s ^2 2 p 3 s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.00855em; vertical-align: -0.19444em;"></span><span class="mord mathit" style="margin-right: 0.07153em;">C</span><span class="mspace">&nbsp;</span><span class="mord">1</span><span class="mord"><span class="mord mathit">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">2</span><span class="mord"><span class="mord mathit">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">2</span><span class="mord mathit">p</span><span class="mord">3</span><span class="mord mathit">s</span></span></span></span></span></h4>
+<h4 id="ne--2-p-5-n-s"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>e</mi><mtext>&nbsp;</mtext><mn>2</mn><msup><mi>p</mi><mn>5</mn></msup><mi>n</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Ne \ 2 p ^5 n s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.00855em; vertical-align: -0.19444em;"></span><span class="mord mathit" style="margin-right: 0.10903em;">N</span><span class="mord mathit">e</span><span class="mspace">&nbsp;</span><span class="mord">2</span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mord mathit">n</span><span class="mord mathit">s</span></span></span></span></span></h4>
+<h1 id="section-4">55</h1>
+<h2 id="indicios-de-fallo-en-aprox-rusell-saunders">Indicios de Fallo en Aprox Rusell# Saunders</h2>
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+Struct.txt
+
+
+LIBROS
+
+	Eisberg Resnick - Cuantica de atomos...
+	Alonso Finn - Vol III Fundamentos Cuanticos...
+	Sanchez del Rio - Fisica Cuantica UCM
+
+
+TAREAS
+
+	1	Sch Books
+
+
+		Bajar/ SACAR Alonso Finn
+
+		Fotos a apuntes Wifly, Laura, Juanad
+
+		- Sacar de BIB
+		- Hacer Resumenes
+		- Buscar PDFs
+		- Buscar ecuaciones
+
+	2	Navegar Temario
+		- HTML del temario
+		- Enlaces a WIKI / LaTeX de cuestiones Extra
+		- 
+
+	3	Repasar CUANTICA I y II / CALCULO
+	4	Buscar Problemas
+	5	Tutorias (Problemas Extra / QUESTS)
+	6	
+	7	
+
+
+
+TEMARIO
+
+
+	0. REPASO
+
+		Atomos
+			Magnitudes, Constantes...
+		Radiacion
+		Unidades de Hartree: Sistema de Unidades atómicas
+		
+
+	1. Introducción a los átomos polielectrónicos
+		Repaso del átomo hidrogenoide. 
+		Sistemas de varios electrones. 
+		Aproximación de campo central. 
+		Estados fundamentales y tabla periódica. 
+		Acoplamiento LS de momentos angulares de spin y orbital. 
+		Excitaciones. 
+		Métodos de Thomas-Fermi y Hartree-Fock.
+
+		Efecto Zeeman.
+		Efecto Stark.
+
+	2. Fundamentos de la estructura molecular
+		Aproximación de Born-Oppenheimer. 
+		Orbitales moleculares. 
+		Tipos de enlace. Espectros de rotación, vibración, electrónicos.
+
+	3. Estructura subatómica de la materia
+		Partículas e interacciones. 
+		Hadrones y leptones. 
+		Masas y números cuánticos. 
+		Quarks. 
+		El nucleón. 
+		Isoespin.
+
+	4. Introducción al Núcleo Atómico
+		Composición del núcleo. 
+		Masas y tamaños nucleares. 
+		Estabilidad. 
+		Desintegraciones. 
+		Modelos. 
+		Reacciones. 
+		Fisión y fusión nuclear. 
+		Nucleosíntesis.
+	5. Introducción a la Física de partículas
+		Clasificación detallada, segunda y tercera familias de quarks y leptones. 
+		Partículas compuestas. 
+		Modelo quark. 
+		Bosones mediadores. 
+		Producción y detección de partículas. 
+		Desintegraciones.

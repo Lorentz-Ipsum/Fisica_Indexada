@@ -1,0 +1,346 @@
+\documentclass[10pt,a4paper,spanish]{article}
+\usepackage{babel}          \usepackage[latin1]{inputenc}
+\usepackage{amsmath}        \usepackage{amsthm}
+\usepackage{amsfonts}       \usepackage[dvips]{epsfig}
+\usepackage{indentfirst} 
+\usepackage[active]{srcltx}
+\usepackage{braket}		
+\usepackage{multicol}
+\usepackage[a4paper,right=2cm,top=2.5cm]{geometry}
+
+\setlength\arraycolsep{2pt}
+
+
+\newcommand{\exptem}{\expon{-j(k_g z - \omega t)}}						\newcommand{\expcav}{\expon{j\omega t}}
+\newcommand{\J}{\mathrm{J}}		\newcommand{\K}{\mathcal{K}}		\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\dd}{\mathrm{d}}		\newcommand{\tg}{\mathrm{tg}}		\newcommand{\tgh}{\mathrm{tgh}}
+\newcommand{\cotg}{\mathrm{cotg}}	\newcommand{\dB}{\mathrm{dB}}		\newcommand{\Np}{\mathrm{Np}}
+\newcommand{\eV}{\mathrm{eV}}		\newcommand{\hatn}{\hat{n}}			\newcommand{\expon}[1]{\mathrm{e}^{#1}}
+\newcommand{\tr}{\mathrm{tr}}		\newcommand{\dx}{\dd x}			\newcommand{\s}{\mathrm{s}}
+\newcommand{\MeV}{\mathrm{MeV}}	\newcommand{\dr}{\dd r}			\newcommand{\dtr}{\dd^3 r}
+\newcommand{\dt}{\dd t}
+%
+\newcommand{\parcial}[2][]{\frac{\partial #1}{\partial #2}}					\newcommand{\deriv}[2][]{\frac{\dd #1}{\dd #2}}
+\newcommand{\E}[1]{\times 10^{#1}}									\newcommand{\AAA}{\ensuremath{\,\mathrm{\AA}}}
+\newcommand{\cm}{\mathrm{cm}}	
+%
+\newcommand{\vD}{\vec{D}}			\newcommand{\vH}{\vec{H}}			\newcommand{\vj}{\vec{\jmath}}
+\newcommand{\vE}{\vec{E}}			\newcommand{\vB}{\vec{B}}			\newcommand{\vP}{\vec{P}}
+\newcommand{\vM}{\vec{M}}			\newcommand{\vN}{\vec{N}}			\newcommand{\vS}{\vec{S}}
+\newcommand{\va}{\vec{a}}			\newcommand{\vnabla}{\vec{\nabla}}	\newcommand{\vL}{\vec{L}}
+\newcommand{\vr}{\vec{r}}			\newcommand{\vp}{\vec{p}}			\newcommand{\vsigma}{\vec{\sigma}}
+\newcommand{\vR}{\vec{R}}			\newcommand{\vA}{\vec{A}}			\newcommand{\vepsilon}{\vec{\varepsilon}}
+\newcommand{\vJ}{\vec{J}}			\newcommand{\vk}{\vec{k}}	
+\newcommand{\parcte}[3]{ \left( \parcial{#1}{#2} \right)_{\!#3} }
+\newcommand{\sep}{\vspace{1mm} \hrule \vspace{1mm} \noindent}
+\newcommand{\inv}[1]{{#1}^{-1}}
+%
+\newcommand{\la}{\left<}						\newcommand{\ra}{\right>}	\newcommand{\bok}[3]{ \la #1 \right| #2 \left| #3 \ra }
+\newcommand{\ketbra}[2]{ \left| #1 \ra\la #2 \right| }	\newcommand{\commut}[2]{\left[ #1 , #2 \right]}
+
+%\newcommand{\hi}{\hat \imath}
+%\newcommand{\hj}{\hat \jmath}
+%\newcommand{\hk}{\hat k}
+%\def\tablename{Tabla}
+
+\author{pod}
+\title{Físca atómica}
+\date{Otoño, 2002}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\maketitle
+
+\section{Átomos hidrogenoides}
+%
+$$ 
+p''(r) = \frac{2\mu}{\hbar^2} \left[ U_l(r) - E \right] p(r) \quad , \quad 
+U_l(r) = V(r) + \frac{\hbar^2}{2\mu} \frac{l(l+1)}{r^2} \quad , \quad 
+n = n_r + l + 1 \quad , \ 
+(\alpha)_k = \alpha \cdot (\alpha+k-1) 
+$$
+%
+$$ 
+{}_1F_1(\alpha, \beta, z) = \sum_{k=0}^{\infty} \frac{(\alpha)_k}{(\beta)_k} \frac{z^k}{k!}\quad ,\quad p_{nl}(r) = a_0^{-1/2} \left( \frac{2Z r}{n a_0} \right)^{l+1} \expon{- \frac{Zr}{n a_0} } {}_1 F_1 \left( l+1-n , 2l+2, \frac{2Zr}{n a_0} \right) 
+$$
+%
+$$ 
+\psi_{nlm}(\vr) = \frac{p_{nl}(r)}r  Y_{ml}(\hat r) \ , \ 
+E = - \frac{Z^2}{2 n^2} \frac{m e^4}{\hbar^2} \ , \ 
+\int_0^\infty\!\!\!\! r^n \expon{-ar} \dr = \frac{n!}{a^{n+1}} \ , \ 
+\psi^{(Z)} = Z^{3/2} \psi^{(1)} \ , \ 
+\Braket{ r^k }^{(Z)} = \frac{\Braket{ r^k }^{(1)}}{Z^k} 
+$$
+%
+\begin{eqnarray*}
+H_{m } & = & - \frac1{8 m^3 c^2} p^4  = - \frac{\alpha^2}{2} \left( H_p + \frac{Z}{r} \right)^2 \quad , \
+\alpha = \frac{e^2}{\hbar c} = 1/137.0035 \\
+H_{so} & = & - \frac{e\hbar}{8 m^2 c^2} \vsigma \cdot \vnabla \varphi \times \vp = \frac{\alpha^2}{2} \frac1r \deriv[V]{r} \vL \vS = \xi(r) \vL \vS \ , \ \xi(r) = \frac{Z \alpha^2}{2} \frac1{r^3} \\
+H_{DW} & = & - \frac{e\hbar}{8 m^2 c^2} \nabla^2 \varphi = \frac{Z\alpha^2}{2} \pi \delta(\vr)
+\end{eqnarray*}
+% 
+\begin{eqnarray*}
+\Braket{H_{so}} & = & - E_n \frac{(Z \alpha)^2}{2n} \frac{j(j+1)-l(l+1)-3/4}{l\left(l+1/2\right)(l+1)} ( 1 - \delta_{l0} ) \\
+\Braket{ H_m  } & = & - E_n \left( \frac{Z\alpha}{n} \right)^2 \left[ \frac34 - \frac n{l+1/2} \right] \\
+\Braket{H_{DW}} & = & - E_n \frac{(Z \alpha)^2}{n}\delta_{l0} \\
+\Delta E_{nlj}  & = &   E_n \left( \frac{Z\alpha}{n} \right)^2 \left[ \frac n{j+1/2} - \frac34 \right] \quad , \ j = l \pm 1/2
+\end{eqnarray*}
+%
+$$
+\textrm{Vol. finito}\ \Delta E = \frac{Z^4}{n^3} \left( \frac{M}{M+1} \right)^3 \frac 25 R^2 \delta_{l0} \ , \
+R = A^{1/3} \, 2.3\E{-5}a_0
+$$
+%
+$$
+\textrm{massa fin.}\ E(M) = \frac{M}{M+m} E(\infty) \quad , \ \Delta E = E(M) - E(\infty)
+$$
+
+\section{Átomos multielectrònicos}
+$$ 
+\vR = \frac{ \sum_i m_e \vr_{e_i} + M_N \vr_N }{M_n + N m_e} \ , \ 
+\vr_i = \vr_{e_i} - \vr_N \ , \ 
+T = - \frac{\hbar^2}{2(M_N + N m_e)} \nabla_R^2 - \frac{\hbar^2}{2\mu} \sum \nabla_{i}^2 - \frac{\hbar^2}{2M_n} \sum \vnabla_i \vnabla_j 
+$$
+%
+$$
+V = -\sum_{i=1}^N \frac1{r_i} + \sum_{i<j}\frac{e^2}{|\vr_i-\vr_j|} \ , \
+S_N = \frac1{N!} \sum_{p\in S_N} P \ , \
+A_N = \frac1{N!} \sum_{p\in S_N} (-1)^p P \ , \
+A^\dag = A^2 = A \ , \
+A S = S A = 0
+$$
+%
+$$
+F(x_1,\ldots,x_N) = \sum_{ i } f(x_i) \ , \
+G(x_1,\ldots,x_N) = \sum_{i<j} g(x_i,x_j) \ , \
+E \sim n+l \sim n \ ,\
+D_{eq} = {2(2l+1) \choose n }
+$$
+%
+\begin{eqnarray*}
+\Braket{ \psi | F | \psi } & = & \sum_{i=1}^N \int\!\! \phi_i^* f \phi \dtr \quad , \quad
+\Braket{ \psi_{1,2,\ldots} | F | \psi_{\tilde1,2,\ldots} }  =  \int\!\! \phi_1^* f \tilde\phi_1 \dtr \,\\
+%
+\Braket{ \psi | G | \psi } & = & \sum_{i<j} \left( \int\!\!\!\!\int\!\!\! \varphi_i^*(x_1) \varphi_j^*(x_2) g(x_1 x_2) \varphi_i(x_1) \varphi_j(x_2) - \int\!\!\!\!\int\!\!\! \varphi_i^*(x_1) \varphi_j^*(x_2) g(x_1 x_2) \varphi_i(x_2) \varphi_j(x_1) \right) \\
+%
+\Braket{ \psi_{12\ldots} | G | \psi_{\tilde12\ldots} } & = & \sum_{j=2} \left( \int\!\!\!\!\int\!\!\! \varphi_1^*(x_1) \varphi_j^*(x_2) g(x_1 x_2) \tilde\varphi_1(x_1) \varphi_j(x_2) - \int\!\!\!\!\int\!\!\! \varphi_i^*(x_1) \varphi_j^*(x_2) g(x_1 x_2) \tilde\varphi_1(x_2) \varphi_j(x_1) \right) \\
+%
+\Braket{ \psi_{12\ldots} | G | \psi_{\tilde12\ldots} } & = & \left( \int\!\!\!\!\int\!\!\! \varphi_1^*(x_1) \varphi_2^*(x_2) g(x_1 x_2) \tilde\varphi_1(x_1) \tilde\varphi_2(x_2) - \int\!\!\!\!\int\!\!\! \varphi_i^*(x_1) \varphi_2^*(x_2) g(x_1 x_2) \tilde\varphi_1(x_2) \tilde\varphi_2(x_1) \right) \\
+\end{eqnarray*}
+%
+$$ 
+\left[  \frac{-\hbar^2}{2m} \nabla^2 - \frac{Ze^2}{r} \right] \varphi_i + 
+\underbrace{\sum_j^N \left[ \int\!\! \varphi_j^*(\vr\,') \frac{e^2 \dtr\,'}{|\vr-\vr\,'|} \varphi_j(\vr\,') \right] \varphi_i}_{V_D \varphi_i \ \textrm{Hartree} } - 
+\underbrace{\sum_j^N \left[ \delta_{m_{s_i} m_{s_j}} \!\! \int\!\! \varphi_j^*(\vr\,') \frac{e^2 \dtr\,'}{|\vr-\vr\,'|} \varphi_i(\vr\,') \right] \varphi_j}_{V_\textrm{ech}\varphi_i \ \textrm{Hartree-Fock}} = E_i \varphi_i 
+$$
+%
+$$
+f(x) \varphi_i(x) + \left[ \sum_{j=1}^N \int\!\!\dx' \varphi_j^*(x') g(x,x') \varphi_j(x') \right] \varphi_i(x) - \sum_{j=1}^N \left[ \int\!\!\dx' \varphi_j^*(x') g(x,x') \varphi_i(x') \right] \varphi_j(x) = E_i \varphi_i(x) 
+$$
+%
+$$
+E = \Braket{\psi|H|\psi} = \sum_i I(i) + \frac12 \sum_{ij} \left( J(ij) - K(ij) \right) = \sum_i E_i -
+\frac12 \sum_{ij} \left( J(ij) - K(ij) \right) 
+$$
+
+%
+%
+%
+%
+\section{Átomo de helio}
+$$ 
+E_{\textrm{tdp,}(1s)^2} = \left( -Z^2 + \frac 5 8 Z \right) 
+Z_\textrm{eff} = Z - \frac{5}{16} \quad . \quad
+n^{2s+1}L \ , \ E \sim (2s+1)^{-1}
+$$
+%
+$$
+\Delta E = \Braket{ \psi | \frac{e^2}{r_{12}} | \psi } = e \sum_{l=0}^\infty C^l(00,00) C^l(00,00) F^L(10,10) \ , \
+C^L(00,00) = \delta^{L0} 
+$$
+%
+$$
+F^0(10,10) = \int\!\!\dr_1\dr_2 \frac1{r_>} \left[ p_{10}(r_1) p_{10}(r_2) \right]^2 = \frac 58 \frac{Z}{a_0}
+$$
+
+%
+%
+%
+%
+\section{Interacción con campos externos}
+\subsection{Efecto stark}
+$$
+\vA = 0 \ , \ \phi = -\varepsilon \ , \
+H' = e\varepsilon \sum_i z_i \ , \ 
+E^{(1)}_{100} = 0 \ , \
+E^{(2)}_{100} = - \frac94 \frac{a_0^3}{Z^4} \ , \
+$$
+%
+$$
+\Braket{nl'm'|H'|nlm} = 0 \textrm{ si } l-l' = \textrm{par, o } m \ne m' \ , \ 
+\Braket{\vD} = \alpha \vepsilon \ , \
+\alpha = \frac{-1}\varepsilon \parcial[E_0^{(2)}]{\varepsilon} \ , \
+$$
+%
+$$
+E_0^{(2)} = \sum_{k\ne0} \frac{\left| \Braket{0| H' |k} \right|^2}{E_0-E_k} 
+E_0^{(2)} \approx \frac{e^2 \varepsilon^2}{E_0} \sum_i\Braket{0|  z_i^2 |0} \mathop{=}_\textrm{esf} \frac{e^2\varepsilon^2}{E_0} \frac N3 \Braket{r^2}
+$$
+%
+$$
+E_0^{(2)} \ge \frac{-1}{E_1-E_0} \sum_{k\ne0} \left| \Braket{0| H' |k} \right|^2 = \frac{-e^2\varepsilon^2}{E_1-E_0} \sum_i \Braket{z^2} = \frac{-e^2\varepsilon^2 N/3}{E_1-E_0} \Braket{r^2} \ ,\
+$$
+
+\subsection{Efecto Zeeman}
+$ 
+\phi=0 \ , \ 
+\vA = \frac12 \vB \times \vr \ , \ 
+H' = \frac{e}{mc} \vA \vp + \mu_B \vsigma \vB = \mu_B \vB ( \vL + 2 \vS ) = - ( \vM_L + \vM_s ) \vB \ , \
+\vM_i = - g_i \mu_B \vJ_i
+$
+%
+$$
+\bullet\ H' \gg H_\textrm{so}\ \textrm{Paschen-Back}\ 
+E = E_n + \mu_B B ( m_l + 2 m_s ) \ , \
+\Delta E_\textrm{so} = - E_n \frac{\alpha^2 Z^2}{n} \frac{m_l m_s}{l(l+1/2)(l+1)} (1-\delta_{l0} )
+$$
+%
+$$
+\Braket{ \gamma L S M'_L M'_J | H_\textrm{so} | \gamma L S M_L M_J } = T_{\gamma L S} M_L M_S \, \delta_{M'_L M_L} \, \delta_{M'_S M_S} \ , \ \Delta E = \mu_B ( M_L + 2 M_S ) + T_{\gamma L S} M_L M_S
+$$
+%
+$$
+\bullet\ H_\textrm{so} \gg H'\ \textrm{Z. anómalo}\
+g_J = g_L \frac{J^2 + L^2 - S^2}{2 J^2} + g_S \frac{J^2+S^2-L^2}{2J^2} = 1 + \frac{j(j+1) + s(s+1) - l(l+1)}{2 j(j+1)}
+$$
+%
+$$ 
+H' = g_J \mu_B B J_z \ , \ \Delta E = g_J \mu_B B M_J
+$$
+
+\section{Espectroscopias atómicas}
+$$
+\psi = \sum_n C_n(t) \expon{-i E_n t/\hbar} \braket{\phi_n} \ , \
+\dot C_f^{(0)} = 0 \ , \
+\dot C_f^{(1)} = - \frac i \hbar \sum_n C_n^{(0)} H'_{fn} \expon{i\omega_{fn} t} \ , \
+C_f^{(t)} \mathop{=}_{t=0 \to \ket n} -\frac{i}{\hbar} \int_0^t\!\!\!\! \dt' H'_{fi} \expon{i \omega_{fi}}
+$$
+%
+$$
+W_{fi}^\textrm{est} = n(\omega_{fi}) 4\pi \frac{e^2}{3\hbar} \omega_{fi} \left| \Braket{ f | \vr | i } \right|^2 \ , \
+W_{fi}^\textrm{S} = \frac{4e^2}{3\hbar c^3} \omega^3_{fi} \left| \Braket{ f | \vr | i } \right|^2 \ , \
+\frac{N_1}{N_2} = \expon{-\frac{E_1-E_2}{kT}} \ , \
+n= \frac{\omega^2}{\pi^2 c^3} \frac1{\expon{\hbar\omega/kT}-1}
+$$
+%
+$$
+\dot N_{1\to2} = W^\textrm{est} N_1 \ , \
+\dot N_{2\to1} = W^\textrm{est} N_2 + W^\textrm{s} N_2 \ ; \
+\Delta l = \pm 1 \ , \
+\Delta m_l = 0, \pm1 \ , \
+\pi _i = - \pi_f \ , \
+\Delta m_s = 0
+$$
+%
+$$
+W^\textrm{est} = n(\omega_{fi}) \frac{2\pi e^2}{m c^2 \hbar w_{fi}} \left| \Braket{f| \expon{i\vk\vr} \hat{\epsilon} \left[ \vp + i \frac\hbar2 \vsigma\times\vk \right] | i} \right|^2  \ , \
+F^{E1}_{fi} \approx \frac{e A_0}{m c} \Braket{ f | \hat\epsilon \vp | i }
+$$
+%
+$$ 
+\textrm{est.fina}\ \Delta j = 0, \pm1 \ , \
+\Delta m_l = 0, \pm1 \ , \
+\pi_f = - \pi_i % \quad , \
+$$
+%
+$$
+\textrm{multi.}\ \Delta J = 0, \pm 1 (\textrm{no}\ L=L'=0)\ , \
+\Delta M = 0, \pm1 \ , \
+\pi_f = - \pi_i \ , \
+\Delta S = 0
+$$
+%
+$$
+W_{fi} = \frac{4 \alpha}{3 c^2} \omega^3_{fi} \left| \Braket{f| \vr |i} \right|^2
+$$
+
+
+\section{Varios}
+$$
+\Braket{ Y_{l_1 m_1} | C_{LM} | Y_{l_2 m_2} } = \sqrt{ \frac{2l_2+1}{2l_1+1} } \Braket{ L l_2 00|l_1 0} \Braket{L l_2 M m_2 | l_1 m_1} \ , \ C_{LM} = \sqrt{ \frac{4\pi}{2L+1} } Y_{LM} 
+$$
+%
+$$
+\int^\infty_0\!\!\!\! \dr \, p_{n,l-1} \, p_{nl} \, r = - \frac{3n}{2Z} \sqrt{n^2-l^2} a_0 \ , \
+$$
+%
+\begin{eqnarray*}
+a_0 = \frac{\hbar^2}{m e^2} & = & 0.529177 \mathop{\textrm{A}}^\circ \\ %\AA \\
+t_0 = \frac{\hbar^3}{m e^4} & = & 2.41888\E{-17} s \\
+E_h = \frac{m e^4}{\hbar^2} & = & 27.2114 eV \\
+c = \frac1\alpha & & \mu_B = \alpha / 2 \\
+1 \cm^{-1} & = & 1.2398\E{-4} \eV
+\end{eqnarray*}
+%
+\begin{eqnarray*}
+p_{10}(r) & = & \left( \frac{Z}{a_0} \right)^{3/2} 2 r \expon{-Zr/a_0} \\
+p_{20}(r) & = & \left( \frac{Z}{a_0} \right)^{3/2} \frac1{\sqrt2} \left[1 - \frac12 \frac{Zr}{a_0} \right] \expon{-Zr/2a_0} \\
+p_{21}(r) & = & \left( \frac{Z}{a_0} \right)^{3/2} \frac1{2\sqrt6} \frac{Z r^2}{a_0} \expon{-Zr/2a_0} \\
+\end{eqnarray*} 
+%
+\begin{eqnarray*}
+\Braket{ r^{-2} } & = & \frac{Z^2}{a_0^2} \frac1{n^3 (l+1/2)} \\
+\Braket{ r^{-1} } & = & \frac{Z}{a_0} \frac1{n^2} \\
+\Braket{   r    } & = & \frac{a_0}{Z} \frac12 \left( 3 n^2 - l(l+1) \right) \\
+\Braket{ r^{ 2} } & = & \frac{a_0^2}{Z^2} \frac{n^2}{2} \left( 5n^2 + 1 - 3 l(l+1) \right)
+\end{eqnarray*}
+%
+$$
+\vL = \frac1\hbar \vr\times\vp \ ,\
+\nabla^2 = \frac1r \parcial[^2]{r^2}(r\ ) - \frac{\vL^2}{r^2} \ , \
+\frac1{r_{12}} = \sum_{l=0} \frac{4\pi}{2l+1} \frac{r^l_<}{r_>^{l+1}} \sum_{m=-l}{l} Y^*_{lm}(\hat r_1) Y_{lm}(\hat r_2)
+$$
+%
+$$
+\Braket{ Y_{l_3m_3} | Y_{l_1m_1} | Y_{l_2m_2} } = \sqrt{ \frac{(2l_1+1)(2l_2+1)}{4\pi(2l_3+1)} } \Braket{l_1 l_2 00 | l_3 0} \Braket{l_1 l_2 m_1 m_2 | l_3 m_3}
+$$
+%
+$$
+\commut{J_i}{J_j} = i \epsilon_{ijk} J_k \ , \
+J_{\pm1} = \mp \frac1{\sqrt2} \left( J_x \pm i J_y \right) \ , \
+J_0 = J_z \ , \
+J^2 = - J_{+1} J_{-1} + J_0^2 - J_{-1} J_{+1} 
+$$
+%
+$$
+J_{\pm1} \ket{jm} = \mp \sqrt{ \frac12 \Big( j(j+1) - m(m\pm1) \Big) } \ , \
+A_i = | \vA | \, C_{1i} \ , \
+C_{LM} = \sqrt{ \frac{4\pi}{2L+1} } Y_{LM}
+$$
+%
+$$
+\Braket{ j_1 , \frac12 , m-m_2 , m_2= \pm \frac12 | j m } = \left\{
+\begin{array}{cc}
+j = j_1+ 1/2 &    \left( \frac{ j_1 \pm m + 1/2 }{ 2 j_1+1} \right)^{1/2} \\ 
+j = j_1+ 1/2 & \mp\left( \frac{ j_1 \mp m + 1/2 }{ 2 j_1+1} \right)^{1/2} \\ 
+\end{array}  \right. 
+$$
+%
+$$
+C^1(l' m'_l , l m_l) \delta_{q, m'_l-m_l} = \int_{4\pi}\!\!\!\! \dd\hat r \, Y^*_{l'm'} (\hat r) C_{1q}(\hat r) Y_{lm}(\hat r) = \sqrt{ \frac{2l+1}{2l'+1} } \Braket{l100|l'0} \Braket{l1m_l, m'_l-m_l|l'm'_l} 
+$$
+%
+$$
+C^k(l'm';lm) = \int\!\! Y^*_{l'm'} C_{k,m'-m} Y_{lm} \ , \
+\sum_{m'} \left| C^1(l'm';lm) \right|^2 = \left\{
+\begin{array}{ccl}
+\frac{l+1}{2l+1} & \textrm{si} & l'=l+1 \\
+\frac{l}{2l+1}   & \textrm{si} & l'=l-1 \\
+\end{array} \right. 
+$$
+
+\end{document}
+
+
+%$$ \xrightarrow{abbbbbbbbbb} $$

@@ -40,6 +40,9 @@ Problemas / [Tema 2](Problemas/ProblemasV1-T2.md)
 >.
 ---
 
+[![](http://img.youtube.com/vi/mH0oCDa74tE/0.jpg)](http://www.youtube.com/watch?v=mH0oCDa74tE "3b1b - Groups")
+
+
 # Guía docente
 
 ## Resultados del aprendizaje

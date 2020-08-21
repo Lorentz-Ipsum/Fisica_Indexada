@@ -1,0 +1,845 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomica Index Paco Blanco v2</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#bloque-i-introducción-a-los-átomos-polielectronicos">BLOQUE I: INTRODUCCIÓN A LOS ÁTOMOS POLIELECTRONICOS</a></li>
+<li><a href="#section">11</a></li>
+<li><a href="#introduccion-a-los-atomos-polielectronicos">1 Introduccion a los atomos polielectronicos</a>
+<ul>
+<li><a href="#atomos-polielectronicos">ATOMOS POLIELECTRONICOS</a></li>
+<li><a href="#aproximación-básica-campo-central.">AProximación básica: Campo central.</a></li>
+<li><a href="#solución-h_c--sigma-h_i">Solución Hc=ΣHiH_c = \Sigma H_iHc​=ΣHi​</a></li>
+<li><a href="#aproximación-de-campo-central-i">Aproximación de campo central I</a>
+<ul>
+<li><a href="#cuestiones-básicas">Cuestiones básicas</a>
+<ul>
+<li><a href="#soluciones-al-problema-de-un-electron">Soluciones al problema de un electron</a></li>
+<li><a href="#efecto-de-algunas-correciones-relativistas-y-nucleares">Efecto de algunas correciones (relativistas y nucleares</a></li>
+<li><a href="#ejemplos-en-que-basta-esta-aproximacion">Ejemplos en que “basta” esta aproximacion</a></li>
+<li><a href="#funciones-de-onda-en-esta-aproximación-determinantes-de-slater">Funciones de onda en esta aproximación (Determinantes de SLater)</a></li>
+<li><a href="#determinación-de-los-potenciales-vr">Determinación de los potenciales V®</a></li>
+</ul>
+</li>
+<li><a href="#solucion-al-problema-de-campo-central">Solucion al problema de campo central</a>
+<ul>
+<li><a href="#buscamos-soluciones-que-separen-en-parte-radial-y-orbital">Buscamos soluciones que separen en parte radial y orbital</a></li>
+<li><a href="#schrödinger-en-una-dimension">Schrödinger en una dimension</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-1">12</a></li>
+<li><a href="#section-2">13</a>
+<ul>
+<li><a href="#resultados">Resultados:</a>
+<ul>
+<li><a href="#funciones-de-onda-etiquetadas-32-índices-numeros-cuánticos">Funciones de onda etiquetadas 3+2 “índices” (numeros cuánticos)</a></li>
+<li><a href="#energía-sólo-dependiente-de-dos-números-cuçanticos">Energía sólo dependiente de dos números cuçanticos</a>
+<ul>
+<li><a href="#degeneración-en-los-otros">Degeneración en los otros</a></li>
+<li><a href="#definido-por-el-número-de-ceros-de-pr">Definido por el número de ceros de P®</a></li>
+<li><a href="#el-origen-de-la-degeneraciçon-en-m_p-es-la-simetría-esférica-y-desaparece-bajo-campos-externos-zeeman-cristales">El origen de la degeneraciçon en M_p es la simetría esférica y desaparece bajo campos externos (zeeman, cristales)</a></li>
+</ul>
+</li>
+<li><a href="#caso-particular-hidrogenoide">Caso particular: Hidrogenoide</a>
+<ul>
+<li><a href="#p_nl">P_{nl}</a></li>
+<li><a href="#e_nl">E_{nl}</a></li>
+<li><a href="#degeneración-accidental">Degeneración “accidental”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#efectos-de-masa">Efectos de masa</a>
+<ul>
+<li><a href="#isotopico-de-masa">Isotopico de masa</a>
+<ul>
+<li><a href="#trabajando-en-c.m.">Trabajando en C.M.</a></li>
+</ul>
+</li>
+<li><a href="#atomo-muónico">Atomo muónico</a></li>
+<li><a href="#positronio">Positronio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-3">14</a>
+<ul>
+<li><a href="#armónicos-esféricos">=Armónicos esféricos=</a></li>
+</ul>
+</li>
+<li><a href="#section-4">15</a>
+<ul>
+<li><a href="#aproximación-de-campo-central-ii">Aproximación de campo central II</a>
+<ul>
+<li><a href="#aspecto-típico-de-los-niveles-de-energía">Aspecto típico de los niveles de energía</a>
+<ul>
+<li><a href="#fórmula-de-rydberg">Fórmula de Rydberg</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#introducción-spin">Introducción Spin</a>
+<ul>
+<li><a href="#función-de-ondas-de-spin">Función de ondas de Spin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-5">16</a>
+<ul>
+<li><a href="#distribución-de-probabilidad-electrónica">Distribución de probabilidad electrónica</a>
+<ul>
+<li><a href="#segun-phi">Segun Phi</a></li>
+<li><a href="#segun-r">Segun r</a></li>
+<li><a href="#segun-theta">segun theta</a></li>
+</ul>
+</li>
+<li><a href="#propiedades-comunes-a-todo-momento-angular">Propiedades comunes a todo momento angular</a>
+<ul>
+<li><a href="#definición">Definición</a></li>
+<li><a href="#autovectores">Autovectores</a></li>
+<li><a href="#operadores">Operadores</a></li>
+<li><a href="#representacion-matricial">Representacion matricial</a></li>
+<li><a href="#conmutación">Conmutación</a>
+<ul>
+<li><a href="#combinación">Combinación</a></li>
+<li><a href="#numeros-cuanticos">Numeros cuanticos</a></li>
+<li><a href="#coeficientes-cambio-de-base">Coeficientes cambio de base</a></li>
+<li><a href="#combinaciones-lineales">Combinaciones lineales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-6">17</a>
+<ul>
+<li><a href="#efectos-relativistas-ecuación-de-dirac">Efectos Relativistas (Ecuación de Dirac)</a>
+<ul>
+<li><a href="#correcciones-relativistas-al-campo-central">Correcciones Relativistas al campo central</a>
+<ul>
+<li><a href="#solución-de-la-ecuación-de-dirac">Solución de la ecuación de Dirac</a></li>
+<li><a href="#energía-de-un-dipolo-en-un-campo-magnético">Energía de un dipolo en un campo magnético</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-7">18</a>
+<ul>
+<li><a href="#resumen-de-teoría-de-perturbaciones">Resumen de teoría de perturbaciones</a>
+<ul>
+<li><a href="#caso-no-degenerado">Caso no degenerado</a></li>
+<li><a href="#caso-degenerado">Caso degenerado</a>
+<ul>
+<li><a href="#conclusión">Conclusión</a></li>
+<li><a href="#atajo">Atajo!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#efectos-relativistas-en-h-estructura-fina">Efectos relativistas en H (Estructura Fina)</a>
+<ul>
+<li><a href="#h_0">H_0</a></li>
+<li><a href="#h_m-y-h_d">H_m y H_D</a></li>
+<li><a href="#h_so">H_{SO}</a></li>
+<li><a href="#juntando-todo">Juntando todo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-8">19</a>
+<ul>
+<li><a href="#espectro-del-h">Espectro del H</a>
+<ul>
+<li><a href="#estructura-fina">Estructura fina</a></li>
+<li><a href="#reglas-de-selección-dipolares-eléctricas-ei">Reglas de selección dipolares eléctricas (EI)</a></li>
+</ul>
+</li>
+<li><a href="#acoplamiento-ls-para-un-solo-electrón">Acoplamiento LS para un solo electrón</a>
+<ul>
+<li><a href="#ejemplo-obtener-explícitamente-los-casos-de-l1">Ejemplo: Obtener explícitamente los casos de l=1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-9">21</a></li>
+<li><a href="#ejemplos-importantes-de-campo-central">2 Ejemplos importantes de campo central</a>
+<ul>
+<li><a href="#átomos-alcalinos">Átomos alcalinos</a>
+<ul>
+<li><a href="#configuración">Configuración</a></li>
+<li><a href="#desaparece-degeneración-accidental">Desaparece degeneración accidental</a></li>
+<li><a href="#interacción-s-o-es-la-primera-en-importancia">Interacción S# O es la primera en importancia</a></li>
+<li><a href="#el-comportamiento-de-e_nl-es-prácticamente-universal-para-orbitales-suficientemente-excitados-de-cualquier-átomo">El comportamiento de E_{nl} es prácticamente universal para orbitales suficientemente excitados de cualquier átomo</a></li>
+</ul>
+</li>
+<li><a href="#graficas">[Graficas]</a></li>
+</ul>
+</li>
+<li><a href="#section-10">22</a>
+<ul>
+<li><a href="#espectros-característicos-de-rayos-x">Espectros característicos de Rayos X</a></li>
+</ul>
+</li>
+<li><a href="#section-11">23</a>
+<ul>
+<li><a href="#origen">Origen</a></li>
+<li><a href="#producción">Producción</a></li>
+<li><a href="#espectro-de-emisión">Espectro de emisión</a>
+<ul>
+<li><a href="#continuo">Continuo</a></li>
+<li><a href="#discreto">Discreto</a></li>
+</ul>
+</li>
+<li><a href="#espectro-de-absorción">Espectro de absorción</a></li>
+<li><a href="#interpretación-excitación-niveles-internos">Interpretación: Excitación niveles internos</a>
+<ul>
+<li><a href="#pesos-estadísticas">Pesos estadísticas</a></li>
+<li><a href="#reglas-selección">Reglas selección</a></li>
+<li><a href="#ley-de-moseley">Ley de Moseley</a></li>
+</ul>
+</li>
+<li><a href="#graficas-1">[graficas]</a></li>
+<li><a href="#función-de-ondas-antisimétricas.-configuraciónes.">Función de ondas antisimétricas. Configuraciónes.</a></li>
+</ul>
+</li>
+<li><a href="#section-12">25</a>
+<ul>
+<li><a href="#los-electrones-son-indistinguibles">Los electrones son indistinguibles</a></li>
+<li><a href="#observaciones">Observaciones</a></li>
+<li><a href="#consecuencias">Consecuencias</a></li>
+<li><a href="#observaciones-generales">Observaciones generales</a>
+<ul>
+<li><a href="#para-un-electron">Para un electron</a></li>
+<li><a href="#para-nu-electrones">Para \nu electrones</a></li>
+<li><a href="#para-una-configuración-varios-electrones">Para una configuración varios electrones</a></li>
+<li><a href="#notación-para-determinantes-de-slater-con-n_i-l_i-comunes">Notación para determinantes de Slater con n_i l_i comunes</a></li>
+<li><a href="#en-aproximación-campo-central">En aproximación campo central</a></li>
+<li><a href="#orden-de-llenado">Orden de llenado</a></li>
+</ul>
+</li>
+<li><a href="#xperimentally-observed-ground-configurations-and-ground-ls-terms--of-free-atoms">[xperimentally observed ground configurations and ground LS terms 	of free atoms]</a></li>
+</ul>
+</li>
+<li><a href="#section-13">26</a></li>
+<li><a href="#section-14">31</a></li>
+<li><a href="#técnicas-de-cálculo-en-átomos-polielectrónicos">3 Técnicas de cálculo en átomos polielectrónicos</a>
+<ul>
+<li><a href="#thfe">ThFe</a></li>
+<li><a href="#hart">Hart</a>
+<ul>
+<li><a href="#potenciales-autoconsistentes">potenciales autoconsistentes</a></li>
+</ul>
+</li>
+<li><a href="#modelos-variacionales">Modelos variacionales</a>
+<ul>
+<li><a href="#hafo">HaFo</a></li>
+</ul>
+</li>
+<li><a href="#thfe-1">ThFe</a>
+<ul>
+<li><a href="#estadística-fd">Estadística FD</a></li>
+<li><a href="#origen-del-v">Origen del V</a></li>
+<li><a href="#utilidad">Utilidad</a></li>
+</ul>
+</li>
+<li><a href="#hafo-1">HaFo</a>
+<ul>
+<li><a href="#planteamiento">Planteamiento</a></li>
+<li><a href="#procedimiento">Procedimiento</a></li>
+</ul>
+</li>
+<li><a href="#potencial-autoconsistente">Potencial Autoconsistente</a></li>
+<li><a href="#métodos-variacionales">Métodos variacionales</a>
+<ul>
+<li><a href="#fundamento">Fundamento</a>
+<ul>
+<li><a href="#valesp-h">ValEsp H</a></li>
+<li><a href="#energia-orden-0">Energia Orden 0</a></li>
+</ul>
+</li>
+<li><a href="#método-variacional">Método variacional</a>
+<ul>
+<li><a href="#condicion-extremo-valesp_h">Condicion extremo ValEsp_H</a></li>
+<li><a href="#cambiosbase-y-schö">CambiosBase y Schö</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#hafo-hasla">[HaFo: HaSla]</a>
+<ul>
+<li><a href="#fund">Fund</a></li>
+<li><a href="#plant">[Plant]</a>
+<ul>
+<li><a href="#xtremcondition">XtremCondition</a></li>
+<li><a href="#eqinterpretacion">EqInterpretacion</a></li>
+</ul>
+</li>
+<li><a href="#método-resolución">Método resolución</a></li>
+<li><a href="#cálculo-de-energías">Cálculo de energías</a></li>
+<li><a href="#elementos-de-matriz-involucrados-en-el-cálculo-de-energías">[Elementos de matriz involucrados en el cálculo de energías]</a>
+<ul>
+<li><a href="#elementos-de-matriz-de-un-solo-electrón">[Elementos de matriz de un solo electrón]</a></li>
+<li><a href="#elementos-de-matriz-de-dos-electrones-matrix-2e">Elementos de matriz de dos electrones {matrix 2e]</a></li>
+<li><a href="#ejemplo-de-cálculo-variacional">Ejemplo de cálculo variacional</a></li>
+<li><a href="#comparación-de-resultados-para-1s2">[Comparación de resultados para 1s^2]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-15">41</a></li>
+<li><a href="#correccionesinteraccionelectrostatica">4 CorreccionesInteraccionElectrostatica</a>
+<ul>
+<li><a href="#motivos">Motivos</a></li>
+<li><a href="#observacion">Observacion</a></li>
+<li><a href="#terminoselectrostaticos">TerminosElectrostaticos</a></li>
+<li><a href="#ejemplo">Ejemplo</a>
+<ul>
+<li><a href="#e-n_1-p-n_2-p">2e n_1 p n_2 p</a></li>
+</ul>
+</li>
+<li><a href="#veremos">Veremos</a>
+<ul>
+<li><a href="#terminospermitidos"># TerminosPermitidos</a></li>
+<li><a href="#terminosl-como-detslater"># TerminoSl como detSlater</a></li>
+<li><a href="#calculopert"># CalculoPert</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-16">42</a>
+<ul>
+<li><a href="#determinacion-terms-ls-para-una-config">Determinacion terms LS para una config</a>
+<ul>
+<li><a href="#ejemplo-1"># Ejemplo</a>
+<ul>
+<li><a href="#n-p-n-s">n p n’ s</a></li>
+<li><a href="#n-p2">n p^2</a></li>
+</ul>
+</li>
+<li><a href="#algunos-resultados-generales">Algunos resultados generales</a></li>
+<li><a href="#ejemplo-2">_Ejemplo</a>
+<ul>
+<li><a href="#n-p2-n-s_">n p^2 n’ s_</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-17">43</a>
+<ul>
+<li><a href="#ejemplo-explícito-para-dos-electrones-no-equivalentes">Ejemplo explícito para dos electrones no equivalentes</a>
+<ul>
+<li><a href="#n-l-n-l">n l n’ l’</a></li>
+</ul>
+</li>
+<li><a href="#correcciones-a-los-niveles-de-energía">_Correcciones a los niveles de energía</a>
+<ul>
+<li><a href="#reglas-de-hund">Reglas de Hund</a></li>
+<li><a href="#ejemplos">Ejemplos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-18">44</a>
+<ul>
+<li><a href="#correcciones-delta-h_el-a-la-energía">Correcciones \Delta H_{EL} a la energía</a>
+<ul>
+<li><a href="#cálculo">Cálculo</a></li>
+<li><a href="#ejemplo-3">Ejemplo</a></li>
+<li><a href="#calculo-de-sigma_i--j-1r_ij-sobre-determinantes-slater">Calculo de \Sigma_{i < j} /1/r_{ij} sobre determinantes Slater</a></li>
+<li><a href="#la-ab-hay-que-conseguir-que-se-transforme-en-frac-a-b">> La /A/B hay que conseguir que se transforme en \frac {A} {B}</a></li>
+<li><a href="#g-k---f-k">G ^k =  F ^k</a></li>
+<li><a href="#coeficientesgeométricos">CoeficientesGeométricos</a></li>
+<li><a href="#integralesradialesde-slater">IntegralesRadiales(de Slater)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-19">45</a>
+<ul>
+<li><a href="#a_k-para-electrones-s-p-d">[a_k para electrones s, p, d]</a></li>
+</ul>
+</li>
+<li><a href="#section-20">46</a>
+<ul>
+<li><a href="#propiedades-generales--delta-h-_el-">Propiedades generales ( ΔHEL\Delta H _{EL}ΔHEL​ )</a></li>
+<li><a href="#observaciones-1">Observaciones</a></li>
+<li><a href="#ejemplo-4">Ejemplo</a>
+<ul>
+<li><a href="#n-p-n-s-1"># npn′sn p n&#x27; snpn′s</a></li>
+<li><a href="#n-p-3"># np3n p ^3np3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-21">47</a>
+<ul>
+<li><a href="#ejemplo-5">Ejemplo</a>
+<ul>
+<li><a href="#he--1-s--n-l--n--neq-1">He 1s nl (n≠1)He \ 1 s \ n l \ (n  \neq 1)He 1s nl (n̸​=1)</a></li>
+<li><a href="#disposicion-tipica-de-los-niveles-de-energia-en-aproximacion-rusell--saunders">[Disposicion tipica de los niveles de energia en aproximacion Rusell # Saunders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-22">51</a></li>
+<li><a href="#interaccionspinorbita">5 InteraccionSpinOrbita</a>
+<ul>
+<li><a href="#en-atomos">En atomos</a>
+<ul>
+<li><a href="#mathbf-l-y-mathbf-s">L\mathbf {L}L y S\mathbf {S}S</a></li>
+<li><a href="#mathbf-l2-y-mathbf-s2">L2\mathbf {L}^2L2 y S2\mathbf {S}^2S2</a></li>
+<li><a href="#aproximacion-russell-saunders">Aproximacion Russell# Saunders</a></li>
+</ul>
+</li>
+<li><a href="#cálculo-delta-h_-so-en-aproxrussaun">Cálculo ΔHSO\Delta H_ {SO}ΔHSO​ en AproxRusSaun</a>
+<ul>
+<li><a href="#en-base-de-detslat">En base de detSlat</a></li>
+<li><a href="#en-base-de-termsel">En base de TermsEl</a></li>
+<li><a href="#conservacion-de-traza">Conservacion de traza</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-23">52</a>
+<ul>
+<li><a href="#resultado-delta-e_-so-en-aproxrussaun">Resultado ΔESO\Delta E_ {SO}ΔESO​ en AproxRusSaun</a></li>
+<li><a href="#conocida-su-a-5-l">conocida su A(5l)A( ^5 l)A(5l)</a></li>
+<li><a href="#integrales-mathe-_-nl">Integrales KaTeX parse error: Expected 'EOF', got '\math' at position 1: \̲m̲a̲t̲h̲{E} _ {nl}</a></li>
+<li><a href="#para-configuraciones-l-m">Para configuraciones lml ^mlm</a></li>
+<li><a href="#se-justifica-regla-de-los-intervalos-de-landé">Se justifica Regla de los intervalos de Landé</a></li>
+<li><a href="#ejemplos-cálculo-delta-e_-so">Ejemplos cálculo ΔESO\Delta E_ {SO}ΔESO​</a></li>
+</ul>
+</li>
+<li><a href="#section-24">53</a>
+<ul>
+<li><a href="#matriz-de-energias-para-las-correciones-por-interaccion-electrostatica">Matriz de energias para las correciones por interaccion Electrostatica</a></li>
+<li><a href="#otros-tipos-de-acoplamiento">Otros tipos de acoplamiento</a>
+<ul>
+<li><a href="#ejemplos-1">Ejemplos</a>
+<ul>
+<li><a href="#n-l-n-l-1">nln′l′n l n&#x27; l&#x27;nln′l′</a></li>
+<li><a href="#p-5--n-l">p5 nlp ^5 \ n lp5 nl</a></li>
+</ul>
+</li>
+<li><a href="#observación">Observación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-25">54</a>
+<ul>
+<li><a href="#tratamiento-en-acoplamiento-intermedio">Tratamiento en “Acoplamiento Intermedio”</a>
+<ul>
+<li><a href="#caso-general">Caso general</a></li>
+<li><a href="#ejemplo-6">Ejemplo</a>
+<ul>
+<li><a href="#p-s">psp sps</a></li>
+<li><a href="#c--1-s-2-2-s-2-2-p-3-s">C 1s22s22p3sC \ 1 s ^2 2 s ^2 2 p 3 sC 1s22s22p3s</a></li>
+<li><a href="#ne--2-p-5-n-s">Ne 2p5nsNe \ 2 p ^5 n sNe 2p5ns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-26">55</a>
+<ul>
+<li><a href="#indicios-de-fallo-en-aprox-rusell-saunders">Indicios de Fallo en Aprox Rusell# Saunders</a></li>
+</ul>
+</li>
+<li><a href="#section-27">61</a></li>
+<li><a href="#perturbación-por-campos-magnéticos-externos">6 Perturbación por campos magnéticos externos</a>
+<ul>
+<li><a href="#origen-1">Origen</a></li>
+<li><a href="#análisis">Análisis</a>
+<ul>
+<li><a href="#a">a)</a></li>
+<li><a href="#b">b)</a></li>
+</ul>
+</li>
+<li><a href="#expresiones-útiles">Expresiones útiles</a></li>
+<li><a href="#cálculo-de-la-perturbacion-por-b-externo">Cálculo de la perturbacion por B externo</a>
+<ul>
+<li><a href="#a-caso-campo-débil">a) Caso campo débil</a></li>
+<li><a href="#b-caso-campo-intenso">b) Caso campo intenso</a></li>
+<li><a href="#c-caso-campo-muy-intenso">c) Caso campo MUY intenso</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-28">62</a>
+<ul>
+<li><a href="#ejemplo-de-cálculo-válido-para-campos-arbitrarios">=Ejemplo de cálculo válido para campos arbitrarios=</a>
+<ul>
+<li><a href="#aprox-zeeman">Aprox Zeeman</a></li>
+<li><a href="#aproximación-paschen-back">Aproximación Paschen# Back</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-29">63</a>
+<ul>
+<li><a href="#observación-del-efecto-zeeman">=Observación del efecto Zeeman=</a></li>
+<li><a href="#ejemplo-7">Ejemplo</a>
+<ul>
+<li><a href="#n-p">npn pnp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-30">64</a>
+<ul>
+<li><a href="#interacción-de-átomos-con-la-radiación">Interacción de átomos con la radiación</a>
+<ul>
+<li><a href="#tratamiento-clásico">Tratamiento clásico</a></li>
+<li><a href="#planteamiento-semiclásico">Planteamiento semiclásico</a></li>
+<li><a href="#planteamiento-completamente-cuántico">Planteamiento completamente cuántico</a></li>
+</ul>
+</li>
+<li><a href="#coeficientes-de-einstein">Coeficientes de Einstein</a></li>
+</ul>
+</li>
+<li><a href="#section-31">65</a>
+<ul>
+<li><a href="#cálculo-de-coeficientes-de-einstein">Cálculo de Coeficientes de Einstein</a>
+<ul>
+<li><a href="#tratamiento-semiclásico">Tratamiento semiclásico</a></li>
+<li><a href="#cálculo-práctico">Cálculo práctico</a></li>
+<li><a href="#cálculo-en-átomos-a-_ij-alpha-langle-irjrangle2">Cálculo en átomos Aijα∣⟨i∣r∣j⟩∣2A _{ij} \alpha |\langle i|r|j\rangle|^2Aij​α∣⟨i∣r∣j⟩∣2</a>
+<ul>
+<li><a href="#reglas-de-selección">Reglas de selección</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#section-32">66</a>
+<ul>
+<li><a href="#intensidad-de-líneas-espectrales">[Intensidad de líneas espectrales]</a>
+<ul>
+<li><a href="#las-intensidades-contienen-información-sobre-los-coeficientes-a-de-einstein-y-sobre-la-.....">> Las intensidades contienen información sobre los coeficientes A de Einstein y sobre la …</a></li>
+<li><a href="#líneas-que-parten-del-mismo-nivel">Líneas que parten del mismo nivel</a></li>
+<li><a href="#líneas-que-parten-distintos-niveles">Líneas que parten distintos niveles</a></li>
+<li><a href="#transiciones-entre-dos-multipletes">Transiciones entre dos multipletes</a>
+<ul>
+<li><a href="#cálculo-de-coeficientes-6j">Cálculo de coeficientes “6j”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="bloque-i-introducción-a-los-átomos-polielectronicos">BLOQUE I: INTRODUCCIÓN A LOS ÁTOMOS POLIELECTRONICOS</h1>
+<h1 id="section">11</h1>
+<h1 id="introduccion-a-los-atomos-polielectronicos">1 Introduccion a los atomos polielectronicos</h1>
+<h2 id="atomos-polielectronicos">ATOMOS POLIELECTRONICOS</h2>
+<h2 id="aproximación-básica-campo-central.">AProximación básica: Campo central.</h2>
+<h2 id="solución-h_c--sigma-h_i">Solución <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>H</mi><mi>c</mi></msub><mo>=</mo><mi mathvariant="normal">Σ</mi><msub><mi>H</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">H_c = \Sigma H_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.151392em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord">Σ</span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span></h2>
+<h2 id="aproximación-de-campo-central-i">Aproximación de campo central I</h2>
+<h3 id="cuestiones-básicas">Cuestiones básicas</h3>
+<h4 id="soluciones-al-problema-de-un-electron">Soluciones al problema de un electron</h4>
+<h4 id="efecto-de-algunas-correciones-relativistas-y-nucleares">Efecto de algunas correciones (relativistas y nucleares</h4>
+<h4 id="ejemplos-en-que-basta-esta-aproximacion">Ejemplos en que “basta” esta aproximacion</h4>
+<h4 id="funciones-de-onda-en-esta-aproximación-determinantes-de-slater">Funciones de onda en esta aproximación (Determinantes de SLater)</h4>
+<h4 id="determinación-de-los-potenciales-vr">Determinación de los potenciales V®</h4>
+<h3 id="solucion-al-problema-de-campo-central">Solucion al problema de campo central</h3>
+<h4 id="buscamos-soluciones-que-separen-en-parte-radial-y-orbital">Buscamos soluciones que separen en parte radial y orbital</h4>
+<h4 id="schrödinger-en-una-dimension">Schrödinger en una dimension</h4>
+<h1 id="section-1">12</h1>
+<h1 id="section-2">13</h1>
+<h2 id="resultados">Resultados:</h2>
+<h3 id="funciones-de-onda-etiquetadas-32-índices-numeros-cuánticos">Funciones de onda etiquetadas 3+2 “índices” (numeros cuánticos)</h3>
+<h3 id="energía-sólo-dependiente-de-dos-números-cuçanticos">Energía sólo dependiente de dos números cuçanticos</h3>
+<h4 id="degeneración-en-los-otros">Degeneración en los otros</h4>
+<h4 id="definido-por-el-número-de-ceros-de-pr">Definido por el número de ceros de P®</h4>
+<h4 id="el-origen-de-la-degeneraciçon-en-m_p-es-la-simetría-esférica-y-desaparece-bajo-campos-externos-zeeman-cristales">El origen de la degeneraciçon en M_p es la simetría esférica y desaparece bajo campos externos (zeeman, cristales)</h4>
+<h3 id="caso-particular-hidrogenoide">Caso particular: Hidrogenoide</h3>
+<h4 id="p_nl">P_{nl}</h4>
+<h4 id="e_nl">E_{nl}</h4>
+<h4 id="degeneración-accidental">Degeneración “accidental”</h4>
+<h2 id="efectos-de-masa">Efectos de masa</h2>
+<h3 id="isotopico-de-masa">Isotopico de masa</h3>
+<h4 id="trabajando-en-c.m.">Trabajando en C.M.</h4>
+<h3 id="atomo-muónico">Atomo muónico</h3>
+<h3 id="positronio">Positronio</h3>
+<h1 id="section-3">14</h1>
+<h2 id="armónicos-esféricos">=Armónicos esféricos=</h2>
+<h1 id="section-4">15</h1>
+<h2 id="aproximación-de-campo-central-ii">Aproximación de campo central II</h2>
+<h3 id="aspecto-típico-de-los-niveles-de-energía">Aspecto típico de los niveles de energía</h3>
+<h4 id="fórmula-de-rydberg">Fórmula de Rydberg</h4>
+<h2 id="introducción-spin">Introducción Spin</h2>
+<h3 id="función-de-ondas-de-spin">Función de ondas de Spin</h3>
+<h1 id="section-5">16</h1>
+<h2 id="distribución-de-probabilidad-electrónica">Distribución de probabilidad electrónica</h2>
+<h3 id="segun-phi">Segun Phi</h3>
+<h3 id="segun-r">Segun r</h3>
+<h3 id="segun-theta">segun theta</h3>
+<h2 id="propiedades-comunes-a-todo-momento-angular">Propiedades comunes a todo momento angular</h2>
+<h3 id="definición">Definición</h3>
+<h3 id="autovectores">Autovectores</h3>
+<h3 id="operadores">Operadores</h3>
+<h3 id="representacion-matricial">Representacion matricial</h3>
+<h3 id="conmutación">Conmutación</h3>
+<h4 id="combinación">Combinación</h4>
+<h4 id="numeros-cuanticos">Numeros cuanticos</h4>
+<h4 id="coeficientes-cambio-de-base">Coeficientes cambio de base</h4>
+<h5 id="propiedades-de-simetria">Propiedades de simetria</h5>
+<h4 id="combinaciones-lineales">Combinaciones lineales</h4>
+<h1 id="section-6">17</h1>
+<h2 id="efectos-relativistas-ecuación-de-dirac">Efectos Relativistas (Ecuación de Dirac)</h2>
+<h3 id="correcciones-relativistas-al-campo-central">Correcciones Relativistas al campo central</h3>
+<h4 id="solución-de-la-ecuación-de-dirac">Solución de la ecuación de Dirac</h4>
+<h4 id="energía-de-un-dipolo-en-un-campo-magnético">Energía de un dipolo en un campo magnético</h4>
+<h1 id="section-7">18</h1>
+<h2 id="resumen-de-teoría-de-perturbaciones">Resumen de teoría de perturbaciones</h2>
+<h3 id="caso-no-degenerado">Caso no degenerado</h3>
+<h3 id="caso-degenerado">Caso degenerado</h3>
+<h4 id="conclusión">Conclusión</h4>
+<h4 id="atajo">Atajo!</h4>
+<h2 id="efectos-relativistas-en-h-estructura-fina">Efectos relativistas en H (Estructura Fina)</h2>
+<h3 id="h_0">H_0</h3>
+<h3 id="h_m-y-h_d">H_m y H_D</h3>
+<h3 id="h_so">H_{SO}</h3>
+<h3 id="juntando-todo">Juntando todo</h3>
+<h1 id="section-8">19</h1>
+<h2 id="espectro-del-h">Espectro del H</h2>
+<h3 id="estructura-fina">Estructura fina</h3>
+<h3 id="reglas-de-selección-dipolares-eléctricas-ei">Reglas de selección dipolares eléctricas (EI)</h3>
+<h2 id="acoplamiento-ls-para-un-solo-electrón">Acoplamiento LS para un solo electrón</h2>
+<h3 id="ejemplo-obtener-explícitamente-los-casos-de-l1">Ejemplo: Obtener explícitamente los casos de l=1</h3>
+<h1 id="section-9">21</h1>
+<h1 id="ejemplos-importantes-de-campo-central">2 Ejemplos importantes de campo central</h1>
+<h2 id="átomos-alcalinos">Átomos alcalinos</h2>
+<h3 id="configuración">Configuración</h3>
+<h3 id="desaparece-degeneración-accidental">Desaparece degeneración accidental</h3>
+<h3 id="interacción-s-o-es-la-primera-en-importancia">Interacción S# O es la primera en importancia</h3>
+<h3 id="el-comportamiento-de-e_nl-es-prácticamente-universal-para-orbitales-suficientemente-excitados-de-cualquier-átomo">El comportamiento de E_{nl} es prácticamente universal para orbitales suficientemente excitados de cualquier átomo</h3>
+<h2 id="graficas">[Graficas]</h2>
+<h1 id="section-10">22</h1>
+<h2 id="espectros-característicos-de-rayos-x">Espectros característicos de Rayos X</h2>
+<h1 id="section-11">23</h1>
+<h2 id="origen">Origen</h2>
+<h2 id="producción">Producción</h2>
+<h2 id="espectro-de-emisión">Espectro de emisión</h2>
+<h3 id="continuo">Continuo</h3>
+<h3 id="discreto">Discreto</h3>
+<h2 id="espectro-de-absorción">Espectro de absorción</h2>
+<h2 id="interpretación-excitación-niveles-internos">Interpretación: Excitación niveles internos</h2>
+<h3 id="pesos-estadísticas">Pesos estadísticas</h3>
+<h3 id="reglas-selección">Reglas selección</h3>
+<h3 id="ley-de-moseley">Ley de Moseley</h3>
+<h2 id="graficas-1">[graficas]</h2>
+<h2 id="función-de-ondas-antisimétricas.-configuraciónes.">Función de ondas antisimétricas. Configuraciónes.</h2>
+<h1 id="section-12">25</h1>
+<h2 id="los-electrones-son-indistinguibles">Los electrones son indistinguibles</h2>
+<h2 id="observaciones">Observaciones</h2>
+<h2 id="consecuencias">Consecuencias</h2>
+<h2 id="observaciones-generales">Observaciones generales</h2>
+<h3 id="para-un-electron">Para un electron</h3>
+<h3 id="para-nu-electrones">Para \nu electrones</h3>
+<h3 id="para-una-configuración-varios-electrones">Para una configuración varios electrones</h3>
+<h3 id="notación-para-determinantes-de-slater-con-n_i-l_i-comunes">Notación para determinantes de Slater con n_i l_i comunes</h3>
+<h3 id="en-aproximación-campo-central">En aproximación campo central</h3>
+<h3 id="orden-de-llenado">Orden de llenado</h3>
+<h2 id="xperimentally-observed-ground-configurations-and-ground-ls-terms--of-free-atoms">[xperimentally observed ground configurations and ground LS terms 	of free atoms]</h2>
+<h1 id="section-13">26</h1>
+<h1 id="section-14">31</h1>
+<h1 id="técnicas-de-cálculo-en-átomos-polielectrónicos">3 Técnicas de cálculo en átomos polielectrónicos</h1>
+<h2 id="thfe">ThFe</h2>
+<h2 id="hart">Hart</h2>
+<h3 id="potenciales-autoconsistentes">potenciales autoconsistentes</h3>
+<h2 id="modelos-variacionales">Modelos variacionales</h2>
+<h3 id="hafo">HaFo</h3>
+<h2 id="thfe-1"><em>ThFe</em></h2>
+<h3 id="estadística-fd">Estadística FD</h3>
+<h3 id="origen-del-v">Origen del V</h3>
+<h3 id="utilidad">Utilidad</h3>
+<h2 id="hafo-1"><em>HaFo</em></h2>
+<h3 id="planteamiento">Planteamiento</h3>
+<h3 id="procedimiento">Procedimiento</h3>
+<h2 id="potencial-autoconsistente"><em>Potencial Autoconsistente</em></h2>
+<h2 id="métodos-variacionales"><em>Métodos variacionales</em></h2>
+<h3 id="fundamento">Fundamento</h3>
+<h4 id="valesp-h">ValEsp H</h4>
+<h4 id="energia-orden-0">Energia Orden 0</h4>
+<h3 id="método-variacional">Método variacional</h3>
+<h4 id="condicion-extremo-valesp_h">Condicion extremo ValEsp_H</h4>
+<h4 id="cambiosbase-y-schö">CambiosBase y Schö</h4>
+<h2 id="hafo-hasla">[<em>HaFo: HaSla</em>]</h2>
+<h3 id="fund">Fund</h3>
+<h3 id="plant">[Plant]</h3>
+<h4 id="xtremcondition"><em>XtremCondition</em></h4>
+<h4 id="eqinterpretacion"><em>EqInterpretacion</em></h4>
+<h3 id="método-resolución">Método resolución</h3>
+<h3 id="cálculo-de-energías">Cálculo de energías</h3>
+<h3 id="elementos-de-matriz-involucrados-en-el-cálculo-de-energías">[<em>Elementos de matriz involucrados en el cálculo de energías</em>]</h3>
+<h4 id="elementos-de-matriz-de-un-solo-electrón">[Elementos de matriz de un solo electrón]</h4>
+<h4 id="elementos-de-matriz-de-dos-electrones-matrix-2e">Elementos de matriz de dos electrones {matrix 2e]</h4>
+<h5 id="integracion-para-j">Integracion Para J</h5>
+<h6 id="coeficientes-geometricos-resultado-de-integrar-sobre-angulos">Coeficientes geometricos, resultado de integrar sobre angulos</h6>
+<p>####### Integrales radiales<br>
+####### Integrales de Slater<br>
+######## Directa<br>
+######## De canje</p>
+<h4 id="ejemplo-de-cálculo-variacional">Ejemplo de cálculo variacional</h4>
+<h5 id="para-configuración-1s2-helioideos">para configuración 1s^2 (Helioideos)</h5>
+<h4 id="comparación-de-resultados-para-1s2">[Comparación de resultados para 1s^2]</h4>
+<h5 id="electrones-independientes"><em>Electrones independientes</em></h5>
+<h5 id="teoríaperturbaciones"><em>TeoríaPerturbaciones</em></h5>
+<h5 id="tratamientovariacional"><em>TratamientoVariacional</em></h5>
+<h5 id="calculopotionizacion">[CalculoPotIonizacion]</h5>
+<h5 id="aproxcorecongelado">_AproxCoreCongelado</h5>
+<h5 id="incluyendorelajacion"><em>IncluyendoRelajacion</em></h5>
+<h1 id="section-15">41</h1>
+<h1 id="correccionesinteraccionelectrostatica">4 <em>CorreccionesInteraccionElectrostatica</em></h1>
+<h2 id="motivos"><em>Motivos</em></h2>
+<h2 id="observacion"><em>Observacion</em></h2>
+<h2 id="terminoselectrostaticos"><em>TerminosElectrostaticos</em></h2>
+<h2 id="ejemplo"><em>Ejemplo</em></h2>
+<h3 id="e-n_1-p-n_2-p">2e n_1 p n_2 p</h3>
+<h2 id="veremos"><em>Veremos</em></h2>
+<h3 id="terminospermitidos"># TerminosPermitidos</h3>
+<h3 id="terminosl-como-detslater"># TerminoSl como detSlater</h3>
+<h3 id="calculopert"># CalculoPert</h3>
+<h1 id="section-16">42</h1>
+<h2 id="determinacion-terms-ls-para-una-config"><em>Determinacion terms LS para una config</em></h2>
+<h3 id="ejemplo-1"># Ejemplo</h3>
+<h4 id="n-p-n-s">n p n’ s</h4>
+<h4 id="n-p2">n p^2</h4>
+<h3 id="algunos-resultados-generales"><em>Algunos resultados generales</em></h3>
+<h3 id="ejemplo-2">_Ejemplo</h3>
+<h4 id="n-p2-n-s_">n p^2 n’ s_</h4>
+<h1 id="section-17">43</h1>
+<h2 id="ejemplo-explícito-para-dos-electrones-no-equivalentes"><em>Ejemplo explícito para dos electrones no equivalentes</em></h2>
+<h3 id="n-l-n-l">n l n’ l’</h3>
+<h2 id="correcciones-a-los-niveles-de-energía">_Correcciones a los niveles de energía</h2>
+<h3 id="reglas-de-hund">Reglas de Hund</h3>
+<h3 id="ejemplos">Ejemplos</h3>
+<h1 id="section-18">44</h1>
+<h2 id="correcciones-delta-h_el-a-la-energía">Correcciones \Delta H_{EL} a la energía</h2>
+<h3 id="cálculo">Cálculo</h3>
+<h3 id="ejemplo-3">Ejemplo</h3>
+<h3 id="calculo-de-sigma_i--j-1r_ij-sobre-determinantes-slater">Calculo de \Sigma_{i &lt; j} /1/r_{ij} sobre determinantes Slater</h3>
+<h3 id="la-ab-hay-que-conseguir-que-se-transforme-en-frac-a-b">&gt; La /A/B hay que conseguir que se transforme en \frac {A} {B}</h3>
+<h3 id="g-k---f-k">G ^k =  F ^k</h3>
+<h3 id="coeficientesgeométricos">CoeficientesGeométricos</h3>
+<h3 id="integralesradialesde-slater">IntegralesRadiales(de Slater)</h3>
+<h1 id="section-19">45</h1>
+<h2 id="a_k-para-electrones-s-p-d">[a_k para electrones s, p, d]</h2>
+<h1 id="section-20">46</h1>
+<h2 id="propiedades-generales--delta-h-_el-">Propiedades generales ( <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mrow><mi>E</mi><mi>L</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta H _{EL}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right: 0.05764em;">E</span><span class="mord mathit mtight">L</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> )</h2>
+<h2 id="observaciones-1">Observaciones</h2>
+<h2 id="ejemplo-4">Ejemplo</h2>
+<h3 id="n-p-n-s-1"># <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>p</mi><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup><mi>s</mi></mrow><annotation encoding="application/x-tex">n p n&amp;#x27; s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.946332em; vertical-align: -0.19444em;"></span><span class="mord mathit">n</span><span class="mord mathit">p</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.751892em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathit">s</span></span></span></span></span></h3>
+<h3 id="n-p-3"># <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><msup><mi>p</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">n p ^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.00855em; vertical-align: -0.19444em;"></span><span class="mord mathit">n</span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span></h3>
+<h1 id="section-21">47</h1>
+<h2 id="ejemplo-5">Ejemplo</h2>
+<h3 id="he--1-s--n-l--n--neq-1"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mi>e</mi><mtext>&nbsp;</mtext><mn>1</mn><mi>s</mi><mtext>&nbsp;</mtext><mi>n</mi><mi>l</mi><mtext>&nbsp;</mtext><mo>(</mo><mi>n</mi><mi mathvariant="normal">≠</mi><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">He \ 1 s \ n l \ (n  \neq 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="mord mathit">e</span><span class="mspace">&nbsp;</span><span class="mord">1</span><span class="mord mathit">s</span><span class="mspace">&nbsp;</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="mspace">&nbsp;</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.69444em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="rlap"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="inner"><span class="mrel latin_fallback"≯</span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.19444em;"><span class=""></span></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span></h3>
+<h3 id="disposicion-tipica-de-los-niveles-de-energia-en-aproximacion-rusell--saunders">[Disposicion tipica de los niveles de energia en aproximacion Rusell # Saunders</h3>
+<h1 id="section-22">51</h1>
+<h1 id="interaccionspinorbita">5 <em>InteraccionSpinOrbita</em></h1>
+<h2 id="en-atomos">En atomos</h2>
+<h3 id="mathbf-l-y-mathbf-s"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="bold">L</mi></mrow><annotation encoding="application/x-tex">\mathbf {L}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68611em; vertical-align: 0em;"></span><span class="mord"><span class="mord mathbf">L</span></span></span></span></span></span> y <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="bold">S</mi></mrow><annotation encoding="application/x-tex">\mathbf {S}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68611em; vertical-align: 0em;"></span><span class="mord"><span class="mord mathbf">S</span></span></span></span></span></span></h3>
+<h3 id="mathbf-l2-y-mathbf-s2"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi mathvariant="bold">L</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf {L}^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.814108em; vertical-align: 0em;"></span><span class="mord"><span class="mord"><span class="mord mathbf">L</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> y <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi mathvariant="bold">S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf {S}^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.814108em; vertical-align: 0em;"></span><span class="mord"><span class="mord"><span class="mord mathbf">S</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></h3>
+<h3 id="aproximacion-russell-saunders"><em>Aproximacion Russell# Saunders</em></h3>
+<h2 id="cálculo-delta-h_-so-en-aproxrussaun">Cálculo <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>H</mi><mrow><mi>S</mi><mi>O</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta H_ {SO}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathit" style="margin-right: 0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: -0.08125em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right: 0.05764em;">S</span><span class="mord mathit mtight" style="margin-right: 0.02778em;">O</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> en AproxRusSaun</h2>
+<h3 id="en-base-de-detslat">En base de detSlat</h3>
+<h3 id="en-base-de-termsel">En base de TermsEl</h3>
+<h3 id="conservacion-de-traza">Conservacion de traza</h3>
+<h1 id="section-23">52</h1>
+<h2 id="resultado-delta-e_-so-en-aproxrussaun">Resultado <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>E</mi><mrow><mi>S</mi><mi>O</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta E_ {SO}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathit" style="margin-right: 0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: -0.05764em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right: 0.05764em;">S</span><span class="mord mathit mtight" style="margin-right: 0.02778em;">O</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span> en AproxRusSaun</h2>
+<h2 id="conocida-su-a-5-l">conocida su <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><msup><mo>(</mo><mn>5</mn></msup><mi>l</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">A( ^5 l)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathit">A</span><span class="mopen"><span class="mopen">(</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="mclose">)</span></span></span></span></span></h2>
+<h2 id="integrales-mathe-_-nl">Integrales <span class="katex--inline">KaTeX parse error: Expected 'EOF', got '\math' at position 1: \̲m̲a̲t̲h̲{E} _ {nl}</span></h2>
+<h2 id="para-configuraciones-l-m">Para configuraciones <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>l</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">l ^m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord"><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.664392em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">m</span></span></span></span></span></span></span></span></span></span></span></span></h2>
+<h2 id="se-justifica-regla-de-los-intervalos-de-landé">Se justifica Regla de los intervalos de Landé</h2>
+<h2 id="ejemplos-cálculo-delta-e_-so"><em>Ejemplos cálculo <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>E</mi><mrow><mi>S</mi><mi>O</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta E_ {SO}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord">Δ</span><span class="mord"><span class="mord mathit" style="margin-right: 0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: -0.05764em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right: 0.05764em;">S</span><span class="mord mathit mtight" style="margin-right: 0.02778em;">O</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span></span></span></span></span></em></h2>
+<h1 id="section-24">53</h1>
+<h2 id="matriz-de-energias-para-las-correciones-por-interaccion-electrostatica">Matriz de energias para las correciones por interaccion Electrostatica</h2>
+<h2 id="otros-tipos-de-acoplamiento"><em>Otros tipos de acoplamiento</em></h2>
+<h3 id="ejemplos-1">Ejemplos</h3>
+<h4 id="n-l-n-l-1"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>l</mi><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup><msup><mi>l</mi><mo mathvariant="normal">′</mo></msup></mrow><annotation encoding="application/x-tex">n l n&amp;#x27; l&amp;#x27;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.751892em; vertical-align: 0em;"></span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.751892em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right: 0.01968em;">l</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.751892em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span></h4>
+<h4 id="p-5--n-l"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>p</mi><mn>5</mn></msup><mtext>&nbsp;</mtext><mi>n</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">p ^5 \ n l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.00855em; vertical-align: -0.19444em;"></span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mspace">&nbsp;</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right: 0.01968em;">l</span></span></span></span></span></h4>
+<h3 id="observación">Observación</h3>
+<h1 id="section-25">54</h1>
+<h2 id="tratamiento-en-acoplamiento-intermedio">Tratamiento en “Acoplamiento Intermedio”</h2>
+<h3 id="caso-general">Caso general</h3>
+<h3 id="ejemplo-6">Ejemplo</h3>
+<h4 id="p-s"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">p s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="mord mathit">p</span><span class="mord mathit">s</span></span></span></span></span></h4>
+<h5 id="autovalores">Autovalores</h5>
+<h4 id="c--1-s-2-2-s-2-2-p-3-s"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mtext>&nbsp;</mtext><mn>1</mn><msup><mi>s</mi><mn>2</mn></msup><mn>2</mn><msup><mi>s</mi><mn>2</mn></msup><mn>2</mn><mi>p</mi><mn>3</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">C \ 1 s ^2 2 s ^2 2 p 3 s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.00855em; vertical-align: -0.19444em;"></span><span class="mord mathit" style="margin-right: 0.07153em;">C</span><span class="mspace">&nbsp;</span><span class="mord">1</span><span class="mord"><span class="mord mathit">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">2</span><span class="mord"><span class="mord mathit">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">2</span><span class="mord mathit">p</span><span class="mord">3</span><span class="mord mathit">s</span></span></span></span></span></h4>
+<h4 id="ne--2-p-5-n-s"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>e</mi><mtext>&nbsp;</mtext><mn>2</mn><msup><mi>p</mi><mn>5</mn></msup><mi>n</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Ne \ 2 p ^5 n s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.00855em; vertical-align: -0.19444em;"></span><span class="mord mathit" style="margin-right: 0.10903em;">N</span><span class="mord mathit">e</span><span class="mspace">&nbsp;</span><span class="mord">2</span><span class="mord"><span class="mord mathit">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mord mathit">n</span><span class="mord mathit">s</span></span></span></span></span></h4>
+<h1 id="section-26">55</h1>
+<h2 id="indicios-de-fallo-en-aprox-rusell-saunders">Indicios de Fallo en Aprox Rusell# Saunders</h2>
+<h1 id="section-27">61</h1>
+<h1 id="perturbación-por-campos-magnéticos-externos">6 Perturbación por campos magnéticos externos</h1>
+<h2 id="origen-1">Origen</h2>
+<h2 id="análisis">Análisis</h2>
+<h3 id="a">a)</h3>
+<h3 id="b">b)</h3>
+<h2 id="expresiones-útiles">Expresiones útiles</h2>
+<h2 id="cálculo-de-la-perturbacion-por-b-externo">Cálculo de la perturbacion por B externo</h2>
+<h3 id="a-caso-campo-débil">a) Caso campo débil</h3>
+<h3 id="b-caso-campo-intenso">b) Caso campo intenso</h3>
+<h3 id="c-caso-campo-muy-intenso">c) Caso campo MUY intenso</h3>
+<h1 id="section-28">62</h1>
+<h2 id="ejemplo-de-cálculo-válido-para-campos-arbitrarios">=<em>Ejemplo de cálculo válido para campos arbitrarios</em>=</h2>
+<h3 id="aprox-zeeman">Aprox Zeeman</h3>
+<h3 id="aproximación-paschen-back">Aproximación Paschen# Back</h3>
+<h1 id="section-29">63</h1>
+<h2 id="observación-del-efecto-zeeman">=Observación del efecto Zeeman=</h2>
+<h2 id="ejemplo-7">Ejemplo</h2>
+<h3 id="n-p"><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">n p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.19444em;"></span><span class="mord mathit">n</span><span class="mord mathit">p</span></span></span></span></span></h3>
+<h1 id="section-30">64</h1>
+<h2 id="interacción-de-átomos-con-la-radiación">Interacción de átomos con la radiación</h2>
+<h3 id="tratamiento-clásico">Tratamiento clásico</h3>
+<h3 id="planteamiento-semiclásico">Planteamiento semiclásico</h3>
+<h3 id="planteamiento-completamente-cuántico">Planteamiento completamente cuántico</h3>
+<h2 id="coeficientes-de-einstein">Coeficientes de Einstein</h2>
+<h1 id="section-31">65</h1>
+<h2 id="cálculo-de-coeficientes-de-einstein">Cálculo de Coeficientes de Einstein</h2>
+<h3 id="tratamiento-semiclásico">Tratamiento semiclásico</h3>
+<h3 id="cálculo-práctico">Cálculo práctico</h3>
+<h3 id="cálculo-en-átomos-a-_ij-alpha-langle-irjrangle2">Cálculo en átomos <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>α</mi><mi mathvariant="normal">∣</mi><mo>⟨</mo><mi>i</mi><mi mathvariant="normal">∣</mi><mi>r</mi><mi mathvariant="normal">∣</mi><mi>j</mi><mo>⟩</mo><msup><mi mathvariant="normal">∣</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">A _{ij} \alpha |\langle i|r|j\rangle|^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.10022em; vertical-align: -0.286108em;"></span><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.311664em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight" style="margin-right: 0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.286108em;"><span class=""></span></span></span></span></span></span><span class="mord mathit" style="margin-right: 0.0037em;">α</span><span class="mord">∣</span><span class="mopen">⟨</span><span class="mord mathit">i</span><span class="mord">∣</span><span class="mord mathit" style="margin-right: 0.02778em;">r</span><span class="mord">∣</span><span class="mord mathit" style="margin-right: 0.05724em;">j</span><span class="mclose">⟩</span><span class="mord"><span class="mord">∣</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></h3>
+<h4 id="reglas-de-selección">Reglas de selección</h4>
+<h1 id="section-32">66</h1>
+<h2 id="intensidad-de-líneas-espectrales">[Intensidad de líneas espectrales]</h2>
+<h3 id="las-intensidades-contienen-información-sobre-los-coeficientes-a-de-einstein-y-sobre-la-.....">&gt; Las intensidades contienen información sobre los coeficientes A de Einstein y sobre la …</h3>
+<h3 id="líneas-que-parten-del-mismo-nivel"><em>Líneas que parten del mismo nivel</em></h3>
+<h3 id="líneas-que-parten-distintos-niveles"><em>Líneas que parten distintos niveles</em></h3>
+<h3 id="transiciones-entre-dos-multipletes"><em>Transiciones entre dos multipletes</em></h3>
+<h4 id="cálculo-de-coeficientes-6j"><em>Cálculo de coeficientes “6j”</em></h4>
+
+    </div>
+  </div>
+</body>
+
+</html>

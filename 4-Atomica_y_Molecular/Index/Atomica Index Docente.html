@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomica Index Docente</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#física-atómica">Física Atómica</a>
+<ul>
+<li><a href="#introducción-a-los-átomos-polielectrónicos.">1. Introducción a los átomos polielectrónicos.</a>
+<ul>
+<li><a href="#manejo-de-funciones-de-onda-antisimétricas.">Manejo de funciones de onda antisimétricas.</a>
+<ul>
+<li><a href="#configuraciones-degeneración-sistema-periódico.">Configuraciones, Degeneración, Sistema periódico.</a></li>
+</ul>
+</li>
+<li><a href="#aproximaciones-para-el-cálculo-de-la-estructura-atómica.">Aproximaciones para el cálculo de la estructura atómica.</a>
+<ul>
+<li><a href="#métodos-estadísticos-y-de-hartree">Métodos estadísticos y de Hartree</a></li>
+<li><a href="#métodos-variacionales-hartree-fock">Métodos Variacionales (Hartree-Fock)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#correcciones-a-la-aproximación-del-campo-central.">2. Correcciones a la Aproximación del Campo Central.</a>
+<ul>
+<li><a href="#interacción-electrostática.">Interacción electrostática.</a>
+<ul>
+<li><a href="#términos-electrostáticos-y-su-determinación">Términos electrostáticos y su determinación</a></li>
+<li><a href="#cálculo-de-correcciones-por-interacción-electrostática..">Cálculo de correcciones por interacción electrostática…</a></li>
+</ul>
+</li>
+<li><a href="#interacción-spin---órbita.">Interacción Spin - Órbita.</a>
+<ul>
+<li><a href="#momento-angular-total-j-y-autoestados.">Momento angular total J y autoestados.</a></li>
+<li><a href="#cálculo-de-constantes-spin-órbita.">Cálculo de constantes spin-órbita.</a></li>
+</ul>
+</li>
+<li><a href="#aproximación-de-russell-saunders.">Aproximación de Russell Saunders.</a>
+<ul>
+<li><a href="#limitaciones-del-acoplamiento-ls">Limitaciones del acoplamiento LS</a></li>
+</ul>
+</li>
+<li><a href="#otros-modelos-de-acoplamiento-acoplamiento-jj-nociones-de-acoplamiento-intermedio-efectos.">Otros modelos de acoplamiento, acoplamiento JJ, nociones de acoplamiento intermedio, efectos.</a></li>
+</ul>
+</li>
+<li><a href="#átomos-en-campos-externos-constantes.">3. Átomos en campos externos constantes.</a>
+<ul>
+<li><a href="#campos-magnéticos.">Campos magnéticos.</a>
+<ul>
+<li><a href="#límites-zeeman-y-paschen-back.">Límites Zeeman y Paschen-Back.</a></li>
+</ul>
+</li>
+<li><a href="#campos-eléctricos.">Campos eléctricos.</a></li>
+</ul>
+</li>
+<li><a href="#emisión-y-absorción-de-radiación-por-átomos.">4. Emisión y absorción de radiación por átomos.</a>
+<ul>
+<li><a href="#interacción-con-el-campo-electromagnético.">Interacción con el campo electromagnético.</a>
+<ul>
+<li><a href="#coeficientes-de-einstein-y-su-cálculo">Coeficientes de Einstein y su cálculo</a></li>
+</ul>
+</li>
+<li><a href="#reglas-de-selección.">Reglas de selección.</a>
+<ul>
+<li><a href="#líneas-espectrales">Líneas espectrales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#física-molecular">Física Molecular</a>
+<ul>
+<li><a href="#introducción-a-la-estructura-molecular.">5. Introducción a la estructura molecular.</a>
+<ul>
+<li><a href="#aproximación-de-born-oppenheimer">Aproximación de Born Oppenheimer</a></li>
+<li><a href="#estructura-de-moléculas-diatómicas">Estructura de moléculas diatómicas</a></li>
+<li><a href="#función-de-ondas-nuclear.">Función de ondas nuclear.</a>
+<ul>
+<li><a href="#estados-vibracionales-y-rotacionales.">Estados vibracionales y rotacionales.</a></li>
+</ul>
+</li>
+<li><a href="#función-de-ondas-electrónica.">Función de ondas electrónica.</a>
+<ul>
+<li><a href="#curvas-de-potencial.">Curvas de potencial.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#emisión-y-absorción-de-radiación-por-moléculas-diatómicas.">6. Emisión y absorción de radiación por moléculas diatómicas.</a>
+<ul>
+<li><a href="#acoplamiento-de-momentos-angulares.">Acoplamiento de momentos angulares.</a></li>
+<li><a href="#espectros-rotacionales-puros">Espectros rotacionales puros</a></li>
+<li><a href="#espectros-vibro-rotacionales">Espectros vibro-rotacionales</a></li>
+<li><a href="#transiciones-electrónicas.">Transiciones electrónicas.</a>
+<ul>
+<li><a href="#principio-de-franck-condon">Principio de Franck-Condon</a></li>
+</ul>
+</li>
+<li><a href="#otras-técnicas-espectroscópicas.">Otras técnicas espectroscópicas.</a></li>
+</ul>
+</li>
+<li><a href="#moléculas-poliatómicas.">7. Moléculas poliatómicas.</a>
+<ul>
+<li><a href="#orbitales-moleculares-deslocalización.">Orbitales moleculares, deslocalización.</a></li>
+<li><a href="#estados-rotacionales-y-vibracionales.">Estados rotacionales y vibracionales.</a></li>
+<li><a href="#espectroscopía">Espectroscopía</a></li>
+<li><a href="#ejemplos-de-moléculas-importantes-h2o-nh3-...">Ejemplos de moléculas importantes (H2O, NH3, …)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <p>Guía Docente del Grado en Física</p>
+<h1 id="física-atómica">Física Atómica</h1>
+<h2 id="introducción-a-los-átomos-polielectrónicos.">1. Introducción a los átomos polielectrónicos.</h2>
+<h3 id="manejo-de-funciones-de-onda-antisimétricas.">Manejo de funciones de onda antisimétricas.</h3>
+<blockquote>
+<h4 id="configuraciones-degeneración-sistema-periódico.">Configuraciones, Degeneración, Sistema periódico.</h4>
+</blockquote>
+<h3 id="aproximaciones-para-el-cálculo-de-la-estructura-atómica.">Aproximaciones para el cálculo de la estructura atómica.</h3>
+<blockquote>
+<h4 id="métodos-estadísticos-y-de-hartree">Métodos estadísticos y de Hartree</h4>
+<h4 id="métodos-variacionales-hartree-fock">Métodos Variacionales (Hartree-Fock)</h4>
+</blockquote>
+<h2 id="correcciones-a-la-aproximación-del-campo-central.">2. Correcciones a la Aproximación del Campo Central.</h2>
+<h3 id="interacción-electrostática.">Interacción electrostática.</h3>
+<blockquote>
+<h4 id="términos-electrostáticos-y-su-determinación">Términos electrostáticos y su determinación</h4>
+<h4 id="cálculo-de-correcciones-por-interacción-electrostática..">Cálculo de correcciones por interacción electrostática…</h4>
+</blockquote>
+<h3 id="interacción-spin---órbita.">Interacción Spin - Órbita.</h3>
+<blockquote>
+<h4 id="momento-angular-total-j-y-autoestados.">Momento angular total J y autoestados.</h4>
+<h4 id="cálculo-de-constantes-spin-órbita.">Cálculo de constantes spin-órbita.</h4>
+</blockquote>
+<h3 id="aproximación-de-russell-saunders.">Aproximación de Russell Saunders.</h3>
+<blockquote>
+<h4 id="limitaciones-del-acoplamiento-ls">Limitaciones del acoplamiento LS</h4>
+</blockquote>
+<h3 id="otros-modelos-de-acoplamiento-acoplamiento-jj-nociones-de-acoplamiento-intermedio-efectos.">Otros modelos de acoplamiento, acoplamiento JJ, nociones de acoplamiento intermedio, efectos.</h3>
+<h2 id="átomos-en-campos-externos-constantes.">3. Átomos en campos externos constantes.</h2>
+<h3 id="campos-magnéticos.">Campos magnéticos.</h3>
+<blockquote>
+<h4 id="límites-zeeman-y-paschen-back.">Límites Zeeman y Paschen-Back.</h4>
+</blockquote>
+<h3 id="campos-eléctricos.">Campos eléctricos.</h3>
+<h2 id="emisión-y-absorción-de-radiación-por-átomos.">4. Emisión y absorción de radiación por átomos.</h2>
+<h3 id="interacción-con-el-campo-electromagnético.">Interacción con el campo electromagnético.</h3>
+<blockquote>
+<h4 id="coeficientes-de-einstein-y-su-cálculo">Coeficientes de Einstein y su cálculo</h4>
+</blockquote>
+<h3 id="reglas-de-selección.">Reglas de selección.</h3>
+<blockquote>
+<h4 id="líneas-espectrales">Líneas espectrales</h4>
+</blockquote>
+<h1 id="física-molecular">Física Molecular</h1>
+<h2 id="introducción-a-la-estructura-molecular.">5. Introducción a la estructura molecular.</h2>
+<h3 id="aproximación-de-born-oppenheimer">Aproximación de Born Oppenheimer</h3>
+<h3 id="estructura-de-moléculas-diatómicas">Estructura de moléculas diatómicas</h3>
+<h3 id="función-de-ondas-nuclear.">Función de ondas nuclear.</h3>
+<blockquote>
+<h4 id="estados-vibracionales-y-rotacionales.">Estados vibracionales y rotacionales.</h4>
+</blockquote>
+<h3 id="función-de-ondas-electrónica.">Función de ondas electrónica.</h3>
+<blockquote>
+<h4 id="curvas-de-potencial.">Curvas de potencial.</h4>
+</blockquote>
+<h2 id="emisión-y-absorción-de-radiación-por-moléculas-diatómicas.">6. Emisión y absorción de radiación por moléculas diatómicas.</h2>
+<h3 id="acoplamiento-de-momentos-angulares.">Acoplamiento de momentos angulares.</h3>
+<h3 id="espectros-rotacionales-puros">Espectros rotacionales puros</h3>
+<h3 id="espectros-vibro-rotacionales">Espectros vibro-rotacionales</h3>
+<h3 id="transiciones-electrónicas.">Transiciones electrónicas.</h3>
+<blockquote>
+<h4 id="principio-de-franck-condon">Principio de Franck-Condon</h4>
+</blockquote>
+<h3 id="otras-técnicas-espectroscópicas.">Otras técnicas espectroscópicas.</h3>
+<h2 id="moléculas-poliatómicas.">7. Moléculas poliatómicas.</h2>
+<h3 id="orbitales-moleculares-deslocalización.">Orbitales moleculares, deslocalización.</h3>
+<h3 id="estados-rotacionales-y-vibracionales.">Estados rotacionales y vibracionales.</h3>
+<h3 id="espectroscopía">Espectroscopía</h3>
+<h3 id="ejemplos-de-moléculas-importantes-h2o-nh3-...">Ejemplos de moléculas importantes (H2O, NH3, …)</h3>
+
+    </div>
+  </div>
+</body>
+
+</html>

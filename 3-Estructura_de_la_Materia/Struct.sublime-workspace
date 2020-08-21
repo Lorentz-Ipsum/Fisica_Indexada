@@ -1,0 +1,263 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"w",
+				"Working"
+			]
+		]
+	},
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Manu/Documents/18 WRK/_UCM/04 Estructura/Struct.txt",
+		"/Users/Manu/Documents/18 WRK/_UCM/04 Estructura/EstructuraTemario.txt",
+		"/Users/Manu/Documents/18 WRK/_UCM/02 Termo No Eq/formalismo termodinamico fuera equilibrio amplied.pdf",
+		"/Users/Manu/Desktop/Prog/p5js/minkokowskiki/empty-example/index.html",
+		"/Users/Manu/Desktop/Prog/p5js/minkokowskiki/empty-example/sketch.js",
+		"/Users/Manu/Desktop/p5js/colorlol/empty-example/sketch.js",
+		"/Users/Manu/Desktop/p5js/TriMomentum/empty-example/index.html",
+		"/Users/Manu/Desktop/p5js/TriMomentum/p5.min.js",
+		"/Users/Manu/Desktop/empty-example/sketch.js",
+		"/Users/Manu/Documents/17 Wrk2/Doks Projects/Games/Untitled Game Ideas/untitled game 2 minotaur.txt",
+		"/Users/Manu/Documents/17 Wrk2/Doks Projects/Games/Untitled Game Ideas/untitled game 3.txt",
+		"/Users/Manu/.bash_profile",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks PROG/python pro tips.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/00 Sci/Harp Train.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/Poesia/5 jul cambio de vida.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/Poesia/hi world.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/Poesia/Mind.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/Poesia/Esta todo al alcance.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/books.sublime-workspace",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/Artistas.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/Icon.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/Ideas.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/MP&.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/primer 2017 RECOP SHINKU /02 Escrib/YOUTUBE CHANNELS.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks Projects/XbL/XrREFS/tabs computer.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks WRITE/Text/primer 2017 RECOP SHINKU /tabs",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks IMPROVE/Plan Ok/To Orti.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks PROG/prgy 01",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/L Music/Music.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/L Music/MUSIC REFERENCES.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/L Music/Music",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/L Music/Music2.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/L Music/Music2p.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/L Music/MusicYT.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/L Music/YT Play BlJaSw.txt",
+		"/Users/Manu/Desktop/WIN Doks Txt/02 Escrib/Artistas.txt",
+		"/Users/Manu/Desktop/WIN Doks Txt/02 Escrib/Icon.txt",
+		"/Users/Manu/Desktop/WIN Doks Txt/02 Escrib/Ideas.txt",
+		"/Users/Manu/Desktop/WIN Doks Txt/02 Escrib/To Orti.txt",
+		"/Users/Manu/Desktop/WIN Doks Txt/02 Escrib/MP6.txt",
+		"/Users/Manu/Desktop/WIN Doks Txt/02 Escrib/YOUTUBE CHANNELS.txt",
+		"/Users/Manu/Desktop/WIN Doks Txt/tabs dual boot.txt",
+		"/Users/Manu/Desktop/PeliculasListOK",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/WIN L Music/Music.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/WIN L Music/MUSIC REFERENCES.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/WIN L Music/Music2",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/WIN L Music/Music2.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/WIN L Music/MusicYT.txt",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/WIN L Music/YT Play BlJaSw",
+		"/Users/Manu/Biblioteca/2017 Biblioteca/Doks MUSIK/WIN L Music/YT Play BlJaSw.txt",
+		"/Users/Manu/Desktop/prgy 01.txt",
+		"/Users/Manu/Documents/00 WRK/02 Projects/17 MP6/01movieSeries.txt",
+		"/Users/Manu/Documents/17 Wrk2/02 Text/17 Poesi/5 jul cambio de vida",
+		"/Users/Manu/Documents/17 Wrk2/02 Text/17 Poesi/hi world",
+		"/Users/Manu/Documents/17 Wrk2/02 Text/17 Poesi/Mind",
+		"/Users/Manu/Documents/17 Wrk2/02 Text/17 Poesi/Esta todo al alcance",
+		"/Users/Manu/Desktop/plan.txt",
+		"/Users/Manu/Desktop/2 DO REAL.txt",
+		"/Users/Manu/Desktop/2do.txt",
+		"/Users/Manu/Documents/00 WRK/01 Fisica/FIS.txt",
+		"/Users/Manu/Documents/17 Wrk3/03 Progr/KEYGEN/mathpass",
+		"/Users/Manu/Documents/00 WRK/02 Projects/XbL/17 Web.txt",
+		"/Users/Manu/Documents/00 WRK/02 Projects/17 MP6/YOUTUBE CHANNELS.txt",
+		"/Users/Manu/Documents/00 WRK/02 Projects/17 MP6/People/03 Gente.txt",
+		"/Users/Manu/Documents/00 WRK/02 Projects/17 MP6/MP&.txt",
+		"/Users/Manu/Documents/17 Wrk2/02 Text/2017 RECOP SHINKU/Nueva carpeta/sd.txt",
+		"/Users/Manu/Documents/17 Wrk2/02 Text/2017 RECOP SHINKU/02 Escrib/Artistas.txt",
+		"/Users/Manu/Documents/17 Wrk2/02 Text/2017 RECOP SHINKU/02 Escrib/Artistas",
+		"/Users/Manu/Documents/17 Wrk2/02 Text/_ YT/carpeta sin título/videos_master.txt",
+		"/Users/Manu/Biblioteca/Img Recops 17/fonds/asasa/pppporn.txt",
+		"/Users/Manu/Documents/00 WRK/_UCM/02 Fisica Estadistica/FisicaEstadistica.txt",
+		"/Users/Manu/Documents/00 WRK/_UCM/03 SolStatPhi/FisicaEstadoSolido.txt",
+		"/Users/Manu/Desktop/megarefs colegas.txt",
+		"/Users/Manu/Documents/17 Wrk2/02 Text/master_research.txt",
+		"/Users/Manu/Desktop/sassasdaffafaa.py",
+		"/Users/Manu/Documents/02 2Do/_WR/17 MP6/MP&.txt",
+		"/Users/Manu/Documents/02 2Do/2do.txt",
+		"/Users/Manu/Documents/02 2Do/_WR/17 MP6/17 Playlists/Playlist Happy",
+		"/Users/Manu/Documents/000 2Do/_WR/17 MP6/17 Playlists/Albums.txt",
+		"/Users/Manu/Documents/000 2Do/_WR/17 MP6/Games&Webs.txt",
+		"/Users/Manu/Documents/000 2Do/_WR/17 MP6/Libros.txt",
+		"/Users/Manu/Documents/000 2Do/_WR/17 MP6/Music.txt",
+		"/Users/Manu/Documents/000 2Do/_WR/17 MP6/MP&.txt",
+		"/Users/Manu/Documents/000 2Do/_WR/17 MP6/17 Playlists/Sad songs 9gag",
+		"/Users/Manu/Documents/000 2Do/_WR/17 MP6/list G&P.rtf",
+		"/Users/Manu/Documents/000 2Do/_WR/17 MP6/htmls.html",
+		"/Users/Manu/Documents/02 Text/BIB/2017 RECOP SHINKU/02 Escrib/YOUTUBE CHANNELS",
+		"/Users/Manu/Biblioteca/2017/6 junio/17 MP6/Libros",
+		"/Users/Manu/Documents/02 Text/scifital",
+		"/Users/Manu/Documents/02 Wrk2/02 Text/Ppl",
+		"/Users/Manu/Documents/00 WRK/_UCM/_ YT/Names",
+		"/Users/Manu/Documents/02 Wrk2/02 Text/Terror",
+		"/Users/Manu/Documents/02 Wrk2/02 Text/SHort",
+		"/Users/Manu/Documents/02 Wrk2/02 Text/Zarzal Moral 2",
+		"/Users/Manu/Documents/02 Wrk2/02 Text/SHort 1",
+		"/Users/Manu/Library/Application Support/GIMP/2.8/themes/Gimp-CC-Theme-Gray/gtkrc",
+		"/Users/Manu/Library/Application Support/GIMP/2.8/themes/Gimp-CC-Theme-Light/gtkrc"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/00 WRK/_UCM/02 Astro/Astrofisica Resum.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

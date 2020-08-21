@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomica Apuntes T3</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#section">31</a></li>
+<li><a href="#técnicas-de-cálculo-en-átomos-polielectrónicos">3 Técnicas de cálculo en átomos polielectrónicos</a>
+<ul>
+<li><a href="#thfe">ThFe</a></li>
+<li><a href="#hart">Hart</a>
+<ul>
+<li><a href="#potenciales-autoconsistentes">potenciales autoconsistentes</a></li>
+</ul>
+</li>
+<li><a href="#modelos-variacionales">Modelos variacionales</a>
+<ul>
+<li><a href="#hafo">HaFo</a></li>
+</ul>
+</li>
+<li><a href="#thfe-1">ThFe</a>
+<ul>
+<li><a href="#estadística-fd">Estadística FD</a></li>
+<li><a href="#origen-del-v">Origen del V</a></li>
+<li><a href="#utilidad">Utilidad</a></li>
+</ul>
+</li>
+<li><a href="#hafo-1">HaFo</a>
+<ul>
+<li><a href="#planteamiento">Planteamiento</a></li>
+<li><a href="#procedimiento">Procedimiento</a></li>
+</ul>
+</li>
+<li><a href="#potencial-autoconsistente">Potencial Autoconsistente</a></li>
+<li><a href="#métodos-variacionales">Métodos variacionales</a>
+<ul>
+<li><a href="#fundamento">Fundamento</a>
+<ul>
+<li><a href="#valesp-h">ValEsp H</a></li>
+<li><a href="#energia-orden-0">Energia Orden 0</a></li>
+</ul>
+</li>
+<li><a href="#método-variacional">Método variacional</a>
+<ul>
+<li><a href="#condicion-extremo-valesp_h">Condicion extremo ValEsp_H</a></li>
+<li><a href="#cambiosbase-y-schö">CambiosBase y Schö</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#hafo-hasla">[HaFo: HaSla]</a>
+<ul>
+<li><a href="#fund">Fund</a></li>
+<li><a href="#plant">[Plant]</a>
+<ul>
+<li><a href="#xtremcondition">XtremCondition</a></li>
+<li><a href="#eqinterpretacion">EqInterpretacion</a></li>
+</ul>
+</li>
+<li><a href="#método-resolución">Método resolución</a></li>
+<li><a href="#cálculo-de-energías">Cálculo de energías</a></li>
+<li><a href="#elementos-de-matriz-involucrados-en-el-cálculo-de-energías">[Elementos de matriz involucrados en el cálculo de energías]</a>
+<ul>
+<li><a href="#elementos-de-matriz-de-un-solo-electrón">[Elementos de matriz de un solo electrón]</a></li>
+<li><a href="#elementos-de-matriz-de-dos-electrones-matrix-2e">Elementos de matriz de dos electrones {matrix 2e]</a></li>
+<li><a href="#ejemplo-de-cálculo-variacional">Ejemplo de cálculo variacional</a></li>
+<li><a href="#comparación-de-resultados-para-1s2">[Comparación de resultados para 1s^2]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="section">31</h1>
+<h1 id="técnicas-de-cálculo-en-átomos-polielectrónicos">3 Técnicas de cálculo en átomos polielectrónicos</h1>
+<h2 id="thfe">ThFe</h2>
+<h2 id="hart">Hart</h2>
+<h3 id="potenciales-autoconsistentes">potenciales autoconsistentes</h3>
+<h2 id="modelos-variacionales">Modelos variacionales</h2>
+<h3 id="hafo">HaFo</h3>
+<h2 id="thfe-1"><strong>ThFe</strong></h2>
+<h3 id="estadística-fd">Estadística FD</h3>
+<h3 id="origen-del-v">Origen del V</h3>
+<h3 id="utilidad">Utilidad</h3>
+<h2 id="hafo-1"><strong>HaFo</strong></h2>
+<h3 id="planteamiento">Planteamiento</h3>
+<h3 id="procedimiento">Procedimiento</h3>
+<h2 id="potencial-autoconsistente"><em>Potencial Autoconsistente</em></h2>
+<h2 id="métodos-variacionales"><strong>Métodos variacionales</strong></h2>
+<h3 id="fundamento">Fundamento</h3>
+<h4 id="valesp-h">ValEsp H</h4>
+<h4 id="energia-orden-0">Energia Orden 0</h4>
+<h3 id="método-variacional">Método variacional</h3>
+<h4 id="condicion-extremo-valesp_h">Condicion extremo ValEsp_H</h4>
+<h4 id="cambiosbase-y-schö">CambiosBase y Schö</h4>
+<h2 id="hafo-hasla">[<em>HaFo: HaSla</em>]</h2>
+<h3 id="fund">Fund</h3>
+<h3 id="plant">[Plant]</h3>
+<h4 id="xtremcondition"><em>XtremCondition</em></h4>
+<h4 id="eqinterpretacion"><em>EqInterpretacion</em></h4>
+<h3 id="método-resolución">Método resolución</h3>
+<h3 id="cálculo-de-energías">Cálculo de energías</h3>
+<h3 id="elementos-de-matriz-involucrados-en-el-cálculo-de-energías">[<em>Elementos de matriz involucrados en el cálculo de energías</em>]</h3>
+<h4 id="elementos-de-matriz-de-un-solo-electrón">[Elementos de matriz de un solo electrón]</h4>
+<h4 id="elementos-de-matriz-de-dos-electrones-matrix-2e">Elementos de matriz de dos electrones {matrix 2e]</h4>
+<h5 id="integracion-para-j">Integracion Para J</h5>
+<h6 id="coeficientes-geometricos-resultado-de-integrar-sobre-angulos">Coeficientes geometricos, resultado de integrar sobre angulos</h6>
+<p>####### Integrales radiales<br>
+####### Integrales de Slater<br>
+######## Directa<br>
+######## De canje</p>
+<h4 id="ejemplo-de-cálculo-variacional">Ejemplo de cálculo variacional</h4>
+<h5 id="para-configuración-1s2-helioideos">para configuración 1s^2 (Helioideos)</h5>
+<h4 id="comparación-de-resultados-para-1s2">[Comparación de resultados para 1s^2]</h4>
+<h5 id="electrones-independientes"><em>Electrones independientes</em></h5>
+<h5 id="teoríaperturbaciones"><em>TeoríaPerturbaciones</em></h5>
+<h5 id="tratamientovariacional"><em>TratamientoVariacional</em></h5>
+<h5 id="calculopotionizacion">[CalculoPotIonizacion]</h5>
+<h5 id="aproxcorecongelado">_AproxCoreCongelado</h5>
+<h5 id="incluyendorelajacion"><em>IncluyendoRelajacion</em></h5>
+
+    </div>
+  </div>
+</body>
+
+</html>
