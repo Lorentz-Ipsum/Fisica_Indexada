@@ -1,0 +1,1031 @@
+<!DOCTYPE html><html><head>
+      <title>Index SG</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}@font-face{font-family:'Raleway';font-style:italic;font-weight:400;src:local('Raleway Italic'),local('Raleway-Italic'),url(https://fonts.gstatic.com/s/raleway/v14/1Ptsg8zYS_SKggPNyCg4TYFv.ttf) format('truetype')}@font-face{font-family:'Raleway';font-style:italic;font-weight:700;src:local('Raleway Bold Italic'),local('Raleway-BoldItalic'),url(https://fonts.gstatic.com/s/raleway/v14/1Ptpg8zYS_SKggPNyCgw9qR_AtCe.ttf) format('truetype')}@font-face{font-family:'Raleway';font-style:normal;font-weight:400;src:local('Raleway'),local('Raleway-Regular'),url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype')}@font-face{font-family:'Raleway';font-style:normal;font-weight:700;src:local('Raleway Bold'),local('Raleway-Bold'),url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwJYtWqZPBQ.ttf) format('truetype')}body{background:#fcfcfc;color:#111;font-family:'Raleway',sans-serif;font-weight:400;font-size:16px}body h1,body h2,body h3,body h4,body h5,body h6,body table,body li,body .mathjax-exps,body .math{color:#111;font-family:'Raleway',sans-serif}body h1{font-weight:normal;line-height:4rem;margin:0 0 1.75rem;padding:20px 30px;text-align:center;text-transform:uppercase;margin-top:4rem}body h2{font-weight:normal;line-height:3rem;margin:0 0 1.9375rem;padding:0 30px;text-align:center;text-transform:uppercase;margin-top:3rem}body h3{font-weight:normal}body h4{font-weight:normal}body h5{font-size:1.125rem;font-weight:normal}body h6{font-size:1rem;font-weight:bold}body p{color:#111;font-size:1rem;line-height:1.75rem;margin:0 0 1.25rem}body blockquote{margin-left:1rem;margin-right:0;padding:.5em}body h1{font-size:2.827rem}body h2{font-size:1.999rem}body h3{font-size:1.413rem}body h4{font-size:1.25rem}body h5{font-size:1.15rem}body h6{font-size:1rem}body a{color:#990000;text-decoration:none}body a:hover{text-decoration:underline}body table{margin-bottom:20px}body table th,body table td{padding:8px;line-height:1.25rem;vertical-align:top;border-top:1px solid #ddd}body table th{font-weight:bold}body table thead th{vertical-align:bottom}body table caption+thead tr:first-child th,body table caption+thead tr:first-child td,body table colgroup+thead tr:first-child th,body table colgroup+thead tr:first-child td,body table thead:first-child tr:first-child th,body table thead:first-child tr:first-child td{border-top:0}body table tbody+tbody{border-top:2px solid #ddd}body code{padding:.5em;color:inherit;border:1px solid #ccc;padding:.1em;font-size:.9em;margin-left:.2em;margin-right:.2em}body pre>code{border:none}body li>p{margin-top:0;margin-bottom:0}body .task-list{padding-left:0}body .task-list-item{list-style:none;margin-left:-2.4em}body .task-list-item input{top:3px;margin-right:1.6em}body .task-list-item input:before{content:"";display:inline-block;width:1rem;height:1rem;vertical-align:middle;text-align:center;border:1px solid gray;background-color:#fdfdfd;margin-left:0;margin-top:-0.8rem}body .task-list-item input:checked:before,body .task-list-item input[checked]:before{content:'\25FC';font-size:.8125rem;line-height:.9375rem;margin-top:-1rem}@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm){body .task-list-item input:before{margin-top:-0.2rem}body .task-list-item input:checked:before,body .task-list-item input[checked]:before{margin-top:-0.2rem}}body blockquote{margin:0 0 1.11111rem;padding:.5rem 1.11111rem 0 1.05556rem;border-left:1px solid gray;background-color:#ededed}body blockquote,body blockquote p{line-height:1.6;color:#6f6f6f}body img{max-width:100%}body kbd{color:#111}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%C3%ADndice-resumen-de-simetr%C3%ADas-y-grupos">&#xCD;ndice-Resumen de Simetr&#xED;as y Grupos</h1>
+
+<ul>
+<li><a href="#%C3%ADndice-resumen-de-simetr%C3%ADas-y-grupos">&#xCD;ndice-Resumen de Simetr&#xED;as y Grupos</a>
+<ul>
+<li><a href="#tema-1-introducci%C3%B3n-importancia-de-las-simetr%C3%ADas-en-f%C3%ADsica">Tema 1: Introducci&#xF3;n. Importancia de las simetr&#xED;as en f&#xED;sica</a></li>
+<li><a href="#tema-2-elementos-generales-de-teor%C3%ADa-de-grupos">Tema 2: Elementos generales de teor&#xED;a de grupos</a>
+<ul>
+<li><a href="#21-definici%C3%B3n-y-ejemplos">2.1. Definici&#xF3;n y ejemplos</a></li>
+<li><a href="#22-subgrupos">2.2. Subgrupos</a></li>
+<li><a href="#23-clases-de-conjugaci%C3%B3n">2.3. Clases de conjugaci&#xF3;n</a></li>
+<li><a href="#24-subgrupos-normales">2.4. Subgrupos normales</a></li>
+<li><a href="#25-cosets">2.5. Cosets</a></li>
+<li><a href="#26-grupo-cociente">2.6. Grupo cociente</a></li>
+<li><a href="#27-homomorfismos-entre-grupos">2.7. Homomorfismos entre grupos</a></li>
+<li><a href="#28-producto-de-grupos">2.8. Producto de Grupos</a></li>
+</ul>
+</li>
+<li><a href="#tema-3-representaciones-de-grupos">Tema 3 - Representaciones de Grupos</a>
+<ul>
+<li><a href="#31-acciones-de-grupos">3.1. Acciones de Grupos</a></li>
+<li><a href="#32-representaciones-lineales">3.2. Representaciones Lineales</a></li>
+<li><a href="#33-representaci%C3%B3n-conjugada-o-contragradiente">3.3. Representaci&#xF3;n conjugada o contragradiente</a></li>
+<li><a href="#34-representaciones-equivalentes">3.4. Representaciones equivalentes</a></li>
+<li><a href="#35-representaciones-reducibles-e-irreducibles">3.5. Representaciones reducibles e irreducibles</a></li>
+<li><a href="#36-unitariedad">3.6. Unitariedad</a></li>
+<li><a href="#37-lemas-de-schur">3.7. Lemas de Schur</a></li>
+<li><a href="#38-relaciones-de-ortonormalidad-y-completitud">3.8. Relaciones de ortonormalidad y completitud</a></li>
+<li><a href="#39-producto-tensorial-de-representaciones-y-coeficientes-de-clebsch-gordan">3.9. Producto tensorial de representaciones y coeficientes de Clebsch-Gordan</a></li>
+<li><a href="#310-teorema-de-wigner-eckart">3.10. Teorema de Wigner-Eckart</a></li>
+<li><a href="#311-representaciones-del-producto-directo-de-grupos">3.11. Representaciones del producto directo de grupos</a></li>
+</ul>
+</li>
+<li><a href="#tema-4-grupos-y-%C3%A1lgebras-de-lie">Tema 4: Grupos y &#xE1;lgebras de Lie</a>
+<ul>
+<li><a href="#41-elementos-b%C3%A1sicos-sobre-espacios-topol%C3%B3gicos">4.1 Elementos b&#xE1;sicos sobre espacios topol&#xF3;gicos</a></li>
+<li><a href="#42-grupo-de-lie-definici%C3%B3n">4.2 Grupo de Lie: definici&#xF3;n</a></li>
+<li><a href="#43-grupos-de-lie-lineales">4.3 Grupos de Lie lineales</a></li>
+<li><a href="#44-estudio-local-de-un-grupo-de-lie-%C3%A1lgebras-de-lie">4.4 Estudio local de un grupo de Lie: &#xE1;lgebras de Lie</a></li>
+<li><a href="#45-representaciones-adjuntas-de-%C3%A1lgebras-y-grupos-de-lie-constantes-de-estructura">4.5 Representaciones adjuntas de &#xE1;lgebras y grupos de Lie: constantes de estructura</a></li>
+<li><a href="#46-%C3%A1lgebras-de-lie-simples-y-semi-simples">4.6 &#xC1;lgebras de Lie simples y semi-simples</a></li>
+</ul>
+</li>
+<li><a href="#tema-5-rotaciones-en-r3-los-grupos-so3-y-su2">Tema 5: Rotaciones en R^3: Los grupos SO(3) y SU(2)</a>
+<ul>
+<li><a href="#51-descripci%C3%B3n-de-so3">5.1. Descripci&#xF3;n de SO(3)</a></li>
+<li><a href="#52-de-so3-a-su2">5.2. De SO(3) a SU(2)</a></li>
+<li><a href="#53-generados-infinitesimales-y-el-%C3%A1lgebra-de-lie">5.3. Generados infinitesimales y el &#xE1;lgebra de Lie</a></li>
+<li><a href="#54-representaciones-de-su2">5.4. Representaciones de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></a></li>
+<li><a href="#55-producto-directo-de-representaciones-de-su2">5.5. Producto directo de representaciones de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></a></li>
+<li><a href="#56-medida-de-haar-invariante-en-su2">5.6. Medida de Haar invariante en <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></a></li>
+<li><a href="#57-ortogonalidad-completitud-caracteres">5.7. Ortogonalidad, completitud, caracteres</a></li>
+<li><a href="#58-teorema-de-wigner-eckart">5.8. Teorema de Wigner-Eckart</a></li>
+<li><a href="#59-aplicaci%C3%B3n-f%C3%ADsica-isosp%C3%ADn">5.9. Aplicaci&#xF3;n f&#xED;sica: Isosp&#xED;n</a></li>
+<li><a href="#510-rotaci%C3%B3n-de-funciones-de-onda">5.10 Rotaci&#xF3;n de funciones de onda</a></li>
+<li><a href="#511-rotaci%C3%B3n-de-operadores">5.11 Rotaci&#xF3;n de operadores</a></li>
+</ul>
+</li>
+<li><a href="#tema-6-el-grupo-de-lorentz">Tema 6: El grupo de Lorentz</a>
+<ul>
+<li><a href="#61-propiedades-b%C3%A1sicas">6.1. Propiedades b&#xE1;sicas</a></li>
+<li><a href="#62-grupo-de-lorentz-ortocrono-propio">6.2 Grupo de Lorentz ortocrono propio</a></li>
+<li><a href="#63-%C3%A1lgebra-de-lie">6.3 &#xC1;lgebra de Lie</a></li>
+<li><a href="#64-representaciones-irreducibles">6.4 Representaciones irreducibles</a></li>
+</ul>
+</li>
+<li><a href="#tema-7-el-grupo-de-poincar%C3%A9">Tema 7: El grupo de Poincar&#xE9;</a>
+<ul>
+<li><a href="#71-propiedades-b%C3%A1sicas">7.1 Propiedades b&#xE1;sicas</a></li>
+<li><a href="#72-%C3%A1lgebra-de-lie-del-grupo-de-poincar%C3%A9-ortocrono-propio">7.2 &#xC1;lgebra de Lie del grupo de Poincar&#xE9; ortocrono propio</a></li>
+<li><a href="#73-representaciones-unitarias-del-grupo-de-poincar%C3%A9-ortocrono-propio">7.3 Representaciones unitarias del grupo de Poincar&#xE9; ortocrono propio</a></li>
+<li><a href="#74-representaci%C3%B3n-sobre-estados-de-una-part%C3%ADcula">7.4 Representaci&#xF3;n sobre estados de una part&#xED;cula</a></li>
+<li><a href="#75-campo-de-klein-gordon">7.5 Campo de Klein-Gordon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="mume-header" id="tema-1-introducci%C3%B3n-importancia-de-las-simetr%C3%ADas-en-f%C3%ADsica">Tema 1: Introducci&#xF3;n. Importancia de las simetr&#xED;as en f&#xED;sica</h3>
+
+<ul>
+<li>Intro</li>
+<li>Relaci&#xF3;n simetr&#xED;as y teor&#xED;a de Grupos</li>
+<li>Tipos de simetr&#xED;as</li>
+<li>Activo vs pasivo</li>
+<li>Case Study: Red discreta</li>
+</ul>
+<h3 class="mume-header" id="tema-2-elementos-generales-de-teor%C3%ADa-de-grupos">Tema 2: Elementos generales de teor&#xED;a de grupos</h3>
+
+<h4 class="mume-header" id="21-definici%C3%B3n-y-ejemplos">2.1. Definici&#xF3;n y ejemplos</h4>
+
+<ul>
+<li>Def: Grupo
+<ul>
+<li>Propiedades</li>
+<li>Grupo abeliano</li>
+<li>&#xD3;rden de un grupo</li>
+</ul>
+</li>
+<li>Th: Teorema de reordenamiento</li>
+<li>Eg:
+<ul>
+<li>Grupos finitos</li>
+<li>Grupos discretos de &#xF3;rden <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">&#x221E;</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord">&#x221E;</span></span></span></span></li>
+<li>Grupos cont&#xED;nuos compactos</li>
+<li>Grupos cont&#xED;nuos no compactos
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mi>L</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi mathvariant="double-struck">K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">GL(n,\mathbb{K})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathbb">K</span></span><span class="mclose">)</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>L</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi mathvariant="double-struck">K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SL(n,\mathbb{K})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathbb">K</span></span><span class="mclose">)</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">E(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="22-subgrupos">2.2. Subgrupos</h4>
+
+<ul>
+<li>Def: Subgrupo</li>
+<li>Th: Identidad</li>
+<li>Def: Subgrupo propio</li>
+<li>Eg:
+<ul>
+<li>Centro <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Z(g)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mclose">)</span></span></span></span></li>
+<li>Centralizador <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>g</mi></msub></mrow><annotation encoding="application/x-tex">Z_g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">g</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="23-clases-de-conjugaci%C3%B3n">2.3. Clases de conjugaci&#xF3;n</h4>
+
+<ul>
+<li>Relaci&#xF3;n de Equivalencia</li>
+<li>Clase de conjugaci&#xF3;n
+<ul>
+<li>Propiedades</li>
+</ul>
+</li>
+<li>Eg: Grupo de permutaciones <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">S_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li>Tabla de multiplicaci&#xF3;n</li>
+</ul>
+<h4 class="mume-header" id="24-subgrupos-normales">2.4. Subgrupos normales</h4>
+
+<ul>
+<li>Eg: Subgrupo normal o invariante por conjugaci&#xF3;n</li>
+<li>Th: Teorema de uni&#xF3;n de clases de conjugaci&#xF3;n</li>
+<li>Def: Subgrupo simple</li>
+<li>Def: Subgrupo semisimple</li>
+<li>Eg: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">S_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> no es simple</li>
+</ul>
+<h4 class="mume-header" id="25-cosets">2.5. Cosets</h4>
+
+<ul>
+<li>Def: Coset
+<ul>
+<li>Propiedades</li>
+</ul>
+</li>
+<li>Th: Teorema de Lagrange</li>
+<li>Def: &#xCD;ndice</li>
+</ul>
+<h4 class="mume-header" id="26-grupo-cociente">2.6. Grupo cociente</h4>
+
+<ul>
+<li>Def: Producto de Cosets</li>
+<li>Prob: 1</li>
+<li>Th: Grupo cociente o grupo factor <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mi mathvariant="normal">/</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">G/H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span></span></span></span></li>
+<li>Eg: Cociente <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>3</mn></msub><mi mathvariant="normal">/</mi><msub><mi>A</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">S_3/A_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li>Grupo cociente de permutaciones c&#xED;clicas</li>
+</ul>
+<h4 class="mume-header" id="27-homomorfismos-entre-grupos">2.7. Homomorfismos entre grupos</h4>
+
+<ul>
+<li>Def: Homomorfismo
+<ul>
+<li>Propiedades</li>
+<li>Homomorfismo fiel o inyectivo</li>
+<li>Isomorfismo</li>
+</ul>
+</li>
+<li>Pr: Imagen</li>
+<li>Def: N&#xFA;cleo</li>
+<li>Th: Teorema de Cayley</li>
+<li>Eg:
+<ul>
+<li>Aplicaci&#xF3;n <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi><mo>&#x2192;</mo><msub><mi>S</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\mathbb{R} \rightarrow S_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord"><span class="mord mathbb">R</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2192;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">S_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> es isomorfo a <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">D_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>Th:
+<ul>
+<li>N&#xFA;cleo y Subgrupo normal</li>
+<li>Imagen y Subgrupo</li>
+<li>Grupo cociente y N&#xFA;cleo</li>
+<li>Dems</li>
+<li>Cor: Subgrupo normal y Homomorfismos</li>
+</ul>
+</li>
+<li>Eg: Grupo matricial en <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">K</mi></mrow><annotation encoding="application/x-tex">\mathbb{K}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord"><span class="mord mathbb">K</span></span></span></span></span></li>
+<li>Resumen:
+<ul>
+<li>Homomorfismo
+<ul>
+<li>conjugaci&#xF3;n</li>
+<li>Automorfismo</li>
+<li>Centro</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="28-producto-de-grupos">2.8. Producto de Grupos</h4>
+
+<ul>
+<li>Def: Producto directo <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mn>1</mn></msub><mo>&#xD7;</mo><msub><mi>G</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">G_1 \times G_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
+<ul>
+<li>Propiedades</li>
+</ul>
+</li>
+<li>Th: Producto directo de Subgrupos</li>
+<li>Eg:
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mi>U</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>&#xD7;</mo><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">U(n) = U(1) \times SU(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>&#x223C;</mo><mi>S</mi><mi>O</mi><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>&#xD7;</mo><msub><mi>G</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">O(3) \sim SO(3)\times G_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">3</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x223C;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">3</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">G</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>Def: Producto semidirecto</li>
+<li>Prob:
+<ul>
+<li>Grupo finito de &#xF3;rden primo <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">&#x2192;</span></span></span></span> c&#xED;clico</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mo>=</mo><msub><mi>H</mi><mn>1</mn></msub><mo>&#xD7;</mo><msub><mi>H</mi><mn>2</mn></msub><mo>&#x21D2;</mo><mi>G</mi><mi mathvariant="normal">/</mi><msub><mi>H</mi><mn>1</mn></msub><mo>&#x223C;</mo><msub><mi>H</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">G = H_1 \times H_2 \Rightarrow G/H_1 \sim H_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x21D2;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x223C;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.08125em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li>Ejercicio del campus</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="tema-3-representaciones-de-grupos">Tema 3 - Representaciones de Grupos</h3>
+
+<h4 class="mume-header" id="31-acciones-de-grupos">3.1. Acciones de Grupos</h4>
+
+<ul>
+<li>Def: Representaci&#xF3;n</li>
+<li>Def: Grupo sim&#xE9;trico de un conjunto X</li>
+<li>Def: Acci&#xF3;n de Grupo
+<ul>
+<li>Eg: Algunos grupos se definen por su acci&#xF3;n</li>
+<li>Props</li>
+<li>Acci&#xF3;n Fiel</li>
+<li>Acci&#xF3;n Transitiva</li>
+<li>Acci&#xF3;n Libre</li>
+<li>Acci&#xF3;n Regular</li>
+<li>Obs</li>
+</ul>
+</li>
+<li>Def: &#xD3;rbita</li>
+<li>Def: Estabilizador</li>
+<li>Th: Teorema &#xD3;rbita-Estabilizador</li>
+</ul>
+<h4 class="mume-header" id="32-representaciones-lineales">3.2. Representaciones Lineales</h4>
+
+<ul>
+<li>Grupo de operadores</li>
+<li>Composici&#xF3;n de transformaciones lineales</li>
+<li>Grupo de transformaciones lineales o Grupo de operadores</li>
+<li>Def: Representaci&#xF3;n lineal de un grupo
+<ul>
+<li>Def: Dimensi&#xF3;n de la representaci&#xF3;n
+<ul>
+<li>Obs</li>
+</ul>
+</li>
+<li>Def: Repreesentaci&#xF3;n Fiel</li>
+<li>Def: Representaci&#xF3;n degenerada</li>
+</ul>
+</li>
+<li>Def: Representaci&#xF3;n Matricial
+<ul>
+<li>Eg</li>
+<li>Eg: Representaci&#xF3;n Trivial</li>
+</ul>
+</li>
+<li>Def: Representaci&#xF3;n &quot;de definici&#xF3;n&quot;
+<ul>
+<li>Eg: Ejemplos concretos</li>
+<li>Proposiciones</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="33-representaci%C3%B3n-conjugada-o-contragradiente">3.3. Representaci&#xF3;n conjugada o contragradiente</h4>
+
+<ul>
+<li>Def: Representacion compleja conjugada
+<ul>
+<li>Obs: Representaci&#xF3;n real</li>
+</ul>
+</li>
+<li>Def: Representaci&#xF3;n contragradiente</li>
+</ul>
+<h4 class="mume-header" id="34-representaciones-equivalentes">3.4. Representaciones equivalentes</h4>
+
+<ul>
+<li>Def: Transformaci&#xF3;n de similaridad, &quot;Intertwiner&quot;</li>
+<li>Def: Representaciones equivalentes</li>
+<li>Def: Car&#xE1;cter de una Representaci&#xF3;n
+<ul>
+<li>Props:</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="35-representaciones-reducibles-e-irreducibles">3.5. Representaciones reducibles e irreducibles</h4>
+
+<ul>
+<li>Def: Espacio invariante
+<ul>
+<li>Representac&#xF3;n reducible</li>
+<li>Representac&#xF3;n irreducible</li>
+<li>Representac&#xF3;n descomponible</li>
+<li>Representac&#xF3;n completamente reducible</li>
+<li>Eg:</li>
+</ul>
+</li>
+<li>Def: Suma directa de representaciones</li>
+</ul>
+<h4 class="mume-header" id="36-unitariedad">3.6. Unitariedad</h4>
+
+<ul>
+<li>Def: Representaci&#xF3;n unitaria
+<ul>
+<li>Props:</li>
+</ul>
+</li>
+<li>Th: Teorema de Schur-Auerbach
+<ul>
+<li>Dem:</li>
+</ul>
+</li>
+<li>Grupos no finitos
+<ul>
+<li>Def: Medida invariante de Haar</li>
+</ul>
+</li>
+<li>Th: Teorema de Maschke</li>
+</ul>
+<h4 class="mume-header" id="37-lemas-de-schur">3.7. Lemas de Schur</h4>
+
+<ul>
+<li>Lema previo
+<ul>
+<li>Dem:</li>
+</ul>
+</li>
+<li>Lemas:
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>Proposiciones</li>
+</ul>
+</li>
+<li>Probs:
+<ul>
+<li>Representaci&#xF3;n del grupo c&#xED;clico <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">C_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li>Representaci&#xF3;n del grupo bidimensional <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">S_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="38-relaciones-de-ortonormalidad-y-completitud">3.8. Relaciones de ortonormalidad y completitud</h4>
+
+<ul>
+<li>Relaci&#xF3;n de ortonormalidad
+<ul>
+<li>Grupos finitos</li>
+<li>Grupos compactos</li>
+<li>Eg: Grupo de Klein <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">V_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>Relaci&#xF3;n de completitud
+<ul>
+<li>Grupos finitos</li>
+<li>Grupos compactos</li>
+<li>Delta de Dirac adaptada a la medida de Haar de un grupo</li>
+</ul>
+</li>
+<li>Th: Teorema de Peter-Weyl</li>
+<li>Relaciones de ortonormalidad y completitud con caracteres</li>
+<li>Tabla de caracteres
+<ul>
+<li>Eg: Grupos abelianos</li>
+<li>Props:</li>
+</ul>
+</li>
+<li>Prob: Representaci&#xF3;n paridad</li>
+</ul>
+<h4 class="mume-header" id="39-producto-tensorial-de-representaciones-y-coeficientes-de-clebsch-gordan">3.9. Producto tensorial de representaciones y coeficientes de Clebsch-Gordan</h4>
+
+<ul>
+<li>Tensores
+<ul>
+<li>Def: Producto tensorial de operadores</li>
+<li>Def: Producto tensorial de representaciones</li>
+<li>Def: Descomposici&#xF3;n de Clebsch-Gordan
+<ul>
+<li>Def: Multiplicidad</li>
+<li>Proposicion</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Probs:
+<ul>
+<li>Representaci&#xF3;n irreducible unitaria de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">D^{(2)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span></li>
+<li>Tabla de caracteres de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">S_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li>Representaci&#xF3;n bidimensional irreducible unitaria de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">S_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>Def: Coeficientes de Clebsch-Gordan
+<ul>
+<li>Relaciones de ortogonalidad y completitud</li>
+<li>Prob: Coeficientes de Clebsch-Gordan para <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup><mo>&#x2297;</mo><msup><mi>D</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">D^{(2)} \otimes D^{(2)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9713299999999999em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2297;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="310-teorema-de-wigner-eckart">3.10. Teorema de Wigner-Eckart</h4>
+
+<ul>
+<li>Def: Conjunto de operadores tensoriales irreducibles</li>
+<li>Th: Teorema de Wigner-Eckart</li>
+</ul>
+<h4 class="mume-header" id="311-representaciones-del-producto-directo-de-grupos">3.11. Representaciones del producto directo de grupos</h4>
+
+<h3 class="mume-header" id="tema-4-grupos-y-%C3%A1lgebras-de-lie">Tema 4: Grupos y &#xE1;lgebras de Lie</h3>
+
+<h4 class="mume-header" id="41-elementos-b%C3%A1sicos-sobre-espacios-topol%C3%B3gicos">4.1 Elementos b&#xE1;sicos sobre espacios topol&#xF3;gicos</h4>
+
+<ul>
+<li>Compacidad</li>
+<li>Conexi&#xF3;n
+<ul>
+<li>Camino en S</li>
+<li>Arco-conexo</li>
+<li>Simplemente conexo</li>
+<li>n-veces conexo</li>
+<li>Eg: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="script">R</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\mathcal{R}^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathcal">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span> y <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="script">R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathcal{R}^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathcal">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>Mapa homeom&#xF3;rfico
+<ul>
+<li>Continuo</li>
+<li>Propiedades o invariantes topol&#xF3;gicos</li>
+</ul>
+</li>
+<li>Espacio Hausdorff
+<ul>
+<li>Axioma de separabilidad</li>
+</ul>
+</li>
+<li>Carta</li>
+<li>Variedad anal&#xED;tica de dimensi&#xF3;n n</li>
+</ul>
+<h4 class="mume-header" id="42-grupo-de-lie-definici%C3%B3n">4.2 Grupo de Lie: definici&#xF3;n</h4>
+
+<ul>
+<li>Def: Grupo de Lie
+<ul>
+<li>Condiciones sobre elementos</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="43-grupos-de-lie-lineales">4.3 Grupos de Lie lineales</h4>
+
+<ul>
+<li>Def: Condiciones sobre un grupo lineal</li>
+<li>Recubridor universal</li>
+<li>Representaciones unitarias del grupo de Lie</li>
+<li>Eg:
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mi>L</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi mathvariant="script">C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">GL(n,\mathcal{C})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.05834em;">C</span></span><span class="mclose">)</span></span></span></span>: grupo general lineal de matrices complejas, de dimensi&#xF3;n 2<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>L</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi mathvariant="script">C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SL(n, \mathcal{C})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathcal" style="margin-right:0.05834em;">C</span></span><span class="mclose">)</span></span></span></span>: grupo especial lineal</li>
+<li>GL(<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi mathvariant="script">R</mi></mrow><annotation encoding="application/x-tex">n,\mathcal{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathcal">R</span></span></span></span></span>): de dimensi&#xF3;n <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>L</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi mathvariant="script">R</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SL(n,\mathcal{R})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathcal">R</span></span><span class="mclose">)</span></span></span></span>: de dimensi&#xF3;n <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n^2-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>.</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">U(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>: grupo unitario de matrices complejas U tal que <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>U</mi><mo>+</mo></msup><mi>U</mi><mo>=</mo><mi>U</mi><msup><mi>U</mi><mo>+</mo></msup><mo>=</mo><msup><mn mathvariant="script">1</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">U^+U=UU^+=\mathcal{1}^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathcal">1</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span> de dimensi&#xF3;n <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> (en principio es subgrupo de GL pero la condici&#xF3;n de conmutaci&#xF3;n nos quita la mitad).</li>
+<li>SU(n): grupo especial unitario, subgrupo de U(n) que agrupa las matrices con detU=1, de dimensi&#xF3;n <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n^2-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> (como el det U es un complejo de fase libre y norma 1 solo pone 1 condici&#xF3;n sobre el detU).</li>
+<li>O(n): grupo ortogonal de matrices reales que cumplen <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><msup><mi>O</mi><mo>+</mo></msup><mo>=</mo><msup><mi>O</mi><mo>+</mo></msup><mi>O</mi><mo>=</mo><msub><mn mathvariant="script">1</mn><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">OO^+=O^+O=\mathcal{1}_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.771331em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathcal">1</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> de dimensi&#xF3;n <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>n</mi><mo stretchy="false">(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{n(n-1)}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">n</span><span class="mbin mtight">&#x2212;</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>.</li>
+<li>SO(n): grupo ortogonal especia, subgrupo de O(n) con detO=1, de la misma dimensi&#xF3;n que O(n).</li>
+<li>Sp(n): grupo simpl&#xE9;ptico, grupo de matrices unitarias (n <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&#xD7;</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">&#xD7;</span></span></span></span> n) con n par.</li>
+<li>U(l,n-l): grupo pseudo-unitario de matrices complejas U que satisfacen <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mi>g</mi><msup><mi>U</mi><mo>+</mo></msup><mo>=</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">UgU^+=g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9657709999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span></span></span></span> siendo g una matriz diagonal de unos y menos unos.</li>
+<li>O(n,l-n): grupo pseudo-ortogonal de matrices reales con <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mi>g</mi><msup><mi>O</mi><mo>+</mo></msup><mo>=</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">OgO^+=g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9657709999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.771331em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span></span></span></span> con la misma g, de dimensi&#xF3;n <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>n</mi><mo stretchy="false">(</mo><mi>n</mi><mo>&#x2212;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{n(n-1)}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">n</span><span class="mbin mtight">&#x2212;</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>. Es el grupo de Lorentz, la g es una pseudo-m&#xE9;trica.</li>
+</ul>
+</li>
+<li>Eg:
+<ul>
+<li>Compactos</li>
+<li>No Compactos</li>
+</ul>
+</li>
+<li>Prob:
+<ul>
+<li>&#xBF;Son <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> y <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">U(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span> grupos conexos?</li>
+<li>&#xBF;Son <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>O</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>&#x223C;</mo><mi>U</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SO(2)\sim U(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x223C;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> y <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span> simplemente conexos?</li>
+<li>Justificar por qu&#xE9; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SO(1,1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span> no es compacto</li>
+<li>&#xBF;Qu&#xE9; grupo es el recubridor universal de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>O</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SO(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span>? Buscar el grupo normal de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span></span></span></span> tal que <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>&#x223C;</mo><mi>G</mi><mi mathvariant="normal">/</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">S_1 \sim G/H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x223C;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span></span></span></span>.</li>
+</ul>
+</li>
+<li>Medida de integraci&#xF3;n invariante
+<ul>
+<li>Th: Integral invariante para grupos de Lie compactos</li>
+<li>Medida de Lebesgue</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="44-estudio-local-de-un-grupo-de-lie-%C3%A1lgebras-de-lie">4.4 Estudio local de un grupo de Lie: &#xE1;lgebras de Lie</h4>
+
+<ul>
+<li>Def: &#xC1;lgebra de Lie real
+<ul>
+<li>Def: Corchete de Lie</li>
+<li>Def:
+<ul>
+<li>Sub&#xE1;lgebra</li>
+<li>Sub&#xE1;lgebra invariante</li>
+<li>Funci&#xF3;n exponencial de matrices
+<ul>
+<li>Props:
+<ul>
+<li>F&#xF3;rmula de Campbell-Baker-Hausdorff</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Subgrupo uniparam&#xE9;trico de un grupo de Lie lineal</li>
+<li>Generadores del &#xE1;lgebra de Lie</li>
+<li>Relaci&#xF3;n entre &#xE1;lgebras de Lie lineales y grupos de Lie linealees
+<ul>
+<li>Th: Exponenciaci&#xF3;n</li>
+<li>Th: Subrupos uniparam&#xE9;trico</li>
+<li>Nota:</li>
+<li>Eg: &#xC1;lgebra de Lie real de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></li>
+<li>Eg: &#xC1;lgebra de Lie real de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>L</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi mathvariant="double-struck">R</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SL(n, \mathbb{R})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">L</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathbb">R</span></span><span class="mclose">)</span></span></span></span></li>
+<li>Ex: Caracterizar el &#xE1;lgebra de Lie <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>o</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">so(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="45-representaciones-adjuntas-de-%C3%A1lgebras-y-grupos-de-lie-constantes-de-estructura">4.5 Representaciones adjuntas de &#xE1;lgebras y grupos de Lie: constantes de estructura</h4>
+
+<ul>
+<li>Representaci&#xF3;n de un &#xE1;lgebra de Lie
+<ul>
+<li>Obs: Eqyuvakebcua de reoresentaciones, irreducibilidad, lemas de Schur, Descomposici&#xF3;n CB...</li>
+<li>Th: Representaci&#xF3;n anal&#xED;tica n-dimensional</li>
+</ul>
+</li>
+<li>Constantes de estructura
+<ul>
+<li>Def: Matriz adjunta de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>&#x2208;</mo><mi mathvariant="script">L</mi></mrow><annotation encoding="application/x-tex">A\in \mathcal{L}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2208;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord mathcal">L</span></span></span></span></span></li>
+<li>Def: Representaci&#xF3;n adjunta del &#xE1;lgebra</li>
+<li>Def: Constantes de estructura
+<ul>
+<li>Obs:</li>
+<li>Props:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Representaci&#xF3;n de un grupo de Lie lineal
+<ul>
+<li>Def: Representaci&#xF3;n adjunta del grupo
+<ul>
+<li>Obs:</li>
+</ul>
+</li>
+<li>Th: Representaciones adjuntas</li>
+<li>Th: Automorfismo interno del &#xE1;lgebra</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="46-%C3%A1lgebras-de-lie-simples-y-semi-simples">4.6 &#xC1;lgebras de Lie simples y semi-simples</h4>
+
+<ul>
+<li>Def: &#xC1;lgebra de Lie simple</li>
+<li>Def: &#xC1;lgebra de Lie semi-simple
+<ul>
+<li>Props:</li>
+</ul>
+</li>
+<li>Operadores de casimir
+<ul>
+<li>Th: Conmutaci&#xF3;n</li>
+</ul>
+</li>
+<li>Def: Forma de Killing</li>
+</ul>
+<h3 class="mume-header" id="tema-5-rotaciones-en-r3-los-grupos-so3-y-su2">Tema 5: Rotaciones en R^3: Los grupos SO(3) y SU(2)</h3>
+
+<h4 class="mume-header" id="51-descripci%C3%B3n-de-so3">5.1. Descripci&#xF3;n de SO(3)</h4>
+
+<ul>
+<li>Parametrizaci&#xF3;n &#xE1;ngulo-eje
+<ul>
+<li>Eg: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">S=(3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">3</span><span class="mclose">)</span></span></span></span> es doblemente conexos</li>
+</ul>
+</li>
+<li>Clases de conjugaci&#xF3;n</li>
+<li>Parametrizaci&#xF3;n en &#xE1;ngulos de Euler</li>
+</ul>
+<h4 class="mume-header" id="52-de-so3-a-su2">5.2. De SO(3) a SU(2)</h4>
+
+<ul>
+<li>Def: Matrices de Pauli</li>
+<li>Def: Matriz herm&#xED;tica <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><mover accent="true"><mi>x</mi><mo>&#x20D7;</mo></mover><mover accent="true"><mi>&#x3C3;</mi><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">X = \vec{x}\vec{\sigma}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.714em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.20772em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">&#x3C3;</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2355em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width="0.471em" height="0.714em" style="width:0.471em" viewBox="0 0 471 714" preserveAspectRatio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></span></span></span></span>
+<ul>
+<li>Homomorfismo <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span>-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>O</mi><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SO(3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">3</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="53-generados-infinitesimales-y-el-%C3%A1lgebra-de-lie">5.3. Generados infinitesimales y el &#xE1;lgebra de Lie</h4>
+
+<ul>
+<li>Eg: Generadores de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>O</mi><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SO(3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">3</span><span class="mclose">)</span></span></span></span>
+<ul>
+<li>Base de generadores del &#xE1;lgebra de Lie</li>
+</ul>
+</li>
+<li>Eg: Generadores de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></li>
+</ul>
+<h4 class="mume-header" id="54-representaciones-de-su2">5.4. Representaciones de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></h4>
+
+<ul>
+<li>Propiedades de m</li>
+<li>Represendaci&#xF3;n de esp&#xED;n <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span> de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span>
+<ul>
+<li>Matriz de Wigner</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="55-producto-directo-de-representaciones-de-su2">5.5. Producto directo de representaciones de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></h4>
+
+<ul>
+<li>Coeficiente de Clebsch-Gordan de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></li>
+<li></li>
+</ul>
+<h4 class="mume-header" id="56-medida-de-haar-invariante-en-su2">5.6. Medida de Haar invariante en <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>U</mi><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">SU(2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mopen">(</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></h4>
+
+<h4 class="mume-header" id="57-ortogonalidad-completitud-caracteres">5.7. Ortogonalidad, completitud, caracteres</h4>
+
+<ul>
+<li>Polinomios de Chebyshev</li>
+</ul>
+<h4 class="mume-header" id="58-teorema-de-wigner-eckart">5.8. Teorema de Wigner-Eckart</h4>
+
+<ul>
+<li>Th: Wigner-Eckart</li>
+<li>Reglas de selecci&#xF3;n</li>
+</ul>
+<h4 class="mume-header" id="59-aplicaci%C3%B3n-f%C3%ADsica-isosp%C3%ADn">5.9. Aplicaci&#xF3;n f&#xED;sica: Isosp&#xED;n</h4>
+
+<ul>
+<li>Transiciones
+<ul>
+<li>Operador de transici&#xF3;n</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="510-rotaci%C3%B3n-de-funciones-de-onda">5.10 Rotaci&#xF3;n de funciones de onda</h4>
+
+<h4 class="mume-header" id="511-rotaci%C3%B3n-de-operadores">5.11 Rotaci&#xF3;n de operadores</h4>
+
+<ul>
+<li>Escalares</li>
+<li>Vectoriales
+<ul>
+<li>Eg: Operador de posici&#xF3;n</li>
+<li>Relaci&#xF3;n entre coordenadas <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">V_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> y <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>Q</mi><mi>m</mi><mi>j</mi></msubsup></mrow><annotation encoding="application/x-tex">Q^j_m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.071664em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li>Tensoriales
+<ul>
+<li>Tensor de &#xF3;rden 2</li>
+<li>Ex:</li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="tema-6-el-grupo-de-lorentz">Tema 6: El grupo de Lorentz</h3>
+
+<h4 class="mume-header" id="61-propiedades-b%C3%A1sicas">6.1. Propiedades b&#xE1;sicas</h4>
+
+<ul>
+<li>Espacio de Minkowski</li>
+<li>Ex: Matrices <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">&#x39B;</mi></mrow><annotation encoding="application/x-tex">\Lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">&#x39B;</span></span></span></span></li>
+<li>Subgrupo ortocrono propio</li>
+</ul>
+<h4 class="mume-header" id="62-grupo-de-lorentz-ortocrono-propio">6.2 Grupo de Lorentz ortocrono propio</h4>
+
+<ul>
+<li>Rotaciones espaciales</li>
+<li>Transformaci&#xF3;n de Lorentz pura
+<ul>
+<li>Ex:</li>
+</ul>
+</li>
+<li>Parametrizaci&#xF3;n
+<ul>
+<li>Compacidad</li>
+<li>Conectividad</li>
+</ul>
+</li>
+<li>Recubridor universal de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi mathvariant="script">L</mi><mo>+</mo><mo>&#x2191;</mo></msubsup></mrow><annotation encoding="application/x-tex">\mathcal{L}^\uparrow_+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.248878em;vertical-align:-0.281862em;"></span><span class="mord"><span class="mord"><span class="mord mathcal">L</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999999em;"><span style="top:-2.4764690000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">+</span></span></span><span style="top:-3.180908em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mrel mtight">&#x2191;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.281862em;"><span></span></span></span></span></span></span></span></span></span>
+<ul>
+<li>Homeomorfismo</li>
+<li>Matrices unitarias y herm&#xED;ticas</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="63-%C3%A1lgebra-de-lie">6.3 &#xC1;lgebra de Lie</h4>
+
+<ul>
+<li>Generadores herm&#xED;ticos de rotaciones</li>
+<li>Boosts puros</li>
+<li>Tensor antisim&#xE9;trico <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mrow><mi>&#x3BC;</mi><mi>&#x3BD;</mi></mrow></msub></mrow><annotation encoding="application/x-tex">M_{\mu\nu}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">&#x3BC;</span><span class="mord mathdefault mtight" style="margin-right:0.06366em;">&#x3BD;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span></li>
+<li>Casimires</li>
+</ul>
+<h4 class="mume-header" id="64-representaciones-irreducibles">6.4 Representaciones irreducibles</h4>
+
+<ul>
+<li>Complexificaci&#xF3;n</li>
+<li>Representaciones tensoriales y espinoriales</li>
+<li>Representaci&#xF3;n de esp&#xED;n m&#xE1;s bajo</li>
+</ul>
+<h3 class="mume-header" id="tema-7-el-grupo-de-poincar%C3%A9">Tema 7: El grupo de Poincar&#xE9;</h3>
+
+<h4 class="mume-header" id="71-propiedades-b%C3%A1sicas">7.1 Propiedades b&#xE1;sicas</h4>
+
+<h4 class="mume-header" id="72-%C3%A1lgebra-de-lie-del-grupo-de-poincar%C3%A9-ortocrono-propio">7.2 &#xC1;lgebra de Lie del grupo de Poincar&#xE9; ortocrono propio</h4>
+
+<h4 class="mume-header" id="73-representaciones-unitarias-del-grupo-de-poincar%C3%A9-ortocrono-propio">7.3 Representaciones unitarias del grupo de Poincar&#xE9; ortocrono propio</h4>
+
+<h4 class="mume-header" id="74-representaci%C3%B3n-sobre-estados-de-una-part%C3%ADcula">7.4 Representaci&#xF3;n sobre estados de una part&#xED;cula</h4>
+
+<h4 class="mume-header" id="75-campo-de-klein-gordon">7.5 Campo de Klein-Gordon</h4>
+
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

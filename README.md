@@ -1,4 +1,21 @@
+---
+title: Fisica_Indexada
+author: Lorentz Ipsum
+date: 19 de agosto de 2020
+print_background: true
+export_on_save:
+  html: true
+---
+
 # Física Indexada
+
+[GitHub del repositorio](https://github.com/Lorentz-Ipsum/Fisica_Indexada/)
+
+[Web de Github Pages donde se renderiza el repositorio](https://lorentz-ipsum.github.io/Fisica_Indexada/)
+
+## Enlaces
+
+[4-Simetrias_y_Grupos](4-Simetrias_y_Grupos/README.md)
 
 ## ¿Qué es?
 

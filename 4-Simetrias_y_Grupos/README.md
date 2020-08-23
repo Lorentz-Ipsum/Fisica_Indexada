@@ -1,29 +1,47 @@
-# Simetrias_y_Grupos-019
-Apuntes de Simetrías y Grupos en la UCM 2019.
+---
+title: Simetrias_y_Grupos
+author: Lorentz Ipsum
+date: 19 de agosto de 2020
+print_background: true
+export_on_save:
+  html: true
+---
 
-## Links
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-[Web donde se renderiza el repositorio](https://lorentz-ipsum.github.io/Simetrias_y_Grupos-019/)
+# Simetrias_y_Grupos
 
-[GitHub del repositorio](https://github.com/Lorentz-Ipsum/Simetrias_y_Grupos-019)
+Apuntes interacticos de Simetrías y Grupos en la UCM, curso 2019/2020.
+
+[Web donde se renderiza el repositorio](https://lorentz-ipsum.github.io/Fisica_Indexada/Simetrias_y_Grupos-019/)
+
+[GitHub del repositorio](https://github.com/Lorentz-Ipsum/Fisica_Indexada/Simetrias_y_Grupos-019)
+
+## Indice
+[TOC]
 
 ---
 
-## Treeview
+## Archivos
 
 Apuntes / md / [Notas para pasar de tex a md](Apuntes/md/Notas para pasar de tex a md.md)
 
 ---
 
-Apuntes / md / [Tema 1](Apuntes/md/GrupsV1-T1.md)
-
-Apuntes / md / [Tema 2](Apuntes/md/GrupsV1-T2.md)
-
-Apuntes / md / [Tema 3](Apuntes/md/GrupsV1-T3.md)
-
-Apuntes / md / [Tema 4](Apuntes/md/GrupsV1-T4.md)
-
-Apuntes / md / [Tema 5](Apuntes/md/GrupsV1-T5.md)
+> [Índice de todos los temas](Index/index-Nivel3.md)
+>
+> Apuntes
+> > [Tema 1: Introducción](Apuntes/md/t1.md)
+> > [Tema 2: Elementos generales de la teoría de Grupos](Apuntes/md/t2.md)
+> > [Tema 3: Representaciones de Grupos](Apuntes/md/t3.md)
+> > [Tema 4: Grupos y álgebras de Lie](Apuntes/md/t4.md)
+> > [Tema 5: Rotaciones en R^3: Los grupos SO(3) y SU(2)](Apuntes/md/t5.md)
+> > [Tema 6: El grupo de Lorentz](Apuntes/md/t6.md)
+> > [Tema 7: El grupo de Poincaré](Apuntes/md/t7.md)
+>
+> Problemas
+> > [Enunciados](Problemas/Enunciados.md)
+> > [Ejemplo de ejercicios resueltos](Problemas/Resueltos.md)
 
 ---
 
@@ -31,45 +49,29 @@ Apuntes / md / [Tema 5](Apuntes/md/GrupsV1-T5.md)
 Problemas / [Tema 2](Problemas/ProblemasV1-T2.md)
 
 ---
->.
->.
->.
-> Intervalo Publicitario
->.
->.
->.
----
+# Enlaces interesantes
 
 [![](http://img.youtube.com/vi/mH0oCDa74tE/0.jpg)](http://www.youtube.com/watch?v=mH0oCDa74tE "3b1b - Groups")
 
+---
+# Sobre este proyecto
 
+La idea es que haya un glosario completo.
+
+---
 # Guía docente
 
 ## Resultados del aprendizaje
 
-
 Aprender a aplicar los conceptos y métodos de la teoría de grupos finitos y continuos al estudio de la simetría en problemas físicos.
-
 
 ## Breve descripción de contenidos
 
-
 Teoria de grupos. Grupos de Lie, sus representaciones y aplicaciones en física. Grupo de Lorentz y Poincaré y sus representaciones y aplicaciones en física. Grupos finitos.
-
 
 ## Conocimientos previos necesarios
 
-
 Primero y segundo de grado. Mecánica Cuántica.
-
-## Tutorias
-Mercedes Martín Benito
-Dpto. FT Despacho 13, 2a pl. oeste
-X: 10:30-13:00 y 14:30-16:00 V: 12:30-14:30
-e-mail
-m.martin.benito@ucm.es
-
-> Avisar antes de las tutorias por mail!
 
 ## Programa de la asignatura
 
@@ -80,8 +82,6 @@ m.martin.benito@ucm.es
 producto directo, isospín, rotaciones de funciones de onda y de operadores.
 • Grupos de Lorentz y de Poincaré ortocronos propios: álgebra de Lie, representaciones
 irreducibles del grupo de Lorentz, representaciones unitarias del grupo de Poincaré.
-
-
 
 ## Bibliografía
 

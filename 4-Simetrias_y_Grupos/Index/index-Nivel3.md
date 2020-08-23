@@ -1,4 +1,18 @@
+---
+title: Index SG
+author: Lorentz Ipsum
+date: 19 de agosto de 2020
+print_background: true
+export_on_save:
+  html: true
+---
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+# Índice-Resumen de Simetrías y Grupos
+[TOC]
+
+---
 ### Tema 1: Introducción. Importancia de las simetrías en física
 
 - Intro

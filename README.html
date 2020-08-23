@@ -1,0 +1,317 @@
+<!DOCTYPE html><html><head>
+      <title>Fisica_Indexada</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}body{background:#fff;line-height:1.555;text-align:justify;padding:2em;font-size:1.3rem;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-moz-font-feature-settings:"liga" on;font-family:"San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;line-height:1.58;letter-spacing:-0.003em;color:rgba(0,0,0,0.8)}body p{font-family:"San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;line-height:1.58;letter-spacing:-0.003em;color:rgba(0,0,0,0.8)}body h1,body h2,body h3,body h4,body h5,body h6,body table,body li,body .mathjax-exps,body .math{font-family:"San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;color:rgba(0,0,0,0.8)}body a,body a:link,body a:visited,body a:active{color:#404247;text-decoration:none;text-shadow:1px 1px 0 #fff,-1px 1px 0 #fff,2px 0 0 #fff,-2px 0 0 #fff;box-shadow:inset 0 -1px 0 0 #fff,inset 0 -2px 0 0 #404247}body h1,body h2,body h3,body h4,body h5,body h6{font-weight:700 !important;font-style:normal;line-height:1.15;letter-spacing:-0.02em}body p{margin-bottom:1.3em;font-weight:400;font-style:normal;font-size:18px;line-height:32px;color:#404247;overflow:visible}body a:hover{text-decoration:none}body h1,body h2,body h3,body h4{margin:1.414em 0 .5em;font-weight:inherit;line-height:1.2}body h1{margin-top:0;font-size:40px;line-height:48px;color:#101010;margin-top:21px}body h1:first-child{margin-top:80px}body h2{font-size:36px;line-height:40px;color:#202123}body h2:first-child{margin-top:40px}body h3{font-size:24px;line-height:32px;color:#202123}body h4,body h5,body h6{font-size:21px;line-height:32px;color:#a5a7ae;font-weight:400}body small,body .font_small{font-size:.707em}body p,body .mathjax-block{margin-top:0;-webkit-hypens:auto;-moz-hypens:auto;hyphens:auto}body img{max-width:100%}body ul{padding-left:1.2em;font-weight:400;font-style:normal}body ul>li:before{padding-top:4px;padding-right:15px;position:absolute;display:inline-block;box-sizing:border-box;width:58px;margin-left:-58px;text-align:right}body li>p{margin-top:0;margin-bottom:0}body ol{padding-left:1.2em}body blockquote{margin-left:1em;padding-left:1em;border-left:1px solid #ddd;line-height:1.15;letter-spacing:-0.02em;font-weight:400;font-style:normal;font-size:21px;background-color:#f0f0f0}body blockquote p{font-style:normal;margin-bottom:0}body code,body pre{font-family:"Consolas","Menlo","Monaco",monospace,serif;font-size:.9em;color:inherit}body pre.md-fences{margin-left:1em;padding-left:1em;border:1px solid #ddd;padding-bottom:8px;padding-top:6px;margin-bottom:1.5em}body a{color:#2484c1;text-decoration:none}body a img{border:none}body h1 a,body h1 a:hover{color:#333;text-decoration:none}body hr{color:#ddd;height:1px;margin:2em 0;border-top:solid 1px #ddd;border-bottom:none;border-left:0;border-right:0}body table{margin-bottom:1.333333rem}body table th,body table td{padding:8px;line-height:1.333333rem;vertical-align:top;border-top:1px solid #ddd}body table th{font-weight:bold}body table thead th{vertical-align:bottom}body table caption+thead tr:first-child th,body table caption+thead tr:first-child td,body table colgroup+thead tr:first-child th,body table colgroup+thead tr:first-child td,body table thead:first-child tr:first-child th,body table thead:first-child tr:first-child td{border-top:0}body table tbody+tbody{border-top:2px solid #ddd}body .task-list{padding:0}body .task-list-item{padding-left:.5rem}body .task-list-item{list-style-type:none;margin-left:-1.8em}body .task-list-item .task-list-item-checkbox{margin-right:.8em}body .task-list-item input:before{content:'\221A';display:inline-block;width:1.33333333rem;height:1.6rem;vertical-align:middle;text-align:center;color:#ddd;background-color:#fefefe}body .task-list-item input:checked:before,body .task-list-item input[checked]:before{color:inherit}body kbd{color:rgba(0,0,0,0.8)}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="f%C3%ADsica-indexada">F&#xED;sica Indexada</h1>
+
+<p><a href="https://github.com/Lorentz-Ipsum/Fisica_Indexada/">GitHub del repositorio</a></p>
+<p><a href="https://lorentz-ipsum.github.io/Fisica_Indexada/">Web de Github Pages donde se renderiza el repositorio</a></p>
+<h2 class="mume-header" id="enlaces">Enlaces</h2>
+
+<p><a href="4-Simetrias_y_Grupos/README.md">4-Simetrias_y_Grupos</a></p>
+<h2 class="mume-header" id="qu%C3%A9-es">&#xBF;Qu&#xE9; es?</h2>
+
+<p>Un proyecto para mostrar las relaciones entre las ramas de la f&#xED;sica, y explicar exhaustivamente los conceptos fundamentales en cada una de estas ramas.</p>
+<h2 class="mume-header" id="para-qui%C3%A9n">&#xBF;Para qui&#xE9;n?</h2>
+
+<p>Para estudiantes, profesores y toda persona interesada en la f&#xED;sica y la programaci&#xF3;n.</p>
+<h2 class="mume-header" id="c%C3%B3mo">&#xBF;C&#xF3;mo?</h2>
+
+<p>El desarrollo ser&#xE1; en dos partes, cada una de las cuales puede trabajarse por separado:</p>
+<ol>
+<li>Indexar y hacer un glosario de los conceptos m&#xE1;s importantes de cada rama de la fisica.</li>
+<li>Construir un programa con el que visualizar estos elementos en forma de arbol conceptual.</li>
+</ol>
+<h3 class="mume-header" id="1-index-y-glosario">1. Index y Glosario</h3>
+
+<p>Constar&#xE1; de los siguientes elementos:</p>
+<ul>
+<li>Teoremas, corolarios, experimentos y resultados, en formato de texto.</li>
+<li>Ecuaciones, desarrollos matem&#xE1;ticos, formularios, problemas desarrollados.</li>
+<li>Gr&#xE1;ficas, videos, experimentos interactivos.</li>
+<li>Fechas, nombres, lugares.</li>
+</ul>
+<h3 class="mume-header" id="2-%C3%A1rbol-conceptual">2. &#xC1;rbol Conceptual</h3>
+
+<p>Para presentar los conceptos del glosario de una forma m&#xE1;s f&#xE1;cil de visualizar. Deber&#xED;a tener las siguientes propiedades:</p>
+<ul>
+<li>Al hacer zoom muestra u oculta los temas m&#xE1;s relevantes.</li>
+<li>Direccionalidad. Los nodos est&#xE1;n relacionados entre s&#xED; de una forma espec&#xED;fica. P.ej: Cronol&#xF3;gicamente, cierto experimento lleva a unas sobre la naturaleza conclusiones que podemos condensar en una f&#xF3;rmula.</li>
+<li>Cronolog&#xED;a. Debe ser posible reordenar pulsando un bot&#xF3;n los elementos del &#xE1;rbol para ver c&#xF3;mo se desarrollaron los eventos cronol&#xF3;gicamente.</li>
+</ul>
+<blockquote>
+<p>Basado en el proyecto <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/index.html">Hyperphysics</a> de la Universidad del estado de Georgia.</p>
+</blockquote>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

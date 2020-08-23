@@ -217,7 +217,7 @@ Sólo habría que añadir un breve estilo al anchor para que esté subrayado:
 Para encontrarlas podemos usar:
 
 ```
-\*\*\<span style\=\"color\:(.+?)\"\>(.*)\:<\/span\>(.*)\*\*
+\<span style\=\"color\:(.+?)\"\>(.*)\:<\/span\>(.*)
 ```
 
 Donde se nos devuelve:
@@ -240,6 +240,12 @@ Lo que nos interesa es hacer:
 <details>
 	<summary>
 	</summary>
+</details>
+
+
+<details>
+<summary>
+</summary>
 </details>
 ```
 

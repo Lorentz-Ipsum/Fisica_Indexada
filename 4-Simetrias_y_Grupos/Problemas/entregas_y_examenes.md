@@ -2,7 +2,9 @@
 title: Entregas y exámenes
 author: Lorentz Ipsum
 date: 19 de agosto de 2020
-fontfamily: times
+print_background: true
+export_on_save:
+  html: true
 ---
 
 ---
