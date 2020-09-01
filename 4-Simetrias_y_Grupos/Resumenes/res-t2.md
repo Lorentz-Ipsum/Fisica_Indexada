@@ -1,0 +1,185 @@
+---
+title: Resumen T2.
+author: Lorentz Ipsum
+date: 14 de agosto de 2020
+print_background: true
+html:
+  toc: true
+export_on_save:
+  html: true
+---
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+---
+# Resumen 2. Elementos generales de teoría de grupos
+[TOC]
+
+---
+## Clases de conjugación de un grupo
+
+# <a name= "" style="color:blue">Resumen Asier</a>
+
+\section{Elementos generales de teoría de grupos}
+
+<a name="conjugado" style="color:blue">Definicion:
+$g_1$ se dice **conjugado** a $g_2$ si $\exists\ h$ tal que $g_1=hg_2h^{-1}$, con $g_1,g_2,h\in G$.
+- Los elementos conjugados forman una \textbf{clase de conjugación}.
+- Si dos elementos son conjugados a un tercero, son conjugados entre sí.
+- Cada elemento de un grupo forma parte de una única clase de conjugación.
+</a>
+
+<a name="" style="color:blue">Def
+Un subgrupo $H$ de $G$ es \textbf{normal} o \textbf{invariante por conjugación}, $H\triangleleft G$, si
+
+$$
+ghg^{-1}\in H\qquad \forall g\in G\quad \forall h\in H
+$$
+</a>
+
+\begin{teorema}
+Un subgrupo es normal si es la unión de clases de conjugación.
+\end{teorema}
+
+
+ <a name=""><span style="color:blue">Definicion</span>
+ Un grupo se dice \textbf{simple} si no tiene subgrupos normales propios. Si no tiene subgrupos normales abelianos propios se dice \textbf{semi-simple}.
+ \end{definicion}
+
+\begin{definicion}
+Dado un grupo $G$ con un subgrupo $H$, su \textbf{coset} por la izda. (resp. por la dcha.) asociado a $g\in  G$ es el \underline{conjunto} $gH=\left\{gh_i\right\}$ (resp. $Hg=\left\{h_i g\right\}$).
+\begin{itemize}
+\item El coset es subgrupo ssi $g\in H$.
+\item Cada elemento de $G$ pertenece a algún coset.
+\item $G$ es la unión disjunta de cosets asociados a $H$.
+\end{itemize}
+</a>
+
+\begin{teorema}[Lagrange]
+Si $G$ es un grupo finito y $H$ un subgrupo de $G$, el orden de $H$ es divisor del orden de $G$, i.e. $\abs{G}/\abs{H}$ es entero.
+\end{teorema}
+
+\begin{teorema}
+Un subgrupo $H$ de un grupo $G$ es normal ssi sus cosets por la izda. y por la dcha. coinciden
+\begin{equation}
+H\triangleleft G \Longleftrightarrow gH=Hg \quad \forall g\in G
+\end{equation}
+\end{teorema}
+
+<a name=""><span style="color:blue">Definicion</span>
+Definiendo el producto de dos cosets de $H\triangleleft G$ como
+\begin{equation}
+g_1 H \ast g_2 H=(g_1\cdot g_2) H
+\end{equation}
+donde $\cdot$ es la multiplicación ordinaria en $G$, el conjunto de cosets de $H$ forma un grupo con respecto a la multiplicación $\ast$, llamado \textbf{grupo cociente} y denotado por $G/H$.
+</a>
+
+Si dos elementos $g,g'\in G$ pertenecen al mismo coset, $gH=g'H$, existe una relación de equivalencia entre ellos. El grupo cociente es el conjunto de estas clases de equivalencia.
+\begin{ejemplo}
+Sea $G=S_n$ (grupo de las permutaciones) y $H=A_n$ (permutaciones pares). El grupo cociente clasifica a las permutaciones en pares e impares:
+\begin{equation}
+S_n/A_n=\left\{A_n,\tau_i A_n \right \}
+\end{equation} \label{ejemplo_permutaciones_pares}
+\end{ejemplo}
+
+
+<a name=""><span style="color:blue">Definicion</span>
+Un \textbf{homomorfismo} es una aplicación que respeta la estructura de grupo:
+\begin{subequations}
+\begin{flalign}
+&\phi: G\rightarrow G'\qquad (G,\cdot)\quad (G',\ast)\\
+&\phi(g\cdot h)=\phi(g)\ast \phi(h)
+\end{flalign}
+\end{subequations}
+
+En particular, se cumple
+\begin{subequations}
+\begin{gather}
+\phi(e_G)=e_{G'}\\
+\phi(g^{-1})=\left[\phi(g)\right]^{-1}
+\end{gather}
+\end{subequations}
+
+
+Un \textbf{isomorfismo} es un homomorfismo biyectivo, $G\cong G'$
+</a>
+
+<a name=""><span style="color:blue">Definicion</span>
+El \textbf{núcleo} del homomorfismo es
+\begin{equation}
+\ker \phi= \phi^{-1}(e_{G'})=\left\{g\in G |\phi(g)=e_{G'}\right \}\subset G
+\end{equation}
+</a>
+
+\begin{proposicion}
+Un homomorfismo $\phi$ es \textbf{fiel} (inyectivo) ssi su núcleo es la identidad, $\ker\phi=\{e_G\}$.
+\end{proposicion}
+
+\begin{teorema}
+Sea $\phi:G\rightarrow G'$ un homomorfismo entre grupos. Entonces:
+
+\begin{enumerate}[label=\roman*)]
+\item El núcleo es subgrupo normal de $G$, $\ker\phi \triangleleft G$
+\item La imagen $\phi(G)$ es subgrupo de $G'$.
+\item $G/\ker\phi \cong \phi(G)$ con el isomorfismo dado por
+\begin{subequations}
+\begin{flalign}
+ \tilde{\phi}: G/\ker\phi &\rightarrow \phi(G)\\
+ g\ker \phi &\mapsto \tilde{\phi} (g\ker\phi)=\phi (g)
+\end{flalign}
+\end{subequations}
+\end{enumerate}
+
+
+\end{teorema}
+
+\begin{corolario}
+Un subgrupo $H$ de un grupo $G$ es normal ssi existe un homomorfismo entre grupos $\phi:G\rightarrow G'$ con $\ker\phi=H$.
+\end{corolario}
+
+\begin{ejemplo}
+El determinante es un homomorfismo de $\mathrm{GL}(n,\mathbb{C})$ en $\mathbb{C}^\ast=\mathbb{C}\backslash \left\{0\right\} $. Su núcleo está formado por el subgrupo normal de las matrices con $\det =1$
+
+\begin{equation}
+SL(n,\mathbb{C}) \triangleleft \mathrm{GL}(n,\mathbb{C})\qquad \mathrm{GL}(n,\mathbb{C})/SL(n,\mathbb{C})\cong \mathbb{C}^\ast %\backslash \left\{0\right\}
+\end{equation}
+\end{ejemplo}
+
+<a name=""><span style="color:blue">Definicion</span>
+El \textbf{producto directo} de dos grupos $G_1$ y $G_2$ es el grupo
+\begin{subequations}
+\begin{flalign}
+& G_1\times G_2= \left\{(g_1,g_2)|g_1\in G_1,\ g_2\in G_2\right\}\\
+& (g_1,g_2)\star (g_1',g_2')= (g_1\cdot g_1', g_2\ast g_2')
+\end{flalign}
+\end{subequations}
+
+\begin{itemize}
+\item $\abs{G_1\times G_2}=\abs{G_1}\abs{G_2}$
+\item $\left\{(g_1,e_{G_2})|g_1\in G_1\right\}\cong G_1$ y $\left\{(e_{G_1},g_2)|\ g_2\in G_2\right\} \cong G_2$ son subgrupos normales
+\end{itemize}
+</a>
+
+\begin{teorema} \label{producto_directo_teorema}
+Un grupo $G$ es \textbf{producto directo} de sus subgrupos $G_1$ y $G_2$ si cumple:
+\begin{enumerate}[label=\roman*)]
+\item $G_1$ y $G_2$ son subgrupos normales de $G$, o equivalentemente $g_1g_2=g_2g_1\ \forall g_i\in G_i$
+\item Todo elemento $g\in G$ se puede expresar como $g=g_1g_2$ de forma única
+\item $G_1\cap G_2=\{e\}$
+\end{enumerate}
+\end{teorema}
+
+\begin{corolario}
+Si $G=G_1\times G_2$, entonces $G/G_1\cong G_2$ y $G/G_2\cong G_1$.
+\end{corolario}
+
+<a name=""><span style="color:blue">Definicion</span>
+Un grupo $G$ es $\textbf{producto semi-directo}$, $G=G_1\rtimes G_2$ si %tiene dos subgrupos $G_1$ y $G_2$ tales que
+
+\begin{enumerate}[label=\roman*)]
+\item $G_1$ es subgrupo normal de $G$
+\item Todo elemento $g\in G$ se puede expresar como $g=g_1g_2$ de forma única
+\item $G_1\cap G_2=\{e\}$
+\end{enumerate}
+
+</a>

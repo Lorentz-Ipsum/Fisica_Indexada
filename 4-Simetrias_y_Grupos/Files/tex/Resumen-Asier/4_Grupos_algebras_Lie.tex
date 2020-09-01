@@ -1,0 +1,153 @@
+\section{Grupos y álgebras de Lie}
+\begin{definicion}
+Una \textbf{variedad topológica} es un espacio topológico Hausdorff (para cada par de puntos existen sendos abiertos disjuntos que los contienen) con una base numerable de abiertos que es localmente homeomorfo a $\mathbb{R}^n$.  La variedad se dice \textbf{analítica} si para cada par de cartas con intersección no vacía el mapa $\phi_\beta o \phi_\alpha^{-1}$ es una función analítica.
+\end{definicion}
+
+\begin{definicion}
+Un \textbf{grupo de Lie} $G$ de dimensión $n$ es un conjunto de elementos que
+\begin{enumerate}[label=\roman*)]
+\item Forman grupo
+\item Forman una variedad analítica de dimensión $n$
+\item El mapa $\phi:G\times G\rightarrow G\qquad (g_1,g_2)\mapsto \phi(g_1,g_2)=g_1g_2$ es analítico $\forall g_1,g_2\in G$
+\item El mapa $\phi:G\rightarrow G\qquad g\mapsto \phi(g)=g^{-1}$ es analítico $\forall g\in G$
+\end{enumerate}
+\end{definicion}
+
+\begin{definicion}
+Un \textbf{grupo de Lie lineal} $G$ de dimensión $n$ satisface:
+\begin{enumerate}[label=\roman*)]
+\item Posee una representación matricial fiel $D$, de dimensión $m$. Definimos la distancia como
+\begin{equation}
+d(g,g'):=\sqrt{\sum_{i,j=1}^m\abs{D(g)_{ij}-D(g')_ij}^2}
+\end{equation}
+
+Sea $M_\delta$ un entorno de la identidad:
+\begin{equation}
+M_\delta=\left\{g_i\in G\ |\ d(g_i,e)<\delta\right\}
+\end{equation}
+\item Existe un $\delta>0$ tal que los elementos de $M_\delta$ se pueden parametrizar con  $(x_1,\ldots,x_n)\in \mathbb{R}^n$, con $e$ correspondiente a $x_1=\ldots=x_n=0$. Cada elemento de $M_\delta$ se corresponde con un único punto de $\mathbb{R}^n$, y no hay un punto de $\mathbb{R}^n$ correspondiente a más de un $g_i \in M_\delta$.
+\item Existe un $\varepsilon>0$ tal que $\forall (x_1,\ldots,x_n)\in \mathbb{R}^n$ con $\sum_i x_i^2<\varepsilon$, $(x_1,\ldots,x_n)$ se corresponde a un $g_i\in G$
+\item $D(g(x_1,\ldots,x_n))\equiv D(x_1,\ldots,x_n)$ es una función analítica de $(x_1,\ldots,x_n)\ \forall (x_1,\ldots,x_n)$  tal que $\sum_i x_i^2<\varepsilon$
+\end{enumerate}
+\end{definicion}
+
+\begin{remark}
+Todo grupo de Lie lineal es isomorfo a algún subgrupo de $\mathrm{GL}(n)$.
+\end{remark}
+
+\begin{definicion}[Recubridor universal]
+Si $G$ es un grupo de Lie múltiplemente conexo, existe un $\tilde{G}$ simplemente conexo tal que $G$ es isomorfo a $\tilde{G}/Z(\tilde{G})$ o a alguno de sus subgrupos, donde el $Z(\tilde{G})$ es el centro de $\tilde{G}$:
+\begin{equation}
+Z(\tilde{G})=\left\{h\in \tilde{G}| hg=gh\quad  \forall g\in \tilde{G}\right\}
+\end{equation}
+\end{definicion}
+
+
+%Tablica con grupos de Lie
+
+\begin{teorema}
+Si $G$ es un grupo de Lie compacto, la \textbf{medida de Haar} proporciona
+\begin{equation}
+\int_G f(g)\dif g=\int_{a_1}^{b_1}\dif x_1\ \cdots\ \int_{a_n}^{b_n}\dif x_n\ \sigma (x_1,\ldots,x_n)\ f(g(x_1,\ldots,x_n))<\infty
+\end{equation}
+para toda función $f(g)$ continua, con $\int_G\dif g=1$.
+\end{teorema}
+
+\begin{definicion}
+Un \textbf{álgebra de Lie real} $\lie$ de dimensión $n\geq 1$ es un espacio vectorial real con un corchete de Lie $[,]$ que satisface:
+\begin{enumerate}[label=\roman*)]
+\item $[A,B]\in \lie$
+\item $[\alpha A+\beta B,C]=\alpha [A,C]+\beta [B,C]\qquad \forall\alpha,\beta \in \mathbb{R}$
+\item $[A,B]=-[B,A]$
+\item $[A,[B,C]]+[B,[C,A]]+[C,[A,B]]=0$ identidad de Jacobi
+\end{enumerate} 
+$\forall A,B,C,\in \lie$.\medskip
+
+Para un álgebra de Lie de matrices, el corchete de Lie es el conmutador.
+\end{definicion}
+
+
+\begin{remark}
+Para toda matriz $S$ no singular se tiene
+\begin{equation}
+e^{SAS^{-1}}=Se^AS^{-1}
+\end{equation}
+\end{remark}
+
+\begin{relacion}[fórmula de Baker-Campbell-Hausdorff] Sean $A$ y $B$ dos matrices que no conmutan con entradas suficientemente pequeñas. Entonces
+\begin{equation}
+e^A e^B=e^C\qquad C=A+B+\frac{1}{2}[A,B]+\frac{1}{12}\left([A,[A,B]]+[B,[B,A]]\right)+\cdots
+\end{equation}
+\end{relacion}
+
+\begin{definicion}
+Un \textbf{subgrupo uniparamétrico} es un subgrupo de un grupo de Lie lineal formado por matrices $T(t)$ que dependen de un parámetro real $t$ de tal forma que
+\begin{subequations}
+\begin{flalign}
+&T(t)\ T(t')=T(t+t')=T(t')\ T(t)\\
+&T(0)=\mathbb{1}_m\\
+&T^{-1}(t)=T(-t)
+\end{flalign}
+\end{subequations}
+
+Un \textbf{vector tangente en la identidad} $\omega$ viene dado por
+\begin{equation}
+\omega\equiv \left.\der{T(t)}{T}\right|_{t=0} \leadsto T(t)=e^{\omega t}
+\end{equation}
+\end{definicion}
+
+\begin{definicion}[Generadores del álgebra de Lie]
+Por la definición de grupo de Lie lineal de dimensión $n$, las matrices de representación son funciones analíticas de $(x_1,\ldots,x_n)\in\mathbb{R}^n$. Las matrices
+\begin{equation}
+(A_r)_{ij}=\left.\parder{D_{ij}(g)}{x_r}\right|_{x_1=\cdots=x_n=0}\qquad \forall r=1,\ldots,n\quad \forall i,j=1,\ldots,m
+\end{equation}
+con $g\in M_\delta$ (elementos conexos con la identidad) y $m=\dim D$, forman una base del EV real de dimensión $n$. Dicho EV es el álgebra de Lie asociada al grupo $G$, siendo el corchete de Lie el conmutador. Las matrices $A_1,\ldots,A_n$ son los \textbf{generadores del álgebra de Lie} y en física se toman hermíticas.
+\end{definicion}
+
+\begin{proposicion}[Relación entre álgebras de Lie reales y grupos de Lie lineales] Sea $G$ un grupo de Lie y $\lie$ su álgebra de Lie asociada. Entonces
+\begin{enumerate}[label=\roman*)] 
+\item Todo elemento $A\in \lie$ está asociado con un subgrupo uniparamétrico de $G$ dado por
+\begin{equation}
+T(t)=e^{At}\qquad \forall t\in(-\infty,+\infty)
+\end{equation}
+\item Todo elemento de $G$ en un entorno cercano a la identidad pertenece a un subgrupo uniparamétrico de $G$: $T(0)=e$.
+\item Si $G$ es compacto, todo elemento de un subgrupo conexo de $G$ se puede expresar de la forma $e^A$, con $A\in\lie$. Si $G$ es además conexo, todo elemento de $G$ es de la forma $e^A$, con $A\in\lie$.
+\end{enumerate}
+\end{proposicion}
+
+\begin{nota}
+El álgebra de Lie es el espacio tangente de $G$ evaluado en la identidad:
+
+\begin{equation}
+T(t)=e^{\omega t}\Longrightarrow \der{T}{t}=\omega T(t)
+\end{equation}
+\end{nota}
+
+\begin{definicion}[Representación de un álgebra de Lie]. A cada elemento $A\in\lie$ le corresponde una matriz $m\times m$ $D(A)$ tal que
+\begin{subequations}
+\begin{flalign}
+&D(\alpha A+\beta B)=\alpha D(A)+\beta D(B)\\
+& D([A,B])=\left[D(A),D(B)\right]
+\end{flalign}
+\end{subequations}
+$\forall A,B\in\lie;\qquad \forall\alpha,\beta\in\mathbb{R}$. \medskip
+
+Estas matrices forman una representación de dimensión $m$ de $\lie$. Si los elementos de $\lie$ son matrices, $D(A)=A$.
+\end{definicion}
+
+\begin{teorema}
+Sea $D_G$ una representación analítica $m$-dimensional de un grupo de Lie lineal con álgebra de Lie $\lie$. Entonces
+\begin{enumerate}
+\item Existe una representación de $\lie$ definida por
+\begin{equation}
+D_\lie(A)=\left.\der{}{t}D_G(e^{tA})\right|_{t=0}\qquad \forall A\in\lie
+\end{equation}
+\item $e^{tD_\lie(A)}=D_G(e^{tA})\qquad \forall A\in\lie\quad \forall t\in\mathbb{R}$
+\item $D_\lie'$ es equivalente a $D_\lie$ si $D_G'$ es equivalente a $D_G$. El recíproco es cierto si $G$ es conexo.
+\item $D_\lie$ es [completamente] reducible si $D_G$ lo es. El recíproco se cumple si $G$ es conexo. 
+\item Si $G$ es conexo, entonces $D_\lie$ es irreducible ssi $D_G$ lo es.
+\item $D_\lie(A)$ es antihermítica si $D_G$ es unitaria. El recíproco es cierto para $G$ conexo.
+\end{enumerate}
+\end{teorema}
+
+% Representación adjunta (clase 8/11)

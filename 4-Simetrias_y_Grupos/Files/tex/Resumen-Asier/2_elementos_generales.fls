@@ -1,0 +1,11 @@
+PWD /media/asier/DATA/Cuarto Grado/Simetrías y grupos en física/Resumen
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /media/asier/DATA/Cuarto Grado/Simetrías y grupos en física/Resumen/2_elementos_generales.tex
+OUTPUT /media/asier/DATA/Cuarto Grado/Simetrías y grupos en física/Resumen/2_elementos_generales.log
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT /media/asier/DATA/Cuarto Grado/Simetrías y grupos en física/Resumen/2_elementos_generales.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map

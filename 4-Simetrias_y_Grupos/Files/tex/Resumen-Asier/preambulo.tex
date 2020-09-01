@@ -1,0 +1,119 @@
+% Paquetes de idioma y codificación de caracteres
+\usepackage[english,spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Paquetes de escritura matemática
+\usepackage{amsmath,amsfonts,amssymb,bm,mathtools}
+
+% Márgenes y tamaño del folio
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,a4paper]{geometry} 
+
+% \usepackage{multirow} %Múltiples filas
+% \usepackage{graphicx} %Gráficos
+% \usepackage{soul} %Subrayar
+% \usepackage{fancybox} %Cajitas guays
+% \usepackage{multicol}
+% \usepackage{cancel}
+% \usepackage{pdfpages} %Inserción PDF
+% \usepackage{tabu}%Ahorra tener que estar usando $ todo el rato en tablas
+% \usepackage{realboxes}
+% \usepackage{titlesec} %spacing before and after section titles
+% \usepackage{lipsum} %texto de ejemplo
+% % \usepackage{natbib}
+% \usepackage{babelbib}
+% \usepackage{urlbst}
+\usepackage{siunitx}
+
+\usepackage{color}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem 
+\usepackage{bbold} %identitity matrix symbol ("double" one)
+	
+	
+% Definición de comandos: 
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert} %valor absoluto/módulo
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} %norma
+\newcommand{\refer}[1]{$^{[\ref{#1}]}$} %Referencias en superíndice
+\newcommand{\uni}[1]{\ \mathrm{#1}} %Unidades con separación de un 'en' y  sin cursiva
+\newcommand{\dif}{\mathrm{d} } %diferencial con d en roman
+\newcommand{\der}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}} %derivada de #1 resp a #2
+\newcommand{\derd}[2]{\frac{\mathrm{d}^2#1}{\mathrm{d}#2^2}} %derivada segunda de #1 resp a #2
+\newcommand{\dert}[2]{\frac{\mathrm{d}^3#1}{\mathrm{d}#2^3}} %derivada tercera de #1 resp a #2
+\newcommand{\parc}[2]{\frac{\partial#1}{\partial#2}} %derivada parcial de #1 resp a #2
+\newcommand{\parcd}[2]{\frac{\partial^2#1}{\partial#2^2}} %derivada de #1 resp a #2
+\newcommand{\curl}{\nabla\times} %curl operator
+\newcommand{\rot}{\nabla\times}  %operador rotacional
+\newcommand{\diver}{\nabla\cdot} %operador divergencia
+\newcommand{\laplac}{\nabla^2}
+\newcommand{\mean}[1]{\langle #1\rangle } %Media
+\newcommand{\pe}[2]{\langle #1|#2\rangle } %Producto escalar
+\newcommand{\bra}[1]{\left\langle#1\right|}  %bra
+\newcommand{\ket}[1]{\left|#1\right\rangle} %ket
+\newcommand{\braket}[2]{\left\langle#1\right|\left.#2\right\rangle} 
+% \newcommand{\braopket}[3]{\left\langle#1\right.\left|#2\right|\left.#3\right\rangle}
+\newcommand{\braopket}[3]{\bra{#1}#2\ket{#3}}
+\newcommand{\parder}[2]{\frac{\partial#1}{\partial#2}} %derivada parcial de #1 resp a #2
+\newcommand{\parderd}[2]{\frac{\partial^2#1}{\partial#2^2}} %derivada parcial segunda de #1 resp a #2
+\newcommand{\trace}[1]{\operatorname{Tr}\left(#1\right)} %traza
+% \newcommand{\suchthat}{\mathrel{\mathop\supset}\kern-4.0pt$-$\kern-1.0pt$-~$}
+
+\usepackage{mathrsfs}
+% \newcommand{\lie}{\mathcal{L}} %álgebra de Lie
+\newcommand{\lie}{\mathscr{L}} %álgebra de Lie
+
+% Definiciones y teoremas
+% https://www.overleaf.com/learn/latex/Theorems_and_proofs
+% https://tex.stackexchange.com/questions/283578/how-to-produce-theorems-in-which-the-color-of-heading-and-body-of-the-theorem-my
+\usepackage{amsthm,thmtools,xcolor}
+
+\theoremstyle{definition}
+\newtheorem{definicion}{Definición}[section]
+% \theoremstyle{definition}
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{proposicion}[teorema]{Proposición}
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{corolario}{Corolario}[teorema]
+\newtheorem{relacion}[teorema]{Relación}%[section]
+
+% \theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{observacion}[remark]{Observación}%[section]
+\newtheorem{nota}[remark]{Nota}%[section]
+% \newtheorem{ejemplo}{Ejemplo}[section]
+
+
+% examples in blue
+\declaretheoremstyle[
+  headfont=\color{blue}\normalfont\bfseries,
+  bodyfont=\color{blue}\normalfont,
+]{colored}
+\declaretheorem[
+  style=colored,
+  numberwithin=section,
+  name=Ejemplo,
+]{ejemplo}
+
+
+
+
+
+% Primer tema omitido
+\newcommand{\fakesection}[1]{%
+  \par\refstepcounter{section}% Increase section counter
+  \sectionmark{#1}% Add section mark (header)
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}% Add section to ToC
+  % Add more content here, if needed.
+}
+
+
+% Página en blanco 
+\usepackage{afterpage}
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{-1}%
+	\newpage}
+	
+% Numeración de las ecuaciones por secciones
+\numberwithin{equation}{section}
+

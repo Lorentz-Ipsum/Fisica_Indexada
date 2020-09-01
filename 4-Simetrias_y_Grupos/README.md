@@ -21,23 +21,20 @@ Apuntes interacticos de Simetrías y Grupos en la UCM, curso 2019/2020.
 [TOC]
 
 ---
-
 ## Archivos
-
-Apuntes / md / [Notas para pasar de tex a md](Apuntes/md/Notas para pasar de tex a md.md)
 
 ---
 
 > [Índice de todos los temas](Index/index-Nivel3.md)
 >
 > Apuntes
-> > [Tema 1: Introducción](Apuntes/md/t1.md)
-> > [Tema 2: Elementos generales de la teoría de Grupos](Apuntes/md/t2.md)
-> > [Tema 3: Representaciones de Grupos](Apuntes/md/t3.md)
-> > [Tema 4: Grupos y álgebras de Lie](Apuntes/md/t4.md)
-> > [Tema 5: Rotaciones en R^3: Los grupos SO(3) y SU(2)](Apuntes/md/t5.md)
-> > [Tema 6: El grupo de Lorentz](Apuntes/md/t6.md)
-> > [Tema 7: El grupo de Poincaré](Apuntes/md/t7.md)
+> > [Tema 1: Introducción](Apuntes/t1.md)
+> > [Tema 2: Elementos generales de la teoría de Grupos](Apuntes/t2.md)
+> > [Tema 3: Representaciones de Grupos](Apuntes/t3.md)
+> > [Tema 4: Grupos y álgebras de Lie](Apuntes/t4.md)
+> > [Tema 5: Rotaciones en R^3: Los grupos SO(3) y SU(2)](Apuntes/t5.md)
+> > [Tema 6: El grupo de Lorentz](Apuntes/t6.md)
+> > [Tema 7: El grupo de Poincaré](Apuntes/t7.md)
 >
 > Problemas
 > > [Enunciados](Problemas/Enunciados.md)
@@ -49,14 +46,27 @@ Apuntes / md / [Notas para pasar de tex a md](Apuntes/md/Notas para pasar de tex
 Problemas / [Tema 2](Problemas/ProblemasV1-T2.md)
 
 ---
-# Enlaces interesantes
-
-[![](http://img.youtube.com/vi/mH0oCDa74tE/0.jpg)](http://www.youtube.com/watch?v=mH0oCDa74tE "3b1b - Groups")
-
----
 # Sobre este proyecto
 
 La idea es que haya un glosario completo.
+
+## To Do
+
+- [x] Depurar formato de Ej / Sol en Apuntes
+- [x] Acabar de pasar lista de problemas de clase
+- [ ] Marcar dificultad de los problemas
+- [ ] Pasar soluciones de problemas fáciles
+- [ ] Limpiar apuntes / Añadir notas
+- [ ] Pasar de .md a .tex para esportar .pdf
+- [ ] Corregir erratas
+- [ ] Añadir glosario
+- [ ] Añadir lista de definiciones
+
+---
+      ___  __  __  ____    __      ____  _____  ___  ____  _  _  ____  ____
+     / __)(  )(  )(_  _)  /__\    (  _ \(  _  )/ __)( ___)( \( )(_  _)( ___)
+    ( (_-. )(__)(  _)(_  /(__)\    )(_) ))(_)(( (__  )__)  )  (   )(   )__)
+     \___/(______)(____)(__)(__)  (____/(_____)\___)(____)(_)\_) (__) (____)
 
 ---
 # Guía docente
@@ -104,3 +114,18 @@ Fortschritte der Physik 13, 279-384 (1965)
 • J. Fuchs, C. Schweigert, Symmetries, Lie Algebras and Representations, Cambridge
 University Press, 1997
 • A. González López, Simetrías y Grupos en Física. Notas de curso, UCM, 2013.
+
+---
+     ____  _  _  __      __    ___  ____  ___
+    ( ___)( \( )(  )    /__\  / __)( ___)/ __)
+     )__)  )  (  )(__  /(__)\( (__  )__) \__ \
+    (____)(_)\_)(____)(__)(__)\___)(____)(___/
+
+---
+# Enlaces interesantes
+
+[![](http://img.youtube.com/vi/mH0oCDa74tE/0.jpg)](http://www.youtube.com/watch?v=mH0oCDa74tE "3b1b - Groups")
+
+[Minicurso de Grupos de Lie de Javier Garcia](https://www.youtube.com/playlist?list=PLAnA8FVrBl8DTFTMP8kXbDnRJHQKqfjaw)
+
+[![](http://img.youtube.com/vi/4NE-KNwHKSI/0.jpg)](http://www.youtube.com/watch?v=4NE-KNwHKSI "")

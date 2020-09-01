@@ -1,0 +1,385 @@
+\section{Rotaciones en $\mathbb{R}^3:\ \mathrm{SO}(3)$ y $\mathrm{SU}(2)$}
+\newcommand{\normalv}{\vec{n}}
+\newcommand{\posv}{\vec{x}}
+\newcommand{\SU}{\mathrm{SU}(2)}
+\newcommand{\SO}{\mathrm{SO}(3)}
+\newcommand{\su}{\mathfrak{su}(2)}
+\newcommand{\so}{\mathfrak{so}(3)}
+
+\begin{itemize}
+\item Las rotaciones (propias) son transformaciones lineales de $\vec{x}\in \mathbb{R}^3$ que dejan invariante su norma y preservan la orientación. 
+\item En una base ortonormal los elementos de $\mathrm{SO}(3)$ son matrices $3\times 3$ ortogonales de $\det=1$.
+\item La dimensión del grupo es 3: se puede parametrizar por un vector unitario en la dirección del eje y un ángulo $\psi$, con $0\leq\psi\leq  \pi$.
+\item \textbf{Parametrización ángulo-eje:} el eje $\normalv$ queda determinado por los ángulos polar y azimutal $(\theta,\phi)$, con $0\leq \theta\leq \pi$ y $0\leq\phi < 2\pi$.
+\end{itemize}
+
+% \begin{flushleft}
+% \textbf{Parametrización ángulo-eje.} Any rotation can be designated by RE(i//) where the unit vector n specifies the
+% direction of the axis of rotation and ill denotes the angle of rotation around that axis.
+% Since the unit vector n, in turn, is determined by the two angles—say the polar and
+% the azmuthal angles (0, <35) of its direction—we see that R is characterized by the
+% three parameters (i//, 0, qb) where 0 5 ill 5 rt, 0 5 0 5 rt, and 0 5 <35 < 2rt. There is a
+% redundancy in this parameterization:
+% \end{flushleft}
+
+
+\begin{remark}
+Puesto que $R_{\normalv}(\pi)=R_{-\normalv}(\pi)$, $\mathrm{SO}(3)$ es isomorfo a la esfera con las antillas identificadas:
+\begin{equation}
+\mathrm{SO(3)}\cong S_3/\mathbb{Z}_2
+\end{equation}
+\end{remark}
+
+
+
+\begin{nota}
+$\mathrm{SO}(3)$ es doblemente conexo: hay dos clases de caminos cerrados, homótopos a un punto y no homótopos a un punto.
+\end{nota}
+
+\begin{relacion}[Fórmula de Olinde-Rodrigues]
+% \begin{subequations}
+\begin{flalign}
+&R_{\normalv}(\psi) \vec{x}=\cos\psi \vec{x}+(1- \cos\psi)(\posv\cdot\normalv)\normalv+\sin\psi(\normalv\times\posv)\\
+&(R_{\normalv}(\psi))_{ij}=\delta_{ij}\cos\psi+n_in_j(1-\cos\psi)-\sin\psi \sum_k \epsilon_{ijk} n_k
+\end{flalign}
+% \end{subequations}
+\end{relacion}
+
+\begin{teorema}
+Todas las rotaciones por el mismo ángulo pertenecen a la misma clase:
+\begin{equation}
+RR_{\normalv}(\psi R^{-1})=R_{\normalv'}(\psi)\qquad \normalv'=R\normalv
+\end{equation}
+$\forall R\in \mathrm{SO}(3)$.
+\end{teorema}
+
+\begin{proposicion}
+$\mathrm{SU}(2)$ es el recubridor universal de $\mathrm{SO}(3)$:
+\begin{equation}
+\mathrm{SO}(3)\cong \mathrm{SU}(2)/\mathbb{Z}_2
+\end{equation}
+\end{proposicion}
+
+% \begin{proof}
+% Veamos primero que $\mathrm{SO(3)}\cong \mathrm{SU}(2)/\mathbb{Z}_2$. Sea $u=(u^0=\cos(\psi/2),\vec{u}=\vec{n}\sin(\psi/2))$. Entonces $\psi\mapsto \psi+(2n+1)2\pi$ lleva de $\vec{u}$ a $-\vec{u}$. \medskip
+
+% Las matrices de Pauli satisfacen
+% \end{proof}
+
+$\SU$ se puede escribir como
+\begin{equation}
+\SU=\left\{U_{\normalv}(\psi)=e^{-i\frac{\psi}{2}\normalv\cdot\vec{\sigma}},\ 0\leq\psi<2\pi\right\}\cong S^3 
+\end{equation}
+donde $\vec(\sigma)=(\sigma_1,\sigma_2,\sigma_3)$ son las matrices de Pauli, con las propiedades siguientes:
+\begin{subequations}
+\begin{flalign}
+&\sigma_i\sigma_j=\delta_{ij}\mathbb{1}+i\sum_k\epsilon_{ijk}\sigma_k\\
+& [\sigma_i,\sigma_j]=2i\epsilon_{ijk}\sigma_k\\
+&(\normalv\cdot\vec{\sigma})^2=\mathbb{1}
+\end{flalign}
+\end{subequations}
+
+El homomorfismo $\SU\rightarrow\SO$ viene dado por:
+\begin{equation}
+\vec{x}'=R_{\normalv}(\psi) \vec{x}\longmapsto		X'=U_{\normalv}(\psi)X U_{\normalv}^\dagger(\psi)=\vec{x}'\cdot \vec{\sigma}
+\end{equation}
+
+Nótese que $U$ y $-U$ mapean la misma rotación de $\SO$.
+
+\begin{flushleft}
+\textbf{Generadores de $\SO$}. Existe un subgrupo uniparamétrico asociado a las rotaciones de eje fijo $\normalv$. Cada uno de estos subgrupos lleva asociado un generador $J_{\normalv}$:
+\end{flushleft}
+
+\begin{subequations}
+\begin{flalign}
+& R_{\normalv}(\psi)=e^{-i\psi J_{\normalv}}=e^{-i\psi \normalv \cdot \vec{J}}\\
+&J_k=\left. i\der{R_k(\psi)}{\psi}\right|_{\psi=0}\qquad k=1,2,3\\
+&[J_i,J_j]=i\epsilon_{ijk} J_k
+\end{flalign}
+\end{subequations}
+
+El Casimir es $\vec{J}^2=J_1^2+J_2^2+J_3^2$, que conmuta con los tres $J_i$.
+
+
+\begin{flushleft}
+\textbf{Generadores de $\SU$}. Toda matriz $U\in\SU$ se puede escribir como $U=e^{iH}$, con $H$ hermítica y de traza nula. El conjunto de matrices $H$ forma un espacio vectorial de dimensión 3, con base $\{\sigma_i\}$:
+\end{flushleft}
+
+\begin{subequations}
+\begin{gather}
+H=\sum_{k=1}^3\eta_k \frac{\sigma_k}{2}\Longrightarrow U=e^{i\vec{\eta}\cdot \frac{\vec{\sigma}}{2}}\\
+\left[\frac{\sigma_i}{2},\frac{\sigma_j}{2}\right]=i\epsilon_{ijk} \frac{\sigma_k}{2}
+\end{gather}
+\end{subequations}
+
+Las matrices de Pauli generan la misma álgebra que las $J_i$: $\su=\so$. $\frac{\vec{\sigma}}{2}$ y $\vec{J}$ forman dos representaciones unitarias independientes del mismo álgebra de Lie.\medskip
+
+Otra base es $J_z=J_3,\ J_\pm=J_1\pm iJ_2$
+\begin{subequations}
+\begin{gather}
+[J_z,J_\pm]=\pm J_\pm\\
+[J_+,J_-]=2J_z\\
+\vec{J}^2=J_z+J_z+J_-J_+\\
+[\vec{J}^2,J_\pm]=0
+\end{gather}
+\end{subequations}
+
+En física los generadores $J_k$ se toman hermíticos:
+\begin{subequations}
+\begin{flalign}
+&J_i^\dagger=J_i\qquad i=1,2,3\\
+&J_\pm^\dagger=J_\mp
+\end{flalign}
+\end{subequations}
+
+
+\begin{flushleft}
+\textbf{Representación de espín $j$ de $\su$}. Sean $\ket{j,\ m}$ autovectores ortonormales de $\vec{J}^2$ y $J_z$, que forman un EV de $dim=2j+1$. Se toma $\braket{j\ j}{j\ j}=1$ y se cumple
+\end{flushleft}
+\begin{flalign}
+&\vec{J}^2\ket{j\ m}=j(j+1)\ket{j\ m} \hspace{0.1\linewidth} j=0,\frac{1}{2},1,\frac{3}{2},\ldots\\
+&J_z\ket{j\ m}=m\ket{j\ m}\hspace{0.08\linewidth}m=-j,-j+1,\ldots,j-1,j\\
+&J_\pm \ket{j\ m}=\sqrt{j(j+1)-m(m\pm1)}\ \ket{j\ m\pm1}
+\end{flalign}
+% con $j=0,\frac{1}{2},1,\frac{3}{2},\ldots\quad$ y $\quad m=-j,-j+1,\ldots,j-1,j$.
+
+\begin{flushleft}
+\textbf{Representación de espín $j$ de $\SU$}. Bajo la acción de la <<rotación>> $U\in\SU$, la matriz $D^j$ de la representación de espín $j$ actúa sobre el EV $\operatorname{lin}\left\{\ket{j\ m},\ m=-j,\ldots,j\right\}$ de la siguiente forma:
+\end{flushleft}
+\begin{equation}
+\ket{j\ m} \longmapsto D^j(U)\ket{j\ m}=\sum_{m'=-j}^j\ket{j\ m'}D_{m'm}^j(U)
+\end{equation}
+con
+\begin{flalign}
+D_{m'm}^j(\alpha,\beta,\gamma)&=\braopket{jm'}{D(\alpha,\beta,\gamma)}{jm}=\braopket{jm'}{e^{-i\alpha J_z}e^{-i\beta J_y}e^{-i\gamma J_z}}{jm} \nonumber=\\
+&=e^{i\alpha m'}d_{mm'}^j(\beta)e^{-i\gamma m}\\
+d_{mm'}^j(\beta)&=\braopket{jm'}{e^{-i\beta J_y}}{jm}\qquad \text{matriz de Wigner}
+\end{flalign}
+
+\begin{flushleft}
+\textbf{Producto directo de representaciones de $\su$}. Los autovectores de $(\vec{J}^{(i)})^2$ y $J_{i\ z}$ son $\ket{j_1\ m_1}\otimes\ket{j_2\ m_2}\equiv \ket{j_1 m_1; j_2 m_2}$. Los descomponemos en la base de autovectores comunes de $(\vec{J}^{(1)})^2, (\vec{J}^{(2)})^2,\ \vec{J}^2$ y $J_z$: $\quad \ket{(j_1,j_2) J\ M}$.
+\end{flushleft}
+
+En términos de los coeficientes de Clebsch-Gordan
+\begin{equation}
+C_{j_1m_1j_2m_2|JM}=\braket{(j_1,j_2)JM}{j_1m_1j_2m_2}
+\end{equation}
+se tiene
+\begin{subequations}
+\begin{flalign}
+& \ket{j_1m_1j_2m_2 } =\sum_{J=\abs{j_1-j_2}}^{j_1+j_2} C_{j_1m_1j_2m_2|JM}\ \ket{(j_1,j_2) JM}\\
+& \ket{(j_1, j_2) JM}=\sum_{m_1=-j_1}^{j_1}C_{j_1m_1j_2m_2|JM}^\ast \ket{j_1m_1j_2m_2}
+\end{flalign}
+\end{subequations}
+
+Estos coeficientes:
+\begin{itemize}
+\item Dependen de una elección de fase relativa entre vectores. Por convenio,
+\begin{equation}
+\braket{(j_1,\ j_2)\ J\ J}{j_1\ j_1\ j_2\ J-j_1}\in \mathbb{R}
+\end{equation}
+\item Satisfacen la relación de recurrencia dada por
+\begin{flalign}
+&\sqrt{J(J+1)-M(M\pm 1)}\braket{J\ M}{m_1\ m_2}= \nonumber \\
+&=\sqrt{j_1(j_1+1)-m_1(m_1\pm 1)}\braket{J\ M\pm 1}{m_1 \pm1\ m_2}\\
+&+\sqrt{j_2(j_2+1)-m_2(m_2\pm 1)}\braket{J\ M\pm 1}{m_1\ m_2\pm 1} \nonumber
+\end{flalign}
+\item Se les impone además la condición de normalización
+\begin{equation}
+\sum_{m_1,m_2}\abs{\braket{j_1\ m_1\ j_2\ m_2}{(j_1,j_2)\ J\ M}}^2=1
+\end{equation}
+que fija, salvo signo, todos los coeficientes de C-G.
+\end{itemize}
+
+\begin{flushleft}
+\textbf{Teorema de Wigner-Eckart:} Si un sistema físico admite el grupo de simetría $\SU$, las transformaciones de simetría implican relaciones entre los observables que pertenecen a la misma representación, i.e. las cantidades físicas se corresponden con tensores irreducibles. 
+\end{flushleft}
+
+Sea un conjunto de operadores tensoriales irreducibles $\left\{Q_{\tilde{m}}^{\tilde{j}}\right\}_{\tilde{m}=-\tilde{j}}^{\tilde{j}}$ que se transforman con la representación de espín $j$:
+\begin{equation}
+D^j(g)Q_{\tilde{m}}^{\tilde{j}}D^{j'}(g^{-1})= \sum_{m'}Q_{m'}^{\tilde{j}} D_{m'\tilde{m}}^{\tilde{j}}(g)
+\end{equation}
+
+Entonces sus elementos de matriz entre estados físicos cumplen 
+\begin{equation}
+\braopket{j'm'}{Q_{\tilde{m}}^{\tilde{j}}}{jm}=C_{jm,\tilde{j}\tilde{m}|j'm'} (j'||\tilde{Q}'||j)
+\end{equation}
+donde los elementos de matriz reducida $(j'||\tilde{Q}'||j)$ son independientes de $m,m'$ y $\tilde{m}$. \medskip
+
+Sin ningún conocimiento acerca de la física del sistema podemos obtener:
+
+\begin{itemize}
+\item Reglas de selección
+\begin{subequations}
+\begin{flalign}
+&\abs{j-\tilde{j}} \leq j'\leq j+\tilde{j}\\
+&m'=m+\tilde{m}
+\end{flalign}
+\end{subequations}
+\item Los cocientes
+\begin{equation}
+\frac{\braopket{jm'}{Q_{\tilde{m}}^j}{jm}}{\braopket{jn'}{Q_{\tilde{n}}^j}{jn}}=\frac{C_{jm,\tilde{j}\tilde{m}|j'm'}}{C_{jn,\tilde{j}\tilde{n}|j'n'}}
+\end{equation}
+\end{itemize}
+
+\begin{ejemplo}[Isospín]
+
+La simetría de isospín aparece cuando la única interacción relevante es la electromagnética y el único observable la carga eléctrica. Los nucleones y los mesones $\pi$ corresponden al doblete y al triplete de isospín respectivamente:
+$$p=\ket{\frac{1}{2}\ \frac{1}{2}}\qquad n=\ket{\frac{1}{2}\ -\frac{1}{2}}$$
+$$\pi^+=\ket{1\ 1}\quad \pi^0=\ket{1\ 0}\quad \pi^-=\ket{1\ -1}$$
+Efectuando la descomposición de C-G de $\frac{1}{2}\otimes 1$ e invirtiéndola se obtiene
+
+$$\ket{p\ \pi^+}=\ket{\frac{3}{2}\ \frac{3}{2}}	$$
+$$\ket{p\ \pi^-}=\frac{1}{\sqrt{3}}\left(\ket{\frac{3}{2}\ -\frac{1}{2}}	-\sqrt{2} \ket{\frac{1}{2}\ -\frac{1}{2}}	\right)$$
+
+Por el teorema de Wigner-Eckart
+$$\braopket{I\ I_z}{\mathcal{T}}{I'\ I_z'}=\mathcal{T}_I \delta_{II'} \delta_{I_zI_z'}$$
+de modo que los elementos de matriz del operador transición $\mathcal{T}$ entre los diferentes estados resultan
+$$\braopket{p\ \pi^+}{\mathcal{T}}{p\ \pi^+}=\mathcal{T}_{3/2}$$
+$$\braopket{p\ \pi^-}{\mathcal{T}}{p\ \pi^-}=\frac{1}{3}\mathcal{T}_{3/2}+\frac{2}{3}\mathcal{T}_{1/2}$$
+
+Experimentalmente, para energías de $\sim 180 \si{\mega\electronvolt}$ se tiene
+
+$$\frac{\sigma(\pi^+ p\rightarrow \pi^+ p)}{\sigma(\pi^- p\rightarrow \pi^- p)}=9$$
+de lo que inferimos que $\mathcal{T}_{1/2}\ll \mathcal{T}_{3/2}$.
+\end{ejemplo}
+
+
+% \begin{relacion}[Rotación de funciones de onda]
+\begin{flushleft}
+\textbf{Rotación de funciones de onda.} Consideremos el espacio de representación $\mathcal{H}=\mathrm{L}^2(\mathbb{R}^3,\dif \vec{x})$ de vectores %(estados)
+\end{flushleft}
+\begin{equation}
+\ket{\psi}=\int_{\mathbb{R}^3}  \dif^3\posv\ \psi(\posv)\ \ket{\posv}
+\end{equation}
+
+La transformación $\posv\rightarrow \posv'=R\posv$ ($x_i'=R_{ij}x_j$) induce la transformación
+\begin{equation}
+\ket{\posv'}=U(R)\ket{\posv}=\ket{R\posv}0
+\end{equation}
+donde $U(R)$ es la representación de $R$ sobre $\mathcal{H}$, de modo que
+\begin{gather}
+\ket{\psi'}=U(R)\ket{\psi}=\int \dif^3\posv\ \psi(\posv)\ \ket{\posv'}=\int \dif^3\posv\ \psi(R^{-1}\posv)\ \ket{\posv}\\
+\boxed{\psi'(\posv)=\psi(R^{-1}\posv)}
+\end{gather}
+
+Para estados etiquetados con un número cuántico discreto (espín)
+\begin{gather}
+U(R)\ket{\posv\ \sigma}=\ket{R\posv\ \lambda}\ D_{\lambda\sigma}^{1/2}(R)
+\end{gather}
+con $D_{\lambda\sigma}^{1/2}(R)$ representación de espín $1/2$ de $\SU$, se tiene
+\begin{flalign}
+\ket{\psi}=\int \dif^3\posv\ \psi_{\sigma}(\posv)\ \ket{\posv\ \sigma}\xrightarrow{R} \ket{\psi'}&=U(R)\ket{\psi}=\int \dif^3\posv'\ \psi_{\sigma}(\posv)\ \ket{R\posv\ \lambda}\ D_{\lambda\sigma}^{1/2}(R) \nonumber\\
+&=\int \dif^3\posv'\ \underbrace{\psi_{\sigma}(R^{-1}\posv)\ D_{\lambda\sigma}^{1/2}(R)}_{\psi_{\lambda}'(\posv)}\ \ket{\posv\ \lambda}
+\end{flalign}
+\begin{equation}
+\boxed{\psi_{\lambda}'(\posv)=\psi_{\sigma}(R^{-1}\posv)\ D_{\lambda\sigma}^{1/2}(R)}
+\end{equation}
+% \end{relacion}
+
+\begin{definicion}
+Un conjunto de funciones multi-componente $\{\phi_m(\posv),\ m=-j\ldots,j\}$ del vector de coordenadas $\posv\in\mathbb{R}^3$ se dice que forma una \textbf{función de onda irreducible} o un \textbf{campo irreducible de espín $j$} si se transforma bajo rotaciones $R\in\SO$ como 
+\begin{equation}
+\phi \xrightarrow{R} \phi'\qquad \phi'_m(\posv)=D^j_{m'm}(R)\phi_m(R^{-1}\posv)
+\end{equation}
+donde $D^j_{m'm}$ es la matriz que representa a $R$ en la representación irreducible de espín $j$:
+\begin{equation}
+D_{m'm}^j(R)=\braopket{j\ m'}{D^j(R)}{j\ m}
+\end{equation}
+\end{definicion}
+
+\begin{flushleft}
+\textbf{Rotación de operadores.} Consideramos ahora las propiedades de transformación de operadores $\widehat{Q}$ que actúan sobre $\ket{\posv}$, cuyo valor esperado será invariante:
+\end{flushleft}
+\begin{gather}
+\braopket{\psi}{\widehat{Q}}{\psi}=\braopket{\psi'}{\widehat{Q}'}{\psi'}=\braopket{\psi}{U^{\dagger}(R)\ \widehat{Q}'\ U(R)}{\psi}\\
+\boxed{\widehat{Q}'=U(R)\ \widehat{Q}\ U^{-1}(R)}
+\end{gather}
+
+
+\begin{flushleft}
+\textbf{Conjunto de operadores tensoriales irreducibles de rango $j$:} Conjunto de $(2j+1)$ operadores $\{Q_m^j\}_{m=-j}^j$ que se transforman bajo la rotación $R$ de $\SO$ de acuerdo a la representación
+\end{flushleft}
+\begin{equation}
+U(R)\ Q_m^j\ U^{-1}(R)=\sum_{m'}Q_{m'}^j\ D_{m'm}^j(R)=\sum_{m'}Q_{m'}^j\ \braopket{j\ m'}{U(R)}{j\ m}
+\end{equation}
+
+Equivalentemente, se caracterizan por sus conmutadores con los generadores del álgebra:
+\begin{subequations}
+\begin{flalign}
+& [J_3,Q_m^j]=m\ Q_m^j\\
+& [J_\pm,Q_m^j]=\sqrt{j(j+1)-m(m\pm1)}\ Q_{m\pm1}^j
+\end{flalign}
+\end{subequations}
+
+Además, se comprueba
+\begin{equation}
+\sum_{i=1}^3 [J_i,[J_i,Q_m^j]]=j(j+1)\ Q_m^j
+\end{equation}
+
+\begin{flushleft}
+\textbf{Operadores escalares.} Son invariantes bajo rotaciones $\longrightarrow$ se transforman en la representación $j=0$.
+\end{flushleft}
+\begin{equation}
+U(R)\ \widehat{S}\ U^{-1}(R)=\widehat{S}\Longrightarrow[\widehat{S},J_i]=0
+\end{equation}
+
+\begin{flushleft}
+\textbf{Operadores vectoriales}  
+\end{flushleft}
+\begin{itemize}
+\item Se transforman como un vector en $\mathbb{R}^3$ (en la representación de definición de $\SO$): $\widehat{V}_i$, con coordenadas cartesianas en la base canónica de $\mathbb{R}^3$.
+\begin{equation}
+U(R)\ \widehat{V}_i\ U^{-1}(R)=\widehat{V}_j\ R_{ji}\Longleftrightarrow U^{-1}(R)\ \widehat{V}_i\ U(R)=R_{ij}\ \widehat{V}_j
+\end{equation}
+Infinitesimalmente
+
+\begin{flalign}
+&U(R)\ \widehat{V}_i\ U^{-1}(R)=\widehat{V}_i +i\psi n_k[\widehat{V}_i,J_k]+\mathcal{O}(\psi^2)\\
+&\widehat{V}_i\ R_{ji}=\widehat{V}_i+\psi \epsilon_{ijk}n_k\widehat{V}_j+\mathcal{O}(\psi^2)\\
+\therefore\quad  &[V_i,J_k]=i \epsilon_{ijk} V_j
+\end{flalign}
+
+\item Se transforman en la representación $j=1$: $Q_m^1\ (m=-1,0,1)$, con coordenadas <<esféricas>> en la base de autoestados de $\vec{J}^2$ y $J_z$
+\begin{equation}
+U(R)\ Q_m^1\ U^{-1}(R)=\sum_{m'=-1}^1 Q_{m'}^1\ D_{m'm}^1(R)
+\end{equation}
+\item Relación entre coordenadas $V_i$ y $Q_m^1$
+\begin{equation}
+\widehat{V}=V_1\ \hat{e}_1+V_2\ \hat{e}_2+V_3\ \hat{e}_3=Q_1^1\ket{1\ 1}+Q_0^1\ket{1\ 0}+Q_{-1}^1\ket{1\ -1}
+\end{equation}
+
+Los autovalores de $J_3=\begin{pmatrix}
+0&-i&0\\
+i&0&0\\
+0&0&0
+\end{pmatrix}$ (en la base canónica de $\mathbb{R}^3$) son
+
+\begin{flalign}
+& \ket{1\ 1}=\frac{1}{\sqrt{2}}(\hat{e}_1+i\hat e_2)\quad \ket{1\ -1}=\frac{1}{\sqrt{2}}(-\hat{e}_1+i\hat e_2)\quad \ket{1\ 0}=\hat e_3\\ %\qquad  \text{autovalores de } J_3=\begin{pmatrix}
+% 0&-i&0\\
+% i&0&0\\
+% 0&0&0
+% \end{pmatrix}
+& V_1=-\frac{1}{\sqrt{2}}(Q_1^1-Q_{-1}^1)\quad  V_2=\frac{i}{\sqrt{2}}(Q_1^1+Q_{-1}^1) \quad V_3=Q_0^1\quad \text{salvo fase}
+\end{flalign}
+\end{itemize}
+
+\begin{flushleft}
+\textbf{Operadores tensoriales de rango 2}. Un tensor $\widehat{T}=T^{ij} \hat{e}_i \otimes \hat{e}_j,\ T^{ij}=a^ib^j$ se puede descomponer como
+\end{flushleft}
+\begin{equation}
+\widehat{T}=\widehat{T}^{(0)}+\widehat{T}^{(1)}+\widehat{T}^{(2)}
+\end{equation}
+donde
+\begin{itemize}
+\item $\widehat{T}^{(0)}=\frac{a_k b_k}{3}\ \delta_{ij}$ se transforma como un escalar, $\operatorname{Tr}(\widehat{T})=a^kb_k\longrightarrow$ espín 0
+\item $\widehat{T}^{(1)}=\frac{1}{2}(a_ib_j-a_jb_i)$ se transforma como un vector, $\frac{1}{2} \vec{a}\times \vec{b}\longrightarrow$ espín 1
+\item $\widehat{T}^{(2)}=\frac{1}{2}(a_ib_j-a_jb_i)-\frac{a_kb_k}{3} \delta_{ik}$ se transforma como un tensor simétrico sin traza $\longrightarrow$ espín 2
+\end{itemize}
+\bigskip 
+
+Bajo $\SO$ un tensor se transforma según
+\begin{equation}
+T\xrightarrow{R} T'=R\ T\ R^{-1}
+\end{equation}

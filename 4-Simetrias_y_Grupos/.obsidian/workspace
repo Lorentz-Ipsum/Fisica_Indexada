@@ -9,24 +9,24 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Apuntes/md/GrupsV1-T3.md",
+            "file": "Problemas/Resueltos.md",
             "mode": "source"
           }
         },
-        "group": "3e1a4a06da70bf12"
+        "group": "90206afea49b042d"
       },
       {
-        "id": "8797a8faeaa17682",
+        "id": "d14930311b24baf6",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Apuntes/md/GrupsV1-T3.md",
+            "file": "Problemas/Resueltos.md",
             "mode": "preview"
           }
         },
-        "group": "3e1a4a06da70bf12"
+        "group": "90206afea49b042d"
       }
     ],
     "direction": "vertical"
@@ -74,7 +74,9 @@
             "type": "leaf",
             "state": {
               "type": "backlink",
-              "state": {}
+              "state": {
+                "file": "Problemas/Resueltos.md"
+              }
             }
           }
         ]
@@ -85,7 +87,10 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Apuntes/md/GrupsV1-T3.md",
-    "Apuntes/sg-workfile.md"
+    "Problemas/Resueltos.md",
+    "Problemas/ResueltosWork.md",
+    "Problemas/Enunciados.md",
+    "Problemas/entregas_y_examenes.md",
+    "Resumenes/res-t3.md"
   ]
 }
